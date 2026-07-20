@@ -146,7 +146,7 @@ export default function Header() {
           {/* Logo Component */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
             <Image
-              src="/logo.png"
+              src="/logo1.png"
               alt="Ila Garg"
               width={160}
               height={50}
