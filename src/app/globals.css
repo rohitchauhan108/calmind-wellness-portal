@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Marcellus&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Marcellus', Georgia, serif;
+  
+  --color-brand-cream: #FDFBF8;
+  --color-brand-beige: #F4EFEA;
+  --color-brand-warm-white: #FAF7F2;
+  --color-brand-olive-light: #9AA68E;
+  --color-brand-olive: #627254;
+  --color-brand-olive-dark: #3D4835;
+  --color-brand-brown-light: #D5C3AF;
+  --color-brand-brown: #8D7B68;
+  --color-brand-charcoal: #2C302E;
+  --color-brand-charcoal-light: #4A504E;
+  
+  --shadow-premium: 0 16px 36px -12px rgba(98, 114, 84, 0.08);
+  --shadow-premium-hover: 0 24px 48px -16px rgba(98, 114, 84, 0.16);
+}
+
+@layer base {
+  *, ::before, ::after {
+    border-color: rgba(98, 114, 84, 0.1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-brand-cream);
+    color: var(--color-brand-charcoal);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom premium ambient glowing animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+@keyframes pulse-gentle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 9s ease-in-out infinite;
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 8s ease-in-out infinite;
+}
+
+/* Glassmorphism utility classes */
+.glass-nav {
+  background: rgba(253, 251, 248, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(98, 114, 84, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
