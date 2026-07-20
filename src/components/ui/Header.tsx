@@ -138,7 +138,7 @@ export default function Header() {
       <nav
         className={`transition-all duration-300 ${
           isScrolled
-            ? "glass-nav py-3 shadow-md z-50 bg-brand-cream"
+            ? " py-3 shadow-md z-999 bg-brand-cream"
             : "bg-brand-cream py-4 border-b border-brand-olive/10"
         }`}
       >

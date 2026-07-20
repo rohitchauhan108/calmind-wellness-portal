@@ -4,6 +4,7 @@ import { Play, ArrowRight, ShieldCheck, Star, Sparkles, X, Leaf } from 'lucide-r
 
 export default function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const easeCurve: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -21,14 +22,14 @@ export default function Hero() {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 1, ease: easeCurve }
     }
   };
 
   return (
     <section 
       id="home" 
-      className="relative min-h-screen pt-32 pb-20 md:py-40 flex items-center overflow-hidden bg-brand-cream"
+      className="relative min-h-screen pt-12  pb-20 md:py-24 flex items-center overflow-hidden bg-brand-cream"
     >
       {/* Background Decorative Blurs & Shapes */}
       <div className="absolute top-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-brand-olive-light/10 blur-[120px] pointer-events-none animate-pulse-gentle" />
