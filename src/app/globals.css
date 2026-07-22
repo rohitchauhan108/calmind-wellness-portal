@@ -1,28 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Marcellus&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Instrument Sans', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Marcellus', Georgia, serif;
+  /* Mapped to Next.js CSS Variables */
+  --font-sans: var(--font-poppins), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-montserrat), sans-serif;
   
-  --color-brand-cream: #FDFBF8;
-  --color-brand-beige: #F4EFEA;
-  --color-brand-warm-white: #FAF7F2;
-  --color-brand-olive-light: #9AA68E;
-  --color-brand-olive: #627254;
-  --color-brand-olive-dark: #3D4835;
-  --color-brand-brown-light: #D5C3AF;
-  --color-brand-brown: #8D7B68;
-  --color-brand-charcoal: #2C302E;
-  --color-brand-charcoal-light: #4A504E;
+  --color-brand-cream: #F7F3EF;
+  --color-brand-beige: #E8DDD4;
+  --color-brand-warm-white: #FDFBF9;
+  --color-brand-burgundy: #722F37;
+  --color-brand-burgundy-light: #9B444D;
+  --color-brand-burgundy-dark: #4A1C23;
+  --color-brand-gold: #C9A962;
+  --color-brand-gold-light: #DCC58A;
+  --color-brand-espresso: #2A2320;
+  --color-brand-espresso-light: #423935;
+  --color-brand-sage: #8B9A7D;
+  --color-brand-sage-light: #AAB89E;
   
-  --shadow-premium: 0 16px 36px -12px rgba(98, 114, 84, 0.08);
-  --shadow-premium-hover: 0 24px 48px -16px rgba(98, 114, 84, 0.16);
+  --shadow-premium: 0 20px 40px -12px rgba(114, 47, 55, 0.15);
+  --shadow-premium-hover: 0 28px 60px -16px rgba(114, 47, 55, 0.25);
 }
 
 @layer base {
   *, ::before, ::after {
-    border-color: rgba(98, 114, 84, 0.1);
+    border-color: rgba(114, 47, 55, 0.1);
   }
 
   html {
@@ -31,8 +33,9 @@
 
   body {
     background-color: var(--color-brand-cream);
-    color: var(--color-brand-charcoal);
+    color: var(--color-brand-espresso);
     font-family: var(--font-sans);
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -40,24 +43,25 @@
   
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    letter-spacing: -0.01em;
   }
 }
 
 /* Custom premium ambient glowing animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-12px); }
 }
 
 @keyframes float-slow {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(2deg); }
+  50% { transform: translateY(-18px) rotate(2deg); }
 }
 
 @keyframes pulse-gentle {
   0%, 100% { opacity: 0.2; transform: scale(1); }
-  50% { opacity: 0.35; transform: scale(1.05); }
+  50% { opacity: 0.4; transform: scale(1.06); }
 }
 
 .animate-float {
@@ -74,15 +78,15 @@
 
 /* Glassmorphism utility classes */
 .glass-nav {
-  background: rgba(253, 251, 248, 1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(98, 114, 84, 0.08);
+  background: rgba(247, 243, 239, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(114, 47, 55, 0.1);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(232, 221, 212, 0.95);
 }

@@ -78,25 +78,25 @@ export default function Statistics() {
   ];
 
   return (
-    <section id="statistics" className="py-24 md:py-32 bg-[#FAF7F2] text-[#2C302E] relative overflow-hidden font-sans">
+    <section id="statistics" className="py-24 md:py-32 bg-brand-warm-white text-brand-espresso relative overflow-hidden font-sans">
       
       {/* Background Soft Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#536244]/5 blur-[140px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-brand-burgundy/5 blur-[140px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#536244]/10 border border-[#536244]/20 text-[#536244] text-xs font-semibold tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-burgundy/8 border border-brand-burgundy/15 text-brand-burgundy-dark text-xs font-semibold tracking-wider uppercase">
             <TrendingUp className="w-3.5 h-3.5" />
             <span>Measurable Impact</span>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-medium text-[#2C302E] tracking-tight leading-[1.15]">
+          <h2 className="text-3xl md:text-5xl font-semibold font-serif font-medium text-brand-espresso tracking-tight leading-[1.15]">
             Root-level transformation, proven by numbers.
           </h2>
 
-          <p className="text-sm md:text-base text-[#6A706C] font-light leading-relaxed">
+          <p className="text-sm md:text-base text-brand-espresso-light font-medium leading-relaxed">
             Our multi-disciplinary framework delivers tangible clarity, emotional lightness, and lasting growth.
           </p>
         </div>
@@ -110,36 +110,36 @@ export default function Statistics() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="bg-white border border-[#E2DDD3] rounded-3xl p-7 md:p-8 shadow-sm hover:shadow-xl transition-all duration-300 relative group overflow-hidden flex flex-col justify-between"
+              className="bg-white border border-brand-burgundy/10 rounded-3xl p-7 md:p-8 shadow-sm hover:shadow-xl transition-all duration-300 relative group overflow-hidden flex flex-col justify-between"
             >
               {/* Top Animated Accent Border */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-gradient-to-r group-hover:from-[#D6A97A] group-hover:to-[#536244] transition-all duration-500" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-gradient-to-r group-hover:from-brand-burgundy/40 group-hover:to-brand-burgundy transition-all duration-500" />
 
               <div className="space-y-6">
                 
                 {/* Header Row: Icon Badge */}
                 <div className="flex items-center justify-between">
-                  <div className="w-11 h-11 rounded-2xl bg-[#F2EDE4] text-[#536244] flex items-center justify-center border border-[#E2DDD3] group-hover:bg-[#536244] group-hover:text-white transition-all duration-300">
+                  <div className="w-11 h-11 rounded-2xl bg-brand-cream/80 text-brand-burgundy flex items-center justify-center border border-brand-burgundy/10 group-hover:bg-brand-burgundy group-hover:text-brand-cream transition-all duration-300">
                     {stat.icon}
                   </div>
-                  <Sparkles className="w-4 h-4 text-[#D6A97A] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <Sparkles className="w-4 h-4 text-brand-burgundy opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
                 {/* Counter & Label */}
                 <div className="space-y-1">
-                  <div className="font-serif text-4xl md:text-5xl font-semibold tracking-tight text-[#2C302E] group-hover:text-[#536244] transition-colors duration-300">
+                  <div className="font-serif text-4xl md:text-5xl font-semibold tracking-tight text-brand-espresso group-hover:text-brand-burgundy transition-colors duration-300">
                     <Counter value={stat.value} suffix={stat.suffix} />
                   </div>
-                  <h3 className="text-xs font-bold text-[#2C302E] uppercase tracking-wider">
+                  <h3 className="text-xs font-bold text-brand-espresso uppercase tracking-wider">
                     {stat.label}
                   </h3>
                 </div>
 
                 {/* Divider Line */}
-                <div className="w-10 h-0.5 bg-[#E2DDD3] group-hover:w-full group-hover:bg-[#D6A97A] transition-all duration-500" />
+                <div className="w-10 h-0.5 bg-brand-burgundy/10 group-hover:w-full group-hover:bg-brand-burgundy transition-all duration-500" />
 
                 {/* Description */}
-                <p className="text-xs text-[#6A706C] font-light leading-relaxed">
+                <p className="text-xs text-brand-espresso-light font-medium leading-relaxed">
                   {stat.detail}
                 </p>
               </div>
@@ -154,14 +154,14 @@ export default function Statistics() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 p-4 md:p-5 rounded-2xl bg-[#F2EDE4] border border-[#E2DDD3] flex flex-col sm:flex-row items-center justify-center gap-3 text-center sm:text-left text-xs text-[#555C58]"
+          className="mt-12 p-4 md:p-5 rounded-2xl bg-brand-cream/60 border border-brand-burgundy/10 flex flex-col sm:flex-row items-center justify-center gap-3 text-center sm:text-left text-xs text-brand-espresso-light"
         >
-          <div className="flex items-center gap-2 font-medium text-[#2C302E]">
-            <Shield className="w-4 h-4 text-[#536244]" />
+          <div className="flex items-center gap-2 font-medium text-brand-espresso">
+            <Shield className="w-4 h-4 text-brand-burgundy" />
             <span>Guaranteed Professional Standards:</span>
           </div>
-          <span className="hidden sm:inline text-[#D0C9BD]">•</span>
-          <p className="font-light">
+          <span className="hidden sm:inline text-brand-burgundy/30">•</span>
+          <p className="font-medium">
             All diagnostic reports and energy sessions follow standardized clinical discretion protocols.
           </p>
         </motion.div>

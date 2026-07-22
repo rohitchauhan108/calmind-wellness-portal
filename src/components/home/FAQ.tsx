@@ -58,10 +58,10 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-0 md:py-0 bg-[#FAF7F2] text-[#2C302E] relative overflow-hidden font-sans">
+    <section id="faq" className="py-0 md:py-0 bg-brand-warm-white text-brand-espresso relative overflow-hidden font-sans">
       
       {/* Background Ambient Glow */}
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-[#536244]/5 blur-[140px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-brand-burgundy/5 blur-[140px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
@@ -71,35 +71,35 @@ export default function FAQ() {
           <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-28">
             
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#536244]/10 border border-[#536244]/20 text-[#536244] text-xs font-semibold tracking-wider uppercase">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-burgundy/8 border border-brand-burgundy/15 text-brand-burgundy-dark text-xs font-semibold tracking-wider uppercase">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Seeking Clarity</span>
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-serif font-medium text-[#2C302E] tracking-tight leading-[1.15]">
+              <h2 className="text-3xl md:text-5xl font-serif font-semibold text-brand-espresso tracking-tight leading-[1.15]">
                 Frequently Asked Inquiries
               </h2>
 
-              <p className="text-sm md:text-base text-[#6A706C] font-light leading-relaxed">
+              <p className="text-sm md:text-base text-brand-espresso-light font-medium leading-relaxed">
                 Everything you need to know about our modalities, privacy guidelines, and consultation protocols.
               </p>
             </div>
 
             {/* Interactive Search Field */}
             <div className="relative">
-              <Search className="w-4 h-4 text-[#8C928E] absolute left-4 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-brand-espresso-light/60 absolute left-4 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Search questions (e.g. Graphotherapy, Zoom...)"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full text-xs md:text-sm pl-11 pr-4 py-3.5 rounded-2xl bg-white border border-[#E2DDD3] text-[#2C302E] placeholder-[#8C928E] focus:outline-none focus:border-[#536244] shadow-sm transition-all"
+                className="w-full text-xs md:text-sm pl-11 pr-4 py-3.5 rounded-2xl bg-white border border-brand-burgundy/10 text-brand-espresso placeholder:text-brand-espresso-light/60 focus:outline-none focus:border-brand-burgundy shadow-sm transition-all"
               />
             </div>
 
             {/* Category Filter Pills */}
             <div className="space-y-2">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#8C928E] block">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-brand-espresso-light block">
                 Filter by Topic:
               </span>
               <div className="flex flex-wrap gap-2">
@@ -110,10 +110,10 @@ export default function FAQ() {
                       setActiveCategory(cat);
                       setOpenIndex(null);
                     }}
-                    className={`px-3.5 py-2 rounded-xl text-xs font-medium transition-all duration-200 ${
+                    className={`px-3.5 py-2 rounded-xl text-xs font-medium transition-all duration-200 cursor-pointer ${
                       activeCategory === cat
-                        ? 'bg-[#536244] text-white shadow-md'
-                        : 'bg-[#EFE9DF] text-[#555C58] hover:bg-[#E5DFD4]'
+                        ? 'bg-brand-burgundy text-brand-cream shadow-md'
+                        : 'bg-brand-cream/80 text-brand-espresso-light hover:bg-brand-cream'
                     }`}
                   >
                     {cat}
@@ -123,13 +123,13 @@ export default function FAQ() {
             </div>
 
             {/* Direct Support Callout */}
-            <div className="p-6 rounded-2xl bg-[#F2EDE4] border border-[#E2DDD3] flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-[#536244] text-[#FAF7F2] flex items-center justify-center shrink-0">
+            <div className="p-6 rounded-2xl bg-brand-cream/60 border border-brand-burgundy/10 flex items-center gap-4">
+              <div className="w-10 h-10 rounded-full bg-brand-burgundy text-brand-cream flex items-center justify-center shrink-0">
                 <MessageCircle className="w-5 h-5" />
               </div>
               <div className="space-y-0.5">
-                <h4 className="text-xs font-bold text-[#2C302E]">Have a specific query?</h4>
-                <p className="text-xs text-[#6A706C] font-light">
+                <h4 className="text-xs font-bold text-brand-espresso">Have a specific query?</h4>
+                <p className="text-xs text-brand-espresso-light font-medium">
                   Ask us directly on your free 1:1 discovery call.
                 </p>
               </div>
@@ -140,10 +140,10 @@ export default function FAQ() {
           {/* Right Column: Interactive Accordion List (7 Columns) */}
           <div className="lg:col-span-7 space-y-4">
             {filteredFaqs.length === 0 ? (
-              <div className="p-12 text-center bg-white rounded-3xl border border-[#E2DDD3]">
-                <HelpCircle className="w-8 h-8 text-[#8C928E] mx-auto mb-3" />
-                <h3 className="text-base font-medium text-[#2C302E]">No matching questions found</h3>
-                <p className="text-xs text-[#6A706C] mt-1">Try adjusting your search terms or topic filters.</p>
+              <div className="p-12 text-center bg-white rounded-3xl border border-brand-burgundy/10">
+                <HelpCircle className="w-8 h-8 text-brand-espresso-light/50 mx-auto mb-3" />
+                <h3 className="text-base font-medium text-brand-espresso">No matching questions found</h3>
+                <p className="text-xs text-brand-espresso-light mt-1">Try adjusting your search terms or topic filters.</p>
               </div>
             ) : (
               filteredFaqs.map((faq, idx) => {
@@ -157,8 +157,8 @@ export default function FAQ() {
                     transition={{ duration: 0.3, delay: idx * 0.05 }}
                     className={`rounded-2xl md:rounded-3xl transition-all duration-300 border overflow-hidden ${
                       isOpen
-                        ? 'bg-white border-[#536244] shadow-md'
-                        : 'bg-[#F2EDE4]/60 border-[#E2DDD3] hover:bg-white hover:border-[#D0C9BD]'
+                        ? 'bg-white border-brand-burgundy shadow-md'
+                        : 'bg-white/70 border-brand-burgundy/10 hover:bg-white hover:border-brand-burgundy/30'
                     }`}
                   >
                     <button
@@ -167,10 +167,10 @@ export default function FAQ() {
                       aria-expanded={isOpen}
                     >
                       <div className="space-y-1">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-[#D6A97A]">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-brand-burgundy">
                           {faq.category}
                         </span>
-                        <h3 className="font-serif text-base md:text-lg font-medium text-[#2C302E] leading-snug">
+                        <h3 className="font-serif text-base md:text-lg font-semibold text-brand-espresso leading-snug">
                           {faq.q}
                         </h3>
                       </div>
@@ -178,8 +178,8 @@ export default function FAQ() {
                       <div
                         className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
                           isOpen
-                            ? 'bg-[#536244] text-white rotate-180'
-                            : 'bg-[#EFE9DF] text-[#2C302E]'
+                            ? 'bg-brand-burgundy text-brand-cream rotate-180'
+                            : 'bg-brand-burgundy/8 text-brand-burgundy'
                         }`}
                       >
                         {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
@@ -195,8 +195,8 @@ export default function FAQ() {
                           transition={{ duration: 0.3, ease: 'easeInOut' }}
                           className="overflow-hidden"
                         >
-                          <div className="px-6 pb-6 md:px-7 md:pb-7 pt-0 border-t border-[#E2DDD3]/50 mt-1">
-                            <p className="text-xs md:text-sm text-[#555C58] font-light leading-relaxed pt-4">
+                          <div className="px-6 pb-6 md:px-7 md:pb-7 pt-0 border-t border-brand-burgundy/5 mt-1">
+                            <p className="text-xs md:text-sm text-brand-espresso-light font-medium leading-relaxed pt-4">
                               {faq.a}
                             </p>
                           </div>

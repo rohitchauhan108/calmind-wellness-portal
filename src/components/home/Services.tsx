@@ -71,21 +71,21 @@ export default function Services() {
   return (
     <section id="services" className="py-16 sm:py-24 lg:py-32 bg-brand-cream relative overflow-hidden">
       {/* Soft background light */}
-      <div className="absolute top-0 right-0 w-[250px] sm:w-[300px] h-[500px] sm:h-[600px] bg-brand-olive-light/5 blur-[100px] sm:blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[250px] sm:w-[300px] h-[500px] sm:h-[600px] bg-brand-sage/5 blur-[100px] sm:blur-[120px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-6 mb-8 sm:mb-16">
           <div className="max-w-2xl space-y-2 sm:space-y-4">
-            <span className="text-brand-olive text-xs sm:text-sm font-semibold tracking-wider uppercase">
-              Our Services
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif text-brand-charcoal tracking-tight leading-tight">
+            <span className="text-brand-burgundy-dark text-xs sm:text-sm font-semibold tracking-wider uppercase">
+                    Our Services
+                  </span>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif text-brand-espresso tracking-tight leading-tight">
               Empowering pathways designed for holistic wellness.
             </h2>
           </div>
-          <p className="text-brand-charcoal-light font-light text-sm sm:text-base max-w-sm leading-relaxed">
+          <p className="text-brand-espresso-light font-medium text-sm sm:text-base max-w-sm leading-relaxed">
             Every session is custom-tailored. We identify your unique subconscious blocks, emotional barriers, and personal goals before formulating your healing plan.
           </p>
         </div>
@@ -95,7 +95,7 @@ export default function Services() {
           
           {/* MOBILE SELECT DROPDOWN (Visible on screen < lg) */}
           <div className="block lg:hidden w-full relative z-20">
-            <label htmlFor="service-select" className="block text-xs font-semibold text-brand-olive uppercase tracking-wider mb-2">
+            <label htmlFor="service-select" className="block text-xs font-semibold text-brand-burgundy-dark uppercase tracking-wider mb-2">
               Select Service Category
             </label>
             <div className="relative">
@@ -103,7 +103,7 @@ export default function Services() {
                 id="service-select"
                 value={activeTab}
                 onChange={(e) => setActiveTab(Number(e.target.value))}
-                className="w-full appearance-none bg-white border border-brand-olive/20 rounded-2xl px-5 py-4 pr-12 text-brand-charcoal font-medium text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-olive"
+                className="w-full appearance-none bg-white border border-brand-burgundy/20 rounded-2xl px-5 py-4 pr-12 text-brand-espresso font-medium text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-burgundy-dark"
               >
                 {servicesData.map((service, index) => (
                   <option key={index} value={index}>
@@ -111,7 +111,7 @@ export default function Services() {
                   </option>
                 ))}
               </select>
-              <ChevronDown className="w-5 h-5 text-brand-olive absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <ChevronDown className="w-5 h-5 text-brand-burgundy-dark absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
           </div>
 
@@ -124,18 +124,18 @@ export default function Services() {
                 onClick={() => setActiveTab(index)}
                 className={`text-left px-6 py-5 rounded-2xl transition-all duration-300 flex items-center gap-4 border text-sm w-full cursor-pointer select-none ${
                   activeTab === index
-                    ? 'bg-brand-olive border-brand-olive text-brand-cream shadow-premium'
-                    : 'bg-white hover:bg-brand-beige/40 border-brand-olive/5 text-brand-charcoal'
+                    ? 'bg-brand-burgundy-dark border-brand-burgundy-dark text-brand-cream shadow-premium'
+                    : 'bg-white hover:bg-brand-beige/40 border-brand-burgundy/5 text-brand-espresso'
                 }`}
               >
                 <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-colors pointer-events-none ${
-                  activeTab === index ? 'bg-brand-cream/15 text-brand-cream' : 'bg-brand-olive/8 text-brand-olive'
+                  activeTab === index ? 'bg-brand-cream/15 text-brand-cream' : 'bg-brand-burgundy/8 text-brand-burgundy'
                 }`}>
                   {service.icon}
                 </div>
                 <div className="overflow-hidden pointer-events-none">
                   <span className={`block text-[11px] uppercase tracking-wider ${
-                    activeTab === index ? 'text-brand-brown-light' : 'text-brand-olive'
+                    activeTab === index ? 'text-brand-gold' : 'text-brand-burgundy'
                   }`}>
                     {service.subtitle}
                   </span>
@@ -148,7 +148,7 @@ export default function Services() {
           </div>
 
           {/* Active Content Viewer */}
-          <div className="lg:col-span-8 bg-white border border-brand-olive/5 rounded-2xl sm:rounded-[32px] p-5 sm:p-8 md:p-10 shadow-sm sm:shadow-premium">
+          <div className="lg:col-span-8 bg-white border border-brand-burgundy/5 rounded-2xl sm:rounded-[32px] p-5 sm:p-8 md:p-10 shadow-sm sm:shadow-premium">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
@@ -161,26 +161,26 @@ export default function Services() {
                 {/* Content description */}
                 <div className="md:col-span-7 space-y-5 sm:space-y-6 order-2 md:order-1">
                   <div>
-                    <span className="text-brand-olive font-semibold text-[10px] sm:text-xs uppercase tracking-widest bg-brand-olive/5 px-2.5 py-1 rounded inline-block">
+                    <span className="text-brand-burgundy font-semibold text-[10px] sm:text-xs uppercase tracking-widest bg-brand-burgundy/5 px-2.5 py-1 rounded inline-block">
                       {servicesData[activeTab].sessionType}
                     </span>
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-serif text-brand-charcoal mt-2 sm:mt-3 leading-tight">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-serif text-brand-espresso mt-2 sm:mt-3 leading-tight">
                       {servicesData[activeTab].title}
                     </h3>
                   </div>
 
-                  <p className="text-brand-charcoal-light font-light text-xs sm:text-[15px] leading-relaxed">
+                  <p className="text-brand-espresso-light font-medium text-xs sm:text-[15px] leading-relaxed">
                     {servicesData[activeTab].description}
                   </p>
 
                   <div className="space-y-2.5 sm:space-y-3">
-                    <h4 className="text-[11px] sm:text-[12px] font-semibold text-brand-charcoal uppercase tracking-wider">
+                    <h4 className="text-[11px] sm:text-[12px] font-semibold text-brand-espresso uppercase tracking-wider">
                       Anticipated Outcomes:
                     </h4>
                     <div className="grid grid-cols-1 gap-2">
                       {servicesData[activeTab].benefits.map((benefit, i) => (
-                        <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm font-light text-brand-charcoal-light">
-                          <span className="w-4 h-4 rounded-full bg-brand-olive/10 text-brand-olive flex items-center justify-center shrink-0 mt-0.5">
+                        <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm font-medium text-brand-espresso-light">
+                          <span className="w-4 h-4 rounded-full bg-brand-burgundy/10 text-brand-burgundy flex items-center justify-center shrink-0 mt-0.5">
                             <Check className="w-2.5 h-2.5" />
                           </span>
                           <span>{benefit}</span>
@@ -190,15 +190,15 @@ export default function Services() {
                   </div>
 
                   {/* Metadata Row */}
-                  <div className="pt-4 border-t border-brand-olive/10 flex items-center gap-4 sm:gap-6 text-xs sm:text-sm text-brand-charcoal-light">
+                  <div className="pt-4 border-t border-brand-burgundy/10 flex items-center gap-4 sm:gap-6 text-xs sm:text-sm text-brand-espresso-light">
                     <div>
-                      <span className="text-[11px] sm:text-xs text-brand-olive font-medium block">Duration</span>
-                      <span className="font-semibold text-brand-charcoal">{servicesData[activeTab].duration}</span>
+                      <span className="text-[11px] sm:text-xs text-brand-burgundy font-medium block">Duration</span>
+                      <span className="font-semibold text-brand-espresso">{servicesData[activeTab].duration}</span>
                     </div>
-                    <div className="w-[1px] h-8 bg-brand-olive/10" />
+                    <div className="w-[1px] h-8 bg-brand-burgundy/10" />
                     <div>
-                      <span className="text-[11px] sm:text-xs text-brand-olive font-medium block">Format</span>
-                      <span className="font-semibold text-brand-charcoal">{servicesData[activeTab].sessionType}</span>
+                      <span className="text-[11px] sm:text-xs text-brand-burgundy font-medium block">Format</span>
+                      <span className="font-semibold text-brand-espresso">{servicesData[activeTab].sessionType}</span>
                     </div>
                   </div>
                 </div>

@@ -33,17 +33,17 @@ export default function HowItWorks() {
   return (
     <section id="process" className="py-24 md:pb-24 bg-brand-cream relative">
       {/* Background soft lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[400px] bg-brand-olive-light/3 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[400px] bg-brand-sage/3 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-24 space-y-4">
-          <span className="text-brand-olive text-sm font-semibold tracking-wider uppercase">Your Journey of Rebirth</span>
-          <h2 className="text-3xl md:text-5xl font-serif text-brand-charcoal tracking-tight leading-tight">
+          <span className="text-brand-burgundy-dark text-sm font-semibold tracking-wider uppercase">Your Journey of Rebirth</span>
+          <h2 className="text-3xl md:text-5xl font-serif text-brand-espresso tracking-tight leading-tight">
             Our Bespoke Protocol, Step-by-Step
           </h2>
-          <p className="text-brand-charcoal-light font-light text-base md:text-lg max-w-xl mx-auto">
+          <p className="text-brand-espresso-light font-medium text-base md:text-lg max-w-xl mx-auto">
             From the initial physiological assessment to lasting integrated change, we provide a structured, secure, and entirely personalized methodology.
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function HowItWorks() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative" id="process-timeline-container">
           
           {/* Subtle connecting line for desktop */}
-          <div className="hidden lg:block absolute top-[68px] left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-brand-olive-light/0 via-brand-olive/20 to-brand-olive-light/0 z-0 pointer-events-none" />
+          <div className="hidden lg:block absolute top-[68px] left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-brand-sage/0 via-brand-burgundy-dark/20 to-brand-sage/0 z-0 pointer-events-none" />
 
           {steps.map((step, idx) => (
             <motion.div
@@ -62,28 +62,28 @@ export default function HowItWorks() {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.8, delay: idx * 0.15 }}
               whileHover={{ y: -6 }}
-              className="bg-white border border-brand-olive/5 rounded-3xl p-8 relative z-10 shadow-premium hover:shadow-premium-hover transition-all duration-300 group"
+              className="bg-white border border-brand-burgundy/5 rounded-3xl p-8 relative z-10 shadow-premium hover:shadow-premium-hover transition-all duration-300 group"
             >
               {/* Step number on back */}
-              <div className="absolute -top-6 -left-2 font-serif text-8xl font-bold text-brand-olive/[0.04] group-hover:text-brand-olive/[0.08] transition-colors duration-500 pointer-events-none">
+              <div className="absolute -top-6 -left-2 font-serif text-8xl font-bold text-brand-burgundy-dark/[0.04] group-hover:text-brand-burgundy-dark/[0.08] transition-colors duration-500 pointer-events-none">
                 {step.num}
               </div>
 
               {/* Icon container - updated text/hover rules for white icon */}
-              <div className="w-12 h-12 rounded-2xl bg-brand-cream border border-brand-olive/10 flex items-center justify-center text-brand-olive group-hover:text-white group-hover:bg-brand-olive mb-8 shadow-sm transition-all duration-500 relative z-10 [&>svg]:transition-colors duration-300">
+              <div className="w-12 h-12 rounded-2xl bg-brand-cream border border-brand-burgundy-dark/10 flex items-center justify-center text-brand-burgundy-dark group-hover:text-white group-hover:bg-brand-burgundy-dark mb-8 shadow-sm transition-all duration-500 relative z-10 [&>svg]:transition-colors duration-300">
                 {step.icon}
               </div>
 
               <div className="space-y-3">
-                <span className="text-[11px] uppercase tracking-wider font-semibold text-brand-olive">
+                <span className="text-[11px] uppercase tracking-wider font-semibold text-brand-burgundy-dark">
                   Phase {step.num}
                 </span>
-                <h3 className="text-lg font-serif text-brand-charcoal font-semibold group-hover:text-brand-olive transition-colors duration-300">
+                <h3 className="text-lg font-serif text-brand-espresso font-semibold group-hover:text-brand-burgundy-dark transition-colors duration-300">
                   {step.title}
                 </h3>
-                <p className="text-xs md:text-sm text-brand-charcoal-light font-light leading-relaxed">
-                  {step.desc}
-                </p>
+                <p className="text-xs md:text-sm text-brand-espresso-light font-medium leading-relaxed">
+                    {step.desc}
+                  </p>
               </div>
 
             </motion.div>
