@@ -1,16 +1,13 @@
 "use client";
 
-import Hero from '../components/home/Hero';
-import CategoryCards from '../components/home/CategoryCards';
-import Services from '../components/home/Services';
-import About from '../components/home/About';
-import Features from '../components/home/Features';
-import Programs from '../components/home/Programs';
-import HowItWorks from '../components/home/HowItWorks';
-import Testimonials from '../components/home/Testimonials';
-import Statistics from '../components/home/Statistics';
-import FAQ from '../components/home/FAQ';
-import CTA from '../components/home/CTA';
+import Hero from "../components/home/Hero";
+import Services from "../components/home/Services";
+import Programs from "../components/home/Programs";
+import Testimonials from "../components/home/Testimonials";
+import Statistics from "../components/home/Statistics";
+import SupportCategories from "../components/home/SupportCategories"
+
+import CTA from "../components/home/CTA";
 
 export default function Home() {
   return (
@@ -22,40 +19,20 @@ export default function Home() {
         {/* 1. Hero */}
         <Hero />
 
-        {/* 2. Category Cards */}
-        <CategoryCards />
+        {/* 2. Testimonials */}
+        <Testimonials />
 
+       <SupportCategories/>
         {/* 3. Services */}
         <Services />
 
-        {/* 4. About */}
-        <About />
 
-        {/* 5. Why Choose Us (Features) */}
-        <Features />
-
-        {/* 6. Programs */}
+        {/* 4. Programs */}
         <Programs />
 
-        {/* 7. Process (How It Works) */}
-        <HowItWorks />
-
-      
-
-        {/* 9. Testimonials */}
-        <Testimonials />
-
-        {/* 10. Statistics */}
-        <Statistics />
-
-        {/* 11. FAQ */}
-        <FAQ />
-
-        {/* 12. CTA */}
+        {/* 5. CTA */}
         <CTA />
-
       </main>
-
     </div>
   );
 }

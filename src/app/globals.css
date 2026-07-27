@@ -5,26 +5,37 @@
   --font-sans: var(--font-poppins), system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-montserrat), sans-serif;
   
-  --color-brand-cream: #F7F3EF;
-  --color-brand-beige: #E8DDD4;
-  --color-brand-warm-white: #FDFBF9;
-  --color-brand-burgundy: #722F37;
-  --color-brand-burgundy-light: #9B444D;
-  --color-brand-burgundy-dark: #4A1C23;
-  --color-brand-gold: #C9A962;
-  --color-brand-gold-light: #DCC58A;
-  --color-brand-espresso: #2A2320;
-  --color-brand-espresso-light: #423935;
-  --color-brand-sage: #8B9A7D;
-  --color-brand-sage-light: #AAB89E;
+  /* Modern, Premium Transformation Palette */
+  --color-brand-ivory: #FAF7F2;          /* Warm Ivory Background */
+  --color-brand-warm-white: #FCFAFA;     /* Card Backgrounds */
+  --color-brand-charcoal: #23272A;       /* Primary Typography */
+  --color-brand-charcoal-muted: #4B5156; /* Secondary Body Text */
   
-  --shadow-premium: 0 20px 40px -12px rgba(114, 47, 55, 0.15);
-  --shadow-premium-hover: 0 28px 60px -16px rgba(114, 47, 55, 0.25);
+  /* Primary Accent: Deep Forest Green */
+  --color-brand-forest: #1E3A2B;
+  --color-brand-forest-light: #2A4F3B;
+  --color-brand-forest-dark: #13261C;
+  
+  /* Secondary Accent: Burnt Copper / Terracotta */
+  --color-brand-copper: #C25E38;
+  --color-brand-copper-light: #D4744E;
+  --color-brand-copper-dark: #A04725;
+  
+  /* Subtle Accent: Muted Teal */
+  --color-brand-teal: #4A7C7D;
+  --color-brand-teal-light: #689B9C;
+
+  /* Card Borders & Dividers */
+  --color-brand-border: #E5DFC0;
+  
+  /* Premium Shadows */
+  --shadow-premium: 0 20px 40px -12px rgba(30, 58, 43, 0.12);
+  --shadow-premium-hover: 0 28px 60px -16px rgba(30, 58, 43, 0.22);
 }
 
 @layer base {
   *, ::before, ::after {
-    border-color: rgba(114, 47, 55, 0.1);
+    border-color: rgba(30, 58, 43, 0.12);
   }
 
   html {
@@ -32,8 +43,8 @@
   }
 
   body {
-    background-color: var(--color-brand-cream);
-    color: var(--color-brand-espresso);
+    background-color: var(--color-brand-ivory);
+    color: var(--color-brand-charcoal);
     font-family: var(--font-sans);
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -78,15 +89,15 @@
 
 /* Glassmorphism utility classes */
 .glass-nav {
-  background: rgba(247, 243, 239, 0.98);
+  background: rgba(250, 247, 242, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(114, 47, 55, 0.1);
+  border-bottom: 1px solid rgba(30, 58, 43, 0.1);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(252, 250, 250, 0.90);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(232, 221, 212, 0.95);
+  border: 1px solid rgba(229, 223, 192, 0.6);
 }

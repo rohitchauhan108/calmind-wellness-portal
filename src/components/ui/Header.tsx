@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronDown,
@@ -14,14 +13,13 @@ import {
   Linkedin,
   Phone,
   ArrowRight,
-  Sparkles,
 } from "lucide-react";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [mobileExpanded, setMobileExpanded] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -48,7 +46,7 @@ export default function Header() {
         { 
           label: "Our Philosophy", 
           href: "#about", 
-          description: "Core values & approach to healing" 
+          description: "Core values & approach to transformation" 
         },
       ],
     },
@@ -62,9 +60,9 @@ export default function Header() {
           description: "Personalized guidance & goal clarity" 
         },
         { 
-          label: "Energy Healing", 
+          label: "Personal Growth", 
           href: "#services", 
-          description: "Balance & restore your emotional flow" 
+          description: "Overcome burnout & build resilience" 
         },
         { 
           label: "Graphotherapy", 
@@ -72,9 +70,9 @@ export default function Header() {
           description: "Handwriting analysis for self-growth" 
         },
         { 
-          label: "Root-Cause Diagnosis", 
+          label: "Pattern Recognition", 
           href: "#services", 
-          description: "Identify subconscious patterns" 
+          description: "Identify subconscious habits" 
         },
       ],
     },
@@ -87,20 +85,20 @@ export default function Header() {
     <header className="w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       {/* 1. Top Announcement / Info Bar */}
       <div
-        className={`bg-brand-espresso text-brand-beige/80 text-xs transition-all duration-300 overflow-hidden ${
+        className={`bg-brand-forest text-brand-ivory/80 text-xs transition-all duration-300 overflow-hidden ${
           isScrolled
             ? "max-h-0 opacity-0 py-0"
-            : "max-h-12 py-2.5 border-b border-white/5"
+            : "max-h-12 py-2.5 border-b border-white/10"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
-              <MapPin className="w-3.5 h-3.5 text-brand-gold" />
+              <MapPin className="w-3.5 h-3.5 text-brand-copper" />
               <span>Gurgaon, Haryana, India (Worldwide Online)</span>
             </div>
             <div className="hidden md:flex items-center gap-2">
-              <Clock className="w-3.5 h-3.5 text-brand-gold" />
+              <Clock className="w-3.5 h-3.5 text-brand-copper" />
               <span>Mon — Sat: 08:00 - 18:00 (IST)</span>
             </div>
           </div>
@@ -108,23 +106,23 @@ export default function Header() {
           <div className="flex items-center gap-5">
             <a
               href="tel:+919876543210"
-              className="hidden sm:flex items-center gap-1.5 hover:text-brand-gold transition-colors"
+              className="hidden sm:flex items-center gap-1.5 hover:text-brand-copper transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-brand-gold" />
+              <Phone className="w-3.5 h-3.5 text-brand-copper" />
               <span>+91 98765 43210</span>
             </a>
-            <div className="h-3 w-[1px] bg-white/15 hidden sm:block" />
-            <div className="flex items-center gap-3 text-brand-beige/70">
+            <div className="h-3 w-[1px] bg-white/20 hidden sm:block" />
+            <div className="flex items-center gap-3 text-brand-ivory/70">
               <a
                 href="#"
-                className="hover:text-brand-cream transition-colors"
+                className="hover:text-brand-ivory transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-3.5 h-3.5" />
               </a>
               <a
                 href="#"
-                className="hover:text-brand-cream transition-colors"
+                className="hover:text-brand-ivory transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-3.5 h-3.5" />
@@ -138,14 +136,14 @@ export default function Header() {
       <nav
         className={`transition-all duration-300 ${
           isScrolled
-            ? " py-3 shadow-md z-999 bg-brand-cream"
-            : "bg-brand-cream py-4 border-b border-brand-burgundy/10"
+            ? "py-3 shadow-md z-50 bg-brand-ivory/95 backdrop-blur-md"
+            : "bg-brand-ivory py-4 border-b border-brand-forest/10"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-          {/* Brand Name (Placeholder for new logo) */}
+          {/* Brand Name */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <span className="font-serif text-xl font-bold md:text-2xl text-brand-burgundy transition-colors duration-300">
+            <span className="font-serif text-xl font-bold md:text-2xl text-brand-forest transition-colors duration-300">
               Ila Garg
             </span>
           </Link>
@@ -161,19 +159,19 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="font-sans text-[15px] font-medium text-brand-espresso hover:text-brand-burgundy flex items-center gap-1.5 py-1 transition-colors duration-200"
+                  className="font-sans text-[15px] font-medium text-brand-charcoal hover:text-brand-forest flex items-center gap-1.5 py-1 transition-colors duration-200"
                 >
                   {item.label}
                   {item.dropdown && (
                     <ChevronDown
-                      className={`w-3.5 h-3.5 text-brand-burgundy/70 transition-transform duration-300 ${
-                        activeDropdown === item.label ? "rotate-180 text-brand-burgundy" : ""
+                      className={`w-3.5 h-3.5 text-brand-forest/70 transition-transform duration-300 ${
+                        activeDropdown === item.label ? "rotate-180 text-brand-forest" : ""
                       }`}
                     />
                   )}
                 </Link>
 
-                {/* Enhanced Submenu Dropdown */}
+                {/* Submenu Dropdown */}
                 <AnimatePresence>
                   {item.dropdown && activeDropdown === item.label && (
                     <motion.div
@@ -183,27 +181,27 @@ export default function Header() {
                       transition={{ duration: 0.2, ease: "easeOut" }}
                       className="absolute top-full left-0 w-72 pt-2 z-50"
                     >
-                      <div className="bg-brand-warm-white/95 backdrop-blur-md shadow-xl rounded-2xl p-2.5 border border-brand-burgundy/15 overflow-hidden relative">
-                        {/* Top Accent Gradient Bar */}
-                        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-burgundy/40 via-brand-burgundy to-brand-burgundy/40" />
+                      <div className="bg-brand-warm-white backdrop-blur-md shadow-xl rounded-2xl p-2.5 border border-brand-forest/15 overflow-hidden relative">
+                        {/* Top Accent Line */}
+                        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-forest/40 via-brand-forest to-brand-forest/40" />
 
                         <div className="space-y-1 pt-1">
                           {item.dropdown.map((subItem) => (
                             <Link
                               key={subItem.label}
                               href={subItem.href}
-                              className="group/item flex items-start gap-3 p-2.5 rounded-xl transition-all duration-200 hover:bg-brand-beige/80 hover:shadow-sm"
+                              className="group/item flex items-start gap-3 p-2.5 rounded-xl transition-all duration-200 hover:bg-brand-ivory hover:shadow-sm"
                             >
-                              <div className="mt-1 flex-shrink-0 w-2 h-2 rounded-full bg-brand-burgundy/40 group-hover/item:bg-brand-burgundy group-hover/item:scale-125 transition-all" />
+                              <div className="mt-1 flex-shrink-0 w-2 h-2 rounded-full bg-brand-forest/40 group-hover/item:bg-brand-copper group-hover/item:scale-125 transition-all" />
                               <div className="flex-1">
                                 <div className="flex items-center justify-between">
-                                  <span className="text-sm font-semibold text-brand-espresso group-hover/item:text-brand-burgundy transition-colors">
+                                  <span className="text-sm font-semibold text-brand-charcoal group-hover/item:text-brand-forest transition-colors">
                                     {subItem.label}
                                   </span>
-                                  <ArrowRight className="w-3.5 h-3.5 text-brand-burgundy opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200" />
+                                  <ArrowRight className="w-3.5 h-3.5 text-brand-copper opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-200" />
                                 </div>
                                 {subItem.description && (
-                                  <p className="text-xs text-brand-espresso/60 mt-0.5 font-sans leading-tight">
+                                  <p className="text-xs text-brand-charcoal-muted mt-0.5 font-sans leading-tight">
                                     {subItem.description}
                                   </p>
                                 )}
@@ -223,7 +221,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center">
             <Link
               href="#contact"
-              className="font-sans text-[14px] font-medium px-6 py-2.5 rounded-full border border-brand-espresso/30 text-brand-espresso hover:bg-brand-burgundy hover:border-brand-burgundy hover:text-brand-cream transition-all duration-300 shadow-sm flex items-center gap-2 group"
+              className="font-sans text-[14px] font-medium px-6 py-2.5 rounded-full border border-brand-forest/30 text-brand-forest hover:bg-brand-forest hover:border-brand-forest hover:text-brand-ivory transition-all duration-300 shadow-sm flex items-center gap-2 group"
             >
               <span>Book a Session</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -233,7 +231,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-brand-espresso hover:text-brand-burgundy transition-colors rounded-lg"
+            className="lg:hidden p-2 text-brand-charcoal hover:text-brand-forest transition-colors rounded-lg"
             aria-label="Toggle Navigation"
           >
             {isMobileMenuOpen ? (
@@ -252,15 +250,15 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-brand-warm-white border-b border-brand-burgundy/10 px-6 py-6 space-y-3 shadow-xl max-h-[80vh] overflow-y-auto"
+            className="lg:hidden bg-brand-warm-white border-b border-brand-forest/10 px-6 py-6 space-y-3 shadow-xl max-h-[80vh] overflow-y-auto"
           >
             {navItems.map((item) => (
-              <div key={item.label} className="border-b border-brand-burgundy/10 pb-2">
+              <div key={item.label} className="border-b border-brand-forest/10 pb-2">
                 <div className="flex items-center justify-between py-1">
                   <Link
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="font-sans text-base font-medium text-brand-espresso"
+                    className="font-sans text-base font-medium text-brand-charcoal"
                   >
                     {item.label}
                   </Link>
@@ -271,7 +269,7 @@ export default function Header() {
                           mobileExpanded === item.label ? null : item.label
                         )
                       }
-                      className="p-1 text-brand-burgundy"
+                      className="p-1 text-brand-forest"
                     >
                       <ChevronDown
                         className={`w-5 h-5 transition-transform duration-200 ${
@@ -284,13 +282,13 @@ export default function Header() {
 
                 {/* Mobile Submenu Accordion */}
                 {item.dropdown && mobileExpanded === item.label && (
-                  <div className="pl-4 mt-2 space-y-2 border-l-2 border-brand-burgundy/20 py-1">
+                  <div className="pl-4 mt-2 space-y-2 border-l-2 border-brand-copper/40 py-1">
                     {item.dropdown.map((subItem) => (
                       <Link
                         key={subItem.label}
                         href={subItem.href}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="block py-1 text-sm font-medium text-brand-espresso/80 hover:text-brand-burgundy"
+                        className="block py-1 text-sm font-medium text-brand-charcoal-muted hover:text-brand-forest"
                       >
                         {subItem.label}
                       </Link>
@@ -304,7 +302,7 @@ export default function Header() {
               <Link
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center justify-center gap-2 font-sans text-sm font-medium w-full py-3 rounded-full bg-brand-burgundy text-brand-cream hover:bg-brand-burgundy-dark transition-colors shadow-sm"
+                className="flex items-center justify-center gap-2 font-sans text-sm font-medium w-full py-3 rounded-full bg-brand-forest text-brand-ivory hover:bg-brand-forest-dark transition-colors shadow-sm"
               >
                 <span>Book a Session</span>
                 <ArrowRight className="w-4 h-4" />

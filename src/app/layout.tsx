@@ -24,13 +24,13 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Ila Garg - Life Coaching, Energy Healing & Graphotherapy',
+  title: 'Ila Garg - Life Coaching & Graphotherapy',
   description: 
-    'Understand your mind. Heal your emotional blocks. Reclaim your life. We blend Life Coaching, Energy Healing, and Graphotherapy to help you address the root causes of your struggles.',
+    'Your life today is the result of thousands of small patterns. Change the patterns, change your future. Practical Life Coaching and Graphotherapy to create real transformation.',
 };
 
 export const viewport: Viewport = {
-  themeColor: '#F7F3EF',
+  themeColor: '#FAF7F2', // Updated to match Warm Ivory background
   width: 'device-width',
   initialScale: 1,
 };
@@ -42,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${montserrat.variable} ${poppins.variable}`}>
-      <body className="min-h-screen flex flex-col bg-brand-cream text-brand-espresso font-sans antialiased selection:bg-brand-burgundy/10 selection:text-brand-burgundy">
+      <body className="min-h-screen flex flex-col bg-brand-ivory text-brand-charcoal font-sans antialiased selection:bg-brand-forest/10 selection:text-brand-forest">
         <LenisSmoothScroll />
         <Header />
         <main className="flex-grow pt-[104px] md:pt-[120px]">

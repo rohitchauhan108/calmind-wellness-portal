@@ -1,6 +1,18 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Play, ArrowRight, ShieldCheck, Star, Sparkles, X, Leaf } from 'lucide-react';
+"use client";
+
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Play,
+  ArrowRight,
+  ShieldCheck,
+  Star,
+  Sparkles,
+  X,
+  Compass,
+  CheckCircle2,
+  TrendingUp,
+} from "lucide-react";
 
 export default function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -11,70 +23,126 @@ export default function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2,
-      }
-    }
+        staggerChildren: 0.12,
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 24, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 1, ease: easeCurve }
-    }
+      transition: { duration: 0.8, ease: easeCurve },
+    },
   };
 
   return (
-    <section 
-      id="home" 
-      className="relative min-h-screen pt-12  pb-20 md:py-24 flex items-center overflow-hidden bg-brand-cream"
+    <section
+      id="home"
+      className="relative min-h-[90vh] py-12 md:py-16 flex items-center overflow-hidden bg-[#FBF9F5] text-[#1C2826]"
     >
-      {/* Background Decorative Blurs & Shapes */}
-      <div className="absolute top-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-brand-sage/10 blur-[120px] pointer-events-none animate-pulse-gentle" />
-      <div className="absolute bottom-[-5%] left-[-5%] w-[40vw] h-[40vw] rounded-full bg-brand-beige/40 blur-[100px] pointer-events-none" />
-      
+      {/* SVG Sacred Patterns, Topography & Noise Texture Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
+        {/* Tactile Paper Noise Texture Filter */}
+        <svg className="absolute inset-0 w-full h-full opacity-20">
+          <filter id="noiseFilterHero">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.8"
+              numOctaves="3"
+              stitchTiles="stitch"
+            />
+          </filter>
+          <rect width="100%" height="100%" filter="url(#noiseFilterHero)" />
+        </svg>
+
+        {/* Sacred Geometry Concentric Rings - Top Right */}
+        <svg
+          className="absolute -top-32 -right-32 w-[700px] h-[700px] text-[#073E42]/15"
+          viewBox="0 0 100 100"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="0.2"
+        >
+          <circle cx="50" cy="50" r="10" />
+          <circle cx="50" cy="50" r="20" />
+          <circle cx="50" cy="50" r="30" />
+          <circle cx="50" cy="50" r="40" />
+          <circle cx="50" cy="50" r="49" />
+          <path d="M50 0 V100 M0 50 H100" strokeDasharray="1 1" />
+        </svg>
+
+        {/* Topographic Flow Lines - Bottom Left */}
+        <svg
+          className="absolute -bottom-40 -left-40 w-[800px] h-[800px] text-[#073E42]/10"
+          viewBox="0 0 400 400"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="0.5"
+        >
+          <path d="M 0,100 Q 100,200 200,100 T 400,100" />
+          <path d="M 0,130 Q 100,230 200,130 T 400,130" />
+          <path d="M 0,160 Q 100,260 200,160 T 400,160" />
+          <path d="M 0,190 Q 100,290 200,190 T 400,190" />
+          <path d="M 0,220 Q 100,320 200,220 T 400,220" />
+          <path d="M 0,250 Q 100,350 200,250 T 400,250" />
+        </svg>
+      </div>
+
+      {/* Deep Emerald Ambient Glow Spheres */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#073E42]/10 rounded-full blur-[150px] pointer-events-none -mr-40 -mt-20" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#073E42]/8 rounded-full blur-[160px] pointer-events-none -ml-20 -mb-20" />
+
+      {/* Subtle Radial Grid Overlay Pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(#073E42_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.04] pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
           {/* Left: Text Content */}
-          <motion.div 
+          <motion.div
             id="hero-content"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-7 space-y-8"
+            className="lg:col-span-7 space-y-7"
           >
-            {/* Eyebrow */}
-            <motion.div 
-              variants={itemVariants}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-burgundy/8 border border-brand-burgundy/15 text-brand-burgundy-dark text-[13px] font-medium tracking-wider uppercase"
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Holistic Personal Growth & Transformation</span>
+            {/* Eyebrow Badge */}
+            <motion.div variants={itemVariants} className="inline-block">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#073E42]/10 border border-[#073E42]/15 shadow-sm backdrop-blur-sm">
+                <Sparkles className="w-4 h-4 text-[#073E42]" />
+                <span className="text-[#073E42] text-xs sm:text-sm font-semibold tracking-wide uppercase">
+                  Holistic Transformation & Graphotherapy
+                </span>
+              </div>
             </motion.div>
 
-            {/* Heading */}
-            <motion.h1 
+            {/* Main Headline */}
+            <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl md:text-6xl font-serif text-brand-espresso leading-[1.1] tracking-tight"
+              className="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#073E42] leading-[1.12] tracking-tight font-bold"
             >
-              Understand your mind.<br />
-              <span className="italic text-brand-burgundy font-medium">"Heal your emotional blocks"</span><br />
+              Understand your mind. <br />
+              <span className="italic font-normal text-[#073E42]/90">
+                Break limiting patterns.
+              </span>{" "}
+              <br />
               Reclaim your life.
             </motion.h1>
 
-            {/* Supporting Paragraph */}
-            <motion.p 
+            {/* Subtitle */}
+            <motion.p
               variants={itemVariants}
-              className="text-base sm:text-lg text-brand-espresso-light font-medium max-w-xl leading-relaxed"
+              className="text-base sm:text-lg text-[#1C2826]/80 font-normal max-w-xl leading-relaxed"
             >
-              Welcome to Ila Garg. We blend Life Coaching, Energy Healing, and Graphotherapy (handwriting analysis) to help you address the root causes of your struggles and drive lasting behavioral change.
+              Integrating Life Coaching, Recovery Frameworks, and Graphotherapy
+              (handwriting analysis) to reprogram subconscious habits and foster
+              sustainable personal growth.
             </motion.p>
 
-            {/* CTAs */}
-            <motion.div 
+            {/* Action Buttons */}
+            <motion.div
               variants={itemVariants}
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2"
             >
@@ -82,160 +150,199 @@ export default function Hero() {
                 href="#programs"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  document
+                    .getElementById("programs")
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
                 }}
-                className="px-8 py-4 rounded-full bg-brand-burgundy text-brand-cream hover:bg-brand-burgundy-dark transition-all duration-300 shadow-premium hover:shadow-premium-hover flex items-center justify-center gap-2 group text-[15px] font-medium cursor-pointer"
+                className="px-8 py-4 rounded-full bg-[#073E42] text-white hover:bg-[#073E42]/90 transition-all duration-300 shadow-lg hover:shadow-[#073E42]/25 flex items-center justify-center gap-3 group text-base font-medium cursor-pointer"
               >
-                Begin Your Journey
+                <span>Begin Your Journey</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
 
               <button
                 onClick={() => setIsVideoOpen(true)}
-                className="px-6 py-4 rounded-full border border-brand-burgundy/20 hover:border-brand-burgundy text-brand-espresso hover:bg-brand-burgundy/5 transition-all duration-300 flex items-center justify-center gap-3 text-[15px] font-medium"
+                className="px-7 py-4 rounded-full border border-[#073E42]/20 hover:border-[#073E42] text-[#073E42] hover:bg-[#073E42]/5 transition-all duration-300 flex items-center justify-center gap-3 text-base font-medium group cursor-pointer"
               >
-                <span className="w-8 h-8 rounded-full bg-brand-burgundy/10 flex items-center justify-center text-brand-burgundy">
-                  <Play className="w-3.5 h-3.5 fill-brand-burgundy ml-0.5" />
+                <span className="w-8 h-8 rounded-full bg-[#073E42]/10 group-hover:bg-[#073E42] group-hover:text-white flex items-center justify-center text-[#073E42] transition-colors duration-300">
+                  <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
                 </span>
-                Watch the Experience
+                <span>Watch Experience</span>
               </button>
             </motion.div>
 
-            {/* Trust Indicators */}
-            <motion.div 
+            {/* Trust Banner */}
+            <motion.div
               variants={itemVariants}
-              className="pt-6 border-t border-brand-burgundy/10 flex flex-wrap items-center gap-6"
+              className="pt-6 border-t border-[#073E42]/10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8"
             >
-              <div className="flex -space-x-3">
-                <img 
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80" 
-                  alt="Client avatar" 
-                  referrerPolicy="no-referrer"
-                  className="w-10 h-10 rounded-full border-2 border-brand-cream object-cover"
-                />
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80" 
-                  alt="Client avatar" 
-                  referrerPolicy="no-referrer"
-                  className="w-10 h-10 rounded-full border-2 border-brand-cream object-cover"
-                />
-                <img 
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80" 
-                  alt="Client avatar" 
-                  referrerPolicy="no-referrer"
-                  className="w-10 h-10 rounded-full border-2 border-brand-cream object-cover"
-                />
+              <div className="flex items-center gap-3">
+                <div className="flex -space-x-3">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&h=120&q=80"
+                    alt="Client avatar"
+                    referrerPolicy="no-referrer"
+                    className="w-10 h-10 rounded-full border-2 border-[#FBF9F5] object-cover shadow-sm"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&h=120&q=80"
+                    alt="Client avatar"
+                    referrerPolicy="no-referrer"
+                    className="w-10 h-10 rounded-full border-2 border-[#FBF9F5] object-cover shadow-sm"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&h=120&q=80"
+                    alt="Client avatar"
+                    referrerPolicy="no-referrer"
+                    className="w-10 h-10 rounded-full border-2 border-[#FBF9F5] object-cover shadow-sm"
+                  />
+                </div>
+                <div>
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-[#E6B055] text-[#E6B055]"
+                      />
+                    ))}
+                    <span className="text-[#073E42] font-bold text-sm ml-1">
+                      4.9/5
+                    </span>
+                  </div>
+                  <p className="text-xs text-[#073E42]/70 font-medium">
+                    500+ Lives Transformed
+                  </p>
+                </div>
               </div>
 
-              <div className="space-y-1">
-                <div className="flex items-center gap-1 text-[#E6B055]">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-current text-[#E6B055]" />
-                  ))}
-                  <span className="text-brand-espresso font-semibold text-sm ml-1">4.9/5</span>
-                </div>
-                <p className="text-xs text-brand-espresso-light">Empowering hundreds of professionals, entrepreneurs, and students</p>
+              <div className="hidden sm:block w-px h-8 bg-[#073E42]/15" />
+
+              <div className="flex items-center gap-2 text-xs font-semibold text-[#073E42]">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                <span>Certified Graphotherapist & Life Coach</span>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Right: Immersive Image with decoration */}
-          <div className="lg:col-span-5 relative" id="hero-graphics">
+          {/* Right Visual Graphic Stack */}
+          <div className="lg:col-span-5 relative">
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.94, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-[450px] mx-auto lg:ml-auto"
+              transition={{ duration: 1, ease: easeCurve }}
+              className="relative w-full max-w-[440px] mx-auto lg:ml-auto"
             >
-              {/* Organic Shape Outline Border */}
-              <div className="absolute inset-0 rounded-[40px] border-2 border-brand-gold/40 translate-x-4 translate-y-4 pointer-events-none" />
+              {/* Back Accent Glow Card */}
+              <div className="absolute inset-0 translate-x-3 translate-y-3 bg-gradient-to-br from-[#073E42]/20 to-[#073E42]/10 rounded-[32px] blur-sm pointer-events-none" />
 
-              {/* Floating Element 1 (Mindful Stat Card) */}
+              {/* Floating Highlight Card 1 */}
               <motion.div
-                className="absolute -left-10 top-1/4 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-premium border border-brand-burgundy/5 z-20 hidden md:block max-w-[180px]"
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -left-8 top-12 bg-white/90 backdrop-blur-xl p-3.5 rounded-2xl shadow-xl border border-[#073E42]/10 z-30 hidden sm:flex items-center gap-3 max-w-[210px]"
+                animate={{ y: [0, -6, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
-                <div className="flex items-center gap-2.5 mb-1.5">
-                  <div className="w-7 h-7 rounded-full bg-brand-burgundy-dark/10 flex items-center justify-center text-brand-burgundy-dark">
-                      <ShieldCheck className="w-4 h-4" />
-                    </div>
-                  <span className="text-[12px] font-semibold text-brand-espresso">Root Cause Focus</span>
+                <div className="w-10 h-10 rounded-xl bg-[#073E42]/10 flex items-center justify-center text-[#073E42] shrink-0">
+                  <ShieldCheck className="w-5 h-5" />
                 </div>
-                <p className="text-[11px] text-brand-espresso-light leading-snug">Identifying subconscious patterns shaping your life.</p>
+                <div>
+                  <h4 className="text-xs font-bold text-[#073E42]">
+                    Subconscious Shift
+                  </h4>
+                  <p className="text-[11px] text-[#073E42]/70 leading-tight">
+                    Identify root behavior patterns
+                  </p>
+                </div>
               </motion.div>
 
-              {/* Floating Element 2 (Daily Ritual Tip) */}
+              {/* Floating Highlight Card 2 */}
               <motion.div
-                className="absolute -right-8 bottom-12 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-premium border border-brand-burgundy/5 z-20 hidden md:block max-w-[190px]"
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute -right-6 bottom-10 bg-white/90 backdrop-blur-xl p-3.5 rounded-2xl shadow-xl border border-[#073E42]/10 z-30 hidden sm:flex items-center gap-3 max-w-[210px]"
+                animate={{ y: [0, 6, 0] }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.5,
+                }}
               >
-                <div className="flex items-center gap-2.5 mb-1">
-                  <span className="text-[20px]">✍️</span>
-                  <span className="text-[12px] font-semibold text-brand-espresso">Graphotherapy</span>
+                <div className="w-10 h-10 rounded-xl bg-[#073E42]/10 flex items-center justify-center text-[#073E42] shrink-0">
+                  <TrendingUp className="w-5 h-5" />
                 </div>
-                <p className="text-[11px] text-brand-espresso-light leading-snug">Transform habits and beliefs through handwriting redesign.</p>
+                <div>
+                  <h4 className="text-xs font-bold text-[#073E42]">
+                    Graphotherapy
+                  </h4>
+                  <p className="text-[11px] text-[#073E42]/70 leading-tight">
+                    Rewire habits via handwriting
+                  </p>
+                </div>
               </motion.div>
 
-              {/* Main Luxury Image container */}
-              <div className="relative rounded-[36px] overflow-hidden aspect-[4/5] shadow-premium bg-brand-beige">
-                <img 
-                  src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" 
-                  alt="A premium wellness meditation practitioner" 
+              {/* Main Image Frame */}
+              <div className="relative rounded-[28px] overflow-hidden aspect-[4/5] shadow-2xl bg-white border-4 border-white/90">
+                <img
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1000&q=80"
+                  alt="Ila Garg - Transformation Expert"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover object-center transition-transform duration-1000 hover:scale-105"
+                  className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
                 />
-                
-                {/* Soft Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-espresso/20 via-transparent to-transparent pointer-events-none" />
+
+                {/* Subtle Vignette Accent */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#073E42]/30 via-transparent to-transparent pointer-events-none" />
               </div>
             </motion.div>
           </div>
-
         </div>
       </div>
 
-      {/* Video Modal Experience */}
+      {/* Video Modal */}
       <AnimatePresence>
         {isVideoOpen && (
           <motion.div
-            id="video-modal"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-brand-espresso/90 backdrop-blur-md p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-[#1C2826]/80 backdrop-blur-md p-4"
           >
             <motion.div
-              initial={{ scale: 0.95, y: 20 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.95, y: 20 }}
-              transition={{ duration: 0.4 }}
-              className="relative w-full max-w-4xl bg-brand-cream rounded-3xl overflow-hidden shadow-2xl p-1"
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className="relative w-full max-w-4xl bg-[#073E42] rounded-3xl overflow-hidden shadow-2xl border border-white/10"
             >
               <button
                 onClick={() => setIsVideoOpen(false)}
-                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-brand-espresso/20 hover:bg-brand-espresso/40 text-brand-cream flex items-center justify-center transition-colors z-10"
+                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors z-20 cursor-pointer"
+                aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="aspect-video w-full bg-brand-espresso relative">
-                {/* Interactive premium placeholder content simulating high-end video */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 bg-cover bg-center" style={{ backgroundImage: `linear-gradient(rgba(44, 48, 46, 0.75), rgba(44, 48, 46, 0.85)), url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80')` }}>
-                  <Leaf className="w-16 h-16 text-brand-gold animate-bounce-slow mb-4" />
-                  <h3 className="text-3xl font-serif text-brand-cream mb-2">The Journey of Transformation</h3>
-                  <p className="text-sm text-brand-beige max-w-md mb-6 leading-relaxed">
-                    Watch how combining Life Coaching, Energy Healing, and Graphotherapy creates deep, permanent personal growth.
+              <div className="aspect-video w-full relative flex items-center justify-center">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `linear-gradient(rgba(7, 62, 66, 0.88), rgba(7, 62, 66, 0.88)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80')`,
+                  }}
+                />
+                <div className="relative z-10 text-center p-6 max-w-lg">
+                  <Compass className="w-14 h-14 text-amber-300 mx-auto mb-4 animate-pulse" />
+                  <h3 className="text-2xl sm:text-3xl font-serif text-white mb-3">
+                    Experience The Method
+                  </h3>
+                  <p className="text-sm text-white/80 leading-relaxed mb-6">
+                    A short preview into how Graphotherapy and tailored coaching
+                    unlock permanent mindset transformation.
                   </p>
-                  <button 
-                    onClick={() => {
-                      alert("Experience Demo Video: A cinematic introduction would load here. Connect via WhatsApp or email on the bottom form to begin.");
-                      setIsVideoOpen(false);
-                    }}
-                    className="px-6 py-3 rounded-full bg-brand-cream text-brand-espresso font-medium hover:bg-brand-beige transition-colors flex items-center gap-2"
+                  <button
+                    onClick={() => setIsVideoOpen(false)}
+                    className="px-6 py-3 rounded-full bg-white text-[#073E42] font-semibold hover:bg-[#FBF9F5] transition-all shadow-lg cursor-pointer"
                   >
-                    Play Cinematic Demo
+                    Close Preview
                   </button>
                 </div>
               </div>
