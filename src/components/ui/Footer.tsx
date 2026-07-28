@@ -132,18 +132,26 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-[#E6B055] shrink-0 mt-1" />
                 <span className="leading-relaxed">
                   Worldwide Online Consultations<br />
-                  <strong className="font-normal text-white">Gurgaon, Haryana, India</strong>
+                  <strong className="font-normal text-white">2, Woodcock Court, Reading, RG7 1BZ, GB</strong>
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#E6B055] shrink-0" />
-                <span>+91 98765 43210</span>
+                <a href="tel:+16475704793" className="hover:text-white transition-colors">
+                  +(647) 570-4793
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-[#E6B055] shrink-0" />
+                <a href="mailto:contact@ilagarg.com" className="hover:text-white transition-colors">
+                  contact@ilagarg.com
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-[#E6B055] shrink-0 mt-1" />
                 <span className="leading-relaxed">
                   By Appointment Only<br />
-                  Mon — Sat: 09:00 - 18:00 (IST)
+                  Mon — Sat: 08:00 - 18:00
                 </span>
               </li>
             </ul>
@@ -154,19 +162,30 @@ export default function Footer() {
         {/* 3. Bottom Legal & Scroll Top Row */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-[#FBF9F5]/60 font-medium">
           <div className="space-y-2 text-center md:text-left">
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-xs text-[#FBF9F5]/80 mb-2">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-4 text-xs text-[#FBF9F5]/80 mb-2">
               <p>© {currentYear} Ila Garg. All rights reserved.</p>
               <span className="text-white/20 hidden sm:inline">•</span>
               
-              {/* Razorpay Required Policy Links */}
               <Link href="/terms" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
-                Terms & Conditions
+                Terms &amp; Conditions
               </Link>
               <span className="text-white/20">•</span>
+              
+              <Link href="/privacy-policy" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
+                Privacy Policy
+              </Link>
+              <span className="text-white/20">•</span>
+              
               <Link href="/refund-policy" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
-                Refund & Cancellation Policy
+                Refund &amp; Cancellation Policy
               </Link>
               <span className="text-white/20">•</span>
+
+              <Link href="/medical-disclaimer" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
+                Disclaimer
+              </Link>
+              <span className="text-white/20">•</span>
+
               <Link href="/contact" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
                 Contact Us
               </Link>

@@ -13,6 +13,7 @@ import {
   Linkedin,
   Phone,
   ArrowRight,
+  Mail,
 } from "lucide-react";
 
 export default function Header() {
@@ -78,7 +79,7 @@ export default function Header() {
     },
     { label: "Areas We Help", href: "#areas" },
     { label: "Programs", href: "#programs" },
-    { label: "Contact", href: "#contact" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -94,22 +95,30 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
-              <MapPin className="w-3.5 h-3.5 text-brand-copper" />
-              <span>Gurgaon, Haryana, India (Worldwide Online)</span>
+              <MapPin className="w-3.5 h-3.5 text-brand-copper shrink-0" />
+              <span>2, Woodcock Court, Reading, RG7 1BZ, GB</span>
             </div>
-            <div className="hidden md:flex items-center gap-2">
-              <Clock className="w-3.5 h-3.5 text-brand-copper" />
-              <span>Mon — Sat: 08:00 - 18:00 (IST)</span>
+            <div className="hidden lg:flex items-center gap-2">
+              <Clock className="w-3.5 h-3.5 text-brand-copper shrink-0" />
+              <span>Mon — Sat: 08:00 - 18:00</span>
             </div>
           </div>
 
           <div className="flex items-center gap-5">
             <a
-              href="tel:+919876543210"
+              href="mailto:contact@ilagarg.com"
+              className="hidden md:flex items-center gap-1.5 hover:text-brand-copper transition-colors"
+            >
+              <Mail className="w-3.5 h-3.5 text-brand-copper" />
+              <span>contact@ilagarg.com</span>
+            </a>
+            <div className="h-3 w-[1px] bg-white/20 hidden md:block" />
+            <a
+              href="tel:+16475704793"
               className="hidden sm:flex items-center gap-1.5 hover:text-brand-copper transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-brand-copper" />
-              <span>+91 98765 43210</span>
+              <span>+(647) 570-4793</span>
             </a>
             <div className="h-3 w-[1px] bg-white/20 hidden sm:block" />
             <div className="flex items-center gap-3 text-brand-ivory/70">

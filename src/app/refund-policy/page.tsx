@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'Refund & Cancellation Policy | Ila Garg',
+  title: 'Refund Policy | Ila Garg',
   description: 'Refund, cancellation, and session rescheduling policy for Ila Garg services.',
 };
 
@@ -10,46 +10,101 @@ export default function RefundPolicyPage() {
     <main className="py-20 bg-[#FBF9F5] text-[#1C2826] min-h-screen">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
         <h1 className="text-4xl sm:text-5xl font-serif font-bold text-[#073E42] mb-4">
-          Refund & Cancellation Policy
+          Refund Policy
         </h1>
         <p className="text-sm text-[#1C2826]/60 mb-8">
-          Last updated: July 2026
+          Last Updated: July 2026
         </p>
 
         <div className="space-y-6 text-sm sm:text-base leading-relaxed text-[#1C2826]/85 font-sans">
-          <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">1. Session Rescheduling</h2>
-            <p>
-              If you need to reschedule a scheduled coaching session, please inform us at least 24 hours prior to the scheduled time. Requests made within 24 hours of the appointment time may result in forfeiture of the session fee.
-            </p>
-          </div>
+          <p>
+            Thank you for choosing Ila Garg.
+          </p>
+          <p>
+            We are committed to providing high-quality coaching, healing, workshops, and personal transformation programs. Please read this Refund Policy carefully before making a purchase.
+          </p>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">2. Cancellations & Refunds</h2>
-            <p>
-              We understand plans can change. Below are our refund terms for various services:
+            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">No Refund Policy</h2>
+            <p className="mb-2">
+              All purchases made through this website are final and non-refundable.
             </p>
-            <ul className="list-disc pl-5 mt-2 space-y-1">
-              <li>
-                <strong>1-on-1 Sessions:</strong> Full refund if canceled at least 48 hours prior to the scheduled session. No refunds for cancellations made under 24 hours or for no-shows.
-              </li>
-              <li>
-                <strong>Multi-Week Programs & Digital Products:</strong> Once accessed or initiated, program fees are non-refundable unless stated otherwise in writing.
-              </li>
+            <p className="mb-2">
+              By purchasing any of our services, you acknowledge and agree that you are making an informed decision and accept this Refund Policy.
+            </p>
+            <p className="mb-2">
+              This policy applies to all products and services, including but not limited to:
+            </p>
+            <ul className="list-disc list-inside space-y-1 ml-2">
+              <li>One-to-One Coaching Sessions</li>
+              <li>Healing Sessions</li>
+              <li>Chakra Balancing Programs</li>
+              <li>Handwriting Analysis &amp; Graphotherapy</li>
+              <li>Workshops</li>
+              <li>Group Coaching Programs</li>
+              <li>Online Courses</li>
+              <li>Digital Products</li>
+              <li>Events</li>
+              <li>Memberships (if applicable)</li>
             </ul>
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">3. Refund Processing Time</h2>
+            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Missed Sessions</h2>
             <p>
-              Approved refunds will be processed automatically to your original method of payment via Razorpay. It typically takes <strong>5 to 7 business days</strong> for the refunded amount to reflect in your bank account or credit card statement.
+              If you fail to attend a scheduled session or event, or arrive late, the session will be considered forfeited. No refund, credit, or replacement session will be provided.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">4. Contact For Refunds</h2>
+            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Change of Mind</h2>
+            <p className="mb-2">
+              Refunds will not be issued due to:
+            </p>
+            <ul className="list-disc list-inside space-y-1 ml-2">
+              <li>Change of mind</li>
+              <li>Personal scheduling conflicts</li>
+              <li>Failure to attend</li>
+              <li>Lack of participation</li>
+              <li>Dissatisfaction based on expected outcomes</li>
+              <li>Any reason other than our inability to deliver the purchased service</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Results Disclaimer</h2>
             <p>
-              To initiate a refund or cancellation request, please email us directly at <strong>contact@ilagarg.com</strong> with your order details and reason for cancellation.
+              Our services are designed to support personal growth and transformation. Results vary from person to person based on many factors, including individual commitment, participation, and circumstances. Therefore, no guarantees of specific results are made, and refunds will not be issued based on outcomes.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Service Cancellation by Us</h2>
+            <p>
+              If we are unable to deliver a service due to circumstances within our control, we reserve the right to reschedule the service or, at our sole discretion, provide an appropriate alternative.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Acceptance of this Policy</h2>
+            <p>
+              By purchasing any product or service from Ila Garg, you confirm that you have read, understood, and agreed to this Refund Policy.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Contact</h2>
+            <p className="mb-1">
+              If you have any questions regarding this policy, please contact us at:
+            </p>
+            <p>
+              Email:{' '}
+              <a
+                href="mailto:contact@ilagarg.com"
+                className="text-[#073E42] underline font-medium hover:opacity-80"
+              >
+                contact@ilagarg.com
+              </a>
             </p>
           </div>
         </div>

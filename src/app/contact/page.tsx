@@ -35,7 +35,9 @@ export default function ContactPage() {
                 Email
               </h3>
               <p className="text-base text-[#1C2826]">
-                contact@ilagarg.com
+                <a href="mailto:contact@ilagarg.com" className="hover:underline">
+                  contact@ilagarg.com
+                </a>
               </p>
             </div>
 
@@ -44,7 +46,9 @@ export default function ContactPage() {
                 Phone Number
               </h3>
               <p className="text-base text-[#1C2826]">
-                +91 98765 43210
+                <a href="tel:+16475704793" className="hover:underline">
+                  +(647) 570-4793
+                </a>
               </p>
             </div>
 
@@ -53,9 +57,9 @@ export default function ContactPage() {
                 Operational Address
               </h3>
               <p className="text-base text-[#1C2826] leading-relaxed">
-                123 Healing Ways, Green Park<br />
-                New Delhi, Delhi 110016<br />
-                India
+                2, Woodcock Court<br />
+                Reading, RG7 1BZ<br />
+                United Kingdom
               </p>
             </div>
           </div>
