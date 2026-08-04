@@ -37,43 +37,31 @@ export default function Header() {
     { label: "Home", href: "/" },
     {
       label: "About",
-      href: "#about",
-      dropdown: [
-        { 
-          label: "Meet Ila Garg", 
-          href: "#about", 
-          description: "Discover her journey & expertise" 
-        },
-        { 
-          label: "Our Philosophy", 
-          href: "#about", 
-          description: "Core values & approach to transformation" 
-        },
-      ],
+      href: "/about",
     },
     {
       label: "Services",
-      href: "#services",
+      href: "/services",
       dropdown: [
-        { 
-          label: "Life Coaching", 
-          href: "#services", 
-          description: "Personalized guidance & goal clarity" 
+        {
+          label: "Life Coaching",
+          href: "/services",
+          description: "Personalized guidance & goal clarity",
         },
-        { 
-          label: "Personal Growth", 
-          href: "#services", 
-          description: "Overcome burnout & build resilience" 
+        {
+          label: "Energy Healing",
+          href: "/services",
+          description: "Emotional release & emotional balance",
         },
-        { 
-          label: "Graphotherapy", 
-          href: "#services", 
-          description: "Handwriting analysis for self-growth" 
+        {
+          label: "Graphotherapy",
+          href: "/services",
+          description: "Handwriting analysis for self-growth",
         },
-        { 
-          label: "Pattern Recognition", 
-          href: "#services", 
-          description: "Identify subconscious habits" 
+        {
+          label: "Integrated Consultation",
+          href: "/services",
+          description: "Root-cause diagnostic & personalized roadmap",
         },
       ],
     },
