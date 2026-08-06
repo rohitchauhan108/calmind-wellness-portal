@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-
+import Link from "next/link";
 export default function ServicesPage() {
   const coreServices = [
     {
@@ -90,9 +90,10 @@ export default function ServicesPage() {
             </p>
 
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <Link href="/contact">
               <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-copper text-white font-semibold shadow-xl shadow-brand-copper/25 hover:bg-brand-copper/90 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0">
                 Start Your Journey Today
-              </button>
+              </button></Link>
             </div>
           </div>
 
@@ -251,9 +252,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="relative z-10 pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-copper text-white font-semibold shadow-xl shadow-brand-copper/25 hover:bg-brand-copper/90 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0">
-                Book Your Consultation
-              </button>
+              <Link href="/contact"></Link>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ import {
   FiArrowRight, 
   FiCheck 
 } from 'react-icons/fi'
-
+import Link from "next/link";
 export default function HowWeHelpPage() {
   const steps = [
     {
@@ -116,9 +116,11 @@ export default function HowWeHelpPage() {
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-4">
+              <Link href="/contact">
               <button className="px-8 py-4 rounded-2xl bg-brand-forest text-brand-ivory font-semibold shadow-xl shadow-brand-forest/10 hover:bg-brand-copper hover:shadow-brand-copper/25 transition-all duration-300">
                 Start Your Journey
               </button>
+              </Link>
               <div className="flex items-center gap-3 px-4 py-2">
                 <div className="flex -space-x-2">
                   <div className="w-9 h-9 rounded-full bg-brand-copper/30 border-2 border-brand-ivory flex items-center justify-center text-xs font-bold text-brand-forest">✦</div>
@@ -314,9 +316,11 @@ export default function HowWeHelpPage() {
             </div>
 
             <div className="relative z-10 pt-4 flex items-center justify-center">
+              <Link href="/contact">
               <button className="px-10 py-5 rounded-2xl bg-brand-copper text-white font-bold shadow-xl shadow-brand-copper/25 hover:bg-brand-copper/90 transition-all duration-300 transform hover:-translate-y-1">
                 Book Your Consultation
               </button>
+              </Link>
             </div>
 
           </div>

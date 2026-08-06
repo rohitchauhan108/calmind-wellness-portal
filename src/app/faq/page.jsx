@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
-
+import Link from "next/link";
 export default function FAQPage() {
   const [openFaq, setOpenFaq] = useState(null);
 
@@ -131,12 +131,12 @@ export default function FAQPage() {
             </div>
 
             <div className="relative z-10 pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
+              <Link 
                 href="/contact"
                 className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#C2783F] text-white font-semibold shadow-lg shadow-[#C2783F]/25 hover:bg-[#C2783F]/90 transition-all duration-300 text-sm text-center"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>
