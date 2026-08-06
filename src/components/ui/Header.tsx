@@ -65,8 +65,9 @@ export default function Header() {
       //   },
       // ],
     },
-    { label: "Areas We Help", href: "#areas" },
-    { label: "Programs", href: "#programs" },
+    { label: "How We Help", href: "/how-we-help" },
+    { label: "Faq", href: "/faq" },
+    // { label: "Programs", href: "#programs" },
     { label: "Contact", href: "/contact" },
   ];
 
