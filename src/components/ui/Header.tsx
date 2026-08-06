@@ -42,28 +42,28 @@ export default function Header() {
     {
       label: "Services",
       href: "/services",
-      dropdown: [
-        {
-          label: "Life Coaching",
-          href: "/services",
-          description: "Personalized guidance & goal clarity",
-        },
-        {
-          label: "Energy Healing",
-          href: "/services",
-          description: "Emotional release & emotional balance",
-        },
-        {
-          label: "Graphotherapy",
-          href: "/services",
-          description: "Handwriting analysis for self-growth",
-        },
-        {
-          label: "Integrated Consultation",
-          href: "/services",
-          description: "Root-cause diagnostic & personalized roadmap",
-        },
-      ],
+      // dropdown: [
+      //   {
+      //     label: "Life Coaching",
+      //     href: "/services",
+      //     description: "Personalized guidance & goal clarity",
+      //   },
+      //   {
+      //     label: "Energy Healing",
+      //     href: "/services",
+      //     description: "Emotional release & emotional balance",
+      //   },
+      //   {
+      //     label: "Graphotherapy",
+      //     href: "/services",
+      //     description: "Handwriting analysis for self-growth",
+      //   },
+      //   {
+      //     label: "Integrated Consultation",
+      //     href: "/services",
+      //     description: "Root-cause diagnostic & personalized roadmap",
+      //   },
+      // ],
     },
     { label: "Areas We Help", href: "#areas" },
     { label: "Programs", href: "#programs" },
