@@ -101,3 +101,6 @@
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(229, 223, 192, 0.6);
 }
+button{
+  cursor: pointer;
+}
