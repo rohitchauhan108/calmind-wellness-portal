@@ -218,7 +218,7 @@ export default function Header() {
           {/* Right Action Button */}
           <div className="hidden lg:flex items-center">
             <Link
-              href="#contact"
+              href="/contact"
               className="font-sans text-[14px] font-medium px-6 py-2.5 rounded-full border border-brand-forest/30 text-brand-forest hover:bg-brand-forest hover:border-brand-forest hover:text-brand-ivory transition-all duration-300 shadow-sm flex items-center gap-2 group"
             >
               <span>Book a Session</span>
