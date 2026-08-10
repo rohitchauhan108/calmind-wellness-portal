@@ -14,7 +14,6 @@ import {
   FiCheckCircle,
   FiStar
 } from "react-icons/fi";
-import CTA from "../../components/home/CTA";
 
 interface ServiceItem {
   icon: React.JSX.Element;
@@ -85,29 +84,6 @@ export default function ServicesPage(): React.JSX.Element {
       icon: <FiTarget className="w-6 h-6 text-[#0d3c38]" />,
       title: "Purpose",
       description: "Deep soul alignment, personal fulfillment, and stepping into your next chapter.",
-    },
-  ];
-
-  const processSteps: ProcessStep[] = [
-    {
-      step: "1",
-      title: "Discover",
-      description: "We begin by understanding your unique challenges, goals, and current situation through a personalized consultation.",
-    },
-    {
-      step: "2",
-      title: "Create Your Plan",
-      description: "Based on your needs, we design a customized action plan with practical strategies and achievable milestones.",
-    },
-    {
-      step: "3",
-      title: "Take Action",
-      description: "Through coaching sessions, guidance, and continuous support, you'll implement positive habits and overcome limiting beliefs.",
-    },
-    {
-      step: "4",
-      title: "Achieve Lasting Growth",
-      description: "As you build confidence and consistency, you'll experience sustainable transformation across the areas of life that matter most.",
     },
   ];
 
@@ -301,52 +277,6 @@ export default function ServicesPage(): React.JSX.Element {
           </div>
         </div>
       </section>
-
-      {/* ================= SECTION 3 – OUR PROCESS ================= */}
-      <section className="relative py-24 lg:py-36 px-6 lg:px-12 bg-[#faf8f5] border-t border-[#0d3c38]/5">
-        <div className="max-w-7xl mx-auto space-y-16">
-          <div className="max-w-3xl space-y-4">
-            <div className="inline-block">
-              <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#0d3c38]/60">
-                Our Process
-              </h2>
-              <div className="h-1 w-12 bg-[#0d3c38] mt-2 rounded-full" />
-            </div>
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0d3c38]">
-              How We Help You Transform
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((item: ProcessStep, index: number) => (
-              <div 
-                key={index}
-                className="group relative p-8 sm:p-10 rounded-3xl bg-white border border-[#0d3c38]/10 shadow-xl shadow-[#0d3c38]/5 hover:border-[#0d3c38]/30 transition-all duration-300 flex flex-col overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#0d3c38]/5 rounded-bl-full pointer-events-none group-hover:bg-[#0d3c38]/10 transition-colors duration-300" />
-
-                <div className="space-y-6 relative z-10 flex-1">
-                  <div className="flex items-end gap-3">
-                    <span className="text-5xl font-black text-[#0d3c38]/20 group-hover:text-[#0d3c38]/40 transition-colors duration-300">
-                      {item.step}.
-                    </span>
-                  </div>
-
-                  <h4 className="text-xl font-bold tracking-tight text-[#0d3c38]">
-                    {item.title}
-                  </h4>
-
-                  <p className="text-[#0d3c38]/75 text-base leading-relaxed font-light">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CTA/>
 
     </div>
   );

@@ -150,34 +150,6 @@ const WHY_CHOOSE_US: WhyChooseUsItem[] = [
   },
 ];
 
-const FAQS: FaqItem[] = [
-  {
-    question: "Who can benefit from your coaching and guidance?",
-    answer:
-      "Whether you're facing challenges in your relationships, career, finances, confidence, health, or searching for greater purpose, our services are designed to help individuals at every stage of life. We provide personalized support to help you overcome obstacles and achieve meaningful, lasting growth.",
-  },
-  {
-    question: "How do I know which area I should focus on first?",
-    answer:
-      "Many life challenges are interconnected. During your initial consultation, we'll help identify the root causes of your concerns and recommend a personalized path that addresses your most important priorities first, creating a strong foundation for long-term transformation.",
-  },
-  {
-    question: "How long does it take to see results?",
-    answer:
-      "Everyone's journey is unique. Some people notice positive changes within a few weeks by consistently applying the guidance provided, while deeper personal transformation may take several months. Your commitment and consistency play a key role in achieving lasting results.",
-  },
-  {
-    question: "Are my sessions and personal information confidential?",
-    answer:
-      "Absolutely. Your privacy is our priority. Everything you share with us is treated with the highest level of confidentiality, creating a safe and supportive environment where you can openly discuss your challenges and goals.",
-  },
-  {
-    question: "Do you offer online coaching and personalized support?",
-    answer:
-      "Yes. We offer online coaching sessions that allow you to receive guidance from anywhere. Each session is tailored to your unique needs, ensuring you receive practical strategies, actionable advice, and ongoing support throughout your personal growth journey.",
-  },
-];
-
 export default function TransformationHero() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<"story" | "mission">("story");
@@ -444,46 +416,6 @@ export default function TransformationHero() {
         </div>
       </section>
 
-      {/* ================= FREQUENTLY ASKED QUESTIONS SECTION ================= */}
-      <section className="relative py-24 px-6 lg:px-12 bg-white">
-        <div className="max-w-3xl mx-auto space-y-12">
-          <div className="text-center space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0D3B36]/70">
-              Got Questions?
-            </span>
-            <h3 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0D3B36]">
-              Frequently Asked Questions
-            </h3>
-          </div>
-
-          <div className="space-y-4">
-            {FAQS.map((faq, index) => {
-              const isOpen = openFaqIndex === index;
-
-              return (
-                <div
-                  key={index}
-                  className="rounded-xl bg-[#F2F5F3] border border-[#0D3B36]/10 overflow-hidden transition-all duration-300"
-                >
-                  <button
-                    onClick={() => toggleFaq(index)}
-                    className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-semibold text-[#0D3B36] text-base sm:text-lg"
-                  >
-                    <span>{faq.question}</span>
-                    <span className="text-xl">{isOpen ? "−" : "+"}</span>
-                  </button>
-
-                  {isOpen && (
-                    <div className="px-6 pb-5 text-sm text-[#0D3B36]/75 leading-relaxed border-t border-[#0D3B36]/10 pt-4 animate-fade-in">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
