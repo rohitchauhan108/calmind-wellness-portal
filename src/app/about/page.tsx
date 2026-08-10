@@ -180,6 +180,7 @@ const FAQS: FaqItem[] = [
 
 export default function TransformationHero() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<"story" | "mission">("story");
 
   const toggleFaq = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
@@ -231,7 +232,7 @@ export default function TransformationHero() {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="relative rounded-3xl overflow-hidden shadow-xl bg-white aspect-[4/5] border border-[#0D3B36]/10">
                 <Image
-                  src="/about-bg.jpg"
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1000&q=80"
                   alt="Holistic personal transformation and growth with Ila Garg"
                   fill
                   priority
@@ -255,7 +256,7 @@ export default function TransformationHero() {
 
         {/* Content Container */}
         <div className="relative max-w-5xl mx-auto">
-          <div className="p-8 sm:p-12 rounded-3xl bg-white/95 backdrop-blur-sm border border-[#0D3B36]/10 shadow-sm text-center space-y-4">
+          <div className="p-8 sm:p-12 rounded-3xl bg-backdrop-blur-sm border border-[#0D3B36]/10 shadow-sm text-center space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D3B36]/5 text-[#0D3B36] text-xs font-semibold tracking-wider uppercase">
               Our Philosophy
             </div>
@@ -274,43 +275,91 @@ export default function TransformationHero() {
         </div>
       </section>
 
-      {/* ================= STORY & MISSION SECTION ================= */}
+      {/* ================= STORY & MISSION TOGGLE SECTION ================= */}
       <section className="relative py-20 px-6 lg:px-12 bg-[#F2F5F3]">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          <article className="p-8 sm:p-10 rounded-3xl bg-white border border-[#0D3B36]/10 shadow-sm flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#0D3B36]/60">
-                About Us
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#0D3B36]">
-                Our Story
-              </h2>
-              <p className="text-base text-[#0D3B36]/75 leading-relaxed">
-                Everyone faces moments of uncertainty—whether it&apos;s
-                struggling in relationships, feeling stuck in a career, or
-                dealing with financial stress. We created this platform to
-                provide practical guidance and personalized support to help
-                transform your life from the inside out.
-              </p>
-            </div>
-          </article>
+        <div className="max-w-4xl mx-auto flex flex-col items-center space-y-8">
+          {/* Toggle Buttons */}
+          <div className="inline-flex p-1.5 rounded-full bg-white border border-[#0D3B36]/10 shadow-sm">
+            <button
+              onClick={() => setActiveTab("story")}
+              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                activeTab === "story"
+                  ? "bg-[#0D3B36] text-white shadow-sm"
+                  : "text-[#0D3B36]/70 hover:text-[#0D3B36]"
+              }`}
+            >
+              Our Story
+            </button>
+            <button
+              onClick={() => setActiveTab("mission")}
+              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                activeTab === "mission"
+                  ? "bg-[#0D3B36] text-white shadow-sm"
+                  : "text-[#0D3B36]/70 hover:text-[#0D3B36]"
+              }`}
+            >
+              Our Mission
+            </button>
+          </div>
 
-          <article className="p-8 sm:p-10 rounded-3xl bg-[#0D3B36] text-white shadow-md flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <span className="text-xs font-semibold uppercase tracking-wider text-white/60">
-                Purpose
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">
-                Our Mission
-              </h2>
-              <p className="text-base text-white/80 leading-relaxed">
-                Our mission is to empower individuals with the knowledge, tools,
-                and guidance they need to overcome life&apos;s challenges and
-                create lasting personal transformation.
-              </p>
-            </div>
-          </article>
+          {/* Dynamic Card Content with Smooth Animation */}
+          <div className="w-full min-h-[220px] relative">
+            {activeTab === "story" ? (
+              <article
+                key="story"
+                className="p-8 sm:p-12 rounded-3xl bg-[#0D3B36] text-white shadow-md space-y-4 animate-fade-in"
+              >
+                <span className="text-xs font-semibold uppercase tracking-wider text-white/60">
+                  About Us
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-bold text-white">
+                  Our Story
+                </h2>
+                <p className="text-base sm:text-lg text-white/80 leading-relaxed">
+                  Everyone faces moments of uncertainty—whether it&apos;s
+                  struggling in relationships, feeling stuck in a career, or
+                  dealing with financial stress. We created this platform to
+                  provide practical guidance and personalized support to help
+                  transform your life from the inside out.
+                </p>
+              </article>
+            ) : (
+              <article
+                key="mission"
+                className="p-8 sm:p-12 rounded-3xl bg-[#0D3B36] text-white shadow-md space-y-4 animate-fade-in"
+              >
+                <span className="text-xs font-semibold uppercase tracking-wider text-white/60">
+                  Purpose
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-bold text-white">
+                  Our Mission
+                </h2>
+                <p className="text-base sm:text-lg text-white/80 leading-relaxed">
+                  Our mission is to empower individuals with the knowledge, tools,
+                  and guidance they need to overcome life&apos;s challenges and
+                  create lasting personal transformation.
+                </p>
+              </article>
+            )}
+          </div>
         </div>
+
+        {/* Smooth Fade & Slide Animation Styles */}
+        <style jsx>{`
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+              transform: translateY(10px) scale(0.98);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0) scale(1);
+            }
+          }
+          .animate-fade-in {
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+          }
+        `}</style>
       </section>
 
       {/* ================= AREAS WE HELP ================= */}
@@ -425,7 +474,7 @@ export default function TransformationHero() {
                   </button>
 
                   {isOpen && (
-                    <div className="px-6 pb-5 text-sm text-[#0D3B36]/75 leading-relaxed border-t border-[#0D3B36]/10 pt-4">
+                    <div className="px-6 pb-5 text-sm text-[#0D3B36]/75 leading-relaxed border-t border-[#0D3B36]/10 pt-4 animate-fade-in">
                       {faq.answer}
                     </div>
                   )}
