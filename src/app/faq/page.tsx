@@ -240,7 +240,7 @@ export default function FAQPage() {
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shrink-0 ${
+                className={`flex items-center gap-2 px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 shrink-0 ${
                   isTabActive
                     ? "bg-[#0F291E] text-white shadow-sm"
                     : "text-[#0F291E] hover:bg-[#0F291E]/5"
@@ -280,10 +280,10 @@ export default function FAQPage() {
             {/* Category Header */}
             <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#0F291E]/15 pb-6 gap-4">
               <div>
-                <span className="text-xs font-bold tracking-widest text-[#059669] uppercase">
+                <span className="text-xs font-semibold tracking-widest text-[#059669] uppercase">
                   {activeSection.number} / {activeSection.tagline}
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold mt-1 text-[#0F291E] tracking-tight">
+                <h2 className="text-3xl sm:text-4xl font-semibold mt-1 text-[#0F291E] tracking-tight">
                   {activeSection.title}
                 </h2>
               </div>
@@ -327,7 +327,7 @@ export default function FAQPage() {
               {/* Right Column: Key Insights Preview Card */}
               <div className="lg:col-span-5 bg-[#EFECE6]/80 backdrop-blur-sm p-8 rounded-3xl border border-[#0F291E]/10 min-h-[340px] flex flex-col justify-between sticky top-8 shadow-sm">
                 <div className="space-y-4">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#059669]">
+                  <span className="text-xs font-semibold uppercase tracking-widest text-[#059669]">
                     Key Insights
                   </span>
 
@@ -340,7 +340,7 @@ export default function FAQPage() {
                       transition={{ duration: 0.2 }}
                       className="space-y-3"
                     >
-                      <h3 className="font-bold text-lg text-[#0F291E] leading-snug">
+                      <h3 className="font-semibold text-lg text-[#0F291E] leading-snug">
                         {activeItem?.question}
                       </h3>
                       <p className="text-sm text-[#0F291E]/80 leading-relaxed font-light">
@@ -377,7 +377,7 @@ export default function FAQPage() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#059669]/20 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-2xl space-y-6">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#34D399]">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#34D399]">
               Still Have Questions?
             </span>
             <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight">
