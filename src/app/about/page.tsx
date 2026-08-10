@@ -26,37 +26,43 @@ const CATEGORIES: Category[] = [
   {
     number: "01",
     title: "Relationships",
-    description: "Communication blocks, repeating emotional patterns, and boundary setting.",
+    description:
+      "Communication blocks, repeating emotional patterns, and boundary setting.",
     href: "/how-we-help#relationships",
   },
   {
     number: "02",
     title: "Career",
-    description: "Direction, clarity in executive decision-making, confidence, and growth.",
+    description:
+      "Direction, clarity in executive decision-making, confidence, and growth.",
     href: "/how-we-help#career",
   },
   {
     number: "03",
     title: "Money",
-    description: "Subconscious abundance blocks, money habits, and recurring financial stress.",
+    description:
+      "Subconscious abundance blocks, money habits, and recurring financial stress.",
     href: "/how-we-help#money",
   },
   {
     number: "04",
     title: "Health & Wellbeing",
-    description: "Somatic stress release, energetic balance, and restoring daily vitality.",
+    description:
+      "Somatic stress release, energetic balance, and restoring daily vitality.",
     href: "/how-we-help#health",
   },
   {
     number: "05",
     title: "Confidence",
-    description: "Unshakeable self-belief, silencing inner criticism, and personal expression.",
+    description:
+      "Unshakeable self-belief, silencing inner criticism, and personal expression.",
     href: "/how-we-help#confidence",
   },
   {
     number: "06",
     title: "Purpose",
-    description: "Deep soul alignment, personal fulfillment, and stepping into your next chapter.",
+    description:
+      "Deep soul alignment, personal fulfillment, and stepping into your next chapter.",
     href: "/how-we-help#purpose",
   },
 ];
@@ -64,9 +70,15 @@ const CATEGORIES: Category[] = [
 const WHY_CHOOSE_US: WhyChooseUsItem[] = [
   {
     title: "Personalized Guidance",
-    description: "Every session is tailored precisely to your unique experiences, challenges, and goals.",
+    description:
+      "Every session is tailored precisely to your unique experiences, challenges, and goals.",
     icon: (
-      <svg className="w-5 h-5 text-[#0D3B36]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg
+        className="w-5 h-5 text-[#0D3B36]"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -78,9 +90,15 @@ const WHY_CHOOSE_US: WhyChooseUsItem[] = [
   },
   {
     title: "Root Cause Focus",
-    description: "We look beyond surface-level symptoms to uncover the deeper drivers of repeated struggles.",
+    description:
+      "We look beyond surface-level symptoms to uncover the deeper drivers of repeated struggles.",
     icon: (
-      <svg className="w-5 h-5 text-[#0D3B36]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg
+        className="w-5 h-5 text-[#0D3B36]"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -92,9 +110,15 @@ const WHY_CHOOSE_US: WhyChooseUsItem[] = [
   },
   {
     title: "Confidential & Safe",
-    description: "Your journey occurs within a secure, non-judgmental, and completely confidential container.",
+    description:
+      "Your journey occurs within a secure, non-judgmental, and completely confidential container.",
     icon: (
-      <svg className="w-5 h-5 text-[#0D3B36]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg
+        className="w-5 h-5 text-[#0D3B36]"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -106,9 +130,15 @@ const WHY_CHOOSE_US: WhyChooseUsItem[] = [
   },
   {
     title: "Long-Term Resilience",
-    description: "Our goal is inner freedom and emotional resilience that lasts a lifetime, far beyond our sessions.",
+    description:
+      "Our goal is inner freedom and emotional resilience that lasts a lifetime, far beyond our sessions.",
     icon: (
-      <svg className="w-5 h-5 text-[#0D3B36]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg
+        className="w-5 h-5 text-[#0D3B36]"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -174,9 +204,9 @@ export default function TransformationHero() {
             </h1>
 
             <p className="text-base sm:text-lg leading-relaxed text-[#0D3B36]/75 max-w-2xl font-normal">
-              Life&apos;s biggest challenges rarely exist in isolation. Difficult
-              relationships, career uncertainty, financial stress, and low
-              confidence influence one another. We help you identify root
+              Life&apos;s biggest challenges rarely exist in isolation.
+              Difficult relationships, career uncertainty, financial stress, and
+              low confidence influence one another. We help you identify root
               causes, overcome limiting patterns, and create lasting positive
               change.
             </p>
@@ -215,9 +245,17 @@ export default function TransformationHero() {
       </section>
 
       {/* ================= PHILOSOPHY SECTION ================= */}
-      <section className="relative py-20 lg:py-24 px-6 lg:px-12 bg-[#FBF9F5]">
-        <div className="max-w-4xl mx-auto">
-          <div className="p-8 sm:p-12 rounded-3xl bg-white border border-[#0D3B36]/10 shadow-sm text-center space-y-4">
+      <section className="relative bg-[#FBF9F5] overflow-hidden py-16 px-4 sm:px-6 lg:px-8">
+        {/* Background Image */}
+        <img
+          src="https://images.pexels.com/photos/30461817/pexels-photo-30461817.jpeg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Content Container */}
+        <div className="relative max-w-5xl mx-auto">
+          <div className="p-8 sm:p-12 rounded-3xl bg-white/95 backdrop-blur-sm border border-[#0D3B36]/10 shadow-sm text-center space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D3B36]/5 text-[#0D3B36] text-xs font-semibold tracking-wider uppercase">
               Our Philosophy
             </div>
@@ -241,29 +279,34 @@ export default function TransformationHero() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <article className="p-8 sm:p-10 rounded-3xl bg-white border border-[#0D3B36]/10 shadow-sm flex flex-col justify-between space-y-4">
             <div className="space-y-4">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#0D3B36]/60">About Us</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#0D3B36]/60">
+                About Us
+              </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-[#0D3B36]">
                 Our Story
               </h2>
               <p className="text-base text-[#0D3B36]/75 leading-relaxed">
-                Everyone faces moments of uncertainty—whether it&apos;s struggling in
-                relationships, feeling stuck in a career, or dealing with financial
-                stress. We created this platform to provide practical guidance and
-                personalized support to help transform your life from the inside out.
+                Everyone faces moments of uncertainty—whether it&apos;s
+                struggling in relationships, feeling stuck in a career, or
+                dealing with financial stress. We created this platform to
+                provide practical guidance and personalized support to help
+                transform your life from the inside out.
               </p>
             </div>
           </article>
 
           <article className="p-8 sm:p-10 rounded-3xl bg-[#0D3B36] text-white shadow-md flex flex-col justify-between space-y-4">
             <div className="space-y-4">
-              <span className="text-xs font-semibold uppercase tracking-wider text-white/60">Purpose</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-white/60">
+                Purpose
+              </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-white">
                 Our Mission
               </h2>
               <p className="text-base text-white/80 leading-relaxed">
                 Our mission is to empower individuals with the knowledge, tools,
-                and guidance they need to overcome life&apos;s challenges and create
-                lasting personal transformation.
+                and guidance they need to overcome life&apos;s challenges and
+                create lasting personal transformation.
               </p>
             </div>
           </article>
