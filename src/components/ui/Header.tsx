@@ -66,7 +66,7 @@ export default function Header() {
       // ],
     },
     { label: "How We Help", href: "/how-we-help" },
-    { label: "Faq", href: "/faq" },
+    { label: "Faqs", href: "/faq" },
     // { label: "Programs", href: "#programs" },
     { label: "Contact", href: "/contact" },
   ];
