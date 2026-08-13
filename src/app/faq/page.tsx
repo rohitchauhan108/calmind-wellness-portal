@@ -376,18 +376,18 @@ export default function FAQPage() {
           {/* Subtle Ambient Glow */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#059669]/20 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="relative z-10 max-w-2xl space-y-6">
+          <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center text-center space-y-6">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#34D399]">
               Still Have Questions?
             </span>
             <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight">
-              Ready to begin your <span className="italic font-normal white/90">transformation</span> journey?
+              Ready to begin your <span className="italic font-normal text-white/90">transformation</span> journey?
             </h2>
             <p className="text-white/80 font-light text-base sm:text-lg leading-relaxed">
               Book a personal 1-on-1 consultation to get custom answers tailored specifically to your goals and life path.
             </p>
 
-            <div className="pt-4 flex flex-col sm:flex-row gap-4">
+            <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#059669] text-white font-semibold text-sm hover:bg-[#047857] transition-all duration-300 shadow-md"

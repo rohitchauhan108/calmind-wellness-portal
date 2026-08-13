@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Clock, MapPin, ArrowUp, Instagram, Linkedin, ArrowRight, Mail } from 'lucide-react';
 
 export default function Footer() {
@@ -15,6 +16,22 @@ export default function Footer() {
   };
 
   const currentYear = new Date().getFullYear();
+
+  const servicesList = [
+    { name: 'Life Coaching', href: '/services' },
+    { name: 'Energy Healing', href: '/services' },
+    { name: 'Graphotherapy', href: '/services' },
+    { name: 'Root-Cause Diagnosis', href: '/services' },
+  ];
+
+  const quickLinks = [
+    { name: 'About Ila', href: '/about' },
+    { name: 'How We Help', href: '/how-we-help' },
+    { name: 'All Services', href: '/services' },
+    { name: 'Programs', href: '/programs' },
+    { name: 'Frequently Asked Questions', href: '/faq' },
+    { name: 'Book Discovery Call', href: '/contact' },
+  ];
 
   return (
     <footer id="footer" className="bg-[#073E42] text-[#FBF9F5] pt-16 pb-12 relative overflow-hidden font-sans border-t border-white/10">
@@ -49,9 +66,13 @@ export default function Footer() {
           {/* Col 1: Brand Info (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
             <Link href="/" className="inline-block group">
-              <span className="font-serif text-2xl text-white group-hover:text-[#E6B055] transition-colors duration-300">
-                Ila Garg
-              </span>
+              <Image
+                src="/logo.png"
+                alt="Ila Garg Logo"
+                width={140}
+                height={40}
+                className="object-contain h-28 w-auto rounded-sm opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+              />
             </Link>
 
             <p className="text-sm font-medium text-[#FBF9F5]/70 leading-relaxed max-w-sm">
@@ -60,14 +81,18 @@ export default function Footer() {
 
             <div className="flex items-center gap-3 pt-2">
               <a 
-                href="#" 
+                href="https://instagram.com" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FBF9F5] hover:text-white hover:bg-white/10 hover:border-white/30 transition-all"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4.5 h-4.5" />
               </a>
               <a 
-                href="#" 
+                href="https://linkedin.com" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FBF9F5] hover:text-white hover:bg-white/10 hover:border-white/30 transition-all"
                 aria-label="LinkedIn"
               >
@@ -87,40 +112,33 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-widest text-[#E6B055]">Services</h4>
             <ul className="space-y-3 text-sm font-medium text-[#FBF9F5]/80">
-              {['Life Coaching', 'Energy Healing', 'Graphotherapy', 'Root-Cause Diagnosis'].map((service) => (
-                <li key={service}>
+              {servicesList.map((service) => (
+                <li key={service.name}>
                   <Link 
-                    href="#services" 
+                    href={service.href} 
                     className="hover:text-white transition-colors duration-200 block"
                   >
-                    {service}
+                    {service.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Col 3: Programs (3 cols) */}
+          {/* Col 3: Navigation Quick Links (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#E6B055]">Programs</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#E6B055]">Navigation</h4>
             <ul className="space-y-3 text-sm font-medium text-[#FBF9F5]/80">
-              {
-                [
-                  { name: 'Empowerment Pathway', href: '#programs' },
-                  { name: 'Energetic Rebirth', href: '#programs' },
-                  { name: 'Subconscious Alignment', href: '#programs' },
-                  { name: 'Discovery Call', href: '/contact' },
-                ].map((program) => (
-                  <li key={program.name}>
-                    <Link 
-                      href={program.href} 
-                      className="hover:text-white transition-colors duration-200 block"
-                    >
-                      {program.name}
-                    </Link>
-                  </li>
-                ))
-              }
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href} 
+                    className="hover:text-white transition-colors duration-200 block"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   title: 'Ila Garg - Life Coaching & Graphotherapy',
   description: 
     'Your life today is the result of thousands of small patterns. Change the patterns, change your future. Practical Life Coaching and Graphotherapy to create real transformation.',
+  icons: {
+    icon: '/favicon.png', // Main favicon icon
+    shortcut: '/favicon.png',
+    apple: '/favicon.png', // Optional: used for Apple home screen shortcut
+  },
 };
 
 export const viewport: Viewport = {

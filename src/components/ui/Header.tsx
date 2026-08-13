@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronDown,
@@ -33,41 +34,23 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
+  type NavItem = {
+    label: string;
+    href: string;
+    dropdown?: Array<{
+      label: string;
+      href: string;
+      description?: string;
+    }>;
+  };
+
+  const navItems: NavItem[] = [
     { label: "Home", href: "/" },
-    {
-      label: "About",
-      href: "/about",
-    },
-    {
-      label: "Services",
-      href: "/services",
-      // dropdown: [
-      //   {
-      //     label: "Life Coaching",
-      //     href: "/services",
-      //     description: "Personalized guidance & goal clarity",
-      //   },
-      //   {
-      //     label: "Energy Healing",
-      //     href: "/services",
-      //     description: "Emotional release & emotional balance",
-      //   },
-      //   {
-      //     label: "Graphotherapy",
-      //     href: "/services",
-      //     description: "Handwriting analysis for self-growth",
-      //   },
-      //   {
-      //     label: "Integrated Consultation",
-      //     href: "/services",
-      //     description: "Root-cause diagnostic & personalized roadmap",
-      //   },
-      // ],
-    },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
     { label: "How We Help", href: "/how-we-help" },
+    { label: "Programs", href: "/programs" },
     { label: "Faqs", href: "/faq" },
-    // { label: "Programs", href: "#programs" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -141,9 +124,14 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Brand Name */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <span className="font-serif text-xl font-bold md:text-2xl text-brand-forest transition-colors duration-300">
-              Ila Garg
-            </span>
+            <Image
+              src="/logo.png"
+              alt="Ila Garg Logo"
+              width={140}
+              height={40}
+              className="object-contain h-20 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -298,7 +286,7 @@ export default function Header() {
 
             <div className="pt-3">
               <Link
-                href="#contact"
+                href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="flex items-center justify-center gap-2 font-sans text-sm font-medium w-full py-3 rounded-full bg-brand-forest text-brand-ivory hover:bg-brand-forest-dark transition-colors shadow-sm"
               >

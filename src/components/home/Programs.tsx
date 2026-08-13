@@ -24,6 +24,7 @@ export default function Programs() {
       ],
       priceIndividual: 450,
       priceVIP: 750,
+      paymentLink: "https://buy.stripe.com/cNi7sN6Zg6p92Ex55PdZ600",
       img: "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=800&q=80",
     },
     {
@@ -41,6 +42,7 @@ export default function Programs() {
       ],
       priceIndividual: 320,
       priceVIP: 550,
+      paymentLink: "https://buy.stripe.com/9B6aEZdnEaFp3IBgOxdZ601",
       img: "https://images.pexels.com/photos/34423/dandelion-seeds-pointed-flower-plant.jpg",
     },
     {
@@ -58,6 +60,7 @@ export default function Programs() {
       ],
       priceIndividual: 950,
       priceVIP: 1550,
+      paymentLink: "https://buy.stripe.com/00w6oJ1EW14P2Ex9m5dZ602",
       img: "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=800&q=80",
     },
   ];
@@ -235,22 +238,15 @@ export default function Programs() {
                   </span>
                 </div>
 
-                <button
-                  onClick={() => {
-                    const contactSection = document.getElementById('contact');
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                      alert(
-                        `Inquiry Confirmed: Booking interest in "${prog.title}" has been registered. Please complete the contact form below to schedule your diagnostic call.`
-                      );
-                    }
-                  }}
+                <a
+                  href={prog.paymentLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full py-4 rounded-full bg-[#073E42] hover:bg-[#073E42]/90 text-white transition-colors duration-300 flex items-center justify-center gap-2 text-[14px] font-medium cursor-pointer shadow-md group"
                 >
-                  Request Consultation
+                  Enroll Now
                   <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}

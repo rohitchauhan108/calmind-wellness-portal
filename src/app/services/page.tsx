@@ -129,11 +129,7 @@ export default function ServicesPage(): React.JSX.Element {
                 </button>
               </Link>
 
-              <a href="#core-services" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/80 hover:bg-white text-[#0d3c38] font-semibold border border-[#0d3c38]/15 backdrop-blur-sm transition-all duration-300 shadow-sm flex items-center justify-center">
-                  Explore Core Areas
-                </button>
-              </a>
+             
             </div>
           </div>
 
