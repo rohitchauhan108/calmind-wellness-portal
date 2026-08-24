@@ -7,78 +7,116 @@ import {
   PenTool,
   Heart,
   ChevronDown,
-  Clock,
   Sparkles,
   ArrowUpRight,
+  Users,
+  Crown,
+  Baby,
+  ArrowRight,
+  UserRound,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState(0);
 
   const servicesData = [
     {
-      icon: <Compass className="w-5 h-5 pointer-events-none" />,
-      title: "Intuitive Life Coaching",
-      subtitle: "Clarity & Growth",
+      icon: <UserRound className="w-5 h-5 pointer-events-none" />,
+      title: "1:1 Life Coaching",
+      subtitle: "Personal. Focused. Built around you.",
       description:
-        "An empowering, personalized coaching relationship dedicated to helping you discover your life purpose, clarify your vision, and strip away long-held subconscious limiting beliefs.",
+        "Work one-on-one on the areas of your life you want to change, grow or create more in. Whether it's your relationships, career, money, confidence or personal growth, the work is centred around your goals, your patterns and what you want to create next.",
       benefits: [
-        "Uncover immediate and long-term goals",
-        "Overcome repeating limiting habits & mindsets",
-        "Build resilient, authentic self-confidence",
-        "Create practical, realistic action roadmaps",
+        "Tailored around your unique goals and patterns",
+        "Deep dive into relationships, career, money, confidence or growth",
+        "Support to release what's been holding you back",
+        "Clear direction on what you want to create next",
       ],
-      duration: "60-90 Minutes",
-      sessionType: "In-Person or Zoom",
-      img: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80",
+      sessionType: "With Ila Garg — Life Coach & Healer",
+      ctaText: "Explore 1:1 Coaching",
+      ctaHref: "/contact",
     },
     {
-      icon: <Sun className="w-5 h-5 pointer-events-none" />,
-      title: "Holistic Energy Healing",
-      subtitle: "Emotional Release",
+      icon: <Crown className="w-5 h-5 pointer-events-none" />,
+      title: "VIP Coaching",
+      subtitle: "Deeper support. Greater accountability. Bigger goals.",
       description:
-        "Gentle yet powerful energy sessions designed to identify and dissolve heavy emotional blocks, severe stress, anxiety, and trauma stored deep within your somatic system.",
+        "A more intensive and personalised coaching experience for those who want ongoing support to create meaningful change across one or multiple areas of life. We work together on your goals, the inner patterns influencing your results, and the actions that move you towards where you want to be.",
       benefits: [
-        "Immediate relief from stress & mental clutter",
-        "Release of deeply trapped trauma and blocks",
-        "Gentle purification of heavy emotional charges",
-        "Restored feeling of emotional alignment and peace",
+        "Ongoing high-support coaching experience",
+        "Greater accountability and momentum",
+        "Work across one or multiple areas of life",
+        "Focused on inner patterns + aligned actions",
       ],
-      duration: "60 Minutes",
-      sessionType: "In-Person or Distant",
-      img: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      icon: <PenTool className="w-5 h-5 pointer-events-none" />,
-      title: "Graphotherapy & Handwriting Analysis",
-      subtitle: "Habit Rewiring",
-      description:
-        "Unlock your subconscious mind through scientific handwriting analysis. After evaluating your strokes, we design customized handwriting exercises to consciously rewire behaviors.",
-      benefits: [
-        "Decode hidden personality and behavioral habits",
-        "Rewire negative subconscious traits with stroke changes",
-        "Drastically improve mental focus and clarity",
-        "Develop conscious, healthy self-growth pathways",
-      ],
-      duration: "75 Minutes",
-      sessionType: "Digital Analysis or In-Person",
-      img: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80",
+      sessionType: "With Ila Garg — Life Coach & Healer",
+      ctaText: "Explore VIP Coaching",
+      ctaHref: "/contact",
     },
     {
       icon: <Heart className="w-5 h-5 pointer-events-none" />,
-      title: "Integrated Root Cause Consult",
-      subtitle: "Ultimate Alignment",
+      title: "1:1 Healing",
+      subtitle: "Release. Reconnect. Create space for change.",
       description:
-        "Our signature high-impact assessment combining all three modalities. We evaluate your goals, bio-energy, and handwriting to address root causes, not just treat symptoms.",
+        "Sometimes moving forward isn't about doing more. It's about releasing what you've been carrying. Individual healing sessions allow you to work more deeply with emotions, experiences and inner patterns that may no longer serve you. Each session is guided around you and what you need at that point in your journey.",
       benefits: [
-        "Comprehensive diagnostic of mental & emotional states",
-        "Custom hybrid roadmap combining coaching and healing",
-        "Discovery of underlying physical and spiritual roots",
-        "Ongoing personal mentorship and high-touch support",
+        "Release emotions and patterns you've been carrying",
+        "Reconnect with yourself at a deeper level",
+        "Create space for new possibilities",
+        "Each session guided by what you need in the moment",
       ],
-      duration: "120 Minutes",
-      sessionType: "Hybrid Solo Experience",
-      img: "https://images.pexels.com/photos/1054251/pexels-photo-1054251.jpeg",
+      sessionType: "With Ila Garg — Life Coach & Healer",
+      ctaText: "Explore 1:1 Healing",
+      ctaHref: "/contact",
+    },
+    {
+      icon: <Users className="w-5 h-5 pointer-events-none" />,
+      title: "Focused Group Programs",
+      subtitle: "One area. Shared journey. Focused transformation.",
+      description:
+        "Guided group experiences focused on specific areas of life. Programs may change throughout the year depending on what is currently being offered.",
+      benefits: [
+        "Health & Wellbeing — greater balance and positive change in physical, mental and emotional wellbeing",
+        "Money & Abundance — transform the beliefs, emotions and patterns influencing your relationship with money and growth",
+        "Relationships — work on the inner patterns influencing the way you connect, communicate and experience your relationships",
+        "Career & Growth — create greater clarity and work through what's standing between where you are and where you want to go professionally",
+      ],
+      sessionType: "Live group experiences with Ila",
+      ctaText: "Explore Current Programs",
+      ctaHref: "/contact",
+    },
+    {
+      icon: <PenTool className="w-5 h-5 pointer-events-none" />,
+      title: "Graphotherapy",
+      subtitle: "Change your handwriting. Work with your patterns.",
+      description:
+        "Graphotherapy uses intentional changes in handwriting as a tool for working with behavioural and emotional patterns. Through handwriting analysis and guided writing practices, the work is designed to support positive changes in the way you think, respond and show up in your life.",
+      benefits: [
+        "Personalised handwriting analysis",
+        "Intentional writing practices to support pattern shifts",
+        "Supports positive change in how you think and respond",
+        "Simple, practical daily practices",
+      ],
+      sessionType: "With Shilpa — Graphotherapist & Handwriting Expert",
+      ctaText: "Explore Graphotherapy",
+      ctaHref: "/contact",
+    },
+    {
+      icon: <Baby className="w-5 h-5 pointer-events-none" />,
+      title: "Program for Kids",
+      subtitle:
+        "Helping children build positive patterns from an early age.",
+      description:
+        "A specially designed program for children using handwriting-based practices to support areas such as focus, confidence, emotional expression and positive habits.",
+      benefits: [
+        "Built around handwriting-based practices",
+        "Supports focus, confidence and emotional expression",
+        "Helps build positive habits early",
+        "Designed specifically for children",
+      ],
+      sessionType: "With Shilpa — Graphotherapist & Handwriting Expert",
+      ctaText: "Explore Kids Program",
+      ctaHref: "/contact",
     },
   ];
 
@@ -148,14 +186,14 @@ export default function Services() {
           <div className="max-w-2xl space-y-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#073E42]/10 border border-[#073E42]/15 text-[#073E42] text-xs font-semibold tracking-widest uppercase">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Our Offerings</span>
+              <span>Ways to Work With Us</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#073E42] tracking-tight leading-tight font-bold">
-              Empowering pathways designed for holistic wellness.
+              Different goals need different kinds of support.
             </h2>
           </div>
           <p className="text-[#073E42]/70 font-medium text-sm sm:text-base max-w-md leading-relaxed">
-            Every session is custom-tailored. We identify your unique subconscious blocks, emotional barriers, and personal goals before formulating your healing plan.
+            Choose the way of working that feels right for where you are now.
           </p>
         </div>
 
@@ -181,7 +219,7 @@ export default function Services() {
               >
                 {servicesData.map((service, index) => (
                   <option key={index} value={index}>
-                    {service.subtitle} — {service.title}
+                    {service.title}
                   </option>
                 ))}
               </select>
@@ -216,14 +254,16 @@ export default function Services() {
                     <span
                       className={`block text-[10px] font-bold uppercase tracking-widest ${
                         activeTab === index
-                          ? "text-[#A3E635]"
+                          ? "text-[#E6B055]"
                           : "text-[#073E42]/60"
                       }`}
                     >
-                      {service.subtitle}
+                      {activeTab === index
+                        ? service.sessionType
+                        : "Select →"}
                     </span>
                     <span className="font-serif font-bold text-[15px] truncate block">
-                      {service.title.split("&")[0]}
+                      {service.title}
                     </span>
                   </div>
                 </div>
@@ -231,7 +271,7 @@ export default function Services() {
                 <ArrowUpRight
                   className={`w-4 h-4 transition-transform duration-300 z-10 ${
                     activeTab === index
-                      ? "text-[#A3E635] translate-x-0.5 -translate-y-0.5"
+                      ? "text-[#E6B055] translate-x-0.5 -translate-y-0.5"
                       : "text-[#073E42]/30 opacity-0 group-hover:opacity-100"
                   }`}
                 />
@@ -255,78 +295,57 @@ export default function Services() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10"
+                className="relative z-10 space-y-6"
               >
-                {/* Content description */}
-                <div className="md:col-span-7 space-y-6 order-2 md:order-1">
-                  <div>
-                    <span className="text-[#073E42] font-semibold text-[10px] sm:text-xs uppercase tracking-widest bg-[#073E42]/10 border border-[#073E42]/15 px-3 py-1 rounded-full inline-block">
-                      {servicesData[activeTab].sessionType}
-                    </span>
-                    <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#073E42] mt-3 leading-tight">
-                      {servicesData[activeTab].title}
-                    </h3>
-                  </div>
-
-                  <p className="text-[#073E42]/80 font-medium text-sm sm:text-base leading-relaxed">
-                    {servicesData[activeTab].description}
+                {/* Practitioner / Type Tag + Title */}
+                <div>
+                  <span className="text-[#073E42] font-semibold text-[10px] sm:text-xs uppercase tracking-widest bg-[#E6B055]/10 border border-[#E6B055]/20 px-3 py-1 rounded-full inline-block">
+                    {servicesData[activeTab].sessionType}
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#073E42] mt-3 leading-tight">
+                    {servicesData[activeTab].title}
+                  </h3>
+                  <p className="text-[#073E42] font-serif italic mt-2 text-base sm:text-lg">
+                    {servicesData[activeTab].subtitle}
                   </p>
+                </div>
 
-                  <div className="space-y-3">
-                    <h4 className="text-xs font-bold text-[#073E42] uppercase tracking-wider">
-                      Anticipated Key Outcomes:
-                    </h4>
-                    <div className="grid grid-cols-1 gap-2.5">
-                      {servicesData[activeTab].benefits.map((benefit, i) => (
-                        <div
-                          key={i}
-                          className="flex items-start gap-3 text-xs sm:text-sm font-medium text-[#073E42]/80"
-                        >
-                          <span className="w-5 h-5 rounded-full bg-[#073E42]/10 text-[#073E42] flex items-center justify-center shrink-0 mt-0.5 border border-[#073E42]/20">
-                            <Check className="w-3 h-3" />
-                          </span>
-                          <span>{benefit}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                {/* Description */}
+                <p className="text-[#073E42]/80 font-medium text-sm sm:text-base leading-relaxed">
+                  {servicesData[activeTab].description}
+                </p>
 
-                  {/* Metadata Bar */}
-                  <div className="pt-6 border-t border-[#073E42]/10 flex items-center gap-6 text-xs sm:text-sm">
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-[#073E42]" />
-                      <div>
-                        <span className="text-[10px] uppercase font-bold text-[#073E42]/60 block">
-                          Duration
+                {/* Benefits / What's included */}
+                <div className="space-y-3">
+                  <h4 className="text-xs font-bold text-[#073E42] uppercase tracking-wider">
+                    {servicesData[activeTab].title === "Focused Group Programs"
+                      ? "Current Focus Areas:"
+                      : "What this includes:"}
+                  </h4>
+                  <div className="grid grid-cols-1 gap-2.5">
+                    {servicesData[activeTab].benefits.map((benefit, i) => (
+                      <div
+                        key={i}
+                        className="flex items-start gap-3 text-xs sm:text-sm font-medium text-[#073E42]/80"
+                      >
+                        <span className="w-5 h-5 rounded-full bg-[#073E42]/10 text-[#073E42] flex items-center justify-center shrink-0 mt-0.5 border border-[#073E42]/20">
+                          <Check className="w-3 h-3" />
                         </span>
-                        <span className="font-semibold text-[#073E42]">
-                          {servicesData[activeTab].duration}
-                        </span>
+                        <span>{benefit}</span>
                       </div>
-                    </div>
-                    <div className="w-[1px] h-8 bg-[#073E42]/15" />
-                    <div>
-                      <span className="text-[10px] uppercase font-bold text-[#073E42]/60 block">
-                        Format
-                      </span>
-                      <span className="font-semibold text-[#073E42]">
-                        {servicesData[activeTab].sessionType}
-                      </span>
-                    </div>
+                    ))}
                   </div>
                 </div>
 
-                {/* Content Image Display */}
-                <div className="md:col-span-5 order-1 md:order-2">
-                  <div className="relative rounded-2xl overflow-hidden aspect-[4/3] md:aspect-[4/5] shadow-lg group border border-[#073E42]/10">
-                    <img
-                      src={servicesData[activeTab].img}
-                      alt={servicesData[activeTab].title}
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#073E42]/30 via-transparent to-transparent" />
-                  </div>
+                {/* CTA Button */}
+                <div className="pt-4 border-t border-[#073E42]/10">
+                  <Link
+                    href={servicesData[activeTab].ctaHref}
+                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[#073E42] text-white hover:bg-[#073E42]/90 transition-all duration-300 font-semibold text-sm shadow-lg hover:shadow-xl active:scale-[0.98]"
+                  >
+                    <span>{servicesData[activeTab].ctaText}</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
               </motion.div>
             </AnimatePresence>

@@ -19,10 +19,12 @@ export default function Home() {
         {/* 1. Hero */}
         <Hero />
 
+       <SupportCategories/>
+
+
         {/* 2. Testimonials */}
         <Testimonials />
 
-       <SupportCategories/>
         {/* 3. Services */}
         <Services />
 

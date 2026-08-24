@@ -6,11 +6,9 @@ import {
   FiMail,
   FiPhone,
   FiClock,
-  FiMapPin,
   FiSend,
   FiCheckCircle,
   FiGlobe,
-  FiBriefcase,
 } from 'react-icons/fi';
 
 export default function ContactPage() {
@@ -20,10 +18,6 @@ export default function ContactPage() {
     e.preventDefault();
     setSubmitted(true);
   };
-
-  const encodedAddress = encodeURIComponent(
-    '2 Woodcock Court, Reading, RG7 1BZ, United Kingdom'
-  );
 
   return (
     <main className="py-16 md:py-24 bg-[#FBF9F5] text-[#0D3B36] min-h-screen font-sans">
@@ -47,8 +41,8 @@ export default function ContactPage() {
           </p>
         </motion.div>
 
-        {/* TOP SECTION: 3 Contact Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        {/* TOP SECTION: 2 Contact Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-4xl mx-auto">
           {/* Card 1: Email & Phone */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -79,12 +73,18 @@ export default function ContactPage() {
                 <FiPhone className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-xs font-bold uppercase tracking-wider text-[#0D3B36]/60">
-                  Phone Number
+                <h3 className="text-xs font-bold uppercase tracking-wider text-[#0D3B36]/60 mb-1">
+                  Phone Numbers
                 </h3>
                 <a
+                  href="tel:+447429519990"
+                  className="text-sm font-medium text-[#0D3B36] hover:underline transition-colors block"
+                >
+                  +44 7429 519990
+                </a>
+                <a
                   href="tel:+16475704793"
-                  className="text-sm font-medium text-[#0D3B36] hover:underline transition-colors"
+                  className="text-sm font-medium text-[#0D3B36] hover:underline transition-colors block mt-0.5"
                 >
                   +(647) 570-4793
                 </a>
@@ -108,12 +108,9 @@ export default function ContactPage() {
                 <h3 className="text-xs font-bold uppercase tracking-wider text-[#0D3B36]/60 mb-1">
                   Working Hours
                 </h3>
-                <span className="text-sm font-semibold text-[#0D3B36] block mb-0.5">
+                <span className="text-sm font-semibold text-[#0D3B36] block">
                   By Appointment Only
                 </span>
-                <p className="text-sm text-[#0D3B36]/75">
-                  Mon — Sat: 08:00 - 18:00
-                </p>
               </div>
             </div>
 
@@ -122,47 +119,17 @@ export default function ContactPage() {
               <span>Worldwide Online Consultations</span>
             </div>
           </motion.div>
-
-          {/* Card 3: Operational Address */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            whileHover={{ y: -6, transition: { duration: 0.2 } }}
-            className="bg-white p-6 rounded-2xl border border-[#0D3B36]/10 shadow-sm hover:shadow-xl transition-shadow duration-300 space-y-3"
-          >
-            <div className="flex items-start gap-3">
-              <div className="p-3 bg-[#0D3B36]/5 rounded-xl text-[#0D3B36] shrink-0">
-                <FiMapPin className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="text-xs font-bold uppercase tracking-wider text-[#0D3B36]/60 mb-1">
-                  Operational Address
-                </h3>
-                <p className="text-sm text-[#0D3B36] leading-relaxed">
-                  2, Woodcock Court<br />
-                  Reading, RG7 1BZ<br />
-                  United Kingdom
-                </p>
-              </div>
-            </div>
-
-            <div className="pt-2 border-t border-[#0D3B36]/10 flex items-center gap-2 text-xs text-[#0D3B36]/75">
-              <FiBriefcase className="text-[#0D3B36]" />
-              <span>Entity: <strong>Ila Garg</strong></span>
-            </div>
-          </motion.div>
         </div>
 
-        {/* BOTTOM SECTION: Left Form, Right Map */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        {/* BOTTOM SECTION: Contact Form (centered) */}
+        <div className="max-w-3xl mx-auto">
           
-          {/* Left: Contact Form */}
+          {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-2xl border border-[#0D3B36]/10 shadow-sm flex flex-col justify-between"
+            className="bg-white p-6 sm:p-10 rounded-2xl border border-[#0D3B36]/10 shadow-sm"
           >
             <div>
               <h2 className="text-2xl font-bold tracking-tight text-[#0D3B36] mb-2">
@@ -254,24 +221,6 @@ export default function ContactPage() {
                 </form>
               )}
             </div>
-          </motion.div>
-
-          {/* Right: Map Embed */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="lg:col-span-5 bg-white p-2 rounded-2xl border border-[#0D3B36]/10 shadow-sm overflow-hidden min-h-[380px] lg:min-h-full flex flex-col"
-          >
-            <iframe
-              title="Operational Address Map"
-              width="100%"
-              height="100%"
-              className="w-full h-full min-h-[360px] rounded-xl border-0"
-              loading="lazy"
-              allowFullScreen
-              src={`https://maps.google.com/maps?q=${encodedAddress}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
-            ></iframe>
           </motion.div>
 
         </div>

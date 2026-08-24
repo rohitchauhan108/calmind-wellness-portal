@@ -8,10 +8,9 @@ import {
   ChevronDown,
   Menu,
   X,
-  MapPin,
-  Clock,
   Instagram,
-  Linkedin,
+  Facebook,
+  Youtube,
   Phone,
   ArrowRight,
   Mail,
@@ -64,17 +63,7 @@ export default function Header() {
             : "max-h-12 py-2.5 border-b border-white/10"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <MapPin className="w-3.5 h-3.5 text-brand-copper shrink-0" />
-              <span>2, Woodcock Court, Reading, RG7 1BZ, GB</span>
-            </div>
-            <div className="hidden lg:flex items-center gap-2">
-              <Clock className="w-3.5 h-3.5 text-brand-copper shrink-0" />
-              <span>Mon — Sat: 08:00 - 18:00</span>
-            </div>
-          </div>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-end">
 
           <div className="flex items-center gap-5">
             <a
@@ -86,14 +75,29 @@ export default function Header() {
             </a>
             <div className="h-3 w-[1px] bg-white/20 hidden md:block" />
             <a
-              href="tel:+16475704793"
+              href="tel:+447429519990"
               className="hidden sm:flex items-center gap-1.5 hover:text-brand-copper transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5 text-brand-copper" />
+              <span>+44 7429 519990</span>
+            </a>
+            <div className="h-3 w-[1px] bg-white/20 hidden xl:block" />
+            <a
+              href="tel:+16475704793"
+              className="hidden xl:flex items-center gap-1.5 hover:text-brand-copper transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-brand-copper" />
               <span>+(647) 570-4793</span>
             </a>
             <div className="h-3 w-[1px] bg-white/20 hidden sm:block" />
             <div className="flex items-center gap-3 text-brand-ivory/70">
+              <a
+                href="#"
+                className="hover:text-brand-ivory transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-3.5 h-3.5" />
+              </a>
               <a
                 href="#"
                 className="hover:text-brand-ivory transition-colors"
@@ -104,9 +108,9 @@ export default function Header() {
               <a
                 href="#"
                 className="hover:text-brand-ivory transition-colors"
-                aria-label="LinkedIn"
+                aria-label="YouTube"
               >
-                <Linkedin className="w-3.5 h-3.5" />
+                <Youtube className="w-3.5 h-3.5" />
               </a>
             </div>
           </div>

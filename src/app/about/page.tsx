@@ -204,7 +204,7 @@ export default function TransformationHero() {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="relative rounded-3xl overflow-hidden shadow-xl bg-white aspect-[4/5] border border-[#0D3B36]/10">
                 <Image
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1000&q=80"
+                  src="/founder.jpeg"
                   alt="Holistic personal transformation and growth with Ila Garg"
                   fill
                   priority

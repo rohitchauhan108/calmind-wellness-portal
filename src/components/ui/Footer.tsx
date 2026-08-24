@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Clock, MapPin, ArrowUp, Instagram, Linkedin, ArrowRight, Mail } from 'lucide-react';
+import { Phone, Clock, ArrowUp, Instagram, Facebook, Youtube, ArrowRight, Mail, Globe } from 'lucide-react';
 
 export default function Footer() {
   const handleScrollToTop = () => {
@@ -81,6 +81,15 @@ export default function Footer() {
 
             <div className="flex items-center gap-3 pt-2">
               <a 
+                href="#" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FBF9F5] hover:text-white hover:bg-white/10 hover:border-white/30 transition-all"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-4.5 h-4.5" />
+              </a>
+              <a 
                 href="https://instagram.com" 
                 target="_blank"
                 rel="noopener noreferrer"
@@ -90,20 +99,13 @@ export default function Footer() {
                 <Instagram className="w-4.5 h-4.5" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="#" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FBF9F5] hover:text-white hover:bg-white/10 hover:border-white/30 transition-all"
-                aria-label="LinkedIn"
+                aria-label="YouTube"
               >
-                <Linkedin className="w-4 h-4.5" />
-              </a>
-              <a 
-                href="mailto:contact@ilagarg.com" 
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FBF9F5] hover:text-white hover:bg-white/10 hover:border-white/30 transition-all"
-                aria-label="Email"
-              >
-                <Mail className="w-4 h-4.5" />
+                <Youtube className="w-4.5 h-4.5" />
               </a>
             </div>
           </div>
@@ -146,18 +148,22 @@ export default function Footer() {
           <div className="lg:col-span-3 space-y-4 text-sm font-medium text-[#FBF9F5]/80">
             <h4 className="text-xs font-bold uppercase tracking-widest text-[#E6B055]">Private Consultations</h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#E6B055] shrink-0 mt-1" />
+              <li className="flex items-center gap-3">
+                <Globe className="w-4 h-4 text-[#E6B055] shrink-0" />
                 <span className="leading-relaxed">
-                  Worldwide Online Consultations<br />
-                  <strong className="font-normal text-white">2, Woodcock Court, Reading, RG7 1BZ, GB</strong>
+                  Worldwide Online Consultations
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-[#E6B055] shrink-0" />
-                <a href="tel:+16475704793" className="hover:text-white transition-colors">
-                  +(647) 570-4793
-                </a>
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-[#E6B055] shrink-0 mt-1" />
+                <span className="leading-relaxed">
+                  <a href="tel:+447429519990" className="hover:text-white transition-colors block">
+                    +44 7429 519990
+                  </a>
+                  <a href="tel:+16475704793" className="hover:text-white transition-colors block mt-0.5">
+                    +(647) 570-4793
+                  </a>
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#E6B055] shrink-0" />
@@ -168,8 +174,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-[#E6B055] shrink-0 mt-1" />
                 <span className="leading-relaxed">
-                  By Appointment Only<br />
-                  Mon — Sat: 08:00 - 18:00
+                  By Appointment Only
                 </span>
               </li>
             </ul>

@@ -1,17 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Play,
   ArrowRight,
   ShieldCheck,
   Star,
-  Sparkles,
   X,
   Compass,
-  CheckCircle2,
-  TrendingUp,
 } from "lucide-react";
 
 export default function Hero() {
@@ -106,59 +104,57 @@ export default function Hero() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-7 space-y-7"
+            className="lg:col-span-7 space-y-8"
           >
-            {/* Eyebrow Badge */}
-            <motion.div variants={itemVariants} className="inline-block">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#073E42]/10 border border-[#073E42]/15 shadow-sm backdrop-blur-sm">
-                <Sparkles className="w-4 h-4 text-[#073E42]" />
-                <span className="text-[#073E42] text-xs sm:text-sm font-semibold tracking-wide uppercase">
-                  Holistic Transformation & Graphotherapy
-                </span>
-              </div>
-            </motion.div>
-
-            {/* Main Headline */}
+            {/* Main Headline - H1 (Most Prominent) */}
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#073E42] leading-[1.12] tracking-tight font-bold"
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif text-[#073E42] leading-[1.08] tracking-tight font-bold"
             >
-              Understand your mind. <br />
-              <span className="italic font-normal text-[#073E42]/90">
-                Break limiting patterns.
-              </span>{" "}
-              <br />
-              Reclaim your life.
+              Lasting change starts within.
             </motion.h1>
 
-            {/* Subtitle */}
+            {/* Supporting Headline - Second Level of Emphasis */}
+            <motion.h2
+              variants={itemVariants}
+              className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#073E42]/90 leading-tight font-semibold"
+            >
+              Do you want more from your life?
+            </motion.h2>
+
+            {/* Supporting Copy */}
+            <motion.div
+              variants={itemVariants}
+              className="space-y-2.5 text-lg sm:text-xl text-[#1C2826]/85 font-medium leading-relaxed"
+            >
+              <p>More in your health.</p>
+              <p>More in your relationships.</p>
+              <p>More in your career.</p>
+              <p>More money.</p>
+              <p>More confidence.</p>
+              <p>More of the person you know you can be.</p>
+            </motion.div>
+
+            {/* Philosophy / Closing Line */}
             <motion.p
               variants={itemVariants}
-              className="text-base sm:text-lg text-[#1C2826]/80 font-normal max-w-xl leading-relaxed"
+              className="text-lg sm:text-xl text-[#073E42] font-serif italic leading-relaxed max-w-lg border-l-2 border-[#E6B055] pl-5 py-1"
             >
-              Integrating Life Coaching, Recovery Frameworks, and Graphotherapy
-              (handwriting analysis) to reprogram subconscious habits and foster
-              sustainable personal growth.
+              Change your inner world. Change what becomes possible in your outer world.
             </motion.p>
 
             {/* Action Buttons */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-3"
             >
-              <a
-                href="#programs"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .getElementById("programs")
-                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
+              <Link
+                href="/how-we-help"
                 className="px-8 py-4 rounded-full bg-[#073E42] text-white hover:bg-[#073E42]/90 transition-all duration-300 shadow-lg hover:shadow-[#073E42]/25 flex items-center justify-center gap-3 group text-base font-medium cursor-pointer"
               >
-                <span>Begin Your Journey</span>
+                <span>Explore How I Can Help</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </a>
+              </Link>
 
               <button
                 onClick={() => setIsVideoOpen(true)}
@@ -214,13 +210,6 @@ export default function Hero() {
                   </p>
                 </div>
               </div>
-
-              <div className="hidden sm:block w-px h-8 bg-[#073E42]/15" />
-
-              <div className="flex items-center gap-2 text-xs font-semibold text-[#073E42]">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>Certified Graphotherapist & Life Coach</span>
-              </div>
             </motion.div>
           </motion.div>
 
@@ -258,34 +247,12 @@ export default function Hero() {
                 </div>
               </motion.div>
 
-              {/* Floating Highlight Card 2 */}
-              <motion.div
-                className="absolute -right-6 bottom-10 bg-white/90 backdrop-blur-xl p-3.5 rounded-2xl shadow-xl border border-[#073E42]/10 z-30 hidden sm:flex items-center gap-3 max-w-[210px]"
-                animate={{ y: [0, 6, 0] }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.5,
-                }}
-              >
-                <div className="w-10 h-10 rounded-xl bg-[#073E42]/10 flex items-center justify-center text-[#073E42] shrink-0">
-                  <TrendingUp className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold text-[#073E42]">
-                    Graphotherapy
-                  </h4>
-                  <p className="text-[11px] text-[#073E42]/70 leading-tight">
-                    Rewire habits via handwriting
-                  </p>
-                </div>
-              </motion.div>
+            
 
               {/* Main Image Frame */}
               <div className="relative rounded-[28px] overflow-hidden aspect-[4/5] shadow-2xl bg-white border-4 border-white/90">
                 <img
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1000&q=80"
+                  src="/founder.jpeg"
                   alt="Ila Garg - Transformation Expert"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
@@ -335,8 +302,8 @@ export default function Hero() {
                     Experience The Method
                   </h3>
                   <p className="text-sm text-white/80 leading-relaxed mb-6">
-                    A short preview into how Graphotherapy and tailored coaching
-                    unlock permanent mindset transformation.
+                    A short preview into how tailored coaching unlocks permanent
+                    mindset transformation.
                   </p>
                   <button
                     onClick={() => setIsVideoOpen(false)}
