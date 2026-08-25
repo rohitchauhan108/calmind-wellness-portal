@@ -4,8 +4,9 @@ import Hero from "../components/home/Hero";
 import Services from "../components/home/Services";
 import Programs from "../components/home/Programs";
 import Testimonials from "../components/home/Testimonials";
-import Statistics from "../components/home/Statistics";
-import SupportCategories from "../components/home/SupportCategories"
+import SupportCategories from "../components/home/SupportCategories";
+import Infomativecta from "../components/home/Informativecta";
+import MeetUs from "../components/home/MeetUs";
 
 import CTA from "../components/home/CTA";
 
@@ -21,19 +22,25 @@ export default function Home() {
 
        <SupportCategories/>
 
+        {/* 2. About */}
+        {/* <About /> */}
 
-        {/* 2. Testimonials */}
+        {/* 3. Testimonials */}
         <Testimonials />
 
-        {/* 3. Services */}
+        {/* 4. Services */}
         <Services />
 
+        {/* 5. Meet Us */}
+        <MeetUs />
 
-        {/* 4. Programs */}
+        {/* 6. Programs */}
         <Programs />
 
-        {/* 5. CTA */}
+        {/* 6. CTA */}
         <CTA />
+
+        <Infomativecta/>
       </main>
     </div>
   );
