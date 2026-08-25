@@ -123,13 +123,13 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-20 sm:py-28 lg:py-32 bg-[#FBF9F5] relative overflow-hidden text-[#1C2826]"
+      className="py-16 sm:py-20 lg:py-28 md:py-32 bg-[#FBF9F5] relative overflow-hidden text-[#1C2826]"
     >
       {/* Dynamic Code-Generated SVG Sacred Patterns & Topography Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-80">
         {/* Subtle Noise Texture */}
         <svg className="absolute inset-0 w-full h-full opacity-20">
-          <filter id="noiseFilter">
+          <filter id="noiseFilterServices">
             <feTurbulence
               type="fractalNoise"
               baseFrequency="0.8"
@@ -137,12 +137,12 @@ export default function Services() {
               stitchTiles="stitch"
             />
           </filter>
-          <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+          <rect width="100%" height="100%" filter="url(#noiseFilterServices)" />
         </svg>
 
         {/* Concentric Geometric Rings Pattern - Top Left */}
         <svg
-          className="absolute -top-24 -left-24 w-[600px] h-[600px] text-[#073E42]/15"
+          className="absolute -top-20 -left-20 sm:-top-24 sm:-left-24 w-[450px] h-[450px] sm:w-[600px] sm:h-[600px] text-[#073E42]/15"
           viewBox="0 0 100 100"
           fill="none"
           stroke="currentColor"
@@ -158,7 +158,7 @@ export default function Services() {
 
         {/* Flowing Organic Waves / Energy Lines - Bottom Right */}
         <svg
-          className="absolute -bottom-32 -right-32 w-[700px] h-[700px] text-[#073E42]/10"
+          className="absolute -bottom-24 -right-24 sm:-bottom-32 sm:-right-32 w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] text-[#073E42]/10"
           viewBox="0 0 400 400"
           fill="none"
           stroke="currentColor"
@@ -174,39 +174,39 @@ export default function Services() {
       </div>
 
       {/* Background Deep Emerald Ambient Glows */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#073E42]/10 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-[450px] h-[450px] bg-[#073E42]/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[380px] h-[380px] sm:w-[500px] sm:h-[500px] bg-[#073E42]/10 rounded-full blur-[110px] sm:blur-[150px] pointer-events-none -mr-24 sm:mr-0" />
+      <div className="absolute bottom-0 left-0 sm:left-10 w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] bg-[#073E42]/5 rounded-full blur-[110px] sm:blur-[140px] pointer-events-none -ml-24 sm:ml-0" />
 
       {/* Decorative Radial Grid Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#073E42_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.05] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12 sm:mb-16">
-          <div className="max-w-2xl space-y-3">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#073E42]/10 border border-[#073E42]/15 text-[#073E42] text-xs font-semibold tracking-widest uppercase">
-              <Sparkles className="w-3.5 h-3.5" />
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-5 sm:gap-6 mb-10 sm:mb-12 md:mb-16">
+          <div className="max-w-2xl space-y-2.5 sm:space-y-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#073E42]/10 border border-[#073E42]/15 text-[#073E42] text-[10px] sm:text-xs font-semibold tracking-widest uppercase">
+              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
               <span>Ways to Work With Us</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#073E42] tracking-tight leading-tight font-bold">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-[#073E42] tracking-tight leading-tight font-bold">
               Different goals need different kinds of support.
             </h2>
           </div>
-          <p className="text-[#073E42]/70 font-medium text-sm sm:text-base max-w-md leading-relaxed">
+          <p className="text-[#073E42]/70 font-medium text-xs sm:text-sm md:text-base max-w-md leading-relaxed">
             Choose the way of working that feels right for where you are now.
           </p>
         </div>
 
         {/* Tabbed Interactive Interface */}
         <div
-          className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 md:gap-8 items-start"
           id="services-interactive"
         >
           {/* MOBILE SELECT DROPDOWN */}
           <div className="block lg:hidden w-full relative z-20">
             <label
               htmlFor="service-select"
-              className="block text-xs font-bold text-[#073E42] uppercase tracking-wider mb-2"
+              className="block text-[10px] sm:text-xs font-bold text-[#073E42] uppercase tracking-wider mb-2"
             >
               Select Experience
             </label>
@@ -215,7 +215,7 @@ export default function Services() {
                 id="service-select"
                 value={activeTab}
                 onChange={(e) => setActiveTab(Number(e.target.value))}
-                className="w-full appearance-none bg-white/90 backdrop-blur-md border border-[#073E42]/20 rounded-2xl px-5 py-4 pr-12 text-[#073E42] font-medium text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-[#073E42]"
+                className="w-full appearance-none bg-white/90 backdrop-blur-md border border-[#073E42]/20 rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3.5 sm:py-4 pr-10 sm:pr-12 text-[#073E42] font-medium text-xs sm:text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-[#073E42]"
               >
                 {servicesData.map((service, index) => (
                   <option key={index} value={index}>
@@ -223,26 +223,26 @@ export default function Services() {
                   </option>
                 ))}
               </select>
-              <ChevronDown className="w-5 h-5 text-[#073E42] absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-[#073E42] absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
           </div>
 
           {/* DESKTOP TABS NAVIGATION */}
-          <div className="hidden lg:flex lg:col-span-4 flex-col gap-3.5 w-full">
+          <div className="hidden lg:flex lg:col-span-4 flex-col gap-3 md:gap-3.5 w-full">
             {servicesData.map((service, index) => (
               <button
                 key={index}
                 type="button"
                 onClick={() => setActiveTab(index)}
-                className={`text-left px-6 py-5 rounded-2xl transition-all duration-300 flex items-center justify-between border text-sm w-full cursor-pointer relative overflow-hidden group ${
+                className={`text-left px-5 sm:px-6 py-4 sm:py-5 rounded-xl sm:rounded-2xl transition-all duration-300 flex items-center justify-between border text-xs sm:text-sm w-full cursor-pointer relative overflow-hidden group ${
                   activeTab === index
                     ? "bg-[#073E42] border-[#073E42] text-white shadow-xl scale-[1.02]"
                     : "bg-white/80 hover:bg-white backdrop-blur-sm border-[#073E42]/10 text-[#073E42] hover:border-[#073E42]/30"
                 }`}
               >
-                <div className="flex items-center gap-4 z-10">
+                <div className="flex items-center gap-3 sm:gap-4 z-10">
                   <div
-                    className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                    className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0 transition-colors ${
                       activeTab === index
                         ? "bg-white/15 text-white"
                         : "bg-[#073E42]/10 text-[#073E42] group-hover:bg-[#073E42]/20"
@@ -252,7 +252,7 @@ export default function Services() {
                   </div>
                   <div className="overflow-hidden">
                     <span
-                      className={`block text-[10px] font-bold uppercase tracking-widest ${
+                      className={`block text-[9px] sm:text-[10px] font-bold uppercase tracking-widest ${
                         activeTab === index
                           ? "text-[#E6B055]"
                           : "text-[#073E42]/60"
@@ -262,14 +262,14 @@ export default function Services() {
                         ? service.sessionType
                         : "Select →"}
                     </span>
-                    <span className="font-serif font-bold text-[15px] truncate block">
+                    <span className="font-serif font-bold text-[14px] sm:text-[15px] truncate block">
                       {service.title}
                     </span>
                   </div>
                 </div>
 
                 <ArrowUpRight
-                  className={`w-4 h-4 transition-transform duration-300 z-10 ${
+                  className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 z-10 ${
                     activeTab === index
                       ? "text-[#E6B055] translate-x-0.5 -translate-y-0.5"
                       : "text-[#073E42]/30 opacity-0 group-hover:opacity-100"
@@ -280,9 +280,9 @@ export default function Services() {
           </div>
 
           {/* Active Content Display Card */}
-          <div className="lg:col-span-8 bg-white/90 backdrop-blur-xl border border-[#073E42]/15 rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
+          <div className="lg:col-span-8 bg-white/90 backdrop-blur-xl border border-[#073E42]/15 rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-10 shadow-xl relative overflow-hidden">
             {/* Card Internal Subtle Pattern Accent */}
-            <div className="absolute -top-12 -right-12 w-48 h-48 pointer-events-none opacity-[0.03] text-[#073E42]">
+            <div className="absolute -top-10 -right-10 sm:-top-12 sm:-right-12 w-36 h-36 sm:w-48 sm:h-48 pointer-events-none opacity-[0.03] text-[#073E42]">
               <svg viewBox="0 0 100 100" fill="currentColor">
                 <circle cx="50" cy="50" r="40" />
               </svg>
@@ -295,41 +295,41 @@ export default function Services() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                className="relative z-10 space-y-6"
+                className="relative z-10 space-y-4 sm:space-y-5 md:space-y-6"
               >
                 {/* Practitioner / Type Tag + Title */}
                 <div>
-                  <span className="text-[#073E42] font-semibold text-[10px] sm:text-xs uppercase tracking-widest bg-[#E6B055]/10 border border-[#E6B055]/20 px-3 py-1 rounded-full inline-block">
+                  <span className="text-[#073E42] font-semibold text-[9px] sm:text-[10px] md:text-xs uppercase tracking-widest bg-[#E6B055]/10 border border-[#E6B055]/20 px-2.5 sm:px-3 py-1 rounded-full inline-block">
                     {servicesData[activeTab].sessionType}
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#073E42] mt-3 leading-tight">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#073E42] mt-2.5 sm:mt-3 leading-tight">
                     {servicesData[activeTab].title}
                   </h3>
-                  <p className="text-[#073E42] font-serif italic mt-2 text-base sm:text-lg">
+                  <p className="text-[#073E42] font-serif italic mt-1.5 sm:mt-2 text-sm sm:text-base md:text-lg">
                     {servicesData[activeTab].subtitle}
                   </p>
                 </div>
 
                 {/* Description */}
-                <p className="text-[#073E42]/80 font-medium text-sm sm:text-base leading-relaxed">
+                <p className="text-[#073E42]/80 font-medium text-xs sm:text-sm md:text-base leading-relaxed">
                   {servicesData[activeTab].description}
                 </p>
 
                 {/* Benefits / What's included */}
-                <div className="space-y-3">
-                  <h4 className="text-xs font-bold text-[#073E42] uppercase tracking-wider">
+                <div className="space-y-2.5 sm:space-y-3">
+                  <h4 className="text-[10px] sm:text-xs font-bold text-[#073E42] uppercase tracking-wider">
                     {servicesData[activeTab].title === "Focused Group Programs"
                       ? "Current Focus Areas:"
                       : "What this includes:"}
                   </h4>
-                  <div className="grid grid-cols-1 gap-2.5">
+                  <div className="grid grid-cols-1 gap-2 sm:gap-2.5">
                     {servicesData[activeTab].benefits.map((benefit, i) => (
                       <div
                         key={i}
-                        className="flex items-start gap-3 text-xs sm:text-sm font-medium text-[#073E42]/80"
+                        className="flex items-start gap-2.5 sm:gap-3 text-[11px] sm:text-xs md:text-sm font-medium text-[#073E42]/80 leading-relaxed"
                       >
-                        <span className="w-5 h-5 rounded-full bg-[#073E42]/10 text-[#073E42] flex items-center justify-center shrink-0 mt-0.5 border border-[#073E42]/20">
-                          <Check className="w-3 h-3" />
+                        <span className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full bg-[#073E42]/10 text-[#073E42] flex items-center justify-center shrink-0 mt-0.5 border border-[#073E42]/20">
+                          <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                         </span>
                         <span>{benefit}</span>
                       </div>
@@ -338,13 +338,13 @@ export default function Services() {
                 </div>
 
                 {/* CTA Button */}
-                <div className="pt-4 border-t border-[#073E42]/10">
+                <div className="pt-3 sm:pt-4 border-t border-[#073E42]/10">
                   <Link
                     href={servicesData[activeTab].ctaHref}
-                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[#073E42] text-white hover:bg-[#073E42]/90 transition-all duration-300 font-semibold text-sm shadow-lg hover:shadow-xl active:scale-[0.98]"
+                    className="inline-flex items-center gap-1.5 sm:gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl bg-[#073E42] text-white hover:bg-[#073E42]/90 transition-all duration-300 font-semibold text-xs sm:text-sm shadow-lg hover:shadow-xl active:scale-[0.98]"
                   >
                     <span>{servicesData[activeTab].ctaText}</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </Link>
                 </div>
               </motion.div>
