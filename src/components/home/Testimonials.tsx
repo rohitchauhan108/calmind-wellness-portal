@@ -17,7 +17,7 @@ export default function Testimonials() {
       quote:
         "Doctors told me nothing more could be done. One session with Ila, and my pain went from an 8 to a 4 — in fifteen minutes.",
       name: "Margaret S.",
-      context: "Age 70",
+      context: "",
     },
     {
       tagline: "Enough, finally felt",
