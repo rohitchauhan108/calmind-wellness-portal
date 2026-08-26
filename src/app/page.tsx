@@ -37,8 +37,7 @@ export default function Home() {
         {/* 6. Programs */}
         <Programs />
 
-        {/* 6. CTA */}
-        <CTA />
+        
 
         <Infomativecta/>
       </main>
