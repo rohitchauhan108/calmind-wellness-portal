@@ -1,23 +1,23 @@
 import type { Metadata, Viewport } from 'next';
 import React from 'react';
-import { Forum, Montserrat } from 'next/font/google';
+import { Philosopher, Poppins } from 'next/font/google';
 import './globals.css';
 import Footer from '../components/ui/Footer';
 import Header from '../components/ui/Header';
 import LenisSmoothScroll from '../components/ui/LenisSmoothScroll';
 import FloatingWhatsApp from '../components/ui/FloatingWhatsApp';
 
-const forum = Forum({
+const philosopher = Philosopher({
   subsets: ['latin'],
-  variable: '--font-forum',
-  weight: ['400'],
+  variable: '--font-philosopher',
+  weight: ['400', '700'],
   display: 'swap',
 });
 
-const montserrat = Montserrat({
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-montserrat',
-  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
+  weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
 });
 
@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${forum.variable} ${montserrat.variable}`}>
+    <html lang="en" className={`${philosopher.variable} ${poppins.variable}`}>
       <body className="min-h-screen flex flex-col bg-brand-ivory text-brand-charcoal font-sans antialiased selection:bg-brand-forest/10 selection:text-brand-forest">
         <LenisSmoothScroll />
         <Header />
