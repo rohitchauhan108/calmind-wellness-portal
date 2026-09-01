@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import {
   Star,
   Calendar,
@@ -13,71 +12,126 @@ import {
 } from "lucide-react";
 
 export default function ProgramsPage() {
-  const [isVIP, setIsVIP] = useState(false);
-
   const programsList = [
     {
       number: "01",
-      badge: "1-ON-1 COACHING",
-      title: "The Personal Empowerment Pathway",
-      tagline: "3-Month Transformative Mentorship",
-      desc: "Perfect for individuals seeking deep clarity, authentic self-belief, and purpose. Includes regular coaching, targeted subconscious block clearing, and custom handwriting transformation guides.",
-      rating: "5.0",
+      badge: "ENTRY-LEVEL",
+      title: "Daily Practice (Name TBD)",
+      tagline: "Short Live Daily Practice",
+      desc: "A short, live-only daily practice designed to build consistency and ground your energy. Approximately 13–15 minutes, 6 days a week.",
+      rating: "New",
       features: [
-        "Six private 75-minute coaching sessions",
-        "Full scientific handwriting analysis",
-        "Custom Graphotherapy exercises",
-        "Subconscious block detection",
-        "Continuous accountability tracking",
-        "Direct email & messaging support",
+        "13–15 minutes daily sessions",
+        "6 days a week schedule",
+        "Live only access",
+        "Entry-level offering",
+        "Final name & content TBD"
       ],
-      priceIndividual: 450,
-      priceVIP: 750,
-      paymentLink: "https://buy.stripe.com/cNi7sN6Zg6p92Ex55PdZ600",
-      img: "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1200&q=80",
-      tags: ["3-MONTH MENTORSHIP", "GRAPHOTHERAPY", "SUBCONSCIOUS CLEARING"],
+      priceText: "Pricing TBD",
+      actionText: "INQUIRE NOW",
+      actionLink: "/contact",
+      img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80",
+      tags: ["DAILY PRACTICE", "LIVE ONLY"],
     },
     {
       number: "02",
-      badge: "HEALING & RESTORATION",
-      title: "The Energetic Rebirth Intensive",
-      tagline: "4-Week Emotional Decompression",
-      desc: "Engineered specifically for those suffering from high stress, heavy anxiety, emotional fatigue, or blocks. Combines powerful energetic clearing with calming somatic exercises.",
-      rating: "4.9",
+      badge: "LOW-TO-MID TIER",
+      title: "Chakra + Healing Practice (Name TBD)",
+      tagline: "Deeper Guided Practice",
+      desc: "A deeper guided practice focusing on Chakra meditation and healing-focused work. Approximately 25–35 minutes, around 4–5 days a week.",
+      rating: "New",
       features: [
-        "Four private 60-min Energy Healing sessions",
-        "Deep somatic decompression protocol",
-        "Mental silence technique training",
-        "Anxiety-relief handwriting stroke guides",
-        "Daily personalized grounding practices",
-        "Weekly energetic field assessments",
+        "25–35 minutes per session",
+        "4–5 days a week",
+        "Chakra meditation focus",
+        "Deep healing work",
+        "Final name & structure TBD"
       ],
-      priceIndividual: 320,
-      priceVIP: 550,
-      paymentLink: "https://buy.stripe.com/9B6aEZdnEaFp3IBgOxdZ601",
-      img: "https://images.pexels.com/photos/34423/dandelion-seeds-pointed-flower-plant.jpg",
-      tags: ["4-WEEK INTENSIVE", "ENERGY HEALING", "SOMATIC DECOMPRESSION"],
+      priceText: "Pricing TBD",
+      actionText: "INQUIRE NOW",
+      actionLink: "/contact",
+      img: "https://images.unsplash.com/photo-1528319725582-ddc096101511?auto=format&fit=crop&w=1200&q=80",
+      tags: ["CHAKRA", "HEALING"],
     },
     {
       number: "03",
-      badge: "COMPLETE INTEGRATION",
-      title: "The Subconscious Alignment Journey",
-      tagline: "6-Month Signature Evolution",
-      desc: "Our flagship, deeply restorative program. We systematically map, rewrite, and heal every facet of your thoughts, emotions, habits, and energetic blockages for permanent life transformation.",
+      badge: "DEEP FOCUS",
+      title: "Focused Group Coaching",
+      tagline: "Area-Specific Transformation",
+      desc: "Deeper programs focused on specific areas of life to bring collective healing, targeted strategies, and profound breakthroughs.",
       rating: "5.0",
       features: [
-        "Twelve private Coaching & Healing sessions",
-        "Full detailed Graphotherapy analysis & redesign",
-        "Comprehensive root-cause discovery audits",
-        "Custom behavioral habit-shift protocol",
-        "Priority scheduling & unlimited high-touch support",
-        "Lifetime integration toolkit & exercises",
+        "Weight Loss focus area",
+        "Relationships focus area",
+        "Career growth strategies",
+        "Money & Abundance blocks",
+        "Deep group coaching dynamic"
       ],
-      priceIndividual: 950,
-      priceVIP: 1550,
-      paymentLink: "https://buy.stripe.com/00w6oJ1EW14P2Ex9m5dZ602",
+      priceText: "Pricing TBD",
+      actionText: "INQUIRE NOW",
+      actionLink: "/contact",
+      img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80",
+      tags: ["GROUP COACHING", "LIFE AREAS"],
+    },
+    {
+      number: "04",
+      badge: "HIGHEST TOUCH",
+      title: "Private / VIP Coaching",
+      tagline: "Premium 1:1 Coaching",
+      desc: "Our highest-touch offering delivering premium 1:1 coaching. Tailored structure, duration, and transformation promises designed exclusively for you.",
+      rating: "5.0",
+      features: [
+        "Premium 1:1 personalized coaching",
+        "Highest-touch mentorship",
+        "Custom transformation promise",
+        "Bespoke duration & structure",
+        "Final public-facing name TBD"
+      ],
+      priceText: "Pricing TBD",
+      actionText: "INQUIRE NOW",
+      actionLink: "/contact",
       img: "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=1200&q=80",
-      tags: ["6-MONTH FLAGSHIP", "FULL HEALING", "HIGH-TOUCH MENTORSHIP"],
+      tags: ["VIP", "1-ON-1", "PREMIUM"],
+    },
+    {
+      number: "05",
+      badge: "SPECIALIZED",
+      title: "Graphotherapy Offerings",
+      tagline: "Handwriting & Subconscious Alignment",
+      desc: "Specialized offerings to reprogram the subconscious through handwriting. Includes individual signature analysis and targeted workshops for all ages.",
+      rating: "5.0",
+      features: [
+        "Signature Analysis",
+        "Adult Graphotherapy Workshops",
+        "Kids Graphotherapy Workshops",
+        "Kids Graphotherapy Program",
+        "Subconscious reprogramming"
+      ],
+      priceText: "Pricing TBD",
+      actionText: "INQUIRE NOW",
+      actionLink: "/contact",
+      img: "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=1200&q=80",
+      tags: ["GRAPHOTHERAPY", "WORKSHOPS"],
+    },
+    {
+      number: "06",
+      badge: "FUTURE OFFERING",
+      title: "Membership",
+      tagline: "Exclusive Community Ecosystem",
+      desc: "An upcoming membership concept currently in development. It will provide ongoing support, community, and continuous transformation.",
+      rating: "Upcoming",
+      features: [
+        "Exclusive community access",
+        "Ongoing continuous support",
+        "Future ecosystem offering",
+        "Membership concept in development",
+        "Details & pricing coming soon"
+      ],
+      priceText: "Coming Soon",
+      actionText: "JOIN WAITLIST",
+      actionLink: "/contact",
+      img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+      tags: ["MEMBERSHIP", "COMMUNITY"],
     },
   ];
 
@@ -103,41 +157,6 @@ export default function ProgramsPage() {
           <p className="text-base sm:text-lg text-[#0D3C38]/75 font-normal max-w-2xl mx-auto leading-relaxed">
             Bespoke holistic frameworks integrating Life Coaching, Energy Healing, and Graphotherapy to help you dissolve subconscious blocks and step into your full potential.
           </p>
-
-          {/* Pricing Tier Selector Toggle */}
-          <div className="pt-6 flex items-center justify-center gap-4">
-            <span
-              className={`text-xs sm:text-sm font-semibold tracking-wide transition-colors ${
-                !isVIP ? "text-[#0D3C38]" : "text-[#0D3C38]/50"
-              }`}
-            >
-              Standard Tier
-            </span>
-
-            <button
-              onClick={() => setIsVIP(!isVIP)}
-              className="w-14 h-8 rounded-full bg-[#0D3C38]/15 p-1 flex items-center transition-colors duration-300 relative focus:outline-none cursor-pointer"
-              aria-label="Toggle VIP Tier"
-            >
-              <motion.div
-                layout
-                className="w-6 h-6 rounded-full bg-[#0D3C38] shadow-sm"
-                transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                style={{ marginLeft: isVIP ? "auto" : "0" }}
-              />
-            </button>
-
-            <span
-              className={`text-xs sm:text-sm font-semibold tracking-wide transition-colors flex items-center gap-2 ${
-                isVIP ? "text-[#0D3C38]" : "text-[#0D3C38]/50"
-              }`}
-            >
-              VIP High-Touch Tier
-              <span className="text-[10px] bg-[#0D3C38] text-white px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
-                Priority
-              </span>
-            </span>
-          </div>
         </div>
       </section>
 
@@ -209,26 +228,21 @@ export default function ProgramsPage() {
                   <div className="pt-6 border-t border-[#0D3C38]/10 flex flex-wrap items-center justify-between gap-6">
                     <div>
                       <div className="text-xs font-semibold uppercase tracking-wider text-[#0D3C38]/60">
-                        {isVIP ? "VIP High-Touch Fee" : "Standard Program Fee"}
+                        Investment
                       </div>
                       <div className="text-3xl sm:text-4xl font-serif font-bold text-[#0D3C38] mt-0.5">
-                        ${isVIP ? prog.priceVIP.toLocaleString() : prog.priceIndividual.toLocaleString()}
-                        <span className="text-xs font-sans text-[#0D3C38]/60 font-normal ml-1">
-                          USD
-                        </span>
+                        {prog.priceText}
                       </div>
                     </div>
 
                     <div className="flex items-center gap-4">
-                      <a
-                        href={prog.paymentLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <Link
+                        href={prog.actionLink}
                         className="px-8 py-3.5 rounded-none bg-[#0D3C38] hover:bg-[#0D3C38]/90 text-white font-medium text-xs tracking-widest uppercase transition-all duration-300 shadow-md inline-flex items-center gap-2 group"
                       >
-                        ENROLL NOW
+                        {prog.actionText}
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

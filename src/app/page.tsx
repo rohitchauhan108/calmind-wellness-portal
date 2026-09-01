@@ -2,7 +2,6 @@
 
 import Hero from "../components/home/Hero";
 import Services from "../components/home/Services";
-import Programs from "../components/home/Programs";
 import Testimonials from "../components/home/Testimonials";
 import SupportCategories from "../components/home/SupportCategories";
 import Infomativecta from "../components/home/Informativecta";
@@ -34,8 +33,7 @@ export default function Home() {
         {/* 5. Meet Us */}
         <MeetUs />
 
-        {/* 6. Programs */}
-        <Programs />
+       
 
         
 

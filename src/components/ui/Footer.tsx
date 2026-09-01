@@ -18,19 +18,19 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const servicesList = [
-    { name: 'Life Coaching', href: '/services' },
-    { name: 'Energy Healing', href: '/services' },
-    { name: 'Graphotherapy', href: '/services' },
-    { name: 'Root-Cause Diagnosis', href: '/services' },
+    { name: 'Private Coaching', href: '/private-coaching' },
+    { name: 'Graphotherapy', href: '/graphotherapy' },
+    { name: 'Membership', href: '/membership' },
+    { name: 'Events', href: '/events' },
+    { name: 'Free Offerings', href: '/free-offerings' },
   ];
 
   const quickLinks = [
     { name: 'About Ila', href: '/about' },
-    { name: 'How We Help', href: '/how-we-help' },
-    { name: 'All Services', href: '/services' },
     { name: 'Programs', href: '/programs' },
+    { name: 'Success Stories', href: '/success-stories' },
     { name: 'Frequently Asked Questions', href: '/faq' },
-    { name: 'Book Discovery Call', href: '/contact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -160,9 +160,7 @@ export default function Footer() {
                   <a href="tel:+447429519990" className="hover:text-white transition-colors block">
                     +44 7429 519990
                   </a>
-                  <a href="tel:+16475704793" className="hover:text-white transition-colors block mt-0.5">
-                    +(647) 570-4793
-                  </a>
+
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -188,17 +186,32 @@ export default function Footer() {
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-4 text-xs text-[#FBF9F5]/80 mb-2">
               <p>© {currentYear} Ila Garg. All rights reserved.</p>
               <span className="text-white/20 hidden sm:inline">•</span>
-              
-              <Link href="/terms" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
-                Terms &amp; Conditions
+
+              <Link href="/success-stories" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
+                Success Stories
               </Link>
               <span className="text-white/20">•</span>
-              
+
+              <Link href="/faq" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
+                FAQ
+              </Link>
+              <span className="text-white/20">•</span>
+
+              <Link href="/contact" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
+                Contact
+              </Link>
+              <span className="text-white/20">•</span>
+
               <Link href="/privacy-policy" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
                 Privacy Policy
               </Link>
               <span className="text-white/20">•</span>
-              
+
+              <Link href="/terms" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
+                Terms &amp; Conditions
+              </Link>
+              <span className="text-white/20">•</span>
+
               <Link href="/refund-policy" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
                 Refund &amp; Cancellation Policy
               </Link>
@@ -206,11 +219,6 @@ export default function Footer() {
 
               <Link href="/medical-disclaimer" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
                 Disclaimer
-              </Link>
-              <span className="text-white/20">•</span>
-
-              <Link href="/contact" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
-                Contact Us
               </Link>
             </div>
 

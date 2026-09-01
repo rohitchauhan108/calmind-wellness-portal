@@ -68,11 +68,13 @@ export default function Header() {
   const navItems: NavItem[] = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "How We Help", href: "/how-we-help" },
     { label: "Programs", href: "/programs" },
-    { label: "Faqs", href: "/faq" },
-    { label: "Contact", href: "/contact" },
+    { label: "Private Coaching", href: "/private-coaching" },
+    { label: "Graphotherapy", href: "/graphotherapy" },
+    { label: "Membership", href: "/membership" },
+    { label: "Events", href: "/events" },
+    { label: "Free Offerings", href: "/free-offerings" },
+    { label: "Login", href: "/login" },
   ];
 
   return (
@@ -89,7 +91,7 @@ export default function Header() {
             : "max-h-12 py-2.5 border-b border-white/10"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-end">
+        <div className="max-w-[90rem] mx-auto px-6 md:px-12 flex items-center justify-end">
           <div className="flex items-center gap-5">
             <a
               href="mailto:contact@ilagarg.com"
@@ -106,14 +108,7 @@ export default function Header() {
               <Phone className="w-3.5 h-3.5 text-brand-copper" />
               <span>+44 7429 519990</span>
             </a>
-            <div className="h-3 w-[1px] bg-white/20 hidden xl:block" />
-            <a
-              href="tel:+16475704793"
-              className="hidden xl:flex items-center gap-1.5 hover:text-brand-copper transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5 text-brand-copper" />
-              <span>+(647) 570-4793</span>
-            </a>
+
             <div className="h-3 w-[1px] bg-white/20 hidden sm:block" />
             <div className="flex items-center gap-3 text-brand-ivory/70">
               <a href="#" className="hover:text-brand-ivory transition-colors" aria-label="Facebook">
@@ -138,7 +133,7 @@ export default function Header() {
             : "bg-brand-ivory py-4 border-b border-brand-forest/10"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+        <div className="max-w-[90rem] mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Brand Name */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
             <Image
@@ -152,7 +147,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
             {navItems.map((item) => {
               const isActive = isPathActive(item.href);
               return (

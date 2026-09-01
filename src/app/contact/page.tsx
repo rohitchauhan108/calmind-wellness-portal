@@ -82,12 +82,7 @@ export default function ContactPage() {
                 >
                   +44 7429 519990
                 </a>
-                <a
-                  href="tel:+16475704793"
-                  className="text-sm font-medium text-[#0D3B36] hover:underline transition-colors block mt-0.5"
-                >
-                  +(647) 570-4793
-                </a>
+
               </div>
             </div>
           </motion.div>
