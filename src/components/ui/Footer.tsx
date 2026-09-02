@@ -51,13 +51,15 @@ export default function Footer() {
               Book a discovery session to uncover your subconscious patterns and gain clarity today.
             </p>
           </div>
-          <Link
-            href="/contact"
+          <a
+            href="https://calendly.com/ilagarg-official/clarity-call-with-ila"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-7 py-3.5 rounded-full bg-[#FBF9F5] text-[#073E42] font-semibold text-sm hover:bg-white transition-all duration-300 flex items-center gap-2 group shrink-0 shadow-lg"
           >
             <span>Schedule Consultation</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Link>
+          </a>
         </div>
         
         {/* 2. Main Footer Navigation Grid */}
@@ -81,7 +83,7 @@ export default function Footer() {
 
             <div className="flex items-center gap-3 pt-2">
               <a 
-                href="#" 
+                href="https://www.facebook.com/ilagargofficial/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FBF9F5] hover:text-white hover:bg-white/10 hover:border-white/30 transition-all"
@@ -90,7 +92,7 @@ export default function Footer() {
                 <Facebook className="w-4.5 h-4.5" />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/ilagargofficial?igsi=dHdyOWplcTY2aW12" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FBF9F5] hover:text-white hover:bg-white/10 hover:border-white/30 transition-all"
@@ -99,7 +101,7 @@ export default function Footer() {
                 <Instagram className="w-4.5 h-4.5" />
               </a>
               <a 
-                href="#" 
+                href="https://www.youtube.com/@ilagargofficial" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FBF9F5] hover:text-white hover:bg-white/10 hover:border-white/30 transition-all"

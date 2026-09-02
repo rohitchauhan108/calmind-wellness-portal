@@ -388,12 +388,14 @@ export default function FAQPage() {
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                href="/contact"
+              <a
+                href="https://calendly.com/ilagarg-official/clarity-call-with-ila"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#059669] text-white font-semibold text-sm hover:bg-[#047857] transition-all duration-300 shadow-md"
               >
                 Book Your Consultation <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
               <Link
                 href="/about"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-semibold text-sm hover:bg-white/20 border border-white/10 transition-all duration-300"

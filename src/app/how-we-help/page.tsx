@@ -400,11 +400,15 @@ export default function HowWeHelpPage() {
 
             {/* CTA Button */}
             <div className="relative z-10 shrink-0">
-              <Link href="/contact">
+              <a
+              href="https://calendly.com/ilagarg-official/clarity-call-with-ila"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
                 <button className="px-7 py-3.5 rounded-full bg-white text-[#0d3c38] font-semibold hover:bg-[#e7f0ec] transition-all duration-300 text-xs sm:text-sm shadow-md">
                   Book A Consultation
                 </button>
-              </Link>
+              </a>
             </div>
 
           </div>

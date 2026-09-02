@@ -294,12 +294,16 @@ export default function ProgramsPage() {
           </p>
 
           <div className="pt-4">
-            <Link href="/contact">
+            <a
+              href="https://calendly.com/ilagarg-official/clarity-call-with-ila"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <button className="px-8 py-4 rounded-full bg-white text-[#0D3C38] font-semibold text-xs tracking-widest uppercase hover:bg-[#E7F0EC] transition-all shadow-lg inline-flex items-center gap-2 cursor-pointer">
                 Schedule Your Discovery Session
                 <ArrowRight className="w-4 h-4" />
               </button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

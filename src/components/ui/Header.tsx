@@ -111,13 +111,13 @@ export default function Header() {
 
             <div className="h-3 w-[1px] bg-white/20 hidden sm:block" />
             <div className="flex items-center gap-3 text-brand-ivory/70">
-              <a href="#" className="hover:text-brand-ivory transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/ilagargofficial/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-ivory transition-colors" aria-label="Facebook">
                 <Facebook className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="hover:text-brand-ivory transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/ilagargofficial?igsi=dHdyOWplcTY2aW12" target="_blank" rel="noopener noreferrer" className="hover:text-brand-ivory transition-colors" aria-label="Instagram">
                 <Instagram className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="hover:text-brand-ivory transition-colors" aria-label="YouTube">
+              <a href="https://www.youtube.com/@ilagargofficial" target="_blank" rel="noopener noreferrer" className="hover:text-brand-ivory transition-colors" aria-label="YouTube">
                 <Youtube className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -253,13 +253,15 @@ export default function Header() {
 
           {/* Right Action Button */}
           <div className="hidden lg:flex items-center">
-            <Link
-              href="/contact"
+            <a
+              href="https://calendly.com/ilagarg-official/clarity-call-with-ila"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-sans text-[14px] font-medium px-6 py-2.5 rounded-full border border-brand-forest/30 text-brand-forest hover:bg-brand-forest hover:border-brand-forest hover:text-brand-ivory transition-all duration-300 shadow-sm flex items-center gap-2 group"
             >
               <span>Book a Session</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -341,14 +343,16 @@ export default function Header() {
             })}
 
             <div className="pt-3">
-              <Link
-                href="/contact"
+              <a
+                href="https://calendly.com/ilagarg-official/clarity-call-with-ila"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="flex items-center justify-center gap-2 font-sans text-sm font-medium w-full py-3 rounded-full bg-brand-forest text-brand-ivory hover:bg-brand-forest-dark transition-colors shadow-sm"
               >
                 <span>Book a Session</span>
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}

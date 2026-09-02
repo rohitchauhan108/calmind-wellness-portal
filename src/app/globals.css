@@ -4,31 +4,53 @@
   /* Mapped to Next.js CSS Variables */
   --font-sans: var(--font-poppins), system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-philosopher), Georgia, 'Times New Roman', serif;
-  
+
   /* Modern, Premium Transformation Palette */
   --color-brand-ivory: #FAF7F2;          /* Warm Ivory Background */
   --color-brand-warm-white: #FCFAFA;     /* Card Backgrounds */
   --color-brand-charcoal: #23272A;       /* Primary Typography */
   --color-brand-charcoal-muted: #4B5156; /* Secondary Body Text */
-  
+
   /* Primary Accent: Deep Forest Green */
   --color-brand-forest: #1E3A2B;
   --color-brand-forest-light: #2A4F3B;
   --color-brand-forest-dark: #13261C;
-  
+
   /* Secondary Accent: Burnt Copper / Terracotta */
   --color-brand-copper: #C25E38;
   --color-brand-copper-light: #D4744E;
   --color-brand-copper-dark: #A04725;
-  
+
   /* Subtle Accent: Muted Teal */
   --color-brand-teal: #4A7C7D;
   --color-brand-teal-light: #689B9C;
 
   /* Card Borders & Dividers */
   --color-brand-border: #E5DFC0;
-  
+
   /* Premium Shadows */
   --shadow-premium: 0 20px 40px -12px rgba(30, 58, 43, 0.12);
   --shadow-premium-hover: 0 28px 60px -16px rgba(30, 58, 43, 0.22);
+
+  /* Legacy palette aliases used across older pages */
+  --color-brand-cream: #FBF9F5;
+  --color-brand-sage: #4A7C7D;
+  --color-brand-gold: #E6B055;
+  --color-brand-espresso: #1C2826;
+  --color-brand-espresso-light: #3D4A47;
+  --color-brand-burgundy: #723B3A;
+  --color-brand-burgundy-dark: #4F2A29;
+}
+
+/* Site-wide consistent heading typography: render every heading with
+   Philosopher (serif) so subpages (About, Programs, How We Help, etc.)
+   visually match the Home page heading font instead of accidentally
+   falling back to Poppins sans-serif.
+
+   Body/copy still inherits Poppins sans-serif via the <body class="font-sans">
+   in layout.tsx, and any span / a / etc. INSIDE a heading will correctly
+   inherit its serif font from the heading parent. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif) !important;
+  letter-spacing: -0.01em;
 }

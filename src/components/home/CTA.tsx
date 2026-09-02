@@ -8,12 +8,7 @@ export default function CTA() {
   const easeCurve: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
   const handleBooking = () => {
-    const contactSection = document.getElementById('contact') || document.getElementById('newsletter');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.location.href = '/contact';
-    }
+    window.open('https://calendly.com/ilagarg-official/clarity-call-with-ila', '_blank');
   };
 
   const handleExplore = () => {
