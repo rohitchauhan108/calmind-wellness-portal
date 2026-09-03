@@ -41,35 +41,35 @@ export default function GraphotherapyPage() {
       icon: <FileSignature className="w-6 h-6" />,
       title: "Submit Your Handwriting Sample",
       desc: "You send us 3 pages of natural handwriting (on unlined paper) plus your signature. We guide you through the exact submission protocol.",
-      accent: "bg-amber-50 text-amber-700",
+      accent: "bg-[#E6B055]/15 text-[#C48F3A]",
     },
     {
       num: "02",
       icon: <Brain className="w-6 h-6" />,
       title: "Scientific Analysis Report",
       desc: "Shilpa conducts a full multi-page grapho-analytical report mapping your subconscious patterns, belief structures, and behavioral signatures.",
-      accent: "bg-indigo-50 text-indigo-700",
+      accent: "bg-[#0D3C38]/10 text-[#08292C]",
     },
     {
       num: "03",
       icon: <PenTool className="w-6 h-6" />,
       title: "Custom Stroke Redesign Protocol",
       desc: "We design a personalised Graphotherapy exercise programme: specific letter modifications, daily drills, and progressive weekly rewrites.",
-      accent: "bg-emerald-50 text-emerald-700",
+      accent: "bg-[#E6B055]/20 text-[#B88127]",
     },
     {
       num: "04",
       icon: <Activity className="w-6 h-6" />,
       title: "Daily Practice & Integration",
       desc: "21–66 days of guided 5–15 minute daily practice. We measure behavioural shift markers alongside handwriting evolution.",
-      accent: "bg-rose-50 text-rose-700",
+      accent: "bg-[#0D3C38]/12 text-[#0D3C38]",
     },
     {
       num: "05",
       icon: <Award className="w-6 h-6" />,
       title: "Follow-up Review & Lock-in",
       desc: "We re-analyse at key milestones, refine the strokes, and lock in the new neural patterns for lasting sustainable change.",
-      accent: "bg-sky-50 text-sky-700",
+      accent: "bg-[#C48F3A]/20 text-[#986A25]",
     },
   ];
 
@@ -162,24 +162,24 @@ export default function GraphotherapyPage() {
       label: "Report measurable behaviour shifts",
       sub: "Within 30 days of protocol start",
       icon: <Activity className="w-5 h-5" />,
-      color: "text-[#059669]",
-      bg: "bg-emerald-50",
+      color: "text-[#0D3C38]",
+      bg: "bg-[#0D3C38]/10",
     },
     {
       stat: "21 days",
       label: "Average first writing change",
       sub: "Handwriting visibly re-patterned",
       icon: <Clock className="w-5 h-5" />,
-      color: "text-[#E6B055]",
-      bg: "bg-amber-50",
+      color: "text-[#C48F3A]",
+      bg: "bg-[#E6B055]/15",
     },
     {
       stat: "1:1",
       label: "With Certified Graphotherapist",
       sub: "Shilpa · 15+ years clinical practice",
       icon: <Award className="w-5 h-5" />,
-      color: "text-[#4F46E5]",
-      bg: "bg-indigo-50",
+      color: "text-[#08292C]",
+      bg: "bg-[#E6B055]/20",
     },
     {
       stat: "100%",
@@ -310,15 +310,15 @@ export default function GraphotherapyPage() {
               >
                 <button
                   onClick={handleBookCall}
-                  className="group inline-flex items-center justify-center gap-2.5 px-8 py-4.5 rounded-2xl bg-[#0D3C38] hover:bg-[#0D3C38]/92 text-[#FBF9F5] font-semibold text-sm md:text-base shadow-xl hover:shadow-2xl hover:shadow-[#0D3C38]/20 transition-all duration-300 cursor-pointer border border-[#0D3C38]/50"
+                  className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-[#0D3C38] hover:bg-[#0D3C38]/92 text-[#FBF9F5] font-semibold text-sm md:text-base shadow-xl hover:shadow-2xl hover:shadow-[#0D3C38]/20 transition-all duration-300 cursor-pointer border border-[#0D3C38]/50"
                 >
-                  <Calendar className="w-4.5 h-4.5 text-[#E6B055]" />
+                  <Calendar className="w-[1.125rem] h-[1.125rem] text-[#E6B055]" />
                   Book Your Handwriting Consultation
-                  <ArrowRight className="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight className="w-[1.125rem] h-[1.125rem] transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center justify-center gap-2 px-8 py-4.5 rounded-2xl bg-transparent hover:bg-white text-[#0D3C38] font-semibold text-sm md:text-base transition-all duration-300 cursor-pointer border-2 border-[#0D3C38]/20 hover:border-[#0D3C38]/40"
+                  className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-transparent hover:bg-white text-[#0D3C38] font-semibold text-sm md:text-base transition-all duration-300 cursor-pointer border-2 border-[#0D3C38]/20 hover:border-[#0D3C38]/40"
                 >
                   Ask About a Custom Programme
                 </Link>
@@ -444,7 +444,7 @@ export default function GraphotherapyPage() {
                 className="group relative rounded-2xl p-6 sm:p-7 bg-white border border-[#0D3C38]/10 hover:border-[#0D3C38]/25 hover:shadow-xl hover:shadow-[#0D3C38]/8 transition-all duration-400 flex flex-col"
               >
                 <div className="flex items-start justify-between mb-5">
-                  <div className={`w-13 h-13 rounded-2xl ${s.accent} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`} style={{ width: "3.25rem", height: "3.25rem" }}>
+                  <div className={`w-[3.25rem] h-[3.25rem] rounded-2xl ${s.accent} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     {s.icon}
                   </div>
                   <span className="font-serif text-xl font-bold text-[#E6B055]/80">
@@ -565,7 +565,7 @@ export default function GraphotherapyPage() {
                     </div>
                     <button
                       onClick={handleBookCall}
-                      className={`group inline-flex items-center gap-2 px-5 sm:px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 cursor-pointer ${
+                      className={`group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 cursor-pointer ${
                         off.primary
                           ? "bg-[#0D3C38] hover:bg-[#0D3C38]/92 text-[#FBF9F5] shadow-md hover:shadow-lg"
                           : "bg-transparent border-2 border-[#0D3C38]/20 hover:border-[#0D3C38]/50 hover:bg-[#0D3C38] hover:text-[#FBF9F5] text-[#0D3C38]"
@@ -608,10 +608,10 @@ export default function GraphotherapyPage() {
             <div className="md:col-span-2 flex md:justify-end">
               <button
                 onClick={handleBookCall}
-                className="group inline-flex items-center gap-2.5 px-7 py-4 rounded-2xl bg-[#E6B055] hover:bg-[#E6B055]/92 text-[#0D3C38] font-semibold text-sm sm:text-base shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-[#E6B055] hover:bg-[#E6B055]/92 text-[#0D3C38] font-semibold text-sm sm:text-base shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer"
               >
                 Enquire About Kids Programme
-                <ArrowRight className="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="w-[1.125rem] h-[1.125rem] transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>
@@ -704,14 +704,14 @@ export default function GraphotherapyPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
               <button
                 onClick={handleBookCall}
-                className="group inline-flex items-center justify-center gap-2.5 px-8 py-4.5 rounded-2xl bg-[#0D3C38] hover:bg-[#0D3C38]/92 text-[#FBF9F5] font-semibold text-sm md:text-base shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-[#0D3C38] hover:bg-[#0D3C38]/92 text-[#FBF9F5] font-semibold text-sm md:text-base shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer"
               >
                 Book Complimentary Graphotherapy Consult
-                <ArrowRight className="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="w-[1.125rem] h-[1.125rem] transition-transform duration-300 group-hover:translate-x-1" />
               </button>
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-2 px-8 py-4.5 rounded-2xl bg-transparent hover:bg-white/70 text-[#0D3C38] font-semibold text-sm md:text-base transition-all duration-300 cursor-pointer border-2 border-[#0D3C38]/30 hover:border-[#0D3C38]/60"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-transparent hover:bg-white/70 text-[#0D3C38] font-semibold text-sm md:text-base transition-all duration-300 cursor-pointer border-2 border-[#0D3C38]/30 hover:border-[#0D3C38]/60"
               >
                 Email Shilpa a Question
               </Link>
