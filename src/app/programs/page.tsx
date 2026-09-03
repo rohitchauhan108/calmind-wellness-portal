@@ -110,7 +110,7 @@ export default function ProgramsPage() {
       priceText: "Pricing TBD",
       actionText: "INQUIRE NOW",
       actionLink: "/contact",
-      img: "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=1200&q=80",
+      img: "/program/5.webp",
       tags: ["GRAPHOTHERAPY", "WORKSHOPS"],
     },
     {
@@ -130,7 +130,7 @@ export default function ProgramsPage() {
       priceText: "Coming Soon",
       actionText: "JOIN WAITLIST",
       actionLink: "/contact",
-      img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+      img: "/program/6.webp",
       tags: ["MEMBERSHIP", "COMMUNITY"],
     },
   ];
