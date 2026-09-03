@@ -30,7 +30,7 @@ export default function ProgramsPage() {
       priceText: "Pricing TBD",
       actionText: "INQUIRE NOW",
       actionLink: "/contact",
-      img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80",
+      img: "/program/1.webp",
       tags: ["DAILY PRACTICE", "LIVE ONLY"],
     },
     {
@@ -50,7 +50,7 @@ export default function ProgramsPage() {
       priceText: "Pricing TBD",
       actionText: "INQUIRE NOW",
       actionLink: "/contact",
-      img: "https://images.unsplash.com/photo-1528319725582-ddc096101511?auto=format&fit=crop&w=1200&q=80",
+      img: "/program/2.webp",
       tags: ["CHAKRA", "HEALING"],
     },
     {
@@ -70,7 +70,7 @@ export default function ProgramsPage() {
       priceText: "Pricing TBD",
       actionText: "INQUIRE NOW",
       actionLink: "/contact",
-      img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80",
+      img: "/program/3.webp",
       tags: ["GROUP COACHING", "LIFE AREAS"],
     },
     {
@@ -90,7 +90,7 @@ export default function ProgramsPage() {
       priceText: "Pricing TBD",
       actionText: "INQUIRE NOW",
       actionLink: "/contact",
-      img: "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=1200&q=80",
+      img: "/program/4.webp",
       tags: ["VIP", "1-ON-1", "PREMIUM"],
     },
     {
