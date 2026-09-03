@@ -41,25 +41,61 @@ export default function Footer() {
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
 
-        {/* 1. Top Callout Card / Banner */}
-        <div className="mb-16 p-8 md:p-10 rounded-3xl bg-[#1C2826] border border-white/10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-2 text-center md:text-left">
-            <h3 className="font-serif text-2xl md:text-3xl font-medium text-white">
-              Ready to begin your healing journey?
-            </h3>
-            <p className="text-sm text-[#FBF9F5]/70 font-medium max-w-lg">
-              Book a discovery session to uncover your subconscious patterns and gain clarity today.
-            </p>
+        <div className="mb-16 rounded-[30px] border border-[#d8b77d]/50 bg-[#f6efe8] p-5 shadow-[0_18px_50px_rgba(7,62,66,0.08)] md:p-8">
+          <div className="grid items-center gap-7 lg:grid-cols-[0.78fr_1.5fr_0.9fr]">
+            <div className="flex justify-center lg:justify-start">
+              <div className="relative h-44 w-44 overflow-hidden rounded-full border-[4px] border-[#d5af6b] bg-[#0d3f3d] shadow-[0_18px_30px_rgba(13,59,54,0.15)] md:h-52 md:w-52">
+                <Image
+                  src="/founder.jpeg"
+                  alt="Ila Garg"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-4 text-[#0d3f3d]">
+              <div className="flex items-center gap-3">
+                <span className="h-px w-12 bg-[#d5af6b]" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#0d3f3d]/65">
+                  My mission
+                </span>
+              </div>
+
+              <h3 className="font-serif text-3xl md:text-4xl font-medium leading-tight text-[#0d3f3d]">
+                I want to create a movement in the world.
+              </h3>
+
+              <p className="max-w-xl text-base leading-relaxed text-[#0d3f3d]/80 md:text-lg">
+                I want to show this to everyone—what is possible. Like, if you just go for it, what it is that we can achieve? Nothing.
+              </p>
+            </div>
+
+            <div className="rounded-[24px] border border-[#d5af6b]/70 bg-[#f9f5f1] p-6 text-center text-[#0d3f3d] shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]">
+              <div className="mb-4 flex justify-center">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#d5af6b] bg-[#0d3f3d]/5 text-[#0d3f3d]">
+                  <Globe className="h-5 w-5" />
+                </div>
+              </div>
+
+              <h4 className="font-serif text-2xl md:text-[2rem] leading-tight">
+                Are you ready to begin?
+              </h4>
+
+              <a
+                href="https://calendly.com/ilagarg-official/clarity-call-with-ila"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#0d3f3d] px-5 py-3 text-sm font-bold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-[#0a2f2d]"
+              >
+                Let&apos;s Connect
+              </a>
+
+              <p className="mt-4 text-sm leading-relaxed text-[#0d3f3d]/70">
+                Your journey within can change everything outside.
+              </p>
+            </div>
           </div>
-          <a
-            href="https://calendly.com/ilagarg-official/clarity-call-with-ila"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-7 py-3.5 rounded-full bg-[#FBF9F5] text-[#073E42] font-semibold text-sm hover:bg-white transition-all duration-300 flex items-center gap-2 group shrink-0 shadow-lg"
-          >
-            <span>Schedule Consultation</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </a>
         </div>
         
         {/* 2. Main Footer Navigation Grid */}

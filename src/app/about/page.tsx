@@ -248,88 +248,117 @@ export default function TransformationHero() {
       </section>
 
       {/* ================= STORY & MISSION TOGGLE SECTION ================= */}
-      <section className="relative py-20 px-6 lg:px-12 bg-[#F2F5F3]">
-        <div className="max-w-4xl mx-auto flex flex-col items-center space-y-8">
-          {/* Toggle Buttons */}
-          <div className="inline-flex p-1.5 rounded-full bg-white border border-[#0D3B36]/10 shadow-sm">
-            <button
-              onClick={() => setActiveTab("story")}
-              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
-                activeTab === "story"
-                  ? "bg-[#0D3B36] text-white shadow-sm"
-                  : "text-[#0D3B36]/70 hover:text-[#0D3B36]"
-              }`}
-            >
-              Our Story
-            </button>
-            <button
-              onClick={() => setActiveTab("mission")}
-              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
-                activeTab === "mission"
-                  ? "bg-[#0D3B36] text-white shadow-sm"
-                  : "text-[#0D3B36]/70 hover:text-[#0D3B36]"
-              }`}
-            >
-              Our Mission
-            </button>
-          </div>
+      <section className="relative overflow-hidden bg-[#eef2ef] px-6 py-20 lg:px-12">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(13,59,54,0.08),_transparent_34%)]" />
+        <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-[#0D3B36]/5 blur-3xl" />
 
-          {/* Dynamic Card Content with Smooth Animation */}
-          <div className="w-full min-h-[220px] relative">
-            {activeTab === "story" ? (
-              <article
-                key="story"
-                className="p-8 sm:p-12 rounded-3xl bg-[#0D3B36] text-white shadow-md space-y-4 animate-fade-in"
-              >
-                <span className="text-xs font-semibold uppercase tracking-wider text-white/60">
-                  About Us
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-white">
-                  Our Story
-                </h2>
-                <p className="text-base sm:text-lg text-white/80 leading-relaxed">
-                  Everyone faces moments of uncertainty—whether it&apos;s
-                  struggling in relationships, feeling stuck in a career, or
-                  dealing with financial stress. We created this platform to
-                  provide practical guidance and personalized support to help
-                  transform your life from the inside out.
-                </p>
-              </article>
-            ) : (
-              <article
-                key="mission"
-                className="p-8 sm:p-12 rounded-3xl bg-[#0D3B36] text-white shadow-md space-y-4 animate-fade-in"
-              >
-                <span className="text-xs font-semibold uppercase tracking-wider text-white/60">
-                  Purpose
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-white">
-                  Our Mission
-                </h2>
-                <p className="text-base sm:text-lg text-white/80 leading-relaxed">
-                  Our mission is to empower individuals with the knowledge, tools,
-                  and guidance they need to overcome life&apos;s challenges and
-                  create lasting personal transformation.
-                </p>
-              </article>
-            )}
+        <div className="relative mx-auto max-w-6xl">
+          <div className="rounded-[32px] border border-[#0D3B36]/10 bg-[#f8f5f1]/90 p-4 shadow-[0_25px_70px_rgba(13,59,54,0.08)] backdrop-blur-sm">
+            <div className="overflow-hidden rounded-[26px] bg-[linear-gradient(135deg,#0d3c38_0%,#0f4a44_40%,#163f3c_100%)] p-5 sm:p-7 lg:p-8">
+              <div className="mb-6 flex justify-center">
+                <div className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 p-1.5 shadow-inner shadow-white/5">
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab("story")}
+                    className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 sm:px-7 ${
+                      activeTab === "story"
+                        ? "bg-white text-[#0D3B36] shadow-md"
+                        : "text-white/75 hover:text-white"
+                    }`}
+                  >
+                    Our Story
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab("mission")}
+                    className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 sm:px-7 ${
+                      activeTab === "mission"
+                        ? "bg-white text-[#0D3B36] shadow-md"
+                        : "text-white/75 hover:text-white"
+                    }`}
+                  >
+                    Our Mission
+                  </button>
+                </div>
+              </div>
+
+              <div className="grid items-center gap-7 lg:grid-cols-[1.35fr_0.65fr]">
+                <div className="relative min-h-[260px] overflow-hidden rounded-[24px] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] p-6 sm:p-8 lg:p-10">
+                  <div className="absolute -left-12 top-10 h-28 w-28 rounded-full bg-[#f7d7c8]/18 blur-2xl" />
+                  <div className="absolute bottom-0 right-0 h-28 w-28 rounded-full bg-[#d6e5de]/12 blur-2xl" />
+
+                  {activeTab === "story" ? (
+                    <article key="story" className="relative animate-fade-in">
+                      <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/75">
+                        About Us
+                      </div>
+                      <h2 className="mb-5 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[2.8rem]">
+                        Our Story
+                      </h2>
+                      <p className="max-w-[620px] text-base leading-relaxed text-white/80 sm:text-lg">
+                        Everyone faces moments of uncertainty—whether it&apos;s struggling in relationships,
+                        feeling stuck in a career, or dealing with financial stress. We created this
+                        platform to provide practical guidance and personalized support to help transform
+                        your life from the inside out.
+                      </p>
+                    </article>
+                  ) : (
+                    <article key="mission" className="relative animate-fade-in">
+                      <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/75">
+                        Purpose
+                      </div>
+                      <h2 className="mb-5 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[2.8rem]">
+                        Our Mission
+                      </h2>
+                      <p className="max-w-[620px] text-base leading-relaxed text-white/80 sm:text-lg">
+                        Our mission is to empower individuals with the knowledge, tools, and guidance they
+                        need to overcome life&apos;s challenges and create lasting personal transformation.
+                      </p>
+                    </article>
+                  )}
+                </div>
+
+                <div className="flex flex-col gap-4">
+                  <div className="rounded-[22px] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
+                    <div className="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-white/60">
+                      Guiding principle
+                    </div>
+                    <div className="text-2xl font-bold text-white">Clarity</div>
+                    <p className="mt-2 text-sm leading-relaxed text-white/70">
+                      We help people uncover what is really driving their patterns and what is possible
+                      beyond them.
+                    </p>
+                  </div>
+
+                  <div className="rounded-[22px] border border-white/10 bg-[#f8f3ee] p-5 text-[#0D3B36] shadow-inner shadow-[#0D3B36]/5">
+                    <div className="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#0D3B36]/55">
+                      What we create
+                    </div>
+                    <div className="text-2xl font-bold">Confidence</div>
+                    <p className="mt-2 text-sm leading-relaxed text-[#0D3B36]/75">
+                      Practical support that changes how you think, feel, and move through everyday life.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Smooth Fade & Slide Animation Styles */}
         <style jsx>{`
           @keyframes fadeIn {
             from {
               opacity: 0;
-              transform: translateY(10px) scale(0.98);
+              transform: translateY(12px) scale(0.98);
             }
             to {
               opacity: 1;
               transform: translateY(0) scale(1);
             }
           }
+
           .animate-fade-in {
-            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation: fadeIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
           }
         `}</style>
       </section>

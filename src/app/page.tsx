@@ -19,6 +19,8 @@ export default function Home() {
         {/* 1. Hero */}
         <Hero />
 
+        
+
        <SupportCategories/>
 
         {/* 2. About */}
@@ -32,10 +34,6 @@ export default function Home() {
 
         {/* 5. Meet Us */}
         <MeetUs />
-
-       
-
-        
 
         <Infomativecta/>
       </main>
