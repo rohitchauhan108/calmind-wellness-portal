@@ -18,7 +18,7 @@ export default function Home() {
       <main id="app-main">
         {/* 1. Hero */}
         <Hero />
-
+ 
         
 
        <SupportCategories/>

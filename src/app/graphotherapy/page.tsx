@@ -310,17 +310,17 @@ export default function GraphotherapyPage() {
               >
                 <button
                   onClick={handleBookCall}
-                  className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-[#0D3C38] hover:bg-[#0D3C38]/92 text-[#FBF9F5] font-semibold text-sm md:text-base shadow-xl hover:shadow-2xl hover:shadow-[#0D3C38]/20 transition-all duration-300 cursor-pointer border border-[#0D3C38]/50"
+                  className="group inline-flex min-h-16 flex-1 items-center justify-center gap-2.5 rounded-2xl border border-[#0D3C38]/50 bg-[#0D3C38] px-6 py-4 text-center text-sm font-semibold text-[#FBF9F5] shadow-xl transition-all duration-300 hover:bg-[#0D3C38]/92 hover:shadow-2xl hover:shadow-[#0D3C38]/20 cursor-pointer sm:px-7 md:text-base"
                 >
-                  <Calendar className="w-[1.125rem] h-[1.125rem] text-[#E6B055]" />
-                  Book Your Handwriting Consultation
-                  <ArrowRight className="w-[1.125rem] h-[1.125rem] transition-transform duration-300 group-hover:translate-x-1" />
+                  <Calendar className="w-[1.125rem] h-[1.125rem] shrink-0 text-[#E6B055]" />
+                  <span className="leading-snug">Book Your Handwriting Consultation</span>
+                  <ArrowRight className="w-[1.125rem] h-[1.125rem] shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
                 <Link
                   href="/contact"
-                  className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-transparent hover:bg-white text-[#0D3C38] font-semibold text-sm md:text-base transition-all duration-300 cursor-pointer border-2 border-[#0D3C38]/20 hover:border-[#0D3C38]/40"
+                  className="group inline-flex min-h-16 flex-1 items-center justify-center gap-2 rounded-2xl border-2 border-[#0D3C38]/20 bg-transparent px-6 py-4 text-center text-sm font-semibold text-[#0D3C38] transition-all duration-300 hover:border-[#0D3C38]/40 hover:bg-white cursor-pointer sm:px-7 md:text-base"
                 >
-                  Ask About a Custom Programme
+                  <span className="leading-snug">Ask About a Custom Programme</span>
                 </Link>
               </motion.div>
             </div>
@@ -704,16 +704,16 @@ export default function GraphotherapyPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
               <button
                 onClick={handleBookCall}
-                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-[#0D3C38] hover:bg-[#0D3C38]/92 text-[#FBF9F5] font-semibold text-sm md:text-base shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                className="group inline-flex min-h-16 flex-1 items-center justify-center gap-2.5 rounded-2xl bg-[#0D3C38] px-6 py-4 text-center text-sm font-semibold text-[#FBF9F5] shadow-xl transition-all duration-300 hover:bg-[#0D3C38]/92 hover:shadow-2xl cursor-pointer sm:px-7 md:text-base"
               >
-                Book Complimentary Graphotherapy Consult
-                <ArrowRight className="w-[1.125rem] h-[1.125rem] transition-transform duration-300 group-hover:translate-x-1" />
+                <span className="leading-snug">Book Complimentary Graphotherapy Consult</span>
+                <ArrowRight className="w-[1.125rem] h-[1.125rem] shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
               <Link
                 href="/contact"
-                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-transparent hover:bg-white/70 text-[#0D3C38] font-semibold text-sm md:text-base transition-all duration-300 cursor-pointer border-2 border-[#0D3C38]/30 hover:border-[#0D3C38]/60"
+                className="group inline-flex min-h-16 flex-1 items-center justify-center gap-2 rounded-2xl border-2 border-[#0D3C38]/30 bg-transparent px-6 py-4 text-center text-sm font-semibold text-[#0D3C38] transition-all duration-300 hover:border-[#0D3C38]/60 hover:bg-white/70 cursor-pointer sm:px-7 md:text-base"
               >
-                Email Shilpa a Question
+                <span className="leading-snug">Email Shilpa a Question</span>
               </Link>
             </div>
             <div className="flex items-center justify-center gap-2 pt-2 text-xs font-semibold text-[#0D3C38]/65">

@@ -15,41 +15,44 @@ export default function ProgramsPage() {
   const programsList = [
     {
       number: "01",
-      badge: "ENTRY-LEVEL",
-      title: "Daily Practice (Name TBD)",
-      tagline: "Short Live Daily Practice",
-      desc: "A short, live-only daily practice designed to build consistency and ground your energy. Approximately 13–15 minutes, 6 days a week.",
+      badge: "DAILY ELEVATION",
+      title: "Raise Your Frequency",
+      tagline: "Your Daily Elevation Practice",
+      desc: "You recharge your phone every day. What about you? Take just 15–20 minutes to pause, reset and elevate your energy. Raise Your Frequency is a live daily practice designed to help you consciously shift how you show up in your day.",
       rating: "New",
       features: [
-        "13–15 minutes daily sessions",
-        "6 days a week schedule",
-        "Live only access",
-        "Entry-level offering",
-        "Final name & content TBD"
+        "Intention Alignment",
+        "Affirmations",
+        "Guided Practice",
+        "15–20 minutes",
+        "Live on Zoom",
+        "6 days a week",
       ],
-      priceText: "Pricing TBD",
-      actionText: "INQUIRE NOW",
-      actionLink: "/contact",
+      priceText: "$20 / month",
+      actionText: "REGISTER & JOIN — $20/MONTH",
+      actionLink: "/programs/register?program=frequency",
       img: "/program/1.webp",
       tags: ["DAILY PRACTICE", "LIVE ONLY"],
     },
     {
       number: "02",
-      badge: "LOW-TO-MID TIER",
-      title: "Chakra + Healing Practice (Name TBD)",
-      tagline: "Deeper Guided Practice",
-      desc: "A deeper guided practice focusing on Chakra meditation and healing-focused work. Approximately 25–35 minutes, around 4–5 days a week.",
+      badge: "ENERGY WORK",
+      title: "Energy Alignment",
+      tagline: "Chakra Activation & Balancing Practice",
+      desc: "A deeper live practice designed to help you reconnect with your body and energy through grounding, breathwork and chakra work. Selected sessions may also include visualization or Reiki, depending on the focus.",
       rating: "New",
       features: [
-        "25–35 minutes per session",
-        "4–5 days a week",
-        "Chakra meditation focus",
-        "Deep healing work",
-        "Final name & structure TBD"
+        "Grounding",
+        "Breathwork",
+        "Chakra Meditation",
+        "Chakra Activation, Alignment & Balancing",
+        "Visualization or Reiki on selected days",
+        "30–40 minutes · Live",
+        "4 days a week",
       ],
-      priceText: "Pricing TBD",
-      actionText: "INQUIRE NOW",
-      actionLink: "/contact",
+      priceText: "$60 / month",
+      actionText: "REGISTER & JOIN — $60/MONTH",
+      actionLink: "/programs/register?program=energy",
       img: "/program/2.webp",
       tags: ["CHAKRA", "HEALING"],
     },
@@ -275,6 +278,34 @@ export default function ProgramsPage() {
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-20 lg:mt-28 rounded-[2rem] bg-[#0D3C38] px-6 py-10 sm:px-10 lg:px-14 text-center text-white shadow-2xl shadow-[#0D3C38]/15">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#E6B055]">
+            Start your monthly practice
+          </p>
+          <h2 className="mt-3 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
+            Ready to make yourself part of your daily practice?
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75">
+            Choose your practice, complete your details and continue to secure monthly payment. Your confirmation will include the session schedule and Zoom access instructions.
+          </p>
+          <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+            <Link
+              href="/programs/register?program=frequency"
+              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[#E6B055] px-6 py-4 text-sm font-semibold text-[#0D3C38] transition-colors hover:bg-[#F0C878]"
+            >
+              Register & Join — $20/month
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/programs/register?program=energy"
+              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-white/30 px-6 py-4 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+            >
+              Register & Join — $60/month
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
