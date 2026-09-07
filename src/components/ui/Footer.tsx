@@ -28,7 +28,6 @@ export default function Footer() {
   const quickLinks = [
     { name: 'About Ila', href: '/about' },
     { name: 'Programs', href: '/programs' },
-    { name: 'Success Stories', href: '/success-stories' },
     { name: 'Frequently Asked Questions', href: '/faq' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -224,11 +223,6 @@ export default function Footer() {
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-4 text-xs text-[#FBF9F5]/80 mb-2">
               <p>© {currentYear} Ila Garg. All rights reserved.</p>
               <span className="text-white/20 hidden sm:inline">•</span>
-
-              <Link href="/success-stories" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
-                Success Stories
-              </Link>
-              <span className="text-white/20">•</span>
 
               <Link href="/faq" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
                 FAQ

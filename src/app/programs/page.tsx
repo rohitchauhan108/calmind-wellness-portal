@@ -1,344 +1,193 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Star,
-  Calendar,
-  ArrowRight,
-  Sparkles,
-  CheckCircle2,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, Sparkles, Star } from "lucide-react";
+
+const clarityCall = "https://calendly.com/ilagarg-official/clarity-call-with-ila";
+
+type Program = {
+  number: string;
+  badge: string;
+  title: string;
+  tagline: string;
+  description: string;
+  features: string[];
+  price: string;
+  action: string;
+  href: string;
+  image: string;
+  tags: string[];
+};
+
+const programs: Program[] = [
+  {
+    number: "01",
+    badge: "DAILY FREQUENCY RISE",
+    title: "Raise Your Frequency",
+    tagline: "A Daily Practice to Set Intention for Your Day and Create Magic",
+    description: "A few minutes for yourself can change how you show up for the rest of your day. Raise Your Frequency is a simple live practice designed to help you pause, reset and consciously shift your energy.",
+    features: ["Intention Alignment", "Affirmations", "Frequency-Raising Practices", "LIVE ON ZOOM · 15–20 minutes · 6 days a week", "Indian pricing available"],
+    price: "$20/month",
+    action: "JOIN RAISE YOUR FREQUENCY",
+    href: "/programs/register?program=frequency",
+    image: "/program/1.webp",
+    tags: ["DAILY PRACTICE", "LIVE ON ZOOM"],
+  },
+  {
+    number: "02",
+    badge: "ENERGY ALIGNMENT",
+    title: "Energy Alignment",
+    tagline: "Chakra Activation & Balancing Practice",
+    description: "Ground. Activate. Align. Balance. Energy Alignment is a deeper live practice designed to help you slow down, reconnect with yourself and bring greater balance to your energy. Sessions combine grounding and breathwork with chakra meditation, activation, alignment and balancing. Selected sessions may also incorporate visualization or Reiki.",
+    features: ["Grounding · Breathwork · Chakra Meditation", "Chakra Activation · Alignment · Balancing", "Visualization or Reiki on selected days", "LIVE ON ZOOM · 30–40 minutes · 4 days a week", "Indian pricing available"],
+    price: "$60/month",
+    action: "JOIN ENERGY ALIGNMENT",
+    href: "/programs/register?program=energy",
+    image: "/program/2.webp",
+    tags: ["CHAKRA", "BALANCING"],
+  },
+  {
+    number: "03",
+    badge: "FIT & FREE",
+    title: "Fit & Free",
+    tagline: "6-Week Weight Loss Transformation Program",
+    description: "What if the missing piece isn’t another diet or exercise plan? Fit & Free explores the emotional, behavioural and subconscious patterns that may be affecting your relationship with food, your body and weight.",
+    features: ["Emotional Eating & Cravings", "Patterns & Habits", "The Subconscious & Weight", "Your Relationship With Your Body", "Creating New Patterns · Integration", "LIVE ONLINE · 1 session per week · 6 weeks"],
+    price: "$200 | ₹14,500",
+    action: "EXPLORE FIT & FREE",
+    href: "/contact",
+    image: "/program/3.webp",
+    tags: ["WEIGHT LOSS", "TRANSFORMATION"],
+  },
+  {
+    number: "04",
+    badge: "MONEY & ABUNDANCE",
+    title: "Money & Abundance",
+    tagline: "3-Month Transformation Program",
+    description: "Change your relationship with money from the inside out. Over three months, we explore the emotional and subconscious patterns influencing your relationship with money and create space for a healthier, more expansive way of relating to abundance.",
+    features: ["Scarcity & Abundance", "Receiving & Worthiness", "Fear & Security", "Inherited Money Beliefs", "Your Relationship With Money", "LIVE ONLINE · 1 session per week · 3 months"],
+    price: "$300 | ₹20,000",
+    action: "EXPLORE MONEY & ABUNDANCE",
+    href: "/contact",
+    image: "/program/4.webp",
+    tags: ["ABUNDANCE", "TRANSFORMATION"],
+  },
+  {
+    number: "05",
+    badge: "RELATIONSHIPS",
+    title: "Relationships",
+    tagline: "3-Month Transformation Program",
+    description: "The patterns we carry within us often show up most clearly in our relationships. This three-month journey gives you space to look beneath those patterns, work through what you may still be carrying and begin creating healthier ways of relating — both to others and to yourself.",
+    features: ["Repeating Relationship Patterns", "Hurt, Anger & Resentment", "Fear of Rejection & Abandonment", "Boundaries & Expectations", "Self-Love & Worthiness", "Creating Healthier Patterns", "LIVE ONLINE · 1 session per week · 3 months"],
+    price: "$300 | ₹20,000",
+    action: "EXPLORE RELATIONSHIPS",
+    href: "/contact",
+    image: "/program/5.webp",
+    tags: ["CONNECTION", "TRANSFORMATION"],
+  },
+  {
+    number: "06",
+    badge: "PRIVATE COACHING",
+    title: "VIP 1:1 Coaching & Healing",
+    tagline: "Because sometimes the work needs to be as individual as you are",
+    description: "A personalized journey built around you, your goals, your experiences, your patterns and the change you want to create. There is no fixed curriculum; our work evolves based on what comes up and what you need.",
+    features: ["You want deeper, personalized support", "You’re navigating more than one area of your life", "You keep noticing patterns you’re ready to understand and change", "Private · Personalized · 1:1"],
+    price: "By conversation",
+    action: "BOOK A CLARITY CALL",
+    href: clarityCall,
+    image: "/program/6.webp",
+    tags: ["VIP", "1-ON-1"],
+  },
+];
 
 export default function ProgramsPage() {
-  const programsList = [
-    {
-      number: "01",
-      badge: "DAILY ELEVATION",
-      title: "Raise Your Frequency",
-      tagline: "Your Daily Elevation Practice",
-      desc: "You recharge your phone every day. What about you? Take just 15–20 minutes to pause, reset and elevate your energy. Raise Your Frequency is a live daily practice designed to help you consciously shift how you show up in your day.",
-      rating: "New",
-      features: [
-        "Intention Alignment",
-        "Affirmations",
-        "Guided Practice",
-        "15–20 minutes",
-        "Live on Zoom",
-        "6 days a week",
-      ],
-      priceText: "$20 / month",
-      actionText: "REGISTER & JOIN — $20/MONTH",
-      actionLink: "/programs/register?program=frequency",
-      img: "/program/1.webp",
-      tags: ["DAILY PRACTICE", "LIVE ONLY"],
-    },
-    {
-      number: "02",
-      badge: "ENERGY WORK",
-      title: "Energy Alignment",
-      tagline: "Chakra Activation & Balancing Practice",
-      desc: "A deeper live practice designed to help you reconnect with your body and energy through grounding, breathwork and chakra work. Selected sessions may also include visualization or Reiki, depending on the focus.",
-      rating: "New",
-      features: [
-        "Grounding",
-        "Breathwork",
-        "Chakra Meditation",
-        "Chakra Activation, Alignment & Balancing",
-        "Visualization or Reiki on selected days",
-        "30–40 minutes · Live",
-        "4 days a week",
-      ],
-      priceText: "$60 / month",
-      actionText: "REGISTER & JOIN — $60/MONTH",
-      actionLink: "/programs/register?program=energy",
-      img: "/program/2.webp",
-      tags: ["CHAKRA", "HEALING"],
-    },
-    {
-      number: "03",
-      badge: "DEEP FOCUS",
-      title: "Focused Group Coaching",
-      tagline: "Area-Specific Transformation",
-      desc: "Deeper programs focused on specific areas of life to bring collective healing, targeted strategies, and profound breakthroughs.",
-      rating: "5.0",
-      features: [
-        "Weight Loss focus area",
-        "Relationships focus area",
-        "Career growth strategies",
-        "Money & Abundance blocks",
-        "Deep group coaching dynamic"
-      ],
-      priceText: "Pricing TBD",
-      actionText: "INQUIRE NOW",
-      actionLink: "/contact",
-      img: "/program/3.webp",
-      tags: ["GROUP COACHING", "LIFE AREAS"],
-    },
-    {
-      number: "04",
-      badge: "HIGHEST TOUCH",
-      title: "Private / VIP Coaching",
-      tagline: "Premium 1:1 Coaching",
-      desc: "Our highest-touch offering delivering premium 1:1 coaching. Tailored structure, duration, and transformation promises designed exclusively for you.",
-      rating: "5.0",
-      features: [
-        "Premium 1:1 personalized coaching",
-        "Highest-touch mentorship",
-        "Custom transformation promise",
-        "Bespoke duration & structure",
-        "Final public-facing name TBD"
-      ],
-      priceText: "Pricing TBD",
-      actionText: "INQUIRE NOW",
-      actionLink: "/contact",
-      img: "/program/4.webp",
-      tags: ["VIP", "1-ON-1", "PREMIUM"],
-    },
-    {
-      number: "05",
-      badge: "SPECIALIZED",
-      title: "Graphotherapy Offerings",
-      tagline: "Handwriting & Subconscious Alignment",
-      desc: "Specialized offerings to reprogram the subconscious through handwriting. Includes individual signature analysis and targeted workshops for all ages.",
-      rating: "5.0",
-      features: [
-        "Signature Analysis",
-        "Adult Graphotherapy Workshops",
-        "Kids Graphotherapy Workshops",
-        "Kids Graphotherapy Program",
-        "Subconscious reprogramming"
-      ],
-      priceText: "Pricing TBD",
-      actionText: "INQUIRE NOW",
-      actionLink: "/contact",
-      img: "/program/5.webp",
-      tags: ["GRAPHOTHERAPY", "WORKSHOPS"],
-    },
-    {
-      number: "06",
-      badge: "FUTURE OFFERING",
-      title: "Membership",
-      tagline: "Exclusive Community Ecosystem",
-      desc: "An upcoming membership concept currently in development. It will provide ongoing support, community, and continuous transformation.",
-      rating: "Upcoming",
-      features: [
-        "Exclusive community access",
-        "Ongoing continuous support",
-        "Future ecosystem offering",
-        "Membership concept in development",
-        "Details & pricing coming soon"
-      ],
-      priceText: "Coming Soon",
-      actionText: "JOIN WAITLIST",
-      actionLink: "/contact",
-      img: "/program/6.webp",
-      tags: ["MEMBERSHIP", "COMMUNITY"],
-    },
-  ];
-
   return (
-    <main className="bg-[#FAF8F5] text-[#0D3C38] antialiased min-h-screen selection:bg-[#0D3C38]/10">
-      
-      {/* ================= HERO HEADER ================= */}
-      <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 px-6 lg:px-16 border-b border-[#0D3C38]/10 overflow-hidden">
-        {/* Soft Ambient Background Glow */}
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#0D3C38]/5 rounded-full blur-[140px] pointer-events-none" />
-
-        <div className="max-w-6xl mx-auto text-center space-y-6 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E7F0EC] border border-[#0D3C38]/10 text-[#0D3C38] text-xs font-semibold tracking-widest uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-[#0D3C38]" />
-            <span>PATHWAYS OF GROWTH</span>
+    <main className="min-h-screen bg-[#FAF8F5] text-[#0D3C38] antialiased selection:bg-[#0D3C38]/10">
+      <section className="relative overflow-hidden border-b border-[#0D3C38]/10 px-6 pb-16 pt-24 lg:px-16 lg:pb-24 lg:pt-32">
+        <div className="pointer-events-none absolute right-1/4 top-0 h-125 w-125 rounded-full bg-[#0D3C38]/5 blur-[140px]" />
+        <div className="relative z-10 mx-auto max-w-6xl space-y-6 text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#0D3C38]/10 bg-[#E7F0EC] px-4 py-1.5 text-xs font-semibold uppercase tracking-widest">
+            <Sparkles className="h-3.5 w-3.5" />
+            <span>PROGRAMS</span>
           </div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#0D3C38] leading-[1.15] font-semibold max-w-4xl mx-auto">
-            Curated Programs for <br className="hidden sm:inline" />
-            <span className="italic font-normal">Lasting Transformation</span>
+          <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-[1.15] sm:text-5xl lg:text-6xl">
+            Choose the support that <br className="hidden sm:inline" />
+            <span className="font-normal italic">meets you where you are</span>
           </h1>
-
-          <p className="text-base sm:text-lg text-[#0D3C38]/75 font-normal max-w-2xl mx-auto leading-relaxed">
-            Bespoke holistic frameworks integrating Life Coaching, Energy Healing, and Graphotherapy to help you dissolve subconscious blocks and step into your full potential.
+          <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#0D3C38]/75 sm:text-lg">
+            Change doesn’t always require doing more. Sometimes, it begins by understanding and shifting what’s happening within. Choose the experience that feels right for you.
           </p>
         </div>
       </section>
 
-      {/* ================= EDITORIAL ALTERNATING PROGRAM LIST ================= */}
-      <section className="py-16 lg:py-28 px-6 lg:px-16">
-        <div className="max-w-7xl mx-auto space-y-24 lg:space-y-36">
-          {programsList.map((prog, index) => {
-            const isEven = index % 2 === 0;
-
+      <section className="px-6 py-16 lg:px-16 lg:py-28">
+        <div className="mx-auto max-w-7xl space-y-24 lg:space-y-36">
+          {programs.map((program, index) => {
+            const reversed = index % 2 !== 0;
             return (
-              <div
-                key={prog.number}
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center ${
-                  !isEven ? "lg:flex-row-reverse" : ""
-                }`}
-              >
-                {/* TEXT CONTENT COLUMN */}
-                <div
-                  className={`lg:col-span-6 space-y-6 ${
-                    !isEven ? "lg:order-2" : "lg:order-1"
-                  }`}
-                >
-                  {/* Step Number & Tags */}
-                  <div className="flex flex-wrap items-center gap-3 text-xs tracking-widest uppercase font-mono text-[#0D3C38]/60">
-                    <span className="font-bold text-[#0D3C38] text-sm">
-                      {prog.number}
-                    </span>
+              <article key={program.number} className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
+                <div className={`space-y-6 lg:col-span-6 ${reversed ? "lg:order-2" : "lg:order-1"}`}>
+                  <div className="flex flex-wrap items-center gap-3 text-xs font-mono uppercase tracking-widest text-[#0D3C38]/60">
+                    <span className="text-sm font-bold text-[#0D3C38]">{program.number}</span>
                     <span>—</span>
-                    <span>{prog.tags.join(" • ")}</span>
+                    <span>{program.tags.join(" • ")}</span>
                   </div>
-
-                  {/* Program Title */}
                   <div className="space-y-2">
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-[#0D3C38] leading-tight">
-                      {prog.title}
-                    </h2>
-                    <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#0D3C38]/70 flex items-center gap-2 pt-1">
-                      <Calendar className="w-4 h-4 text-[#0D3C38]" />
-                      {prog.tagline}
-                    </p>
+                    <p className="text-xs font-bold uppercase tracking-widest text-[#C48F3A]">{program.badge}</p>
+                    <h2 className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">{program.title}</h2>
+                    <p className="pt-1 text-xs font-semibold uppercase tracking-wider text-[#0D3C38]/70 sm:text-sm">{program.tagline}</p>
                   </div>
-
-                  {/* Description */}
-                  <p className="text-sm sm:text-base text-[#0D3C38]/80 leading-relaxed font-normal">
-                    {prog.desc}
-                  </p>
-
-                  {/* Program Inclusions (2-Column Bullet Grid) */}
+                  <p className="text-sm leading-relaxed text-[#0D3C38]/80 sm:text-base">{program.description}</p>
                   <div className="space-y-3 pt-2">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#0D3C38]/60">
-                      PROGRAM INCLUDES
-                    </h4>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2.5">
-                      {prog.features.map((feat, fIdx) => (
-                        <li
-                          key={fIdx}
-                          className="flex items-start gap-2 text-xs sm:text-sm text-[#0D3C38]/85 font-medium leading-snug"
-                        >
-                          <span className="mt-1 text-[#0D3C38]">
-                            <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-                          </span>
-                          <span>{feat}</span>
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-[#0D3C38]/60">WHAT WE’LL EXPLORE</h3>
+                    <ul className="grid grid-cols-1 gap-x-4 gap-y-2.5 sm:grid-cols-2">
+                      {program.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-2 text-xs font-medium leading-snug text-[#0D3C38]/85 sm:text-sm">
+                          <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+                          <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-
-                  {/* Price & Action CTA Block */}
-                  <div className="pt-6 border-t border-[#0D3C38]/10 flex flex-wrap items-center justify-between gap-6">
+                  <div className="flex flex-wrap items-center justify-between gap-6 border-t border-[#0D3C38]/10 pt-6">
                     <div>
-                      <div className="text-xs font-semibold uppercase tracking-wider text-[#0D3C38]/60">
-                        Investment
-                      </div>
-                      <div className="text-3xl sm:text-4xl font-serif font-bold text-[#0D3C38] mt-0.5">
-                        {prog.priceText}
-                      </div>
+                      <div className="text-xs font-semibold uppercase tracking-wider text-[#0D3C38]/60">Investment</div>
+                      <div className="mt-0.5 text-3xl font-medium sm:text-4xl">{program.price}</div>
                     </div>
-
-                    <div className="flex items-center gap-4">
-                      <Link
-                        href={prog.actionLink}
-                        className="px-8 py-3.5 rounded-none bg-[#0D3C38] hover:bg-[#0D3C38]/90 text-white font-medium text-xs tracking-widest uppercase transition-all duration-300 shadow-md inline-flex items-center gap-2 group"
-                      >
-                        {prog.actionText}
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                      </Link>
+                    <Link href={program.href} className="group inline-flex items-center gap-2 bg-[#0D3C38] px-6 py-3.5 text-xs font-medium uppercase tracking-widest text-white transition-colors hover:bg-[#0D3C38]/90">
+                      {program.action}
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  </div>
+                </div>
+                <div className={`relative lg:col-span-6 ${reversed ? "lg:order-1" : "lg:order-2"}`}>
+                  <div className="group relative aspect-4/3 overflow-hidden rounded-2xl border border-[#0D3C38]/10 bg-white shadow-2xl">
+                    <Image src={program.image} alt={program.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#0D3C38]/30 via-transparent to-transparent" />
+                    <div className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3.5 py-1.5 text-xs font-semibold shadow-md">
+                      <Star className="h-3.5 w-3.5 fill-brand-gold text-brand-gold" />
+                      <span>{program.number === "06" ? "Personalized" : program.number === "01" ? "Daily" : "Live"}</span>
                     </div>
                   </div>
                 </div>
-
-                {/* SINGLE IMAGE DISPLAY COLUMN */}
-                <div
-                  className={`lg:col-span-6 relative ${
-                    !isEven ? "lg:order-1" : "lg:order-2"
-                  }`}
-                >
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-[#0D3C38]/10 bg-white group">
-                    <Image
-                      src={prog.img}
-                      alt={prog.title}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-
-                    {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D3C38]/30 via-transparent to-transparent pointer-events-none" />
-
-                    {/* Top Floating Rating Badge */}
-                    <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#0D3C38] shadow-md flex items-center gap-1.5">
-                      <Star className="w-3.5 h-3.5 fill-[#E6B055] text-[#E6B055]" />
-                      <span>{prog.rating} Satisfaction</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </article>
             );
           })}
         </div>
-
-        <div className="mt-20 lg:mt-28 rounded-[2rem] bg-[#0D3C38] px-6 py-10 sm:px-10 lg:px-14 text-center text-white shadow-2xl shadow-[#0D3C38]/15">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#E6B055]">
-            Start your monthly practice
-          </p>
-          <h2 className="mt-3 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
-            Ready to make yourself part of your daily practice?
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base leading-relaxed text-white/75">
-            Choose your practice, complete your details and continue to secure monthly payment. Your confirmation will include the session schedule and Zoom access instructions.
-          </p>
-          <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
-            <Link
-              href="/programs/register?program=frequency"
-              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[#E6B055] px-6 py-4 text-sm font-semibold text-[#0D3C38] transition-colors hover:bg-[#F0C878]"
-            >
-              Register & Join — $20/month
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/programs/register?program=energy"
-              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-white/30 px-6 py-4 text-sm font-semibold text-white transition-colors hover:bg-white/10"
-            >
-              Register & Join — $60/month
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
       </section>
 
-      {/* ================= FINAL CTA BANNER ================= */}
-      <section className="py-20 px-6 lg:px-16 bg-[#0D3C38] text-white">
-        <div className="max-w-5xl mx-auto text-center space-y-6">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E7F0EC]/70">
-            UNSURE WHICH PROGRAM IS RIGHT FOR YOU?
-          </span>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold leading-tight">
-            Book a 1-on-1 Clarity Consultation
-          </h2>
-
-          <p className="text-sm sm:text-base text-white/80 max-w-2xl mx-auto leading-relaxed">
-            We’ll evaluate your specific goals, discuss graphotherapy options, and tailor a roadmap designed explicitly for your personal evolution.
-          </p>
-
-          <div className="pt-4">
-            <a
-              href="https://calendly.com/ilagarg-official/clarity-call-with-ila"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="px-8 py-4 rounded-full bg-white text-[#0D3C38] font-semibold text-xs tracking-widest uppercase hover:bg-[#E7F0EC] transition-all shadow-lg inline-flex items-center gap-2 cursor-pointer">
-                Schedule Your Discovery Session
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </a>
-          </div>
+      <section className="bg-[#0D3C38] px-6 py-20 text-white lg:px-16">
+        <div className="mx-auto max-w-5xl space-y-6 text-center">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#E7F0EC]/70">NOT SURE WHERE TO BEGIN?</span>
+          <h2 className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">You don’t need to have it all figured out before reaching out.</h2>
+          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-white/80 sm:text-base">If you’re unsure which program is right for you, let’s have a conversation and explore what would best support you right now.</p>
+          <a href={clarityCall} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 bg-white px-8 py-4 text-xs font-semibold uppercase tracking-widest text-[#0D3C38] transition-colors hover:bg-[#E7F0EC]">
+            Book a Clarity Call
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </a>
         </div>
       </section>
-
     </main>
   );
 }
