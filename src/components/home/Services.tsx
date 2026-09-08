@@ -2,18 +2,14 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Check,
-  Compass,
-  Sun,
   PenTool,
-  Heart,
   ChevronDown,
   Sparkles,
   ArrowUpRight,
   Users,
-  Crown,
-  Baby,
   ArrowRight,
   UserRound,
+  Zap,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -23,50 +19,18 @@ export default function Services() {
   const servicesData = [
     {
       icon: <UserRound className="w-5 h-5 pointer-events-none" />,
-      title: "1:1 Life Coaching",
+      title: "Private 1:1 Coaching & Healing",
       subtitle: "Personal. Focused. Built around you.",
       description:
-        "Work one-on-one on the areas of your life you want to change, grow or create more in. Whether it's your relationships, career, money, confidence or personal growth, the work is centred around your goals, your patterns and what you want to create next.",
+        "A personalised journey combining coaching and healing support around the areas of your life you want to change, grow or create more in. Whether you want focused guidance, deeper accountability or space to release what you've been carrying, the work is centred around your goals, your patterns and what you want to create next.",
       benefits: [
         "Tailored around your unique goals and patterns",
         "Deep dive into relationships, career, money, confidence or growth",
         "Support to release what's been holding you back",
-        "Clear direction on what you want to create next",
+        "Choose focused sessions or ongoing personalised support",
       ],
       sessionType: "With Ila Garg — Life Coach & Healer",
-      ctaText: "Explore 1:1 Coaching",
-      ctaHref: "/contact",
-    },
-    {
-      icon: <Crown className="w-5 h-5 pointer-events-none" />,
-      title: "VIP Coaching",
-      subtitle: "Deeper support. Greater accountability. Bigger goals.",
-      description:
-        "A more intensive and personalised coaching experience for those who want ongoing support to create meaningful change across one or multiple areas of life. We work together on your goals, the inner patterns influencing your results, and the actions that move you towards where you want to be.",
-      benefits: [
-        "Ongoing high-support coaching experience",
-        "Greater accountability and momentum",
-        "Work across one or multiple areas of life",
-        "Focused on inner patterns + aligned actions",
-      ],
-      sessionType: "With Ila Garg — Life Coach & Healer",
-      ctaText: "Explore VIP Coaching",
-      ctaHref: "/contact",
-    },
-    {
-      icon: <Heart className="w-5 h-5 pointer-events-none" />,
-      title: "1:1 Healing",
-      subtitle: "Release. Reconnect. Create space for change.",
-      description:
-        "Sometimes moving forward isn't about doing more. It's about releasing what you've been carrying. Individual healing sessions allow you to work more deeply with emotions, experiences and inner patterns that may no longer serve you. Each session is guided around you and what you need at that point in your journey.",
-      benefits: [
-        "Release emotions and patterns you've been carrying",
-        "Reconnect with yourself at a deeper level",
-        "Create space for new possibilities",
-        "Each session guided by what you need in the moment",
-      ],
-      sessionType: "With Ila Garg — Life Coach & Healer",
-      ctaText: "Explore 1:1 Healing",
+      ctaText: "Explore Private Support",
       ctaHref: "/contact",
     },
     {
@@ -86,6 +50,22 @@ export default function Services() {
       ctaHref: "/contact",
     },
     {
+      icon: <Zap className="w-5 h-5 pointer-events-none" />,
+      title: "Live Practices",
+      subtitle: "Pause. Align. Raise your frequency.",
+      description:
+        "Ongoing live practices to help you pause, reset and consciously shift your energy. Join Daily Frequency Rise or Chakra Activation & Alignment for grounding, breathwork, meditation and deeper energetic balance.",
+      benefits: [
+        "Daily Frequency Rise — intention, affirmations and frequency-raising practices",
+        "Chakra Activation & Alignment — grounding, breathwork and chakra meditation",
+        "Live online practices with simple tools you can return to regularly",
+        "Create more balance, presence and alignment in your day",
+      ],
+      sessionType: "Ongoing live practices",
+      ctaText: "Explore Live Practices",
+      ctaHref: "/programs",
+    },
+    {
       icon: <PenTool className="w-5 h-5 pointer-events-none" />,
       title: "Graphotherapy",
       subtitle: "Change your handwriting. Work with your patterns.",
@@ -99,23 +79,6 @@ export default function Services() {
       ],
       sessionType: "With Shilpa — Graphotherapist & Handwriting Expert",
       ctaText: "Explore Graphotherapy",
-      ctaHref: "/contact",
-    },
-    {
-      icon: <Baby className="w-5 h-5 pointer-events-none" />,
-      title: "Program for Kids",
-      subtitle:
-        "Helping children build positive patterns from an early age.",
-      description:
-        "A specially designed program for children using handwriting-based practices to support areas such as focus, confidence, emotional expression and positive habits.",
-      benefits: [
-        "Built around handwriting-based practices",
-        "Supports focus, confidence and emotional expression",
-        "Helps build positive habits early",
-        "Designed specifically for children",
-      ],
-      sessionType: "With Shilpa — Graphotherapist & Handwriting Expert",
-      ctaText: "Explore Kids Program",
       ctaHref: "/contact",
     },
   ];

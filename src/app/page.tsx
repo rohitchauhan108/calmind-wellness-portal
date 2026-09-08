@@ -21,7 +21,7 @@ export default function Home() {
  
         
 
-       <SupportCategories/>
+       {/* <SupportCategories/> */}
 
         {/* 2. About */}
         {/* <About /> */}

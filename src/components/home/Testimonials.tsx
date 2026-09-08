@@ -16,24 +16,18 @@ export default function Testimonials() {
       icon: HeartPulse,
       quote:
         "Doctors told me nothing more could be done. One session with Ila, and my pain went from an 8 to a 4 — in fifteen minutes.",
-      name: "Margaret S.",
-      context: "",
     },
     {
       tagline: "Enough, finally felt",
       icon: SmilePlus,
       quote:
         "I kept pushing myself to build more, do more, prove more. Affirmations never worked. One session with Ila and I finally felt what 'enough' actually feels like — not just said it.",
-      name: "Priya R.",
-      context: "",
     },
     {
       tagline: "Anger, released",
       icon: HandHeart,
       quote:
         "For years I couldn't say what I actually meant to my own family. Working with Ila helped me finally let the anger go — and I got my relationship with them back.",
-      name: "James T.",
-      context: "",
     },
   ];
 
@@ -166,17 +160,7 @@ export default function Testimonials() {
                 </p>
 
                 {/* Attribution */}
-                <div className="pt-4 sm:pt-5 border-t border-white/10 flex items-center justify-between">
-                  <div>
-                    <div className="font-semibold text-[#FBF9F5] text-xs sm:text-sm tracking-wide">
-                      — {story.name}
-                    </div>
-                    {story.context && (
-                      <div className="text-[10px] sm:text-xs text-[#FBF9F5]/55 mt-0.5">
-                        {story.context}
-                      </div>
-                    )}
-                  </div>
+                <div className="pt-4 sm:pt-5 border-t border-white/10 flex items-center justify-end">
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#E6B055]/10 border border-[#E6B055]/20 flex items-center justify-center group-hover:bg-[#E6B055]/15 transition-colors shrink-0">
                     <Quote className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#E6B055]/80" />
                   </div>

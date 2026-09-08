@@ -16,7 +16,7 @@ export default function MeetUs() {
       image: "/founder.jpeg",
       alt: "Ila Garg — Life Coach & Healer",
       cta: "Meet Ila",
-      link: "/about",
+      link: "/about#ila",
       accent: "from-[#E6B055]/70 via-[#E6B055] to-[#E6B055]/70",
     },
     {
@@ -27,7 +27,7 @@ export default function MeetUs() {
       image: "/shilpha.jpeg",
       alt: "Shilpa — Graphotherapist & Handwriting Expert",
       cta: "Meet Shilpa",
-      link: "/about",
+      link: "/about#shilpa",
       accent: "from-[#4A7C7D]/70 via-[#4A7C7D] to-[#4A7C7D]/70",
     },
   ];

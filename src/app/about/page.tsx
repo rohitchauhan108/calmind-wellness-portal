@@ -161,7 +161,7 @@ export default function TransformationHero() {
   return (
     <main className="bg-[#FBF9F5] text-[#0D3B36] antialiased selection:bg-[#0D3B36]/10 selection:text-[#0D3B36] font-sans">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative overflow-hidden py-20 lg:py-28 px-6 lg:px-12 bg-[#F2F5F3]">
+      <section id="ila" className="relative scroll-mt-32 overflow-hidden py-20 lg:py-28 px-6 lg:px-12 bg-[#F2F5F3]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0D3B36]/5 border border-[#0D3B36]/15 text-[#0D3B36] text-xs font-semibold tracking-wider uppercase">
@@ -213,6 +213,40 @@ export default function TransformationHero() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= SHILPA SECTION ================= */}
+      <section id="shilpa" className="relative scroll-mt-32 overflow-hidden bg-white px-6 py-20 lg:px-12 lg:py-28">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-[#0D3B36]/10 bg-[#F2F5F3] shadow-xl aspect-[4/5]">
+            <Image
+              src="/shilpha.jpeg"
+              alt="Shilpa - Graphotherapist and Handwriting Expert"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover object-top"
+            />
+          </div>
+
+          <div className="space-y-5">
+            <span className="inline-flex items-center rounded-full border border-[#0D3B36]/15 bg-[#0D3B36]/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#0D3B36]">
+              Meet Shilpa
+            </span>
+            <h2 className="text-3xl font-bold tracking-tight text-[#0D3B36] sm:text-4xl lg:text-5xl">
+              Graphotherapy &amp; Handwriting Expertise
+            </h2>
+            <p className="text-lg leading-relaxed text-[#0D3B36]/75">
+              Shilpa uses handwriting as a window into behavioural and emotional
+              patterns, helping people understand those patterns and work
+              towards positive change through Graphotherapy.
+            </p>
+            <p className="text-base leading-relaxed text-[#0D3B36]/70">
+              Through personalised handwriting analysis and guided writing
+              practices, she supports practical shifts in the patterns that
+              shape how you think, respond and show up in your life.
+            </p>
           </div>
         </div>
       </section>
