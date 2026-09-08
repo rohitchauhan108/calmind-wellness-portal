@@ -19,6 +19,7 @@ export default function SupportCategories() {
     {
       icon: Heart,
       title: 'Health',
+      href: '/programs#health',
       subtitle: 'Body · Mind · Soul',
       description:
         'Feel better physically, mentally and emotionally, and create greater balance and wellbeing in your life.',
@@ -26,6 +27,7 @@ export default function SupportCategories() {
     {
       icon: Users,
       title: 'Relationships',
+      href: '/programs#relationships',
       subtitle: 'Love · Connection · Self',
       description:
         'Create healthier, deeper and more fulfilling relationships — with others and with yourself.',
@@ -33,6 +35,7 @@ export default function SupportCategories() {
     {
       icon: Briefcase,
       title: 'Career',
+      href: '/programs#career',
       subtitle: 'Growth · Clarity · Purpose',
       description:
         'Find greater clarity, confidence and direction, whether you want to grow where you are or create something new.',
@@ -40,6 +43,7 @@ export default function SupportCategories() {
     {
       icon: Wallet,
       title: 'Money',
+      href: '/programs#money',
       subtitle: 'Abundance · Flow · Freedom',
       description:
         'Transform your relationship with money and open yourself to greater growth, abundance and possibility.',
@@ -47,6 +51,7 @@ export default function SupportCategories() {
     {
       icon: Sparkles,
       title: 'Self',
+      href: '/programs#self',
       subtitle: 'Confidence · Worth · Becoming',
       description:
         'Build greater confidence, self-worth and emotional wellbeing, and continue becoming the person you want to be.',
@@ -86,8 +91,9 @@ export default function SupportCategories() {
   const renderCard = (cat, index, source = 'grid') => {
     const Icon = cat.icon;
     return (
-      <motion.div
+      <motion.a
         key={`${source}-${cat.title}`}
+        href={cat.href}
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-40px' }}
@@ -97,7 +103,6 @@ export default function SupportCategories() {
           ease: [0.16, 1, 0.3, 1],
         }}
         whileHover={{ y: -6 }}
-        onClick={handleCardClick}
         className="group relative h-full rounded-[1.75rem] bg-white border border-[#073E42]/8 hover:border-[#073E42]/20 hover:shadow-[0_24px_48px_-16px_rgba(7,62,66,0.12)] transition-all duration-500 cursor-pointer overflow-hidden flex flex-col"
       >
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#073E42]/0 via-[#E6B055] to-[#073E42]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -132,7 +137,7 @@ export default function SupportCategories() {
             </span>
           </div>
         </div>
-      </motion.div>
+      </motion.a>
     );
   };
 

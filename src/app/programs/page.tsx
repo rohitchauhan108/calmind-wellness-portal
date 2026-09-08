@@ -126,7 +126,12 @@ export default function ProgramsPage() {
           {programs.map((program, index) => {
             const reversed = index % 2 !== 0;
             return (
-              <article key={program.number} className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
+              <article
+                key={program.number}
+                id={program.number === "03" ? "health" : program.number === "04" ? "money" : program.number === "05" ? "relationships" : undefined}
+                className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16"
+              >
+                {program.number === "06" && <span id="self" className="absolute -top-24" aria-hidden="true" />}
                 <div className={`space-y-6 lg:col-span-6 ${reversed ? "lg:order-2" : "lg:order-1"}`}>
                   <div className="flex flex-wrap items-center gap-3 text-xs font-mono uppercase tracking-widest text-[#0D3C38]/60">
                     <span className="text-sm font-bold text-[#0D3C38]">{program.number}</span>
@@ -161,7 +166,10 @@ export default function ProgramsPage() {
                     </Link>
                   </div>
                 </div>
-                <div className={`relative lg:col-span-6 ${reversed ? "lg:order-1" : "lg:order-2"}`}>
+                <div
+                  className={`relative lg:col-span-6 ${reversed ? "lg:order-1" : "lg:order-2"}`}
+                  id={program.number === "06" ? "career" : undefined}
+                >
                   <div className="group relative aspect-4/3 overflow-hidden rounded-2xl border border-[#0D3C38]/10 bg-white shadow-2xl">
                     <Image src={program.image} alt={program.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#0D3C38]/30 via-transparent to-transparent" />

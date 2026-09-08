@@ -485,7 +485,7 @@ export default function Hero() {
                 </div>
               </motion.div>
 
-              <motion.div
+              {/* <motion.div
                 className="absolute -right-2 sm:-right-5 bottom-10 sm:bottom-14 bg-white/90 backdrop-blur-xl p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border border-[#E6B055]/25 z-30 hidden sm:flex items-center gap-2.5 sm:gap-3 max-w-[190px] sm:max-w-[220px]"
                 animate={{ y: [0, 5, 0] }}
                 transition={{
@@ -505,7 +505,7 @@ export default function Hero() {
                     Across 1:1 sessions, groups & retreats
                   </p>
                 </div>
-              </motion.div>
+              </motion.div> */}
 
               <div className="relative rounded-[22px] sm:rounded-[28px] overflow-hidden aspect-[4/5] shadow-xl sm:shadow-2xl bg-white border-2 sm:border-4 border-white/90">
                 <Image
