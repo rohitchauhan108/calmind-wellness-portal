@@ -136,14 +136,16 @@ export default function Header() {
         <div className="max-w-[90rem] mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Brand Name */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <Image
-              src="/logo.png"
-              alt="Ila Garg Logo"
-              width={140}
-              height={40}
-              className="object-contain h-20 w-auto"
-              priority
-            />
+            <span className="block h-[4.4rem] overflow-hidden">
+              <Image
+                src="/logo.png"
+                alt="Ila Garg Logo"
+                width={140}
+                height={40}
+                className="object-contain h-20 w-auto"
+                priority
+              />
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
