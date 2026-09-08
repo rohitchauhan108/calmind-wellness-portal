@@ -54,7 +54,8 @@ export default function SupportCategories() {
   ];
 
   const handleCardClick = () => {
-    window.open('https://calendly.com/ilagarg-official/clarity-call-with-ila', '_blank');
+
+    // window.open('https://calendly.com/ilagarg-official/clarity-call-with-ila', '_blank');
   };
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
