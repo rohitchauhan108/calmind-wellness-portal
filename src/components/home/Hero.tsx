@@ -181,7 +181,8 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-2 rounded-full bg-[#E6B055]/12 border border-[#E6B055]/30 backdrop-blur-sm shadow-sm">
             <Gift className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B28532]" />
             <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#7A5B21]">
-              Complimentary Live Experience · Limited Seats
+              {/* Complimentary */}
+              Live Experience · Limited Seats
             </span>
           </div>
         </motion.div>
