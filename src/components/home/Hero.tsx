@@ -17,6 +17,9 @@ import {
   CheckCircle2,
   Gift,
 } from "lucide-react";
+import { FiGift } from "react-icons/fi";
+import { FaTv } from "react-icons/fa";
+import Meet from "./Meet";
 
 type DummySpeaker = {
   name: string;
@@ -96,7 +99,7 @@ export default function Hero() {
     window.open(
       "https://calendly.com/ilagarg-official/clarity-call-with-ila",
       "_blank",
-      "noopener,noreferrer"
+      "noopener,noreferrer",
     );
   };
 
@@ -181,8 +184,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-2 rounded-full bg-[#E6B055]/12 border border-[#E6B055]/30 backdrop-blur-sm shadow-sm">
             <Gift className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B28532]" />
             <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#7A5B21]">
-              {/* Complimentary */}
-              Live Experience · Limited Seats
+              Complimentary Live Experience · Limited Seats
             </span>
           </div>
         </motion.div>
@@ -271,8 +273,6 @@ export default function Hero() {
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
             </button>
-
-           
           </motion.div>
 
           {/* Tiny trust row below CTA */}
@@ -295,8 +295,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-       
-
         {/* ======= COMPLIMENTARY LIVE EXPERIENCES ======= */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -313,66 +311,128 @@ export default function Hero() {
               Experience the Work for Yourself
             </h2>
             <p className="mt-4 sm:mt-5 text-[14px] sm:text-base md:text-lg text-[#1C2826]/75 leading-relaxed max-w-3xl mx-auto">
-              Sometimes the best way to understand this work is to experience it.
-              Choose the area you&apos;d like to work on and join me live to begin
-              exploring the patterns underneath it.
+              Sometimes the best way to understand this work is to experience
+              it. Choose the area you&apos;d like to work on and join me live to
+              begin exploring the patterns underneath it.
             </p>
           </div>
 
           {/* Two sessions side by side on desktop/tablet */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8 items-stretch">
-            {/* Money & Abundance */}
-            <div className="flex h-full flex-col rounded-[24px] sm:rounded-[28px] bg-white/90 backdrop-blur-sm border border-[#E6B055]/35 p-6 sm:p-8 md:p-9 shadow-[0_12px_35px_rgba(7,62,66,0.06)]">
-              <p className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#B28532] mb-4">
-                Money &amp; Abundance
-              </p>
-              <h3 className="text-[23px] sm:text-2xl md:text-3xl font-serif font-bold text-[#073E42] leading-tight">
-                Complimentary 5-Day Live Experience
-              </h3>
-              <p className="mt-4 text-[14px] sm:text-base text-[#1C2826]/75 leading-relaxed">
-                Explore the beliefs, emotions and subconscious patterns shaping
-                your relationship with money — and begin opening yourself to
-                greater abundance.
-              </p>
-              <div className="mt-auto pt-7 sm:pt-9">
-                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]/65">
-                  Dates announcing soon • Live Online • Complimentary
-                </p>
+            {/* --- CARD 1: Money & Abundance --- */}
+            <div className="flex flex-col h-full rounded-[24px] sm:rounded-[28px] shadow-[0_12px_35px_rgba(7,62,66,0.06)] overflow-hidden bg-white">
+              {/* Top Section with Background Image */}
+              <div className="bg-[url('/home/1.webp')] bg-center bg-cover bg-no-repeat flex flex-col flex-grow p-6 sm:p-8 md:p-9">
+                <div className="relative z-10 flex flex-col h-full">
+                  <div>
+                    <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#B28532] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
+                      Complimentary 5-Day Live Experience
+                    </span>
+                  </div>
+
+                  <h3 className="text-[23px] sm:text-2xl md:text-5xl font-serif font-bold text-[#073E42] leading-tight">
+                    Money &amp; <br /> Abundance
+                  </h3>
+
+                  <p className="mt-4 text-[14px] sm:text-base text-[#1C2826]/85 leading-relaxed font-medium">
+                    Explore the beliefs, emotions ,and <br />
+                    subconscious patterns shaping your <br /> relationship with
+                    money — and begin <br /> opening yourself to greater
+                    abundance.
+                  </p>
+                </div>
+              </div>
+
+              {/* Bottom Details & Button Section */}
+              <div className="p-6 sm:p-8 md:p-9 bg-white">
+                <div className="flex items-center flex-wrap gap-2 sm:gap-3 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]">
+                  <span className="inline-flex items-center gap-1">
+                    <Calendar className="w-5 h-5 sm:w-5 sm:h-5 text-[#E6B055]" />
+                    Dates <br /> announcing soon
+                  </span>
+
+                  <span className="text-gray-400">•</span>
+
+                  <span className="inline-flex items-center gap-1">
+                    <FaTv className="w-5 h-5 sm:w-5 sm:h-5 text-[#E6B055]" />
+                    Live Online
+                  </span>
+
+                  <span className="text-gray-400">•</span>
+
+                  <span className="inline-flex items-center gap-1">
+                    <FiGift className="w-5 h-5 sm:w-5 sm:h-5 text-[#E6B055]" />
+                    Complimentary
+                  </span>
+                </div>
+
                 <button
                   onClick={handleRegister}
-                  className="mt-5 w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#073E42] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#063033] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
+                  className="mt-5 w-full sm:w-[50%] inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-[#073E42] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#063033] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
                 >
-                  I&apos;m Interested
-                  <ArrowRight className="w-4 h-4" />
+                  Register for Free
+                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </div>
             </div>
 
-            {/* Fit & Free */}
-            <div className="flex h-full flex-col rounded-[24px] sm:rounded-[28px] bg-white/90 backdrop-blur-sm border border-[#073E42]/15 p-6 sm:p-8 md:p-9 shadow-[0_12px_35px_rgba(7,62,66,0.06)]">
-              <p className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#B28532] mb-4">
-                Fit &amp; Free
-              </p>
-              <h3 className="text-[23px] sm:text-2xl md:text-3xl font-serif font-bold text-[#073E42] leading-tight">
-                Complimentary 90-Minute Live Experience
-              </h3>
-              <p className="mt-4 text-[14px] sm:text-base text-[#1C2826]/75 leading-relaxed">
-                Have you started diets or workouts again and again, only to find
-                yourself falling back into the same patterns? In this 90-minute
-                experience, we&apos;ll look beyond food and exercise and begin
-                exploring what may be underneath cravings, emotional eating,
-                overeating and inconsistency.
-              </p>
-              <div className="mt-auto pt-7 sm:pt-9">
-                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]/65">
-                  Date announcing soon • Live Online • Complimentary
-                </p>
+            {/* --- CARD 2: Fit & Free --- */}
+            <div className="flex flex-col h-full rounded-[24px] sm:rounded-[28px] shadow-[0_12px_35px_rgba(7,62,66,0.06)] overflow-hidden bg-white">
+              {/* Top Section with Background Image */}
+              <div className="bg-[url('/home/2.webp')] bg-center bg-cover bg-no-repeat flex flex-col flex-grow p-6 sm:p-8 md:p-9">
+                <div className="relative z-10 flex flex-col h-full">
+                  <div>
+                    <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#073E42] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
+                      Complimentary 90-Minute Live Experience
+                    </span>
+                  </div>
+
+                  <h3 className="text-[23px] sm:text-2xl md:text-5xl font-serif font-bold text-[#073E42] leading-tight">
+                    Fit
+                    <br /> &amp; Free
+                  </h3>
+
+                  <p className="mt-4 text-[14px] sm:text-base text-[#1C2826]/85 leading-relaxed font-medium">
+                    Have you started diets or <br /> workouts again and again,
+                    only to find <br /> yourself falling back into the same{" "}
+                    <br /> patterns? <br />
+                    In this 90-minute experience, we&apos;ll <br /> look beyond
+                    food and exercise and begin <br /> exploring what may be
+                    underneath cravings, <br /> emotional eating, overeating and
+                    inconsistency.
+                  </p>
+                </div>
+              </div>
+
+              {/* Bottom Details & Button Section */}
+              <div className="p-6 sm:p-8 md:p-9 bg-white">
+                <div className="flex items-center flex-wrap gap-2 sm:gap-3 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]">
+                  <span className="inline-flex items-center gap-1">
+                    <Calendar className="w-5 h-5 sm:w-5 sm:h-5 text-[#E6B055]" />
+                    Dates <br /> announcing soon
+                  </span>
+
+                  <span className="text-gray-400">•</span>
+
+                  <span className="inline-flex items-center gap-1">
+                    <FaTv className="w-5 h-5 sm:w-5 sm:h-5 text-[#E6B055]" />
+                    Live Online
+                  </span>
+
+                  <span className="text-gray-400">•</span>
+
+                  <span className="inline-flex items-center gap-1">
+                    <FiGift className="w-5 h-5 sm:w-5 sm:h-5 text-[#E6B055]" />
+                    Complimentary
+                  </span>
+                </div>
+
                 <button
                   onClick={handleRegister}
-                  className="mt-5 w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#073E42] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#063033] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
+                  className="mt-5 w-full sm:w-[50%] inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-[#073E42] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#063033] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
                 >
-                  I&apos;m Interested
-                  <ArrowRight className="w-4 h-4" />
+                  Register for Free
+                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </div>
             </div>
