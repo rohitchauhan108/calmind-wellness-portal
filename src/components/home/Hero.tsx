@@ -351,14 +351,10 @@ export default function Hero() {
                     Dates <br /> announcing soon
                   </span>
 
-                  <span className="text-gray-400">•</span>
-
                   <span className="inline-flex items-center gap-1">
                     <FaTv className="w-5 h-5 sm:w-5 sm:h-5 text-[#E6B055]" />
                     Live Online
                   </span>
-
-                  <span className="text-gray-400">•</span>
 
                   <span className="inline-flex items-center gap-1">
                     <FiGift className="w-5 h-5 sm:w-5 sm:h-5 text-[#E6B055]" />
@@ -412,14 +408,10 @@ export default function Hero() {
                     Dates <br /> announcing soon
                   </span>
 
-                  <span className="text-gray-400">•</span>
-
                   <span className="inline-flex items-center gap-1">
                     <FaTv className="w-5 h-5 sm:w-5 sm:h-5 text-[#E6B055]" />
                     Live Online
                   </span>
-
-                  <span className="text-gray-400">•</span>
 
                   <span className="inline-flex items-center gap-1">
                     <FiGift className="w-5 h-5 sm:w-5 sm:h-5 text-[#E6B055]" />
