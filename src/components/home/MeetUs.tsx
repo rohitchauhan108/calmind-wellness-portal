@@ -27,7 +27,7 @@ export default function MeetUs() {
       image: "/shilpha.jpeg",
       alt: "Shilpa — Graphotherapist & Handwriting Expert",
       cta: "Meet Shilpa",
-      link: "/about#shilpa",
+      link: "/shilpa",
       accent: "from-[#4A7C7D]/70 via-[#4A7C7D] to-[#4A7C7D]/70",
     },
   ];

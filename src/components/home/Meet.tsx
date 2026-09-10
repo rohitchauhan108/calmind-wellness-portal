@@ -15,7 +15,7 @@ function Meet() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0D3B36] leading-[1.15]">
               Understand your mind. <br />
-              <span className="font-serif italic font-normal text-[#0D3B36]/90">
+              <span className="font-serif italic font-normal relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#B28532]">
                 Break limiting patterns. Reclaim your life.
               </span>
             </h1>

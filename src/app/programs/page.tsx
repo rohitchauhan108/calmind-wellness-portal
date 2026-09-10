@@ -113,7 +113,7 @@ export default function ProgramsPage() {
           </div>
           <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-[1.15] sm:text-5xl lg:text-6xl">
             Choose the support that <br className="hidden sm:inline" />
-            <span className="font-normal italic">meets you where you are</span>
+            <span className="font-normal italic relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#B28532]">meets you where you are</span>
           </h1>
           <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#0D3C38]/75 sm:text-lg">
             Change doesn’t always require doing more. Sometimes, it begins by understanding and shifting what’s happening within. Choose the experience that feels right for you.

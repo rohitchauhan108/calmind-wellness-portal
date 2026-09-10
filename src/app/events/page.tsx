@@ -325,7 +325,7 @@ export default function EventsPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl text-[#073E42] leading-[1.08] font-bold max-w-4xl mx-auto">
             Gatherings designed to move you —
             <br className="hidden sm:inline" />
-            <span className="italic font-normal text-[#073E42]/90">
+            <span className="italic font-normal relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#B28532]">
               from insight, to action, to lasting change.
             </span>
           </h1>
@@ -757,7 +757,7 @@ export default function EventsPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white font-bold leading-[1.15]">
               Book a quick clarity call
               <br className="hidden sm:inline" />
-              <span className="italic font-normal text-white/85">
+              <span className="italic font-normal relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#B28532]">
                 and we&apos;ll match you to the next right step.
               </span>
             </h2>

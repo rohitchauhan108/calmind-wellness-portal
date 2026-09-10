@@ -345,7 +345,7 @@ export default function Hero() {
 
               {/* Bottom Details & Button Section */}
               <div className="p-6 sm:p-8 md:p-9 bg-white">
-                <div className="flex items-center flex-wrap gap-2 sm:gap-3 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]">
+                <div className="flex items-center flex-wrap gap-5 sm:gap-15 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]">
                   <span className="inline-flex items-center gap-1">
                     <Calendar className="w-5 h-5 sm:w-5 sm:h-5 text-[#E6B055]" />
                     Dates <br /> announcing soon
@@ -402,7 +402,7 @@ export default function Hero() {
 
               {/* Bottom Details & Button Section */}
               <div className="p-6 sm:p-8 md:p-9 bg-white">
-                <div className="flex items-center flex-wrap gap-2 sm:gap-3 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]">
+                <div className="flex items-center flex-wrap gap-5 sm:gap-15 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]">
                   <span className="inline-flex items-center gap-1">
                     <Calendar className="w-5 h-5 sm:w-5 sm:h-5 text-[#E6B055]" />
                     Dates <br /> announcing soon
@@ -496,7 +496,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-stretch sm:items-start justify-start gap-3 sm:gap-4 pt-2 sm:pt-1"
             >
               <Link
-                href="/how-we-help"
+                href="#services"
                 className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-[#073E42] text-white hover:bg-[#063033] transition-all duration-300 shadow-lg hover:shadow-[#073E42]/25 flex items-center justify-center gap-2.5 sm:gap-3 group text-[13px] sm:text-base font-medium cursor-pointer w-full sm:w-auto"
               >
                 <span>Explore How I Can Help</span>

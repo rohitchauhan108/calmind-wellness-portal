@@ -66,14 +66,14 @@ export default function Header() {
   };
 
   const navItems: NavItem[] = [
-    { label: "Home", href: "/" },
+    // { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Programs", href: "/programs" },
     { label: "Private Coaching", href: "/private-coaching" },
     { label: "Graphotherapy", href: "/graphotherapy" },
-    { label: "Membership", href: "/membership" },
+    // { label: "Membership", href: "/membership" },
     { label: "Events", href: "/events" },
-    { label: "Free Offerings", href: "/free-offerings" },
+    // { label: "Free Offerings", href: "/free-offerings" },
     { label: "Login", href: "/login" },
   ];
 
@@ -129,8 +129,8 @@ export default function Header() {
       <nav
         className={`transition-all duration-300 ${
           isScrolled
-            ? "py-3 shadow-md z-50 bg-brand-ivory/95 backdrop-blur-md"
-            : "bg-brand-ivory py-4 border-b border-brand-forest/10"
+            ? "py-3 shadow-md z-50 bg-[#faf5f1] backdrop-blur-md"
+            : "bg-[#faf5f1] py-4 border-b border-brand-forest/10"
         }`}
       >
         <div className="max-w-[90rem] mx-auto px-6 md:px-12 flex items-center justify-between">

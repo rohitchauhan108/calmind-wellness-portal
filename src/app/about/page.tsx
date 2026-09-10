@@ -325,7 +325,7 @@ export default function TransformationHero() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0D3B36] leading-[1.12]">
               I never planned to become a{" "}
-              <span className="font-serif italic font-normal text-[#0D3B36]/90">
+              <span className="font-serif italic font-normal relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#B28532]">
                 Life Coach &amp; Healer.
               </span>
             </h1>
@@ -414,41 +414,7 @@ export default function TransformationHero() {
       </section>
 
       {/* ================= SHILPA SECTION ================= */}
-      <section
-        id="shilpa"
-        className="relative scroll-mt-32 overflow-hidden bg-white px-6 py-20 lg:px-12 lg:py-28"
-      >
-        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-[#0D3B36]/10 bg-[#F2F5F3] shadow-xl aspect-[4/5]">
-            <Image
-              src="/shilpha.jpeg"
-              alt="Shilpa - Graphotherapist and Handwriting Expert"
-              fill
-              sizes="(max-width: 1024px) 100vw, 40vw"
-              className="object-cover object-top"
-            />
-          </div>
-
-          <div className="space-y-5">
-            <span className="inline-flex items-center rounded-full border border-[#0D3B36]/15 bg-[#0D3B36]/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#0D3B36]">
-              Meet Shilpa
-            </span>
-            <h2 className="text-3xl font-bold tracking-tight text-[#0D3B36] sm:text-4xl lg:text-5xl">
-              Graphotherapy &amp; Handwriting Expertise
-            </h2>
-            <p className="text-lg leading-relaxed text-[#0D3B36]/75">
-              Shilpa uses handwriting as a window into behavioural and emotional
-              patterns, helping people understand those patterns and work
-              towards positive change through Graphotherapy.
-            </p>
-            <p className="text-base leading-relaxed text-[#0D3B36]/70">
-              Through personalised handwriting analysis and guided writing
-              practices, she supports practical shifts in the patterns that
-              shape how you think, respond and show up in your life.
-            </p>
-          </div>
-        </div>
-      </section>
+      
 
       {/* ================= Cta section ================= */}
 

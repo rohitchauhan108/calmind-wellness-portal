@@ -21,8 +21,8 @@ export default function Home() {
         {/* 1. Hero */}
         <Hero />
 
-
-        {/* <Meet/> */}
+        {/* 2. Meet Ila */}
+        <Meet />
  
         
 

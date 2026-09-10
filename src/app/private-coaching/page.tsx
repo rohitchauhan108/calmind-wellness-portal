@@ -231,7 +231,7 @@ export default function PrivateCoachingPage() {
               >
                 Transformation that's
                 <span className="block italic font-normal mt-2">
-                  built for <span className="text-[#E6B055]">your</span> life.
+                  <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#B28532]">built for your life.</span>
                 </span>
               </motion.h1>
 
@@ -356,7 +356,7 @@ export default function PrivateCoachingPage() {
               Where We Work
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0D3C38] leading-tight">
-              Focus on what matters most to <span className="italic font-normal">you.</span>
+              Focus on what matters <span className="relative italic inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#B28532]">most to you.</span>
             </h2>
             <p className="text-base sm:text-lg text-[#0D3C38]/70 leading-relaxed">
               Every program is bespoke — but these are the life areas where

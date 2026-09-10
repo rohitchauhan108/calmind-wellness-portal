@@ -17,18 +17,18 @@ export default function Footer() {
 
   const currentYear = new Date().getFullYear();
 
-  const servicesList = [
+  const Links = [
+    { name: 'About Ila', href: '/about#ila' },
+    { name: 'Programs', href: '/programs' },
     { name: 'Private Coaching', href: '/private-coaching' },
     { name: 'Graphotherapy', href: '/graphotherapy' },
     { name: 'Membership', href: '/membership' },
-    { name: 'Events', href: '/events' },
-    { name: 'Free Offerings', href: '/free-offerings' },
   ];
 
   const quickLinks = [
-    { name: 'About Ila', href: '/about' },
-    { name: 'Programs', href: '/programs' },
-    { name: 'Frequently Asked Questions', href: '/faq' },
+    { name: 'About Shilpa', href: '/shilpa' },
+    { name: 'Events', href: '/events' },
+    { name: 'How We Help', href: '/how-we-help' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -40,7 +40,7 @@ export default function Footer() {
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
 
-        <div className="mb-16 rounded-[30px] border border-[#d8b77d]/50 bg-[#f6efe8] p-5 shadow-[0_18px_50px_rgba(7,62,66,0.08)] md:p-8">
+        {/* <div className="mb-16 rounded-[30px] border border-[#d8b77d]/50 bg-[#f6efe8] p-5 shadow-[0_18px_50px_rgba(7,62,66,0.08)] md:p-8">
           <div className="grid items-center gap-7 lg:grid-cols-[0.78fr_1.5fr_0.9fr]">
             <div className="flex justify-center lg:justify-start">
               <div className="relative h-44 w-44 overflow-hidden rounded-full border-[4px] border-[#d5af6b] bg-[#0d3f3d] shadow-[0_18px_30px_rgba(13,59,54,0.15)] md:h-52 md:w-52">
@@ -95,7 +95,7 @@ export default function Footer() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         
         {/* 2. Main Footer Navigation Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-16 border-b border-white/10">
@@ -149,15 +149,15 @@ export default function Footer() {
 
           {/* Col 2: Services (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#E6B055]">Services</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#E6B055]">Quick Links</h4>
             <ul className="space-y-3 text-sm font-medium text-[#FBF9F5]/80">
-              {servicesList.map((service) => (
-                <li key={service.name}>
+              {Links.map((link) => (
+                <li key={link.name}>
                   <Link 
-                    href={service.href} 
+                    href={link.href} 
                     className="hover:text-white transition-colors duration-200 block"
                   >
-                    {service.name}
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -166,7 +166,7 @@ export default function Footer() {
 
           {/* Col 3: Navigation Quick Links (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#E6B055]">Navigation</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#E6B055]">Quick Links</h4>
             <ul className="space-y-3 text-sm font-medium text-[#FBF9F5]/80">
               {quickLinks.map((link) => (
                 <li key={link.name}>
