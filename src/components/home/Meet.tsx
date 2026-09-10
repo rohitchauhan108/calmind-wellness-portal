@@ -35,12 +35,7 @@ function Meet() {
               >
                 Begin Your Journey &rarr;
               </Link>
-              <Link
-                href="/how-we-help"
-                className="inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-[#0D3B36]/20 text-[#0D3B36] font-medium hover:bg-[#0D3B36]/5 transition-all duration-300"
-              >
-                Discover How We Help
-              </Link>
+            
             </div>
           </div>
 
