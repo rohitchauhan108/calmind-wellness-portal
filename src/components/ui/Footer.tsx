@@ -17,21 +17,6 @@ export default function Footer() {
 
   const currentYear = new Date().getFullYear();
 
-  const Links = [
-    { name: 'About Ila', href: '/about#ila' },
-    { name: 'Programs', href: '/programs' },
-    { name: 'Private Coaching', href: '/private-coaching' },
-    { name: 'Graphotherapy', href: '/graphotherapy' },
-    { name: 'Membership', href: '/membership' },
-  ];
-
-  const quickLinks = [
-    { name: 'About Shilpa', href: '/shilpa' },
-    { name: 'Events', href: '/events' },
-    { name: 'How We Help', href: '/how-we-help' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
   return (
     <footer id="footer" className="bg-[#073E42] text-[#FBF9F5] pt-16 pb-12 relative overflow-hidden font-sans border-t border-white/10">
       
@@ -97,31 +82,31 @@ export default function Footer() {
           </div>
         </div> */}
         
-        {/* 2. Main Footer Navigation Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-16 border-b border-white/10">
-          
-          {/* Col 1: Brand Info (4 cols) */}
-          <div className="lg:col-span-4 space-y-6">
-            <Link href="/" className="inline-block group">
-              <Image
-                src="/logo.png"
-                alt="Ila Garg Logo"
-                width={140}
-                height={40}
-                className="object-contain h-28 w-auto rounded-sm opacity-90 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </Link>
+        {/* 2. Footer Content Columns */}
+        <div className="grid grid-cols-1 gap-12 border-b border-white/10 pb-14 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+          <div className="md:col-span-2 lg:col-span-5">
+          <Link href="/" className="inline-flex group">
+            <Image
+              src="/logo.png"
+              alt="Ila Garg Logo"
+              width={180}
+              height={55}
+              className="h-28 w-auto rounded-sm object-contain opacity-95 transition-opacity duration-300 group-hover:opacity-100"
+            />
+          </Link>
 
-            <p className="text-sm font-medium text-[#FBF9F5]/70 leading-relaxed max-w-sm">
-              A holistic personal transformation practice integrating Life Coaching, subtle Energy Healing, and Graphotherapy to help you dissolve subconscious blocks and live with clarity.
-            </p>
+          <p className="mt-6 max-w-md text-sm font-medium leading-relaxed text-[#FBF9F5]/70">
+            A holistic personal transformation practice integrating Life Coaching,
+            subtle Energy Healing, and Graphotherapy to help you dissolve
+            subconscious blocks and live with clarity.
+          </p>
 
-            <div className="flex items-center gap-3 pt-2">
+          <div className="mt-8 flex flex-wrap items-center gap-3">
               <a 
                 href="https://www.facebook.com/ilagargofficial/" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FBF9F5] hover:text-white hover:bg-white/10 hover:border-white/30 transition-all"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#FBF9F5] transition-all hover:border-white/30 hover:bg-white/10 hover:text-white"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4.5 h-4.5" />
@@ -130,7 +115,7 @@ export default function Footer() {
                 href="https://www.instagram.com/ilagargofficial?igsi=dHdyOWplcTY2aW12" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FBF9F5] hover:text-white hover:bg-white/10 hover:border-white/30 transition-all"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#FBF9F5] transition-all hover:border-white/30 hover:bg-white/10 hover:text-white"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4.5 h-4.5" />
@@ -139,124 +124,81 @@ export default function Footer() {
                 href="https://www.youtube.com/@ilagargofficial" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FBF9F5] hover:text-white hover:bg-white/10 hover:border-white/30 transition-all"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#FBF9F5] transition-all hover:border-white/30 hover:bg-white/10 hover:text-white"
                 aria-label="YouTube"
               >
                 <Youtube className="w-4.5 h-4.5" />
               </a>
-            </div>
+          </div>
           </div>
 
-          {/* Col 2: Services (2 cols) */}
-          <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#E6B055]">Quick Links</h4>
-            <ul className="space-y-3 text-sm font-medium text-[#FBF9F5]/80">
-              {Links.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    href={link.href} 
-                    className="hover:text-white transition-colors duration-200 block"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="rounded-2xl border border-[#E6B055]/25 bg-white/[0.04] px-6 py-7 sm:px-8 lg:col-span-4">
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#E6B055]">
+              Complimentary Live Experience
+            </p>
+            <h3 className="mt-3 font-serif text-2xl font-bold leading-tight text-[#FBF9F5] sm:text-3xl">
+              Begin creating the change you&apos;re ready for.
+            </h3>
+            <p className="mt-3 max-w-lg text-sm leading-relaxed text-[#FBF9F5]/70">
+              Join live online from anywhere in the world, 17 – 21 September
+              2026, at 7:30 PM IST daily.
+            </p>
+            <a
+              href="https://calendly.com/ilagarg-official/clarity-call-with-ila"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#E6B055] px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[#073E42] transition-colors hover:bg-[#F0C477]"
+            >
+              Book a Session
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
 
-          {/* Col 3: Navigation Quick Links (3 cols) */}
-          <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#E6B055]">Quick Links</h4>
-            <ul className="space-y-3 text-sm font-medium text-[#FBF9F5]/80">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    href={link.href} 
-                    className="hover:text-white transition-colors duration-200 block"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Col 4: Contact & Consultations (3 cols) */}
-          <div className="lg:col-span-3 space-y-4 text-sm font-medium text-[#FBF9F5]/80">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-[#E6B055]">Private Consultations</h4>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3">
-                <Globe className="w-4 h-4 text-[#E6B055] shrink-0" />
-                <span className="leading-relaxed">
+          <div className="border-t border-white/10 pt-8 md:col-span-2 lg:col-span-3 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#E6B055]">
+              Private Consultations
+            </h4>
+            <div className="mt-5 space-y-4 text-sm font-medium text-[#FBF9F5]/80">
+              <span className="flex items-start gap-3">
+                <Globe className="h-4 w-4 text-[#E6B055]" />
+                <span>
                   Worldwide Online Consultations
                 </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-[#E6B055] shrink-0 mt-1" />
-                <span className="leading-relaxed">
-                  <a href="tel:+447429519990" className="hover:text-white transition-colors block">
-                    +44 7429 519990
-                  </a>
-
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#E6B055] shrink-0" />
-                <a href="mailto:contact@ilagarg.com" className="hover:text-white transition-colors">
+              </span>
+              <span className="flex items-start gap-3">
+                <Phone className="h-4 w-4 text-[#E6B055]" />
+                <a href="tel:+447429519990" className="transition-colors hover:text-white">
+                  +44 7429 519990
+                </a>
+              </span>
+              <span className="flex items-start gap-3">
+                <Mail className="h-4 w-4 text-[#E6B055]" />
+                <a href="mailto:contact@ilagarg.com" className="transition-colors hover:text-white">
                   contact@ilagarg.com
                 </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Clock className="w-4 h-4 text-[#E6B055] shrink-0 mt-1" />
-                <span className="leading-relaxed">
+              </span>
+              <span className="flex items-start gap-3">
+                <Clock className="h-4 w-4 text-[#E6B055]" />
+                <span>
                   By Appointment Only
                 </span>
-              </li>
-            </ul>
+              </span>
+            </div>
           </div>
-
         </div>
 
         {/* 3. Bottom Legal & Scroll Top Row */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-[#FBF9F5]/60 font-medium">
-          <div className="space-y-2 text-center md:text-left">
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-4 text-xs text-[#FBF9F5]/80 mb-2">
-              <p>© {currentYear} Ila Garg. All rights reserved.</p>
-              <span className="text-white/20 hidden sm:inline">•</span>
-
-              <Link href="/faq" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
-                FAQ
-              </Link>
-              <span className="text-white/20">•</span>
-
-              <Link href="/contact" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
-                Contact
-              </Link>
-              <span className="text-white/20">•</span>
-
-              <Link href="/privacy-policy" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
-                Privacy Policy
-              </Link>
-              <span className="text-white/20">•</span>
-
-              <Link href="/terms" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
-                Terms &amp; Conditions
-              </Link>
-              <span className="text-white/20">•</span>
-
-              <Link href="/refund-policy" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
-                Refund &amp; Cancellation Policy
-              </Link>
-              <span className="text-white/20">•</span>
-
-              <Link href="/medical-disclaimer" className="hover:text-[#E6B055] transition-colors underline-offset-4 hover:underline">
-                Disclaimer
-              </Link>
-            </div>
-
-            <p className="text-[11px] text-[#FBF9F5]/50 max-w-2xl leading-relaxed">
-              Disclosures: Ila Garg&apos;s coaching, graphotherapy, and healing programs represent professional wellness methodologies designed for lifestyle integration, self-understanding, and emotional healing. All consultations are held under strict confidentiality guidelines.
-            </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-[#FBF9F5]/80 md:justify-start">
+            <span>© {currentYear} Ila Garg. All rights reserved.</span>
+            <span className="text-white/20">|</span>
+            <Link href="/privacy-policy" className="transition-colors hover:text-[#E6B055]">
+              Privacy Policy
+            </Link>
+            <span className="text-white/20">|</span>
+            <Link href="/terms" className="transition-colors hover:text-[#E6B055]">
+              Terms &amp; Conditions
+            </Link>
           </div>
 
           {/* Scroll to Top Button */}

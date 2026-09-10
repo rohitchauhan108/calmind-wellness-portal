@@ -220,18 +220,7 @@ export default function GraphotherapyPage() {
 
   return (
     <main className="bg-[#FAF8F5] text-[#0D3C38] antialiased min-h-screen font-sans overflow-x-hidden">
-      {/* ============ BACK LINK ============ */}
-      <section className="pt-24 pb-0 px-6 lg:px-16">
-        <div className="max-w-7xl mx-auto">
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#0D3C38]/60 hover:text-[#0D3C38] transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Services
-          </Link>
-        </div>
-      </section>
+      
 
       {/* ============ HERO ============ */}
       <section className="relative pt-12 pb-20 lg:pt-20 lg:pb-32 px-6 lg:px-16 overflow-hidden">

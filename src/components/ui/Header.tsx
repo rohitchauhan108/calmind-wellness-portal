@@ -69,12 +69,10 @@ export default function Header() {
     // { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Programs", href: "/programs" },
-    { label: "Private Coaching", href: "/private-coaching" },
+    // { label: "Private Coaching", href: "/private-coaching" },
     { label: "Graphotherapy", href: "/graphotherapy" },
-    // { label: "Membership", href: "/membership" },
     { label: "Events", href: "/events" },
-    // { label: "Free Offerings", href: "/free-offerings" },
-    { label: "Login", href: "/login" },
+    { label: "contact", href: "/contact" },
   ];
 
   return (
@@ -261,7 +259,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="font-sans text-[14px] font-medium px-6 py-2.5 rounded-full border border-brand-forest/30 text-brand-forest hover:bg-brand-forest hover:border-brand-forest hover:text-brand-ivory transition-all duration-300 shadow-sm flex items-center gap-2 group"
             >
-              <span>Book a Session</span>
+              <span>Book a Clarity Call</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
             </a>
           </div>

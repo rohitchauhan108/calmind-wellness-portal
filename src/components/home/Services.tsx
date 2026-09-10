@@ -145,7 +145,10 @@ export default function Services() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-5 sm:gap-6 mb-10 sm:mb-12 md:mb-16">
+        <div
+          id="ways-to-work-with-us"
+          className="scroll-mt-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-5 sm:gap-6 mb-10 sm:mb-12 md:mb-16"
+        >
           <div className="max-w-2xl space-y-2.5 sm:space-y-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#073E42]/10 border border-[#073E42]/15 text-[#073E42] text-[10px] sm:text-xs font-semibold tracking-widest uppercase">
               <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5" />

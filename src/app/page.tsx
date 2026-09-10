@@ -10,6 +10,7 @@ import MeetUs from "../components/home/MeetUs";
 
 import CTA from "../components/home/CTA";
 import Meet from "../components/home/Meet";
+import LastingChange from "../components/home/LastingChange";
 import NewTestimonials from "../components/home/NewTestimonials";
 export default function Home() {
   return (
@@ -18,30 +19,23 @@ export default function Home() {
 
       {/* Main layout contents in the strict requested order */}
       <main id="app-main">
-        {/* 1. Hero */}
         <Hero />
-
-        {/* 2. Meet Ila */}
         <Meet />
+        <LastingChange />
+        <Infomativecta/>
+
+
  
         
 
-       {/* <SupportCategories/> */}
 
-        {/* 2. About & Meet Us */}
-        {/* <About /> */}
 
-        {/* 3. Testimonials */}
-        {/* <Testimonials /> */}
         <NewTestimonials />
 
-        {/* 4. Services */}
         <Services />
 
-        {/* 5. Meet Us */}
         <MeetUs />
 
-        <Infomativecta/>
       </main>
     </div>
   );

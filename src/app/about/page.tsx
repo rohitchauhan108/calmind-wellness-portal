@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ShilpaSection from "../../components/about/ShilpaSection";
 
 interface Category {
   number: string;
@@ -414,42 +415,54 @@ export default function TransformationHero() {
       </section>
 
       {/* ================= SHILPA SECTION ================= */}
-      
+      <ShilpaSection />
 
       {/* ================= Cta section ================= */}
 
-      <section className="relative overflow-hidden bg-[#F2F5F3] px-6 py-20 lg:px-12 lg:py-28 mb-10">
-        <div className="pointer-events-none absolute -left-24 top-0 h-72 w-72 rounded-full bg-[#D8C9A7]/25 blur-3xl" />
-        <div className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#0D3B36]/10 blur-3xl" />
+      <section className="relative mb-10 overflow-hidden bg-[#F2F5F3] px-6 py-16 sm:py-20 lg:px-12 lg:py-24">
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(13,59,54,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(13,59,54,0.045)_1px,transparent_1px)] [background-size:44px_44px]" />
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-[#0D3B36]/[0.06] to-transparent" />
 
-        <div className="relative mx-auto max-w-4xl text-center">
-          <span className="inline-flex items-center rounded-full border border-[#0D3B36]/15 bg-[#0D3B36]/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#0D3B36]">
-            Find Your Next Step
-          </span>
+        <div className="relative mx-auto grid max-w-6xl items-stretch gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:gap-12">
+          <div className="flex flex-col justify-center">
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-12 bg-[#C58A3A]" />
+              <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#0D3B36]/65">
+                Find Your Next Step
+              </span>
+            </div>
 
-          <h2 className="mt-5 text-3xl font-bold leading-tight tracking-tight text-[#0D3B36] sm:text-4xl lg:text-5xl">
-            Explore how we can help
-          </h2>
+            <h2 className="max-w-2xl text-4xl font-bold leading-[1.05] tracking-tight text-[#0D3B36] sm:text-5xl lg:text-6xl">
+              Explore how we can help.
+            </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[#0D3B36]/75 sm:text-lg">
-            Whether you are navigating a relationship, career, confidence, or
-            personal wellbeing challenge, discover the support designed for
-            where you are today.
-          </p>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-[#0D3B36]/75 sm:text-lg">
+              Whether you are navigating a relationship, career, confidence, or
+              personal wellbeing challenge, discover the support designed for
+              where you are today.
+            </p>
+          </div>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="relative flex min-h-[270px] flex-col justify-between overflow-hidden rounded-[2rem] bg-[#0D3B36] p-7 text-white shadow-[0_20px_50px_rgba(13,59,54,0.18)] sm:p-9">
+            <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full border border-white/10" />
+            <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full border border-white/10" />
+
+            <div className="relative">
+              <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#E6B055]">
+                Begin with clarity
+              </span>
+              <p className="mt-4 max-w-xs font-serif text-2xl leading-tight text-white sm:text-3xl">
+                The right support can change what becomes possible.
+              </p>
+            </div>
+
             <Link
               href="/how-we-help"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0D3B36] px-7 py-3.5 font-medium text-white shadow-md transition-all duration-300 hover:bg-[#072723]"
+              className="relative mt-8 inline-flex w-full items-center justify-between rounded-full bg-[#E6B055] px-5 py-3.5 text-sm font-bold text-[#0D3B36] transition-all duration-300 hover:bg-[#f2c878]"
             >
-              Explore How We Help <span aria-hidden="true">&rarr;</span>
+              Explore How We Help
+              <span aria-hidden="true" className="text-lg">&rarr;</span>
             </Link>
-            {/* <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-[#0D3B36]/20 px-7 py-3.5 font-medium text-[#0D3B36] transition-all duration-300 hover:bg-[#0D3B36]/5"
-            >
-              Talk to Us
-            </Link> */}
           </div>
         </div>
       </section>

@@ -54,7 +54,7 @@ const programs: Program[] = [
     tagline: "6-Week Weight Loss Transformation Program",
     description: "What if the missing piece isn’t another diet or exercise plan? Fit & Free explores the emotional, behavioural and subconscious patterns that may be affecting your relationship with food, your body and weight.",
     features: ["Emotional Eating & Cravings", "Patterns & Habits", "The Subconscious & Weight", "Your Relationship With Your Body", "Creating New Patterns · Integration", "LIVE ONLINE · 1 session per week · 6 weeks"],
-    price: "$200 | ₹14,500",
+    price: "$200/month",
     action: "EXPLORE FIT & FREE",
     href: "/contact",
     image: "/program/3.webp",
@@ -67,7 +67,7 @@ const programs: Program[] = [
     tagline: "3-Month Transformation Program",
     description: "Change your relationship with money from the inside out. Over three months, we explore the emotional and subconscious patterns influencing your relationship with money and create space for a healthier, more expansive way of relating to abundance.",
     features: ["Scarcity & Abundance", "Receiving & Worthiness", "Fear & Security", "Inherited Money Beliefs", "Your Relationship With Money", "LIVE ONLINE · 1 session per week · 3 months"],
-    price: "$300 | ₹20,000",
+    price: "$300/month",
     action: "EXPLORE MONEY & ABUNDANCE",
     href: "/contact",
     image: "/program/4.webp",
@@ -80,7 +80,7 @@ const programs: Program[] = [
     tagline: "3-Month Transformation Program",
     description: "The patterns we carry within us often show up most clearly in our relationships. This three-month journey gives you space to look beneath those patterns, work through what you may still be carrying and begin creating healthier ways of relating — both to others and to yourself.",
     features: ["Repeating Relationship Patterns", "Hurt, Anger & Resentment", "Fear of Rejection & Abandonment", "Boundaries & Expectations", "Self-Love & Worthiness", "Creating Healthier Patterns", "LIVE ONLINE · 1 session per week · 3 months"],
-    price: "$300 | ₹20,000",
+    price: "$300/month",
     action: "EXPLORE RELATIONSHIPS",
     href: "/contact",
     image: "/program/5.webp",
@@ -106,6 +106,14 @@ export default function ProgramsPage() {
     <main className="min-h-screen bg-[#FAF8F5] text-[#0D3C38] antialiased selection:bg-[#0D3C38]/10">
       <section className="relative overflow-hidden border-b border-[#0D3C38]/10 px-6 pb-16 pt-24 lg:px-16 lg:pb-24 lg:pt-32">
         <div className="pointer-events-none absolute right-1/4 top-0 h-125 w-125 rounded-full bg-[#0D3C38]/5 blur-[140px]" />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-80"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(13,60,56,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(13,60,56,0.045) 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
+          }}
+        />
         <div className="relative z-10 mx-auto max-w-6xl space-y-6 text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#0D3C38]/10 bg-[#E7F0EC] px-4 py-1.5 text-xs font-semibold uppercase tracking-widest">
             <Sparkles className="h-3.5 w-3.5" />
