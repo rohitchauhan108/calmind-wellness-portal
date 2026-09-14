@@ -8,10 +8,10 @@ function Meet() {
     <section id="ila" className="relative scroll-mt-32 overflow-hidden py-20 lg:py-28 px-6 lg:px-12 bg-[#F2F5F3]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0D3B36]/5 border border-[#0D3B36]/15 text-[#0D3B36] text-xs font-semibold tracking-wider uppercase">
+            {/* <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0D3B36]/5 border border-[#0D3B36]/15 text-[#0D3B36] text-xs font-semibold tracking-wider uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-[#0D3B36]" />
               Meet Ila Garg
-            </div>
+            </div> */}
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0D3B36] leading-[1.15]">
               Understand your mind. <br />

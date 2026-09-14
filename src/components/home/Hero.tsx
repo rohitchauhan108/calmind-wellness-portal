@@ -17,6 +17,9 @@ import {
   CheckCircle2,
   Gift,
 } from "lucide-react";
+import { FaTv } from "react-icons/fa";
+import { FiGift } from "react-icons/fi";
+import { GoDotFill } from "react-icons/go";
 
 type DummySpeaker = {
   name: string;
@@ -96,7 +99,7 @@ export default function Hero() {
     window.open(
       "https://calendly.com/ilagarg-official/clarity-call-with-ila",
       "_blank",
-      "noopener,noreferrer"
+      "noopener,noreferrer",
     );
   };
 
@@ -191,7 +194,7 @@ export default function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-center text-center mx-auto max-w-5xl mb-10 sm:mb-12 md:mb-16"
+          className="flex flex-col items-center text-center mx-auto max-w-8xl mb-10 sm:mb-12 md:mb-16"
         >
           {/* Eye-level sub-headline */}
           <motion.p
@@ -218,8 +221,7 @@ export default function Hero() {
             variants={itemVariants}
             className="mt-4 sm:mt-6 md:mt-7 text-[14px] sm:text-base md:text-lg lg:text-xl text-[#1C2826]/80 font-medium max-w-3xl"
           >
-            For Working Professionals, Business Owners, Homemakers & Anyone who
-            is ready to stop settling and start creating real, lasting change.
+           For Anyone Who Is Ready to Stop Settling and Start Creating Real, Lasting Change.
           </motion.p>
 
           {/* ======= COMPLIMENTARY LIVE EXPERIENCES ======= */}
@@ -228,94 +230,119 @@ export default function Hero() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.8, ease: easeCurve }}
-            className="mt-6 md:mt-12 w-full"
+            className="mt-5"
           >
             <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-12">
-              <h2 className="text-2xl sm:text-4xl  font-serif font-bold tracking-tight text-[#073E42] leading-tight">
+              <h2 className="text-[30px] sm:text-4xl md:text-3xl font-serif font-bold tracking-tight text-[#073E42] leading-tight">
                 Experience the Work for Yourself
               </h2>
               <p className="mt-4 sm:mt-5 text-[14px] sm:text-base md:text-lg text-[#1C2826]/75 leading-relaxed max-w-3xl mx-auto">
-                Sometimes the best way to understand this work is to experience it.
-                Choose the area you&apos;d like to work on and join me live to begin
-                exploring the patterns underneath it.
+                Sometimes the best way to understand this work is to experience
+                it.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8 items-stretch text-left">
-              <div className="flex h-full flex-col rounded-[24px] sm:rounded-[28px] bg-white/90 backdrop-blur-sm border border-[#E6B055]/35 p-6 sm:p-8 md:p-9 shadow-[0_12px_35px_rgba(7,62,66,0.06)]">
-                <p className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#B28532] mb-4">
-                  Money &amp; Abundance
-                </p>
-                <h3 className="text-[23px] sm:text-2xl md:text-3xl font-serif font-bold text-[#073E42] leading-tight">
-                  Complimentary 5-Day Live Experience
-                </h3>
-                <p className="mt-4 text-[14px] sm:text-base text-[#1C2826]/75 leading-relaxed">
-                  Explore the beliefs, emotions and subconscious patterns shaping
-                  your relationship with money — and begin opening yourself to
-                  greater abundance.
-                </p>
-                <div className="mt-auto pt-7 sm:pt-9">
-                  <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]/65">
-                    17 – 21 September 2026 • 5 Days · 7:30 PM IST Daily • Live on Zoom
-                  </p>
+            {/* Two sessions side by side on desktop/tablet */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8 items-stretch">
+              {/* --- CARD 1: Money & Abundance --- */}
+              <div className="flex flex-col h-full rounded-[24px] sm:rounded-[28px] border-b-4 border-[#073e42] shadow-[0_12px_35px_rgba(7,62,66,0.06)] overflow-hidden bg-white">
+                {/* Top Section with Background Image */}
+                <div className="bg-[url('/home/1.webp')] bg-center bg-cover bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left w-[700px]">
+                  <div className="relative z-10 flex flex-col items-start h-full text-left">
+                    <div>
+                      <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#B28532] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
+                        FIRST SESSION COMPLIMENTARY
+                      </span>
+                    </div>
+
+                    <h3 className="text-left text-[23px] sm:text-2xl md:text-5xl font-serif font-bold text-[#073E42] leading-tight">
+                      Money <span className="text-[#B28532]">&amp;</span><br /> Abundance
+                    </h3>
+
+                    <p className="mt-4 max-w-xl text-left text-[14px] sm:text-base text-[#1C2826]/85 leading-relaxed font-medium">
+                      Explore the beliefs, emotions and <br />
+                      subconscious patterns shaping your<br />
+                      relationship with money — and begin<br />
+                      opening  yourself to greater abundance.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Bottom Details & Button Section */}
+                <div className="p-6 sm:p-8 md:p-9 bg-white/10">
+                  <div className="flex items-center flex-wrap gap- sm:gap-6 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]">
+                    <span className="inline-flex items-center gap-1">
+                      Live Online
+                    </span>
+
+                    <span className="inline-flex items-center gap-1">
+                      <GoDotFill className="text-[#073E42]" />
+                      First Session Complimentary
+                    </span>
+                  </div>
+
                   <button
                     onClick={handleRegister}
-                    className="mt-5 w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#073E42] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#063033] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
+                    className="group mt-5 w-[50%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#073E42] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#063033] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
                   >
-                    Register for Free
-                    <ArrowRight className="w-4 h-4" />
+                    I'M INTERESTED
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </button>
                 </div>
               </div>
 
-              <div className="flex h-full flex-col rounded-[24px] sm:rounded-[28px] bg-white/90 backdrop-blur-sm border border-[#073E42]/15 p-6 sm:p-8 md:p-9 shadow-[0_12px_35px_rgba(7,62,66,0.06)]">
-                <p className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#B28532] mb-4">
-                  Fit &amp; Free
-                </p>
-                <h3 className="text-[23px] sm:text-2xl md:text-3xl font-serif font-bold text-[#073E42] leading-tight">
-                  Complimentary 90-Minute Live Experience
-                </h3>
-                <p className="mt-4 text-[14px] sm:text-base text-[#1C2826]/75 leading-relaxed">
-                  Have you started diets or workouts again and again, only to find
-                  yourself falling back into the same patterns? In this 90-minute
-                  experience, we&apos;ll look beyond food and exercise and begin
-                  exploring what may be underneath cravings, emotional eating,
-                  overeating and inconsistency.
-                </p>
-                <div className="mt-auto pt-7 sm:pt-9">
-                  <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]/65">
-                    17 – 21 September 2026 • 5 Days · 7:30 PM IST Daily • Live on Zoom
-                  </p>
+              {/* --- CARD 2: Fit & Free --- */}
+              <div className="flex flex-col h-full rounded-[24px] sm:rounded-[28px] border-b-4 border-[#073e42] shadow-[0_12px_35px_rgba(7,62,66,0.06)] overflow-hidden bg-white">
+                {/* Top Section with Background Image */}
+                <div className="bg-[url('/home/2.webp')] bg-center bg-cover bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left">
+                  <div className="relative z-10 flex flex-col items-start h-full text-left">
+                    <div>
+                      <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#073E42] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
+                        FIRST SESSION COMPLIMENTARY
+                      </span>
+                    </div>
+
+                    <h3 className="text-left text-[23px] sm:text-2xl md:text-5xl font-serif font-bold text-[#073E42] leading-tight">
+                      Fit <span className="text-[#B28532]">&amp;</span><br /> Free
+                    </h3>
+
+                    <p className="mt-4 max-w-xl text-left text-[14px] sm:text-base text-[#1C2826]/85 leading-relaxed font-medium">
+                      Have you tried diets, workouts or routines<br />
+                      again and again, only to find yourself falling<br />
+                      back into the same patterns? Explore what may<br />
+                      be underneath cravings, emotional eating,<br />
+                      overeating and inconsistency — beyond<br />
+                      simply focusing on food and exercise.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Bottom Details & Button Section */}
+                <div className="p-6 sm:p-8 md:p-9">
+                  <div className="flex items-center flex-wrap gap- sm:gap-6 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]">
+                    <span className="inline-flex items-center gap-1">
+                      Live Online
+                    </span>
+
+                    <span className="inline-flex items-center gap-1">
+                      <GoDotFill className="text-[#073E42]" />
+                      First Session Complimentary
+                    </span>
+                  </div>
+
                   <button
                     onClick={handleRegister}
-                    className="mt-5 w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#073E42] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#063033] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
+                    className="group mt-5 w-[50%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#073E42] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#063033] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
                   >
-                    Register for Free
-                    <ArrowRight className="w-4 h-4" />
+                    I'M INTERESTED
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </button>
                 </div>
               </div>
             </div>
           </motion.div>
 
-        
-
-          {/* Tiny trust row below CTA */}
-          <motion.div
-            variants={itemVariants}
-            className="mt-4 sm:mt-5 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-[11px] sm:text-xs text-[#073E42]/65 font-semibold uppercase tracking-[0.14em]"
-          >
-         
-            
-            <span className="inline-flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#073E42]" />
-              Join From Anywhere In The World
-            </span>
-          </motion.div>
         </motion.div>
-
-       
-
       </div>
 
       {/* Video Modal */}
