@@ -308,6 +308,10 @@ h1, h2, h3, h4, h5, h6 {
   background: #f8eee4 !important;
 }
 
+.theme-page main > section#testimonials {
+  background: #0d3c38 !important;
+}
+
 /* Contact is intentionally white-led: pattern in the canvas, green in one
    information panel, and gold only as a restrained accent. */
 .contact-page {

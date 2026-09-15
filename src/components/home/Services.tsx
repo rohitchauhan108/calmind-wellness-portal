@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Check,
@@ -15,6 +15,29 @@ import Link from "next/link";
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState(0);
+
+  useEffect(() => {
+    const target = document.getElementById("ways-to-work-with-us");
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting || window.location.hash !== "#ways-to-work-with-us") {
+          return;
+        }
+
+        window.history.replaceState(
+          null,
+          "",
+          `${window.location.pathname}${window.location.search}`
+        );
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, []);
 
   const servicesData = [
     {

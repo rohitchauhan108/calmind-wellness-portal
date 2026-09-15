@@ -168,7 +168,7 @@ export default function CTA() {
                     <div className="space-y-3 text-xs text-[#FBF9F5]/80">
                       <div className="flex items-center justify-between py-1.5 border-b border-white/5">
                         <span className="text-[#FBF9F5]/60">Duration:</span>
-                        <span className="font-medium text-[#FBF9F5]">15 Minutes</span>
+                        <span className="font-medium text-[#FBF9F5]">45 Minutes - 1 hour</span>
                       </div>
                       <div className="flex items-center justify-between py-1.5 border-b border-white/5">
                         <span className="text-[#FBF9F5]/60">Service:</span>

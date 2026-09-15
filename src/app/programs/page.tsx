@@ -57,7 +57,7 @@ const programs: Program[] = [
     price: "$200/month",
     action: "EXPLORE FIT & FREE",
     href: "/contact",
-    image: "/program/3.webp",
+    image: "/program/fit-&-free-program.webp",
     tags: ["WEIGHT LOSS", "TRANSFORMATION"],
   },
   {

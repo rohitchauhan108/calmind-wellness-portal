@@ -20,6 +20,9 @@ import {
 import { FaTv } from "react-icons/fa";
 import { FiGift } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
+import RegistrationModal, {
+  FreeProgramId,
+} from "../experience/RegistrationModal";
 
 type DummySpeaker = {
   name: string;
@@ -73,7 +76,16 @@ const SPEAKERS: DummySpeaker[] = [
 
 export default function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+  const [selectedProgram, setSelectedProgram] = useState<FreeProgramId | null>(
+    null
+  );
   const easeCurve: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
+  const openRegistration = (programId: FreeProgramId) => {
+    setSelectedProgram(programId);
+    setIsRegistrationOpen(true);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -95,13 +107,13 @@ export default function Hero() {
     },
   };
 
-  const handleRegister = () => {
-    window.open(
-      "https://calendly.com/ilagarg-official/clarity-call-with-ila",
-      "_blank",
-      "noopener,noreferrer",
-    );
-  };
+  // const handleRegister = () => {
+  //   window.open(
+  //     "experience-it-free",
+  //     "_blank",
+  //     "noopener,noreferrer",
+  //   );
+  // };
 
   return (
     <section
@@ -180,14 +192,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: easeCurve }}
           className="flex justify-center mb-6 sm:mb-8"
-        >
-          <div className="inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-2 rounded-full bg-[#E6B055]/12 border border-[#E6B055]/30 backdrop-blur-sm shadow-sm">
-            <Gift className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C48F3A]" />
-            <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#7A5B21]">
-              Complimentary Live Experience · Limited Seats
-            </span>
-          </div>
-        </motion.div>
+        ></motion.div>
 
         {/* ======= CENTERED HEADLINE + AUDIENCE LINE + REGISTER-FREE CTA ======= */}
         <motion.div
@@ -199,9 +204,9 @@ export default function Hero() {
           {/* Eye-level sub-headline */}
           <motion.p
             variants={itemVariants}
-            className="text-[15px] sm:text-lg md:text-2xl font-semibold tracking-wide text-[#0D3C38] mb-2 sm:mb-3 md:mb-4"
+            className="text-[15px] sm:text-lg md:text-5xl font-serif font-bold tracking-wide text-[#0D3C38] mb-2 sm:mb-3 md:mb-4"
           >
-            Master the inner skills that actually matter
+            MASTER THE INNER SKILLS TO CREATE <br /> A LIFE THAT TRULY MATTERS.
           </motion.p>
 
           {/* Big statement headline — "MATTER" gets the gold highlight */}
@@ -209,11 +214,11 @@ export default function Hero() {
             variants={itemVariants}
             className="text-[32px] sm:text-5xl md:text-6xl lg:text-[72px] tracking-tight font-bold leading-[1.02] text-[#0D3C38]"
           >
-            To build a life that truly{" "}
+            {/* To build a life that truly{" "}
             <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#C48F3A]">
               matters
             </span>
-            .
+            . */}
           </motion.h1>
 
           {/* Target audience line */}
@@ -221,7 +226,8 @@ export default function Hero() {
             variants={itemVariants}
             className="mt-4 sm:mt-6 md:mt-7 text-[14px] sm:text-base md:text-lg lg:text-xl text-[#0D3C38]/80 font-medium max-w-3xl"
           >
-           For Anyone Who Is Ready to Stop Settling and Start Creating Real, Lasting Change.
+            For Anyone Who Is Ready to Stop Settling and Start Creating Real,
+            Lasting Change.
           </motion.p>
 
           {/* ======= COMPLIMENTARY LIVE EXPERIENCES ======= */}
@@ -233,13 +239,19 @@ export default function Hero() {
             className="mt-5"
           >
             <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-12">
-              <h2 className="text-[30px] sm:text-4xl md:text-3xl font-serif font-bold tracking-tight text-[#0D3C38] leading-tight">
+              <h2 className="text-[30px] sm:text-4xl md:text-5xl font-semibold tracking-tight text-[#0D3C38] leading-tight">
                 Experience the Work for Yourself
               </h2>
               <p className="mt-4 sm:mt-5 text-[14px] sm:text-base md:text-lg text-[#0D3C38]/75 leading-relaxed max-w-3xl mx-auto">
                 Sometimes the best way to understand this work is to experience
                 it.
               </p>
+              <div className="inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-2 rounded-full bg-[#E6B055]/12 border border-[#E6B055]/30 backdrop-blur-sm shadow-sm mt-5">
+                <Gift className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C48F3A]" />
+                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#7A5B21]">
+                  Complimentary Live Experience
+                </span>
+              </div>
             </div>
 
             {/* Two sessions side by side on desktop/tablet */}
@@ -256,14 +268,17 @@ export default function Hero() {
                     </div>
 
                     <h3 className="text-left text-[23px] sm:text-2xl md:text-5xl font-serif font-bold text-[#0D3C38] leading-tight">
-                      Money <span className="text-[#C48F3A]">&amp;</span><br /> Abundance
+                      Money <span className="text-[#C48F3A]">&amp;</span>
+                      <br /> Abundance
                     </h3>
 
                     <p className="mt-4 max-w-xl text-left text-[14px] sm:text-base text-[#0D3C38]/85 leading-relaxed font-medium">
                       Explore the beliefs, emotions and <br />
-                      subconscious patterns shaping your<br />
-                      relationship with money — and begin<br />
-                      opening  yourself to greater abundance.
+                      subconscious patterns shaping your
+                      <br />
+                      relationship with money — and begin
+                      <br />
+                      opening yourself to greater abundance.
                     </p>
                   </div>
                 </div>
@@ -280,13 +295,13 @@ export default function Hero() {
                       First Session Complimentary
                     </span>
                   </div>
-
                   <button
-                    onClick={handleRegister}
-                    className="group mt-5 w-[50%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#0D3C38] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#08292C] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
+                    type="button"
+                    onClick={() => openRegistration("money-abundance")}
+                    className="group mt-5 lg:w-[40%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#0D3C38] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#08292C] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
                   >
-                    I'M INTERESTED
-                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      REGISTER FREE
+                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </button>
                 </div>
               </div>
@@ -303,16 +318,23 @@ export default function Hero() {
                     </div>
 
                     <h3 className="text-left text-[23px] sm:text-2xl md:text-5xl font-serif font-bold text-[#0D3C38] leading-tight">
-                      Fit <span className="text-[#C48F3A]">&amp;</span><br /> Free
+                      Fit <span className="text-[#C48F3A]">&amp;</span>
+                      <br /> Free
                     </h3>
 
                     <p className="mt-4 max-w-xl text-left text-[14px] sm:text-base text-[#0D3C38]/85 leading-relaxed font-medium">
-                      Have you tried diets, workouts or routines<br />
-                      again and again, only to find yourself falling<br />
-                      back into the same patterns? Explore what may<br />
-                      be underneath cravings, emotional eating,<br />
-                      overeating and inconsistency — beyond<br />
-                      simply focusing on food and exercise.
+                      Have you tried diets, workouts or routines
+                      <br />
+                      again and again, only to find yourself falling
+                      <br />
+                      back into the same patterns? Explore what
+                      <br />
+                      may be underneath cravings, emotional
+                      <br />
+                      eating ,overeating and inconsistency —<br />
+                      beyond simply focusing on food and
+                      <br />
+                      exercise
                     </p>
                   </div>
                 </div>
@@ -329,19 +351,18 @@ export default function Hero() {
                       First Session Complimentary
                     </span>
                   </div>
-
                   <button
-                    onClick={handleRegister}
-                    className="group mt-5 w-[50%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#0D3C38] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#08292C] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
+                    type="button"
+                    onClick={() => openRegistration("fit-free")}
+                    className="group mt-5 lg:w-[40%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#0D3C38] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#08292C] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
                   >
-                    I'M INTERESTED
-                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      REGISTER FREE
+                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </button>
                 </div>
               </div>
             </div>
           </motion.div>
-
         </motion.div>
       </div>
 
@@ -396,6 +417,12 @@ export default function Hero() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <RegistrationModal
+        open={isRegistrationOpen}
+        onClose={() => setIsRegistrationOpen(false)}
+        programId={selectedProgram}
+      />
     </section>
   );
 }

@@ -87,7 +87,7 @@ export default function Footer() {
           <div className="md:col-span-2 lg:col-span-5">
           <Link href="/" className="inline-flex group">
             <Image
-              src="/logo.png"
+              src="/ila-grag-logo.webp"
               alt="Ila Garg Logo"
               width={180}
               height={55}

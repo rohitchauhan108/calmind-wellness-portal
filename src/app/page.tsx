@@ -21,7 +21,7 @@ export default function Home() {
       <main id="app-main">
         <Hero />
         <Meet />
-        <LastingChange />
+        {/* <LastingChange /> */}
         <Infomativecta/>
 
 
