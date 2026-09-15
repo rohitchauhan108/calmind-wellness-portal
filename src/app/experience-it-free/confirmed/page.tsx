@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { Suspense, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
@@ -46,7 +46,7 @@ const NEXT_STEPS: Record<FreeProgramId, string[]> = {
   ],
 };
 
-export default function ConfirmedPage() {
+function ConfirmedContent() {
   const router = useRouter();
   const search = useSearchParams();
 
@@ -367,5 +367,13 @@ export default function ConfirmedPage() {
         </div>
       </section>
     </main>
+  );
+}
+
+export default function ConfirmedPage() {
+  return (
+    <Suspense fallback={null}>
+      <ConfirmedContent />
+    </Suspense>
   );
 }
