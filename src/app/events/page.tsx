@@ -776,7 +776,7 @@ export default function EventsPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#E6B055] text-[#0D3C38] text-sm font-bold shadow-[0_14px_30px_-12px_rgba(230,176,85,0.65)] hover:bg-[#C48F3A] transition-all duration-300 group"
               >
-                Book My Complimentary Clarity Call
+                Book a Clarity Call
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
               <Link

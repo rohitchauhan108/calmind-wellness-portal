@@ -413,18 +413,18 @@ export default function ExperienceItFreePage() {
       </section>
 
       {/* ============ BOTTOM CTA ============ */}
-      <section className="px-6 pb-24 lg:px-16 lg:pb-32">
-        <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#0d3c38] via-[#12514c] to-[#08292C] p-8 text-white shadow-2xl sm:p-10 lg:p-12">
+      <section className="px-6 pb-24 lg:px-16 lg:pb-20 pt-20">
+        <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] bg-[linear-gradient(to_right,#E6B055_0%,#0D3C38_80%,#0D3C38_20%,#0D3C38_100%)] p-8 text-white shadow-2xl sm:p-10 lg:p-12">
           <div className="grid items-center gap-8 lg:grid-cols-[1.4fr_0.6fr] lg:gap-10">
             <div className="space-y-5">
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/8 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-[#E6B055]">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#0D3C38] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-[#E6B055]">
                 <Sparkles className="h-3.5 w-3.5" />
                 <span>Have a question before you begin?</span>
               </div>
               <h3 className="max-w-2xl text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
                 Still unsure which experience is right for you?
               </h3>
-              <p className="max-w-xl text-sm leading-relaxed text-[#FBF9F5]/75 sm:text-base">
+              <p className="max-w-xl text-sm leading-relaxed text-white font-semibold sm:text-base">
                 Start with a Complimentary Clarity Call — a short,
                 no-obligation conversation to briefly discuss what you&apos;re
                 looking to work on.

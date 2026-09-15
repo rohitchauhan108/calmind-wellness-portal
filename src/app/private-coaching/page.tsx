@@ -658,7 +658,7 @@ export default function PrivateCoachingPage() {
                 onClick={handleBookCall}
                 className="group inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-[#E6B055] hover:bg-[#E6B055]/92 text-[#0D3C38] font-semibold text-[13px] sm:text-sm tracking-wide shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer whitespace-normal text-center"
               >
-                Book My Complimentary Clarity Call
+                Book a Clarity Call
                 <ArrowRight className="w-3.5 h-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
               <Link

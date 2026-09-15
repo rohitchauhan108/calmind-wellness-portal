@@ -346,3 +346,6 @@ h1, h2, h3, h4, h5, h6 {
 .contact-page .contact-form {
   box-shadow: 0 24px 60px -35px rgba(13, 60, 56, 0.35);
 }
+button{
+  cursor: pointer;
+}
