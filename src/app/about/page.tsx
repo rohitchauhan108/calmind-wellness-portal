@@ -162,31 +162,59 @@ export default function TransformationHero() {
   return (
     <main className="theme-page bg-[#FBF9F5] text-[#0D3C38] antialiased selection:bg-[#0D3C38]/10 selection:text-[#0D3C38] font-sans">
       {/* ================= PHILOSOPHY SECTION ================= */}
-      <section className="relative bg-[#FBF9F5] overflow-hidden py-16 px-4 sm:px-6 lg:px-8">
-        {/* Background Image */}
-        <img
-          src="https://images.pexels.com/photos/30461817/pexels-photo-30461817.jpeg"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+      <section className="relative bg-[#0D3C38] overflow-hidden py-24 px-4 sm:px-6 lg:px-8">
+        {/* Atmospheric Background Glows & Texture */}
+        <div className="absolute inset-0 opacity-15 mix-blend-overlay pointer-events-none">
+          <img
+            src="https://images.pexels.com/photos/30461817/pexels-photo-30461817.jpeg"
+            alt=""
+            className="w-full h-full object-cover scale-105 filter brightness-90 contrast-125"
+          />
+        </div>
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#0D3C38] rounded-full blur-3xl pointer-events-none" />
 
         {/* Content Container */}
-        <div className="relative max-w-5xl mx-auto">
-          <div className="p-8 sm:p-12 rounded-3xl bg-white/80 backdrop-blur-md border border-[#0D3C38]/10 shadow-sm text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D3C38]/5 text-[#0D3C38] text-xs font-semibold tracking-wider uppercase">
-              Our Philosophy
+        <div className="relative max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left Column: Philosophy Tag & Bold Statement */}
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#FBF9F5]/10 border border-[#FBF9F5]/15 text-[#FBF9F5] text-xs font-medium tracking-widest uppercase backdrop-blur-md">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
+                Our Core Philosophy
+              </div>
+
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal tracking-tight text-[#FBF9F5] leading-[1.15]">
+                True transformation happens when every area of your life thrives{" "}
+                <span className="italic font-light text-[#D4AF37]">
+                  in harmony
+                </span>
+                .
+              </h3>
             </div>
 
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#0D3C38] leading-snug">
-              True transformation happens when every area of your life thrives
-              in harmony.
-            </h3>
+            {/* Right Column: Floating Editorial Glass Card with Secondary Detail */}
+            <div className="lg:col-span-5">
+              <div className="relative p-8 rounded-2xl bg-[linear-gradient(to_top,#C48F3A_0%,#E6B055_40%,#FBF9F5_60%,#FBF9F5_100%)] text-[#0D3C38] shadow-2xl border border-[#D4AF37]/30 backdrop-blur-xl transform transition-transform duration-500 hover:-translate-y-1">
+                {/* Decorative quote mark element */}
+                <div className="absolute -top-4 -right-4 w-10 h-10 rounded-full bg-[#D4AF37] text-[#0D3C38] flex items-center justify-center font-serif font-bold text-xl shadow-md">
+                  &ldquo;
+                </div>
 
-            <p className="text-base sm:text-lg text-[#0D3C38]/75 leading-relaxed font-normal max-w-2xl mx-auto">
-              We believe that mastery over your money, career, health, and
-              relationships begins with unlocking your deepest confidence and
-              ultimate purpose.
-            </p>
+                <p className="text-base sm:text-lg leading-relaxed font-sans font-semibold text-[#0D3C38] p-5">
+                  We believe that mastery over your money, career, health, and
+                  relationships begins with unlocking your deepest confidence
+                  and ultimate purpose.
+                </p>
+
+                {/* <div className="mt-6 pt-6 border-t border-[#0D3C38]/10 flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-[#0D3C38]/60">
+                  <span>Inside-Out Alignment</span>
+                  <span className="text-[#0D3C38] font-serif tracking-normal normal-case text-sm italic">
+                    Shilpa Garg Method
+                  </span>
+                </div> */}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -197,9 +225,7 @@ export default function TransformationHero() {
         <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-[#E6B055]/5 blur-3xl" />
 
         <div className="relative mx-auto max-w-6xl">
-          <div
-            className="rounded-[32px] border border-[#0D3C38]/10 bg-white shadow-[0_25px_70px_rgba(13,59,54,0.06)]"
-          >
+          <div className="rounded-[32px] border border-[#0D3C38]/10 bg-white shadow-[0_25px_70px_rgba(13,59,54,0.06)]">
             {/* Header row: tab switcher */}
             <div className="border-b border-[#0D3C38]/8 px-6 py-7 sm:px-10 sm:py-8">
               <div className="mx-auto flex w-fit items-center gap-1 rounded-full bg-[#FBF9F5] p-1.5 ring-1 ring-[#0D3C38]/8">
@@ -237,7 +263,7 @@ export default function TransformationHero() {
                 <div className="relative grid [grid-template-areas:'stack']">
                   <article
                     key="story"
-                    style={{ gridArea: 'stack' }}
+                    style={{ gridArea: "stack" }}
                     className={`relative transition-all duration-500 ease-out ${
                       activeTab === "story"
                         ? "opacity-100 translate-y-0 pointer-events-auto"
@@ -252,16 +278,16 @@ export default function TransformationHero() {
                     </h2>
                     <p className="max-w-[620px] text-base leading-relaxed text-[#0D3C38]/75 sm:text-lg">
                       Everyone faces moments of uncertainty—whether it&apos;s
-                      struggling in relationships, feeling stuck in a career,
-                      or dealing with financial stress. We created this
-                      platform to provide practical guidance and personalized
-                      support to help transform your life from the inside out.
+                      struggling in relationships, feeling stuck in a career, or
+                      dealing with financial stress. We created this platform to
+                      provide practical guidance and personalized support to
+                      help transform your life from the inside out.
                     </p>
                   </article>
 
                   <article
                     key="mission"
-                    style={{ gridArea: 'stack' }}
+                    style={{ gridArea: "stack" }}
                     className={`relative transition-all duration-500 ease-out ${
                       activeTab === "mission"
                         ? "opacity-100 translate-y-0 pointer-events-auto"
@@ -275,10 +301,9 @@ export default function TransformationHero() {
                       Our Mission
                     </h2>
                     <p className="max-w-[620px] text-base leading-relaxed text-[#0D3C38]/75 sm:text-lg">
-                      Our mission is to empower individuals with the
-                      knowledge, tools, and guidance they need to overcome
-                      life&apos;s challenges and create lasting personal
-                      transformation.
+                      Our mission is to empower individuals with the knowledge,
+                      tools, and guidance they need to overcome life&apos;s
+                      challenges and create lasting personal transformation.
                     </p>
                   </article>
                 </div>
@@ -289,10 +314,12 @@ export default function TransformationHero() {
                   <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-[#C48F3A]">
                     Guiding principle
                   </div>
-                  <div className="text-3xl font-bold text-[#0D3C38]">Clarity</div>
+                  <div className="text-3xl font-bold text-[#0D3C38]">
+                    Clarity
+                  </div>
                   <p className="mt-2.5 text-[15px] leading-relaxed text-[#0D3C38]/70">
-                    We help people uncover what is really driving their
-                    patterns and what is possible beyond them.
+                    We help people uncover what is really driving their patterns
+                    and what is possible beyond them.
                   </p>
                 </div>
 
@@ -300,10 +327,12 @@ export default function TransformationHero() {
                   <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-[#C48F3A]">
                     What we create
                   </div>
-                  <div className="text-3xl font-bold text-[#0D3C38]">Confidence</div>
+                  <div className="text-3xl font-bold text-[#0D3C38]">
+                    Confidence
+                  </div>
                   <p className="mt-2.5 text-[15px] leading-relaxed text-[#0D3C38]/75">
-                    Practical support that changes how you think, feel, and
-                    move through everyday life.
+                    Practical support that changes how you think, feel, and move
+                    through everyday life.
                   </p>
                 </div>
               </div>
@@ -347,16 +376,24 @@ export default function TransformationHero() {
             </div>
 
             {/* Highlighted questions */}
-            <div className="relative mt-8 pl-6 border-l-2 border-[#0D3C38]/20 space-y-4">
-              <p className="text-lg sm:text-xl font-serif italic text-[#0D3C38] leading-relaxed">
-                Why do the things we try to manifest sometimes happen, while
-                other times they don&apos;t?
-              </p>
+            <div className="w-full max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                {/* First Question Card */}
+                <div className="bg-[#F8F6F0] border-r-2 border-l-2 border-[#C48F3A] lg:border-r-0 lg:rounded-r-xl p-8 shadow-sm relative flex flex-col justify-between">
+                  <p className="text-lg sm:text-xl font-serif italic text-[#0D3C38] leading-relaxed">
+                    “ Why do the things we try to manifest sometimes happen, while
+                    other times they don&apos;t?
+                  </p>
+                </div>
 
-              <p className="text-lg sm:text-xl font-serif italic text-[#0D3C38] leading-relaxed">
-                Why do we hold on to grief, stress, fear or emotional pain even
-                when we know they aren&apos;t serving us?
-              </p>
+                {/* Second Question Card */}
+                <div className="bg-[#F8F6F0] border-r-2 border-l-2 border-[#C48F3A] lg:border-r-0 lg:rounded-r-xl p-8 shadow-sm relative flex flex-col justify-between">
+                  <p className="text-lg sm:text-xl font-serif italic text-[#0D3C38] leading-relaxed">
+                    “ Why do we hold on to grief, stress, fear or emotional pain
+                    even when we know they aren&apos;t serving us?
+                  </p>
+                </div>
+              </div>
             </div>
 
             <p className="text-base sm:text-lg leading-relaxed text-[#0D3C38]/75 max-w-2xl pt-2">
@@ -367,16 +404,16 @@ export default function TransformationHero() {
             </p>
 
             <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <Link
+              {/* <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#0D3C38] text-white font-medium shadow-md hover:bg-[#08292C] transition-all duration-300 gap-2"
               >
                 Begin Your Journey &rarr;
-              </Link>
+              </Link> */}
 
               <Link
-                href="/how-we-help"
-                className="inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-[#0D3C38]/20 text-[#0D3C38] font-medium hover:bg-[#0D3C38]/5 transition-all duration-300"
+                href="/#how-we-help"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#0D3C38] text-white font-medium shadow-md hover:bg-[#08292C] transition-all duration-300 gap-2"
               >
                 Discover How We Help
               </Link>
@@ -458,11 +495,13 @@ export default function TransformationHero() {
             </div>
 
             <Link
-              href="/how-we-help"
+              href="/#how-we-help"
               className="relative mt-8 inline-flex w-full items-center justify-between rounded-full bg-[#E6B055] px-5 py-3.5 text-sm font-bold text-[#0D3C38] transition-all duration-300 hover:bg-[#C48F3A]"
             >
               Explore How We Help
-              <span aria-hidden="true" className="text-lg">&rarr;</span>
+              <span aria-hidden="true" className="text-lg">
+                &rarr;
+              </span>
             </Link>
           </div>
         </div>
