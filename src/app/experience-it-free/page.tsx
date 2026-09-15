@@ -75,7 +75,7 @@ const OFFERINGS: Offering[] = [
     freeTag: "First 15 Days Free",
     ctaText: "Start 15 Days Free",
     icon: <Sparkle className="h-6 w-6" />,
-    tone: "light",
+    tone: "dark",
   },
   {
     id: "raise-frequency",
@@ -90,7 +90,7 @@ const OFFERINGS: Offering[] = [
     freeTag: "First 15 Days Free",
     ctaText: "Start 15 Days Free",
     icon: <Sun className="h-6 w-6" />,
-    tone: "dark",
+    tone: "light",
   },
 ];
 
@@ -176,7 +176,7 @@ export default function ExperienceItFreePage() {
         </div>
       </section>
 
-      {/* ============ OFFERINGS GRID (strict 3-column, equal heights) ============ */}
+      {/* ============ OFFERINGS GRID ============ */}
       <section className="relative px-6 py-16 lg:px-16 lg:py-24">
         <div className="pointer-events-none absolute inset-x-0 top-0 -z-0 h-px bg-gradient-to-r from-transparent via-[#0D3C38]/15 to-transparent" />
 
@@ -206,7 +206,6 @@ export default function ExperienceItFreePage() {
                       : "border-[#0D3C38]/10 bg-[#FFFBF2] text-[#0D3C38] shadow-sm hover:shadow-xl hover:shadow-[#0D3C38]/10"
                   }`}
                 >
-                  {/* Soft background gradient glow */}
                   {!isDark && (
                     <div className="pointer-events-none absolute -right-24 -top-24 h-60 w-60 rounded-full bg-[#E6B055]/8 blur-3xl" />
                   )}
@@ -214,7 +213,6 @@ export default function ExperienceItFreePage() {
                     <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-[#E6B055]/10 blur-3xl" />
                   )}
 
-                  {/* ========= TOP ROW: Number + Free Tag ========= */}
                   <div className="relative z-10 mb-7 flex items-start justify-between gap-4">
                     <div
                       className={`font-mono text-[13px] font-bold tracking-[0.22em] ${
@@ -235,7 +233,6 @@ export default function ExperienceItFreePage() {
                     </div>
                   </div>
 
-                  {/* ========= ICON ========= */}
                   <div className="relative z-10 mb-7">
                     <div
                       className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${
@@ -248,7 +245,6 @@ export default function ExperienceItFreePage() {
                     </div>
                   </div>
 
-                  {/* ========= HEADER (fixed height section) ========= */}
                   <div className="relative z-10 mb-5 min-h-[120px] space-y-2.5">
                     <p
                       className={`text-[10px] font-bold uppercase tracking-[0.22em] ${
@@ -273,7 +269,6 @@ export default function ExperienceItFreePage() {
                     </p>
                   </div>
 
-                  {/* ========= DESCRIPTION (flexible growth) ========= */}
                   <div
                     className={`relative z-10 mb-8 flex-1 space-y-3 text-sm leading-relaxed ${
                       isDark ? "text-[#FBF9F5]/70" : "text-[#0D3C38]/70"
@@ -284,7 +279,6 @@ export default function ExperienceItFreePage() {
                     ))}
                   </div>
 
-                  {/* ========= DIVIDER ========= */}
                   <div
                     style={
                       isDark
@@ -296,7 +290,6 @@ export default function ExperienceItFreePage() {
                     }`}
                   />
 
-                  {/* ========= META + CTA (strict bottom aligned) ========= */}
                   <div className="relative z-10 flex items-center justify-between gap-4">
                     <div
                       className={`inline-flex flex-1 items-center gap-1.5 text-[11px] font-medium leading-snug ${
@@ -328,18 +321,16 @@ export default function ExperienceItFreePage() {
             })}
           </div>
 
-          {/* ============ 05 CLARITY CALL: Full-width balanced single card ============ */}
+          {/* ============ 05 CLARITY CALL ============ */}
           <div className="mt-10 lg:mt-12">
             <article
               key={CLARITY_CALL.id}
               className="group relative overflow-hidden rounded-[2.25rem] border border-[#0D3C38]/10 bg-white shadow-md shadow-[#0D3C38]/5"
             >
-              {/* Decorative */}
               <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-[#E6B055]/10 blur-3xl" />
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(230,176,85,0.07),_transparent_45%)]" />
 
               <div className="relative z-10 grid grid-cols-1 items-stretch gap-8 p-7 sm:p-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:p-14">
-                {/* LEFT: Number + Icon + Header + Description */}
                 <div className="flex flex-col justify-between gap-7">
                   <div className="space-y-6">
                     <div className="flex items-start justify-between gap-4">
@@ -376,7 +367,6 @@ export default function ExperienceItFreePage() {
                   </div>
                 </div>
 
-                {/* RIGHT: Vertical divider + Meta + CTA block */}
                 <div className="relative flex items-center">
                   <div className="absolute left-0 top-0 hidden h-full w-px bg-gradient-to-b from-transparent via-[#0D3C38]/15 to-transparent lg:block" />
 
