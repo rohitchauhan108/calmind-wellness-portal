@@ -15,7 +15,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-16 sm:py-20 lg:py-28 bg-[#073E42] relative overflow-hidden text-[#FBF9F5]"
+      className="py-16 sm:py-20 lg:py-28 bg-[#0D3C38] relative overflow-hidden text-[#FBF9F5]"
     >
       {/* Background Texture */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
@@ -116,7 +116,7 @@ export default function Testimonials() {
                 duration: 0.7,
                 delay: index * 0.1,
               }}
-              className="relative bg-[#FBF9F5] text-[#073E42] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-xl"
+              className="relative bg-[#FBF9F5] text-[#0D3C38] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-xl"
             >
               {/* Quote Icon */}
               <div className="absolute top-5 right-5 sm:top-8 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#E6B055]/10 flex items-center justify-center">
@@ -125,7 +125,7 @@ export default function Testimonials() {
 
               {/* Tagline */}
               <div className="mb-5 sm:mb-6 pr-14">
-                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-[#B27A21]">
+                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-[#C48F3A]">
                   {story.tagline}
                 </span>
               </div>
@@ -135,7 +135,7 @@ export default function Testimonials() {
                 {story.quote.split("\n\n").map((paragraph, paragraphIndex) => (
                   <p
                     key={paragraphIndex}
-                    className="text-sm sm:text-base lg:text-lg text-[#073E42]/80 leading-[1.75]"
+                    className="text-sm sm:text-base lg:text-lg text-[#0D3C38]/80 leading-[1.75]"
                   >
                     {paragraph}
                   </p>
@@ -143,8 +143,8 @@ export default function Testimonials() {
               </div>
 
               {/* Author */}
-              <div className="mt-7 sm:mt-9 pt-5 sm:pt-6 border-t border-[#073E42]/10">
-                <p className="font-serif text-lg sm:text-xl font-semibold text-[#073E42]">
+              <div className="mt-7 sm:mt-9 pt-5 sm:pt-6 border-t border-[#0D3C38]/10">
+                <p className="font-serif text-lg sm:text-xl font-semibold text-[#0D3C38]">
                   — {story.author}
                 </p>
               </div>

@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+html {
+  max-width: 100vw;
+  scroll-behavior: auto;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 @theme {
   /* Mapped to Next.js CSS Variables */
   --font-sans: var(--font-poppins), system-ui, -apple-system, sans-serif;
@@ -34,12 +44,12 @@
 
   /* Legacy palette aliases used across older pages */
   --color-brand-cream: #FBF9F5;
-  --color-brand-sage: #4A7C7D;
+  --color-brand-sage: #0D3C38;
   --color-brand-gold: #E6B055;
-  --color-brand-espresso: #1C2826;
-  --color-brand-espresso-light: #3D4A47;
-  --color-brand-burgundy: #723B3A;
-  --color-brand-burgundy-dark: #4F2A29;
+  --color-brand-espresso: #08292C;
+  --color-brand-espresso-light: #0D3C38;
+  --color-brand-burgundy: #C48F3A;
+  --color-brand-burgundy-dark: #B88127;
 }
 
 /* Site-wide consistent heading typography: render every heading with
@@ -53,4 +63,282 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif) !important;
   letter-spacing: -0.01em;
+}
+
+/* Shared Graphotherapy-inspired visual skin: ivory surfaces, copper edges,
+   gold washes, and deep green anchors. */
+.theme-page > section:nth-of-type(2n) {
+  background: #ffffff !important;
+}
+
+.theme-page > section:nth-of-type(3n) {
+  background: #f8eee4 !important;
+}
+
+.theme-page > section:nth-of-type(4n) {
+  background: #fbf8f1 !important;
+}
+
+.theme-page > section.palette-anchor {
+  background: #0d3c38 !important;
+  color: #fbf8f1;
+}
+
+.theme-page > section.palette-gold-anchor {
+  background: linear-gradient(135deg, #0d3c38 0%, #12514c 55%, #08292c 100%) !important;
+  color: #e6b055;
+  box-shadow: inset 0 1px 0 rgba(230, 176, 85, 0.28), inset 0 -1px 0 rgba(230, 176, 85, 0.2);
+}
+
+.theme-page [class~="bg-white"],
+.theme-page [class~="bg-white/90"],
+.theme-page [class~="bg-white/95"] {
+  background-color: #fffaf0 !important;
+}
+
+.theme-page [class~="bg-[#FBF9F5]"],
+.theme-page [class~="bg-[#FAF8F5]"] {
+  background-color: #fbf8f1 !important;
+}
+
+.theme-page [class~="bg-[#0D3C38]/5"],
+.theme-page [class~="bg-[#0D3C38]/8"],
+.theme-page [class~="bg-[#0D3C38]/10"],
+.theme-page [class~="bg-[#0D3C38]/12"],
+.theme-page [class~="bg-[#0D3C38]/15"] {
+  background-color: rgba(230, 176, 85, 0.16) !important;
+}
+
+.theme-page [class~="border-[#0D3C38]/8"],
+.theme-page [class~="border-[#0D3C38]/10"],
+.theme-page [class~="border-[#0D3C38]/15"],
+.theme-page [class~="border-[#0D3C38]/20"] {
+  border-color: rgba(196, 143, 58, 0.28) !important;
+}
+
+.theme-page [class~="shadow-premium"],
+.theme-page [class~="shadow-premium-hover"] {
+  --tw-shadow-color: rgba(196, 143, 58, 0.18);
+}
+
+/* The Programs page uses repeated articles instead of separate sections. */
+.theme-page > section:nth-of-type(2) > div > article {
+  margin-inline: -1rem;
+  padding: 2rem 1rem;
+  border: 1px solid rgba(196, 143, 58, 0.3);
+  border-radius: 2rem;
+  background: rgba(255, 250, 240, 0.78);
+  box-shadow: 0 24px 55px -30px rgba(8, 41, 44, 0.3);
+}
+
+.theme-page > section:nth-of-type(2) > div > article:nth-child(2n) {
+  background: linear-gradient(135deg, #f7e2ac 0%, #fff1c9 55%, #fff8e8 100%);
+}
+
+.theme-page > section:nth-of-type(2) > div > article:nth-child(2n + 1) {
+  background: linear-gradient(135deg, #0d3c38 0%, #12514c 55%, #08292c 100%);
+  color: #fffaf0;
+}
+
+.theme-page > section:nth-of-type(2) > div > article:nth-child(2n + 1) [class*="text-[#0D3C38]"],
+.theme-page > section:nth-of-type(2) > div > article:nth-child(2n + 1) [class*="text-[#0D3C38]/"] {
+  color: rgba(255, 250, 240, 0.86) !important;
+}
+
+.theme-page > section:nth-of-type(2) > div > article:nth-child(2n + 1) [class*="border-[#0D3C38]"] {
+  border-color: rgba(255, 250, 240, 0.24) !important;
+}
+
+.theme-page > section:nth-of-type(2) > div > article:nth-child(2n + 1) [class*="bg-[#0D3C38]"] {
+  background-color: #e6b055 !important;
+  color: #0d3c38 !important;
+}
+
+/* Events use an editorial alternating panel layout, matching Programs. */
+.theme-page #upcoming-events .space-y-20 > article {
+  margin-inline: -1rem;
+  padding: 2rem 1rem;
+  border: 1px solid rgba(196, 143, 58, 0.3);
+  border-radius: 2rem;
+  background: linear-gradient(135deg, #f7e2ac 0%, #fff1c9 55%, #fff8e8 100%);
+  box-shadow: 0 24px 55px -30px rgba(8, 41, 44, 0.3);
+}
+
+.theme-page #upcoming-events .space-y-20 > article:nth-child(2n) {
+  background: linear-gradient(135deg, #0d3c38 0%, #12514c 55%, #08292c 100%);
+  color: #fffaf0;
+}
+
+.theme-page #upcoming-events .space-y-20 > article:nth-child(2n) h3 {
+  color: #e6b055 !important;
+}
+
+.theme-page #upcoming-events .space-y-20 > article:nth-child(2n) [class*="text-[#0D3C38]"],
+.theme-page #upcoming-events .space-y-20 > article:nth-child(2n) [class*="text-[#0D3C38]/"] {
+  color: rgba(255, 250, 240, 0.86) !important;
+}
+
+.theme-page #upcoming-events .space-y-20 > article:nth-child(2n) [class*="border-[#0D3C38]"] {
+  border-color: rgba(255, 250, 240, 0.24) !important;
+}
+
+.theme-page #upcoming-events .space-y-20 > article:nth-child(2n) button {
+  background: #e6b055 !important;
+  color: #0d3c38 !important;
+}
+
+.theme-page #upcoming-events .space-y-20 > article:nth-child(2n) a {
+  border-color: rgba(255, 250, 240, 0.35) !important;
+  color: #fffaf0 !important;
+}
+
+.theme-page #past-highlights article:nth-child(2n) {
+  background: linear-gradient(135deg, #f7e2ac 0%, #fff1c9 55%, #fff8e8 100%);
+}
+
+.theme-page #past-highlights article:nth-child(2n + 1) {
+  background: #fffaf0;
+}
+
+/* Events-only timeline: one featured spotlight followed by a copper-ruled
+   editorial trail, instead of the Programs card rhythm. */
+.events-page #upcoming-events .space-y-20 {
+  position: relative;
+  gap: 4rem;
+}
+
+.events-page #upcoming-events .space-y-20 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0;
+}
+
+.events-page #upcoming-events .space-y-20::before {
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 0.35rem;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(196, 143, 58, 0.55) 8%, rgba(196, 143, 58, 0.55) 92%, transparent);
+  content: "";
+}
+
+.events-page #upcoming-events .event-card {
+  position: relative;
+  margin-inline: 0;
+  padding: 0 0 0 2.25rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+.events-page #upcoming-events .event-card::before {
+  position: absolute;
+  top: 1.25rem;
+  left: -0.05rem;
+  z-index: 2;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 3px solid #fffaf0;
+  border-radius: 999px;
+  background: #c48f3a;
+  box-shadow: 0 0 0 1px rgba(196, 143, 58, 0.6);
+  content: "";
+}
+
+.events-page #upcoming-events .event-card:first-child {
+  padding: 2rem;
+  border: 1px solid rgba(230, 176, 85, 0.45);
+  border-radius: 2rem;
+  background: linear-gradient(135deg, #0d3c38 0%, #12514c 58%, #08292c 100%) !important;
+  color: #fffaf0;
+  box-shadow: 0 28px 65px -35px rgba(8, 41, 44, 0.6);
+}
+
+.events-page #upcoming-events .event-card:first-child::before {
+  top: 2.75rem;
+  left: -2.65rem;
+  width: 1rem;
+  height: 1rem;
+  border-color: #0d3c38;
+  background: #e6b055;
+}
+
+.events-page #upcoming-events .event-card:first-child h3 {
+  color: #e6b055 !important;
+}
+
+.events-page #upcoming-events .event-card:first-child [class*="text-[#0D3C38]"],
+.events-page #upcoming-events .event-card:first-child [class*="text-[#0D3C38]/"] {
+  color: rgba(255, 250, 240, 0.86) !important;
+}
+
+.events-page #upcoming-events .event-card:first-child [class*="border-[#0D3C38]"] {
+  border-color: rgba(255, 250, 240, 0.24) !important;
+}
+
+.events-page #upcoming-events .event-card:first-child button {
+  background: #e6b055 !important;
+  color: #0d3c38 !important;
+}
+
+.events-page #upcoming-events .event-card:first-child a {
+  border-color: rgba(255, 250, 240, 0.35) !important;
+  color: #fffaf0 !important;
+}
+
+.events-page #upcoming-events .event-card:not(:first-child) {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.events-page #upcoming-events .event-card:not(:first-child) > div:first-child > div {
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 45px -28px rgba(8, 41, 44, 0.35);
+}
+
+/* Home sections use the same broad color rhythm as Graphotherapy. */
+.theme-page main > section:nth-of-type(2n) {
+  background-color: #fff1c9 !important;
+  background-image: linear-gradient(135deg, #f7e2ac, #fff1c9 52%, #fff8e8), linear-gradient(rgba(13, 60, 56, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(13, 60, 56, 0.06) 1px, transparent 1px) !important;
+  background-blend-mode: soft-light, normal, normal;
+  background-size: auto, 44px 44px, 44px 44px;
+}
+
+.theme-page main > section:nth-of-type(3n) {
+  background: #f8eee4 !important;
+}
+
+/* Contact is intentionally white-led: pattern in the canvas, green in one
+   information panel, and gold only as a restrained accent. */
+.contact-page {
+  background-color: #ffffff !important;
+  background-image: linear-gradient(rgba(196, 143, 58, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(196, 143, 58, 0.045) 1px, transparent 1px) !important;
+  background-size: 44px 44px !important;
+}
+
+.contact-page .contact-card-dark {
+  background: linear-gradient(135deg, #0d3c38 0%, #12514c 100%) !important;
+  color: #fffaf0;
+  border-color: rgba(230, 176, 85, 0.45) !important;
+}
+
+.contact-page .contact-card-dark [class*="text-[#0D3C38]"] {
+  color: #fffaf0 !important;
+}
+
+.contact-page .contact-card-dark [class*="bg-[#0D3C38]"] {
+  background-color: rgba(230, 176, 85, 0.2) !important;
+  color: #e6b055 !important;
+}
+
+.contact-page .contact-card-dark [class*="border-[#0D3C38]"] {
+  border-color: rgba(230, 176, 85, 0.25) !important;
+}
+
+.contact-page .contact-card-dark [class*="border-t"] {
+  border-color: rgba(255, 250, 240, 0.2) !important;
+}
+
+.contact-page .contact-form {
+  box-shadow: 0 24px 60px -35px rgba(13, 60, 56, 0.35);
 }

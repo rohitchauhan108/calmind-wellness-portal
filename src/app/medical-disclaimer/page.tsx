@@ -7,29 +7,29 @@ export const metadata = {
 
 export default function DisclaimerPage() {
   return (
-    <main className="py-20 bg-[#FBF9F5] text-[#1C2826] min-h-screen">
+    <main className="py-20 bg-[#FBF9F5] text-[#0D3C38] min-h-screen">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
-        <h1 className="text-4xl sm:text-5xl font-serif font-bold text-[#073E42] mb-4">
+        <h1 className="text-4xl sm:text-5xl font-serif font-bold text-[#0D3C38] mb-4">
           Medical &amp; Results Disclaimer
         </h1>
-        <p className="text-sm text-[#1C2826]/60 mb-8">
+        <p className="text-sm text-[#0D3C38]/60 mb-8">
           Last Updated: July 2026
         </p>
 
-        <p className="text-sm sm:text-base leading-relaxed text-[#1C2826]/85 font-sans mb-8">
+        <p className="text-sm sm:text-base leading-relaxed text-[#0D3C38]/85 font-sans mb-8">
           Please read this disclaimer carefully before using our website or participating in any coaching, healing, workshop, course, or program offered by Ila Garg.
         </p>
 
-        <div className="space-y-6 text-sm sm:text-base leading-relaxed text-[#1C2826]/85 font-sans">
+        <div className="space-y-6 text-sm sm:text-base leading-relaxed text-[#0D3C38]/85 font-sans">
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Personal Development Services</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Personal Development Services</h2>
             <p>
               The services provided by Ila Garg—including Life Coaching, Healing Sessions, Chakra Balancing Programs, Handwriting Analysis, Graphotherapy, Workshops, Online Programs, and Educational Content—are intended solely for personal growth, self-awareness, mindset development, and educational purposes.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Not Medical Advice</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Not Medical Advice</h2>
             <p className="mb-2">
               Our services are not medical, psychological, psychiatric, legal, or financial advice.
             </p>
@@ -45,7 +45,7 @@ export default function DisclaimerPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Individual Results May Vary</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Individual Results May Vary</h2>
             <p className="mb-2">
               Every individual is different.
             </p>
@@ -61,7 +61,7 @@ export default function DisclaimerPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Personal Responsibility</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Personal Responsibility</h2>
             <p className="mb-2">
               By participating in our services, you acknowledge that you are fully responsible for your own decisions, actions, health, wellbeing, and results.
             </p>
@@ -71,7 +71,7 @@ export default function DisclaimerPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Emergency Situations</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Emergency Situations</h2>
             <p className="mb-2">
               Our services are not appropriate for medical emergencies or mental health crises.
             </p>
@@ -81,21 +81,21 @@ export default function DisclaimerPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Limitation of Liability</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Limitation of Liability</h2>
             <p>
               By using this website or participating in our services, you agree that Ila Garg shall not be held liable for any direct, indirect, incidental, or consequential loss, damage, injury, or claim arising from your participation or reliance on any information or services provided.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Acceptance</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Acceptance</h2>
             <p>
               By using this website or purchasing any service, you acknowledge that you have read, understood, and agreed to this Medical &amp; Results Disclaimer.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Contact</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Contact</h2>
             <p className="mb-1">
               For any questions regarding this disclaimer, please contact:
             </p>
@@ -103,7 +103,7 @@ export default function DisclaimerPage() {
               Email:{' '}
               <a
                 href="mailto:contact@ilagarg.com"
-                className="text-[#073E42] underline font-medium hover:opacity-80"
+                className="text-[#0D3C38] underline font-medium hover:opacity-80"
               >
                 contact@ilagarg.com
               </a>

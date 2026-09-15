@@ -110,7 +110,7 @@ export default function HowWeHelpPage() {
               OUR PROVEN METHODOLOGY
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#073E42] leading-[1.12] tracking-tight font-semibold">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#0D3C38] leading-[1.12] tracking-tight font-semibold">
               Empowering Lasting Growth,{" "}
               <span className="font-serif italic font-normal">
                 One Intention

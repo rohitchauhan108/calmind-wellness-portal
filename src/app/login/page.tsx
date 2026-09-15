@@ -90,7 +90,7 @@ export default function LoginPage() {
           >
             <div className="relative rounded-[2rem] overflow-hidden border border-white/50 shadow-2xl shadow-[#0D3C38]/15">
               <div className="aspect-[5/6] bg-gradient-to-br from-[#0D3C38] via-[#0D3C38] to-[#156056] p-10 xl:p-14 text-[#FBF9F5] relative flex flex-col justify-between">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(230,176,85,0.25),transparent_55%),radial-gradient(circle_at_80%_90%,rgba(7,62,66,0.55),transparent_50%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(230,176,85,0.25),transparent_55%),radial-gradient(circle_at_80%_90%,rgba(13,60,56,0.55),transparent_50%)]" />
 
                 <div className="relative z-10 space-y-6">
                   <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">

@@ -107,7 +107,7 @@ export default function ServicesPage(): React.JSX.Element {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-[#0d3c38] leading-[1.08]">
               Personalized Solutions for <br className="hidden sm:inline" />
-              <span className="italic font-normal text-[#073E42]/90 border-b-2 border-[#0d3c38]/20 pb-1">
+              <span className="italic font-normal text-[#0D3C38]/90 border-b-2 border-[#0d3c38]/20 pb-1">
                 Every Stage of Your Life
               </span>
             </h1>
@@ -123,7 +123,7 @@ export default function ServicesPage(): React.JSX.Element {
             {/* Call To Action Buttons */}
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <Link href="/contact" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#0d3c38] text-white font-semibold shadow-xl shadow-[#0d3c38]/15 hover:bg-[#072723] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-3">
+                <button className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#0d3c38] text-white font-semibold shadow-xl shadow-[#0d3c38]/15 hover:bg-[#08292C] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-3">
                   <span>Start Your Journey Today</span>
                   <FiArrowRight className="w-4 h-4" />
                 </button>

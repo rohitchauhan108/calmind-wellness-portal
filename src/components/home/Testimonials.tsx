@@ -34,7 +34,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-16 sm:py-20 lg:py-28 bg-[#073E42] relative overflow-hidden text-[#FBF9F5]"
+      className="py-16 sm:py-20 lg:py-28 bg-[#0D3C38] relative overflow-hidden text-[#FBF9F5]"
     >
       {/* Background Texture & Accents */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">

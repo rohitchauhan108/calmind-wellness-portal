@@ -232,7 +232,7 @@ export default function MembershipPage() {
               className="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-[#0D3C38]/15 border border-white/40"
             >
               <div className="aspect-[4/5] bg-gradient-to-br from-[#0D3C38] via-[#0D3C38] to-[#156056] p-8 sm:p-10 text-[#FBF9F5] relative flex flex-col">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_15%,rgba(230,176,85,0.28),transparent_55%),radial-gradient(circle_at_0%_85%,rgba(7,62,66,0.55),transparent_55%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_15%,rgba(230,176,85,0.28),transparent_55%),radial-gradient(circle_at_0%_85%,rgba(13,60,56,0.55),transparent_55%)]" />
 
                 <div className="relative z-10 flex items-start justify-between">
                   <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-[10px] font-bold uppercase tracking-[0.2em]">
@@ -411,7 +411,7 @@ export default function MembershipPage() {
       {/* ============ FINAL CTA ============ */}
       <section className="pb-24 px-6 lg:px-16">
         <div className="max-w-5xl mx-auto rounded-[2rem] overflow-hidden relative bg-gradient-to-br from-[#0D3C38] via-[#0D3C38] to-[#1a6960] text-[#FBF9F5] shadow-2xl shadow-[#0D3C38]/25">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(230,176,85,0.25),transparent_55%),radial-gradient(circle_at_100%_100%,rgba(7,62,66,0.5),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(230,176,85,0.25),transparent_55%),radial-gradient(circle_at_100%_100%,rgba(13,60,56,0.5),transparent_50%)]" />
           <div className="relative z-10 p-8 sm:p-12 lg:p-16 text-center space-y-6 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 backdrop-blur-sm">
               <Shield className="w-4 h-4 text-[#E6B055]" />

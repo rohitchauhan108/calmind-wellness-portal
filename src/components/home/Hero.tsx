@@ -106,12 +106,12 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] sm:min-h-[95vh] pt-24 pb-12 sm:pt-28 sm:pb-16 md:pb-20 flex items-center overflow-hidden bg-[#FBF9F5] text-[#1C2826]"
+      className="relative min-h-[90vh] sm:min-h-[95vh] pt-24 pb-12 sm:pt-28 sm:pb-16 md:pb-20 flex items-center overflow-hidden bg-[#FBF9F5] text-[#0D3C38]"
     >
       {/* ==== BACKDROP: DARK TEAL STAGE WASH (matching the SuperGyan vibe) ==== */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Soft teal vertical-gradient backdrop */}
-        <div className="absolute inset-x-0 top-0 h-[62%] bg-gradient-to-b from-[#0B4A4E]/[0.08] via-[#073E42]/[0.05] to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-[62%] bg-gradient-to-b from-[#12514c]/[0.08] via-[#0D3C38]/[0.05] to-transparent" />
         {/* Subtle curtain-like vertical light rays */}
         <div
           className="absolute inset-x-0 top-0 h-[62%] opacity-[0.35]"
@@ -137,7 +137,7 @@ export default function Hero() {
         </svg>
 
         <svg
-          className="absolute -top-24 -right-24 sm:-top-32 sm:-right-32 w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] text-[#073E42]/15"
+          className="absolute -top-24 -right-24 sm:-top-32 sm:-right-32 w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] text-[#0D3C38]/15"
           viewBox="0 0 100 100"
           fill="none"
           stroke="currentColor"
@@ -152,7 +152,7 @@ export default function Hero() {
         </svg>
 
         <svg
-          className="absolute -bottom-28 -left-28 sm:-bottom-40 sm:-left-40 w-[600px] h-[600px] sm:w-[800px] sm:h-[800px] text-[#073E42]/10"
+          className="absolute -bottom-28 -left-28 sm:-bottom-40 sm:-left-40 w-[600px] h-[600px] sm:w-[800px] sm:h-[800px] text-[#0D3C38]/10"
           viewBox="0 0 400 400"
           fill="none"
           stroke="currentColor"
@@ -168,10 +168,10 @@ export default function Hero() {
       </div>
 
       {/* Deep Emerald Ambient Glow Spheres */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] bg-[#073E42]/10 rounded-full blur-[120px] sm:blur-[150px] pointer-events-none -mr-24 -mt-10 sm:-mr-40 sm:-mt-20" />
-      <div className="absolute bottom-0 left-0 w-[350px] h-[350px] sm:w-[500px] sm:h-[500px] bg-[#073E42]/8 rounded-full blur-[120px] sm:blur-[160px] pointer-events-none -ml-14 -mb-14 sm:-ml-20 sm:-mb-20" />
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] bg-[#0D3C38]/10 rounded-full blur-[120px] sm:blur-[150px] pointer-events-none -mr-24 -mt-10 sm:-mr-40 sm:-mt-20" />
+      <div className="absolute bottom-0 left-0 w-[350px] h-[350px] sm:w-[500px] sm:h-[500px] bg-[#0D3C38]/8 rounded-full blur-[120px] sm:blur-[160px] pointer-events-none -ml-14 -mb-14 sm:-ml-20 sm:-mb-20" />
 
-      <div className="absolute inset-0 bg-[radial-gradient(#073E42_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.04] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(#0D3C38_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.04] pointer-events-none" />
 
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 md:px-12 relative z-10 w-full">
         {/* ======= TOP CENTERED EVENT BADGE ======= */}
@@ -182,7 +182,7 @@ export default function Hero() {
           className="flex justify-center mb-6 sm:mb-8"
         >
           <div className="inline-flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-2 rounded-full bg-[#E6B055]/12 border border-[#E6B055]/30 backdrop-blur-sm shadow-sm">
-            <Gift className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B28532]" />
+            <Gift className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C48F3A]" />
             <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#7A5B21]">
               Complimentary Live Experience · Limited Seats
             </span>
@@ -199,7 +199,7 @@ export default function Hero() {
           {/* Eye-level sub-headline */}
           <motion.p
             variants={itemVariants}
-            className="text-[15px] sm:text-lg md:text-2xl font-semibold tracking-wide text-[#073E42] mb-2 sm:mb-3 md:mb-4"
+            className="text-[15px] sm:text-lg md:text-2xl font-semibold tracking-wide text-[#0D3C38] mb-2 sm:mb-3 md:mb-4"
           >
             Master the inner skills that actually matter
           </motion.p>
@@ -207,10 +207,10 @@ export default function Hero() {
           {/* Big statement headline — "MATTER" gets the gold highlight */}
           <motion.h1
             variants={itemVariants}
-            className="text-[32px] sm:text-5xl md:text-6xl lg:text-[72px] tracking-tight font-bold leading-[1.02] text-[#073E42]"
+            className="text-[32px] sm:text-5xl md:text-6xl lg:text-[72px] tracking-tight font-bold leading-[1.02] text-[#0D3C38]"
           >
             To build a life that truly{" "}
-            <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#B28532]">
+            <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#C48F3A]">
               matters
             </span>
             .
@@ -219,7 +219,7 @@ export default function Hero() {
           {/* Target audience line */}
           <motion.p
             variants={itemVariants}
-            className="mt-4 sm:mt-6 md:mt-7 text-[14px] sm:text-base md:text-lg lg:text-xl text-[#1C2826]/80 font-medium max-w-3xl"
+            className="mt-4 sm:mt-6 md:mt-7 text-[14px] sm:text-base md:text-lg lg:text-xl text-[#0D3C38]/80 font-medium max-w-3xl"
           >
            For Anyone Who Is Ready to Stop Settling and Start Creating Real, Lasting Change.
           </motion.p>
@@ -233,10 +233,10 @@ export default function Hero() {
             className="mt-5"
           >
             <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-12">
-              <h2 className="text-[30px] sm:text-4xl md:text-3xl font-serif font-bold tracking-tight text-[#073E42] leading-tight">
+              <h2 className="text-[30px] sm:text-4xl md:text-3xl font-serif font-bold tracking-tight text-[#0D3C38] leading-tight">
                 Experience the Work for Yourself
               </h2>
-              <p className="mt-4 sm:mt-5 text-[14px] sm:text-base md:text-lg text-[#1C2826]/75 leading-relaxed max-w-3xl mx-auto">
+              <p className="mt-4 sm:mt-5 text-[14px] sm:text-base md:text-lg text-[#0D3C38]/75 leading-relaxed max-w-3xl mx-auto">
                 Sometimes the best way to understand this work is to experience
                 it.
               </p>
@@ -245,21 +245,21 @@ export default function Hero() {
             {/* Two sessions side by side on desktop/tablet */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8 items-stretch">
               {/* --- CARD 1: Money & Abundance --- */}
-              <div className="flex flex-col h-full rounded-[24px] sm:rounded-[28px] border-b-4 border-[#073e42] shadow-[0_12px_35px_rgba(7,62,66,0.06)] overflow-hidden bg-white">
+              <div className="flex flex-col h-full rounded-[24px] sm:rounded-[28px] border-b-4 border-[#0D3C38] shadow-[0_12px_35px_rgba(7,62,66,0.06)] overflow-hidden bg-white">
                 {/* Top Section with Background Image */}
                 <div className="bg-[url('/home/1.webp')] bg-center bg-cover bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left w-[700px]">
                   <div className="relative z-10 flex flex-col items-start h-full text-left">
                     <div>
-                      <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#B28532] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
+                      <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#C48F3A] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
                         FIRST SESSION COMPLIMENTARY
                       </span>
                     </div>
 
-                    <h3 className="text-left text-[23px] sm:text-2xl md:text-5xl font-serif font-bold text-[#073E42] leading-tight">
-                      Money <span className="text-[#B28532]">&amp;</span><br /> Abundance
+                    <h3 className="text-left text-[23px] sm:text-2xl md:text-5xl font-serif font-bold text-[#0D3C38] leading-tight">
+                      Money <span className="text-[#C48F3A]">&amp;</span><br /> Abundance
                     </h3>
 
-                    <p className="mt-4 max-w-xl text-left text-[14px] sm:text-base text-[#1C2826]/85 leading-relaxed font-medium">
+                    <p className="mt-4 max-w-xl text-left text-[14px] sm:text-base text-[#0D3C38]/85 leading-relaxed font-medium">
                       Explore the beliefs, emotions and <br />
                       subconscious patterns shaping your<br />
                       relationship with money — and begin<br />
@@ -270,20 +270,20 @@ export default function Hero() {
 
                 {/* Bottom Details & Button Section */}
                 <div className="p-6 sm:p-8 md:p-9 bg-white/10">
-                  <div className="flex items-center flex-wrap gap- sm:gap-6 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]">
+                  <div className="flex items-center flex-wrap gap- sm:gap-6 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#0D3C38]">
                     <span className="inline-flex items-center gap-1">
                       Live Online
                     </span>
 
                     <span className="inline-flex items-center gap-1">
-                      <GoDotFill className="text-[#073E42]" />
+                      <GoDotFill className="text-[#0D3C38]" />
                       First Session Complimentary
                     </span>
                   </div>
 
                   <button
                     onClick={handleRegister}
-                    className="group mt-5 w-[50%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#073E42] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#063033] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
+                    className="group mt-5 w-[50%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#0D3C38] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#08292C] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
                   >
                     I'M INTERESTED
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -292,21 +292,21 @@ export default function Hero() {
               </div>
 
               {/* --- CARD 2: Fit & Free --- */}
-              <div className="flex flex-col h-full rounded-[24px] sm:rounded-[28px] border-b-4 border-[#073e42] shadow-[0_12px_35px_rgba(7,62,66,0.06)] overflow-hidden bg-white">
+              <div className="flex flex-col h-full rounded-[24px] sm:rounded-[28px] border-b-4 border-[#0D3C38] shadow-[0_12px_35px_rgba(7,62,66,0.06)] overflow-hidden bg-white">
                 {/* Top Section with Background Image */}
                 <div className="bg-[url('/home/2.webp')] bg-center bg-cover bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left">
                   <div className="relative z-10 flex flex-col items-start h-full text-left">
                     <div>
-                      <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#073E42] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
+                      <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#0D3C38] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
                         FIRST SESSION COMPLIMENTARY
                       </span>
                     </div>
 
-                    <h3 className="text-left text-[23px] sm:text-2xl md:text-5xl font-serif font-bold text-[#073E42] leading-tight">
-                      Fit <span className="text-[#B28532]">&amp;</span><br /> Free
+                    <h3 className="text-left text-[23px] sm:text-2xl md:text-5xl font-serif font-bold text-[#0D3C38] leading-tight">
+                      Fit <span className="text-[#C48F3A]">&amp;</span><br /> Free
                     </h3>
 
-                    <p className="mt-4 max-w-xl text-left text-[14px] sm:text-base text-[#1C2826]/85 leading-relaxed font-medium">
+                    <p className="mt-4 max-w-xl text-left text-[14px] sm:text-base text-[#0D3C38]/85 leading-relaxed font-medium">
                       Have you tried diets, workouts or routines<br />
                       again and again, only to find yourself falling<br />
                       back into the same patterns? Explore what may<br />
@@ -319,20 +319,20 @@ export default function Hero() {
 
                 {/* Bottom Details & Button Section */}
                 <div className="p-6 sm:p-8 md:p-9">
-                  <div className="flex items-center flex-wrap gap- sm:gap-6 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#073E42]">
+                  <div className="flex items-center flex-wrap gap- sm:gap-6 text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] text-[#0D3C38]">
                     <span className="inline-flex items-center gap-1">
                       Live Online
                     </span>
 
                     <span className="inline-flex items-center gap-1">
-                      <GoDotFill className="text-[#073E42]" />
+                      <GoDotFill className="text-[#0D3C38]" />
                       First Session Complimentary
                     </span>
                   </div>
 
                   <button
                     onClick={handleRegister}
-                    className="group mt-5 w-[50%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#073E42] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#063033] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
+                    className="group mt-5 w-[50%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#0D3C38] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#08292C] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
                   >
                     I'M INTERESTED
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -352,13 +352,13 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-[#1C2826]/80 backdrop-blur-md p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-[#0D3C38]/80 backdrop-blur-md p-4"
           >
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className="relative w-full max-w-4xl bg-[#073E42] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/10"
+              className="relative w-full max-w-4xl bg-[#0D3C38] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/10"
             >
               <button
                 onClick={() => setIsVideoOpen(false)}
@@ -386,7 +386,7 @@ export default function Hero() {
                   </p>
                   <button
                     onClick={() => setIsVideoOpen(false)}
-                    className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white text-[#073E42] font-semibold hover:bg-[#FBF9F5] transition-all shadow-lg cursor-pointer text-sm sm:text-base"
+                    className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white text-[#0D3C38] font-semibold hover:bg-[#FBF9F5] transition-all shadow-lg cursor-pointer text-sm sm:text-base"
                   >
                     Close Preview
                   </button>

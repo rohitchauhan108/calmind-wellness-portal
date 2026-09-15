@@ -14,7 +14,7 @@ import LastingChange from "../components/home/LastingChange";
 import NewTestimonials from "../components/home/NewTestimonials";
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-brand-cream overflow-x-hidden">
+    <div className="theme-page relative min-h-screen bg-[#FBF9F5] overflow-x-hidden">
       {/* Sticky glassmorphism header navigation */}
 
       {/* Main layout contents in the strict requested order */}

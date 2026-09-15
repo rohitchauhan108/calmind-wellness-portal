@@ -18,7 +18,14 @@ export default function LenisSmoothScroll() {
 
     requestAnimationFrame(raf);
 
+    const handleResize = () => lenis.resize();
+    window.addEventListener('resize', handleResize);
+
+    const resizeTimeout = setTimeout(() => lenis.resize(), 150);
+
     return () => {
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(resizeTimeout);
       lenis.destroy();
     };
   }, []);

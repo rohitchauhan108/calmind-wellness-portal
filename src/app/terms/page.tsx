@@ -7,22 +7,22 @@ export const metadata = {
 
 export default function TermsPage() {
   return (
-    <main className="py-20 bg-[#FBF9F5] text-[#1C2826] min-h-screen">
+    <main className="py-20 bg-[#FBF9F5] text-[#0D3C38] min-h-screen">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
-        <h1 className="text-4xl sm:text-5xl font-serif font-bold text-[#073E42] mb-4">
+        <h1 className="text-4xl sm:text-5xl font-serif font-bold text-[#0D3C38] mb-4">
           Terms & Conditions
         </h1>
-        <p className="text-sm text-[#1C2826]/60 mb-8">
+        <p className="text-sm text-[#0D3C38]/60 mb-8">
           Last Updated: July 2026
         </p>
 
-        <p className="text-sm sm:text-base leading-relaxed text-[#1C2826]/85 font-sans mb-8">
+        <p className="text-sm sm:text-base leading-relaxed text-[#0D3C38]/85 font-sans mb-8">
           Welcome to Ila Garg. By accessing this website or purchasing any of our services, you agree to be bound by these Terms & Conditions. If you do not agree with these terms, please do not use this website or purchase our services.
         </p>
 
-        <div className="space-y-6 text-sm sm:text-base leading-relaxed text-[#1C2826]/85 font-sans">
+        <div className="space-y-6 text-sm sm:text-base leading-relaxed text-[#0D3C38]/85 font-sans">
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">1. Our Services</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">1. Our Services</h2>
             <p className="mb-2">
               Ila Garg provides personal development services, including but not limited to:
             </p>
@@ -41,14 +41,14 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">2. Eligibility</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">2. Eligibility</h2>
             <p>
               You must be at least 18 years of age to purchase our services. If you are under 18, you may participate only with the consent of a parent or legal guardian.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">3. Payments</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">3. Payments</h2>
             <p className="mb-2">
               Payment must be made in full before any coaching session, healing session, workshop, event, program, or digital product is delivered.
             </p>
@@ -61,7 +61,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">4. Scheduling &amp; Attendance</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">4. Scheduling &amp; Attendance</h2>
             <p className="mb-2">
               Clients are responsible for attending their scheduled sessions, workshops, or events at the agreed date and time.
             </p>
@@ -71,7 +71,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">5. Coaching &amp; Healing Disclaimer</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">5. Coaching &amp; Healing Disclaimer</h2>
             <p className="mb-2">
               Our coaching, healing, and personal development services are intended to support personal growth, emotional wellbeing, self-awareness, and mindset development.
             </p>
@@ -84,7 +84,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">6. No Guarantee of Results</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">6. No Guarantee of Results</h2>
             <p className="mb-2">
               Every individual is unique, and results will vary.
             </p>
@@ -97,7 +97,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">7. Intellectual Property</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">7. Intellectual Property</h2>
             <p className="mb-2">
               All content available on this website, including text, graphics, videos, logos, worksheets, course materials, downloads, and branding, is the intellectual property of Ila Garg unless otherwise stated.
             </p>
@@ -107,7 +107,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">8. User Conduct</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">8. User Conduct</h2>
             <p className="mb-2">
               You agree to use this website lawfully and respectfully.
             </p>
@@ -117,21 +117,21 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">9. Limitation of Liability</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">9. Limitation of Liability</h2>
             <p>
               To the fullest extent permitted by applicable law, Ila Garg shall not be liable for any direct, indirect, incidental, consequential, or special damages arising from the use of this website or participation in any of our services.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">10. Privacy</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">10. Privacy</h2>
             <p>
               Your use of this website is also governed by our Privacy Policy, which explains how we collect, use, and protect your personal information.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">11. Changes to These Terms</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">11. Changes to These Terms</h2>
             <p className="mb-2">
               We reserve the right to update or modify these Terms &amp; Conditions at any time without prior notice.
             </p>
@@ -141,14 +141,14 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">12. Governing Law</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">12. Governing Law</h2>
             <p>
               These Terms &amp; Conditions shall be governed by and interpreted in accordance with the laws applicable in the jurisdiction from which Ila Garg operates, without regard to conflict of law principles.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">13. Contact Us</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">13. Contact Us</h2>
             <p className="mb-1">
               If you have any questions regarding these Terms &amp; Conditions, please contact us:
             </p>
@@ -156,7 +156,7 @@ export default function TermsPage() {
               Email:{' '}
               <a
                 href="mailto:contact@ilagarg.com"
-                className="text-[#073E42] underline font-medium hover:opacity-80"
+                className="text-[#0D3C38] underline font-medium hover:opacity-80"
               >
                 contact@ilagarg.com
               </a>

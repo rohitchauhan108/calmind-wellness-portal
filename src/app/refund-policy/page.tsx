@@ -7,16 +7,16 @@ export const metadata = {
 
 export default function RefundPolicyPage() {
   return (
-    <main className="py-20 bg-[#FBF9F5] text-[#1C2826] min-h-screen">
+    <main className="py-20 bg-[#FBF9F5] text-[#0D3C38] min-h-screen">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
-        <h1 className="text-4xl sm:text-5xl font-serif font-bold text-[#073E42] mb-4">
+        <h1 className="text-4xl sm:text-5xl font-serif font-bold text-[#0D3C38] mb-4">
           Refund Policy
         </h1>
-        <p className="text-sm text-[#1C2826]/60 mb-8">
+        <p className="text-sm text-[#0D3C38]/60 mb-8">
           Last Updated: July 2026
         </p>
 
-        <div className="space-y-6 text-sm sm:text-base leading-relaxed text-[#1C2826]/85 font-sans">
+        <div className="space-y-6 text-sm sm:text-base leading-relaxed text-[#0D3C38]/85 font-sans">
           <p>
             Thank you for choosing Ila Garg.
           </p>
@@ -25,7 +25,7 @@ export default function RefundPolicyPage() {
           </p>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">No Refund Policy</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">No Refund Policy</h2>
             <p className="mb-2">
               All purchases made through this website are final and non-refundable.
             </p>
@@ -50,14 +50,14 @@ export default function RefundPolicyPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Missed Sessions</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Missed Sessions</h2>
             <p>
               If you fail to attend a scheduled session or event, or arrive late, the session will be considered forfeited. No refund, credit, or replacement session will be provided.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Change of Mind</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Change of Mind</h2>
             <p className="mb-2">
               Refunds will not be issued due to:
             </p>
@@ -72,28 +72,28 @@ export default function RefundPolicyPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Results Disclaimer</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Results Disclaimer</h2>
             <p>
               Our services are designed to support personal growth and transformation. Results vary from person to person based on many factors, including individual commitment, participation, and circumstances. Therefore, no guarantees of specific results are made, and refunds will not be issued based on outcomes.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Service Cancellation by Us</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Service Cancellation by Us</h2>
             <p>
               If we are unable to deliver a service due to circumstances within our control, we reserve the right to reschedule the service or, at our sole discretion, provide an appropriate alternative.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Acceptance of this Policy</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Acceptance of this Policy</h2>
             <p>
               By purchasing any product or service from Ila Garg, you confirm that you have read, understood, and agreed to this Refund Policy.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-serif font-bold text-[#073E42] mb-2">Contact</h2>
+            <h2 className="text-xl font-serif font-bold text-[#0D3C38] mb-2">Contact</h2>
             <p className="mb-1">
               If you have any questions regarding this policy, please contact us at:
             </p>
@@ -101,7 +101,7 @@ export default function RefundPolicyPage() {
               Email:{' '}
               <a
                 href="mailto:contact@ilagarg.com"
-                className="text-[#073E42] underline font-medium hover:opacity-80"
+                className="text-[#0D3C38] underline font-medium hover:opacity-80"
               >
                 contact@ilagarg.com
               </a>

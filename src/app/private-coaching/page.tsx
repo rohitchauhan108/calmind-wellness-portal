@@ -231,7 +231,7 @@ export default function PrivateCoachingPage() {
               >
                 Transformation that's
                 <span className="block italic font-normal mt-2">
-                  <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#B28532]">built for your life.</span>
+                  <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#C48F3A]">built for your life.</span>
                 </span>
               </motion.h1>
 
@@ -303,7 +303,7 @@ export default function PrivateCoachingPage() {
                 className="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-[#0D3C38]/15 border border-white/40"
               >
                 <div className="aspect-[4/5] w-full bg-gradient-to-br from-[#0D3C38] via-[#0D3C38] to-[#156056] p-8 sm:p-10 text-[#FBF9F5] flex flex-col justify-between relative">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(230,176,85,0.25),transparent_50%),radial-gradient(circle_at_80%_80%,rgba(7,62,66,0.6),transparent_55%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(230,176,85,0.25),transparent_50%),radial-gradient(circle_at_80%_80%,rgba(13,60,56,0.6),transparent_55%)]" />
                   <div className="relative z-10">
                     <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-sm">
                       <Star className="w-3.5 h-3.5 text-[#E6B055] fill-[#E6B055]" />
@@ -356,7 +356,7 @@ export default function PrivateCoachingPage() {
               Where We Work
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0D3C38] leading-tight">
-              Focus on what matters <span className="relative italic inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#B28532]">most to you.</span>
+              Focus on what matters <span className="relative italic inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#C48F3A]">most to you.</span>
             </h2>
             <p className="text-base sm:text-lg text-[#0D3C38]/70 leading-relaxed">
               Every program is bespoke — but these are the life areas where
@@ -634,7 +634,7 @@ export default function PrivateCoachingPage() {
       {/* ============ FINAL CTA ============ */}
       <section className="py-20 lg:py-28 px-6 lg:px-16">
         <div className="max-w-5xl mx-auto rounded-[2rem] overflow-hidden relative bg-gradient-to-br from-[#0D3C38] via-[#0D3C38] to-[#1a6960] text-[#FBF9F5] shadow-2xl shadow-[#0D3C38]/25">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(230,176,85,0.25),transparent_55%),radial-gradient(circle_at_100%_100%,rgba(7,62,66,0.5),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(230,176,85,0.25),transparent_55%),radial-gradient(circle_at_100%_100%,rgba(13,60,56,0.5),transparent_50%)]" />
           <div className="relative z-10 p-8 sm:p-12 lg:p-16 text-center space-y-6 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 backdrop-blur-sm">
               <Sparkles className="w-4 h-4 text-[#E6B055]" />

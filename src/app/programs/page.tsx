@@ -103,7 +103,7 @@ const programs: Program[] = [
 
 export default function ProgramsPage() {
   return (
-    <main className="min-h-screen bg-[#FAF8F5] text-[#0D3C38] antialiased selection:bg-[#0D3C38]/10">
+    <main className="theme-page min-h-screen bg-[#FAF8F5] text-[#0D3C38] antialiased selection:bg-[#0D3C38]/10">
       <section className="relative overflow-hidden border-b border-[#0D3C38]/10 px-6 pb-16 pt-24 lg:px-16 lg:pb-24 lg:pt-32">
         <div className="pointer-events-none absolute right-1/4 top-0 h-125 w-125 rounded-full bg-[#0D3C38]/5 blur-[140px]" />
         <div
@@ -115,13 +115,13 @@ export default function ProgramsPage() {
           }}
         />
         <div className="relative z-10 mx-auto max-w-6xl space-y-6 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#0D3C38]/10 bg-[#E7F0EC] px-4 py-1.5 text-xs font-semibold uppercase tracking-widest">
-            <Sparkles className="h-3.5 w-3.5" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#E6B055]/30 bg-[#E6B055]/12 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest">
+            <Sparkles className="h-3.5 w-3.5 text-[#C48F3A]" />
             <span>PROGRAMS</span>
           </div>
           <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-[1.15] sm:text-5xl lg:text-6xl">
             Choose the support that <br className="hidden sm:inline" />
-            <span className="font-normal italic relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#B28532]">meets you where you are</span>
+            <span className="font-normal italic relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#C48F3A]">meets you where you are</span>
           </h1>
           <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#0D3C38]/75 sm:text-lg">
             Change doesn’t always require doing more. Sometimes, it begins by understanding and shifting what’s happening within. Choose the experience that feels right for you.
@@ -193,12 +193,12 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section className="bg-[#0D3C38] px-6 py-20 text-white lg:px-16">
+      <section className="palette-anchor palette-gold-anchor px-6 py-20 text-[#E6B055] lg:px-16">
         <div className="mx-auto max-w-5xl space-y-6 text-center">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E7F0EC]/70">NOT SURE WHERE TO BEGIN?</span>
-          <h2 className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">You don’t need to have it all figured out before reaching out.</h2>
-          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-white/80 sm:text-base">If you’re unsure which program is right for you, let’s have a conversation and explore what would best support you right now.</p>
-          <a href={clarityCall} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 bg-white px-8 py-4 text-xs font-semibold uppercase tracking-widest text-[#0D3C38] transition-colors hover:bg-[#E7F0EC]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#E6B055]/80">NOT SURE WHERE TO BEGIN?</span>
+          <h2 className="text-3xl font-semibold leading-tight text-[#E6B055] sm:text-4xl lg:text-5xl">You don’t need to have it all figured out before reaching out.</h2>
+          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-[#FFF1C9]/80 sm:text-base">If you’re unsure which program is right for you, let’s have a conversation and explore what would best support you right now.</p>
+          <a href={clarityCall} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 rounded-xl bg-[#E6B055] px-8 py-4 text-xs font-semibold uppercase tracking-widest text-[#0D3C38] transition-colors hover:bg-[#F7E2AC]">
             Book a Clarity Call
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>

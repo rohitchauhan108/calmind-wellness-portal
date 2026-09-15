@@ -18,7 +18,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="footer" className="bg-[#073E42] text-[#FBF9F5] pt-16 pb-12 relative overflow-hidden font-sans border-t border-white/10">
+    <footer id="footer" className="bg-[#0D3C38] text-[#FBF9F5] pt-16 pb-12 relative overflow-hidden font-sans border-t border-white/10">
       
       {/* Subtle Glowing Background Accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-px bg-gradient-to-r from-transparent via-[#E6B055]/40 to-transparent" />
@@ -147,7 +147,7 @@ export default function Footer() {
               href="https://calendly.com/ilagarg-official/clarity-call-with-ila"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#E6B055] px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[#073E42] transition-colors hover:bg-[#F0C477]"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#E6B055] px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[#0D3C38] transition-colors hover:bg-[#C48F3A]"
             >
               Book a Session
               <ArrowRight className="h-4 w-4" />

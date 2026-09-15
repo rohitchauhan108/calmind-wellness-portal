@@ -417,7 +417,7 @@ export default function GraphotherapyPage() {
               The Graphotherapy Process
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0D3C38] leading-tight">
-              From handwriting sample <span className="italic font-normal relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#B28532]">to lasting change.</span>
+              From handwriting sample <span className="italic font-normal relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#C48F3A]">to lasting change.</span>
             </h2>
           </div>
 

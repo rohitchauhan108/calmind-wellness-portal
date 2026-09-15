@@ -188,7 +188,7 @@ export default function FAQPage() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] text-[#0F291E]">
               Frequently Asked <br className="hidden sm:inline" />
-              <span className="italic font-normal text-[#073E42]/90">Questions</span>
+              <span className="italic font-normal text-[#0D3C38]/90">Questions</span>
             </h1>
 
             <p className="text-base sm:text-lg text-[#0F291E]/75 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">

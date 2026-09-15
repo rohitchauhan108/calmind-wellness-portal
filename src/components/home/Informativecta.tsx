@@ -53,7 +53,7 @@ export default function CTA() {
   return (
     <section
       id="cta"
-      className="py-24 md:py-24 bg-[#FBF9F5] text-[#1C2826] relative overflow-hidden"
+      className="py-24 md:py-24 bg-[#FBF9F5] text-[#0D3C38] relative overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none opacity-30">
         <svg className="absolute inset-0 w-full h-full opacity-20">
@@ -69,10 +69,10 @@ export default function CTA() {
         </svg>
       </div>
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#073E42]/5 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#0D3C38]/5 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <div className="bg-[#073E42] rounded-[36px] p-8 md:p-14 lg:p-16 relative overflow-hidden text-[#FBF9F5] shadow-2xl border border-[#073E42]/20">
+        <div className="bg-[#0D3C38] rounded-[36px] p-8 md:p-14 lg:p-16 relative overflow-hidden text-[#FBF9F5] shadow-2xl border border-[#0D3C38]/20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ export default function CTA() {
                           onClick={() => setSelectedFocus(opt.label)}
                           className={`flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs font-medium transition-all duration-300 border cursor-pointer ${
                             isSelected
-                              ? 'bg-[#FBF9F5] text-[#073E42] border-[#FBF9F5] shadow-md scale-105'
+                              ? 'bg-[#FBF9F5] text-[#0D3C38] border-[#FBF9F5] shadow-md scale-105'
                               : 'bg-white/5 text-[#FBF9F5] border-white/15 hover:bg-white/10'
                           }`}
                         >
@@ -146,7 +146,7 @@ export default function CTA() {
                 <motion.div
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-[#1C2826] rounded-3xl p-6 md:p-8 border border-white/10 shadow-2xl text-left relative overflow-hidden"
+                  className="bg-[#0D3C38] rounded-3xl p-6 md:p-8 border border-white/10 shadow-2xl text-left relative overflow-hidden"
                 >
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FBF9F5]/20 via-[#E6B055] to-[#FBF9F5]/20" />
 
@@ -160,7 +160,7 @@ export default function CTA() {
                           1:1 Discovery Call
                         </h3>
                       </div>
-                      <div className="w-10 h-10 rounded-full bg-[#073E42] flex items-center justify-center text-[#FBF9F5] border border-[#073E42]/50">
+                      <div className="w-10 h-10 rounded-full bg-[#0D3C38] flex items-center justify-center text-[#FBF9F5] border border-[#0D3C38]/50">
                         <Clock className="w-5 h-5" />
                       </div>
                     </div>
@@ -187,7 +187,7 @@ export default function CTA() {
 
                     <button
                       onClick={handleBooking}
-                      className="w-full py-4 rounded-xl bg-[#FBF9F5] hover:bg-white text-[#073E42] font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 shadow-lg group cursor-pointer"
+                      className="w-full py-4 rounded-xl bg-[#FBF9F5] hover:bg-white text-[#0D3C38] font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 shadow-lg group cursor-pointer"
                     >
                       <Compass className="w-4 h-4 text-[#E6B055]" />
                       <span>Confirm & Schedule Call</span>

@@ -72,6 +72,7 @@ export default function Header() {
     // { label: "Private Coaching", href: "/private-coaching" },
     { label: "Graphotherapy", href: "/graphotherapy" },
     { label: "Events", href: "/events" },
+    { label: "Experience It Free", href: "/experience-it-free" },
     { label: "contact", href: "/contact" },
   ];
 
@@ -127,8 +128,8 @@ export default function Header() {
       <nav
         className={`transition-all duration-300 ${
           isScrolled
-            ? "py-3 shadow-md z-50 bg-[#faf5f1] backdrop-blur-md"
-            : "bg-[#faf5f1] py-4 border-b border-brand-forest/10"
+            ? "py-3 shadow-md z-50 bg-[#FBF9F5] backdrop-blur-md"
+            : "bg-[#FBF9F5] py-4 border-b border-brand-forest/10"
         }`}
       >
         <div className="max-w-[90rem] mx-auto px-6 md:px-12 flex items-center justify-between">
