@@ -31,20 +31,20 @@ const programs: Program[] = [
     price: "$20/month",
     action: "JOIN RAISE YOUR FREQUENCY",
     href: "/programs/register?program=frequency",
-    image: "/program/1.webp",
+    image: "/program/frequency.webp",
     tags: ["DAILY PRACTICE", "LIVE ON ZOOM"],
   },
   {
     number: "02",
     badge: "ENERGY ALIGNMENT",
-    title: "Energy Alignment",
-    tagline: "Chakra Activation & Balancing Practice",
+    title: "Activation & Balancing Chakra Daily",
+    tagline: "Energy Alignment",
     description: "Ground. Activate. Align. Balance. Energy Alignment is a deeper live practice designed to help you slow down, reconnect with yourself and bring greater balance to your energy. Sessions combine grounding and breathwork with chakra meditation, activation, alignment and balancing. Selected sessions may also incorporate visualization or Reiki.",
     features: ["Grounding · Breathwork · Chakra Meditation", "Chakra Activation · Alignment · Balancing", "Visualization or Reiki on selected days", "LIVE ON ZOOM · 30–40 minutes · 4 days a week"],
     price: "$60/month",
     action: "JOIN ENERGY ALIGNMENT",
     href: "/programs/register?program=energy",
-    image: "/program/2.webp",
+    image: "/program/chakra.webp",
     tags: ["CHAKRA", "BALANCING"],
   },
   {
@@ -70,7 +70,7 @@ const programs: Program[] = [
     price: "$300/month",
     action: "EXPLORE MONEY & ABUNDANCE",
     href: "/contact",
-    image: "/program/4.webp",
+    image: "/program/money.webp",
     tags: ["ABUNDANCE", "TRANSFORMATION"],
   },
   {
@@ -83,7 +83,7 @@ const programs: Program[] = [
     price: "$300/month",
     action: "EXPLORE RELATIONSHIPS",
     href: "/contact",
-    image: "/program/5.webp",
+    image: "/program/relationships.webp",
     tags: ["CONNECTION", "TRANSFORMATION"],
   },
   {
@@ -96,7 +96,7 @@ const programs: Program[] = [
     price: "By conversation",
     action: "BOOK A CLARITY CALL",
     href: clarityCall,
-    image: "/program/6.webp",
+    image: "/program/coaching-&-healing.webp",
     tags: ["VIP", "1-ON-1"],
   },
 ];
@@ -178,13 +178,13 @@ export default function ProgramsPage() {
                   className={`relative lg:col-span-6 ${reversed ? "lg:order-1" : "lg:order-2"}`}
                   id={program.number === "06" ? "career" : undefined}
                 >
-                  <div className="group relative aspect-4/3 overflow-hidden rounded-2xl border border-[#0D3C38]/10 bg-white shadow-2xl">
+                  <div className="group relative aspect-4/3 overflow-hidden rounded-2xl bg-white shadow-2xl">
                     <Image src={program.image} alt={program.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#0D3C38]/30 via-transparent to-transparent" />
-                    <div className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3.5 py-1.5 text-xs font-semibold shadow-md">
+                    {/* <div className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full bg-white/95 px-3.5 py-1.5 text-xs font-semibold shadow-md">
                       <Star className="h-3.5 w-3.5 fill-brand-gold text-brand-gold" />
                       <span>{program.number === "06" ? "Personalized" : program.number === "01" ? "Daily" : "Live"}</span>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </article>

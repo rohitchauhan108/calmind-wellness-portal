@@ -31,7 +31,7 @@ export default function GraphotherapyPage() {
   const handleBookCall = () => {
     window.open(
       "https://calendly.com/ilagarg-official/clarity-call-with-ila",
-      "_blank"
+      "_blank",
     );
   };
 
@@ -136,6 +136,7 @@ export default function GraphotherapyPage() {
     },
     {
       badge: "WORKSHOPS",
+      id: "kids-graphotherapy-workshops",
       name: "Kids Graphotherapy Workshops",
       tagline: "In-school or weekend group sessions",
       duration: "5 weekly 60-min sessions",
@@ -220,8 +221,6 @@ export default function GraphotherapyPage() {
 
   return (
     <main className="bg-[#FAF8F5] text-[#0D3C38] antialiased min-h-screen font-sans overflow-x-hidden">
-      
-
       {/* ============ HERO ============ */}
       <section className="relative pt-12 pb-20 lg:pt-20 lg:pb-32 px-6 lg:px-16 overflow-hidden">
         <div className="absolute top-10 right-0 w-[550px] h-[550px] bg-[#E6B055]/12 rounded-full blur-[150px] pointer-events-none" />
@@ -251,7 +250,8 @@ export default function GraphotherapyPage() {
               >
                 Rewire your subconscious
                 <span className="block italic font-normal mt-2">
-                  with your own <span className="text-[#C48F3A]">handwriting.</span>
+                  with your own{" "}
+                  <span className="text-[#C48F3A]">handwriting.</span>
                 </span>
               </motion.h1>
 
@@ -281,12 +281,8 @@ export default function GraphotherapyPage() {
                   Certified Practitioner · Shilpa
                 </span>
                 <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white border border-[#0D3C38]/10 shadow-sm">
-                  <Users className="w-4 h-4 text-[#0D3C38]" />
-                  1000+ Analysis Delivered
-                </span>
-                <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white border border-[#0D3C38]/10 shadow-sm">
                   <GraduationCap className="w-4 h-4 text-[#0D3C38]" />
-                  Kids · Teens · Adults Programs
+                  Kids · Adults Programs
                 </span>
               </motion.div>
 
@@ -302,14 +298,16 @@ export default function GraphotherapyPage() {
                   className="group inline-flex min-h-16 flex-1 items-center justify-center gap-2.5 rounded-2xl border border-[#0D3C38]/50 bg-[#0D3C38] px-6 py-4 text-center text-sm font-semibold text-[#FBF9F5] shadow-xl transition-all duration-300 hover:bg-[#0D3C38]/92 hover:shadow-2xl hover:shadow-[#0D3C38]/20 cursor-pointer sm:px-7 md:text-base"
                 >
                   <Calendar className="w-[1.125rem] h-[1.125rem] shrink-0 text-[#E6B055]" />
-                  <span className="leading-snug">Book Your Handwriting Consultation</span>
+                  <span className="leading-snug">Book a Clarity Call</span>
                   <ArrowRight className="w-[1.125rem] h-[1.125rem] shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
                 <Link
                   href="/contact"
                   className="group inline-flex min-h-16 flex-1 items-center justify-center gap-2 rounded-2xl border-2 border-[#0D3C38]/20 bg-transparent px-6 py-4 text-center text-sm font-semibold text-[#0D3C38] transition-all duration-300 hover:border-[#0D3C38]/40 hover:bg-white cursor-pointer sm:px-7 md:text-base"
                 >
-                  <span className="leading-snug">Ask About a Custom Programme</span>
+                  <span className="leading-snug">
+                    Ask About a Custom Programme
+                  </span>
                 </Link>
               </motion.div>
             </div>
@@ -393,15 +391,17 @@ export default function GraphotherapyPage() {
               >
                 {o.icon}
               </div>
-              <div className={`text-3xl sm:text-4xl font-serif font-bold ${o.color} leading-none mb-1.5`}>
+              <div
+                className={`text-3xl sm:text-4xl font-serif font-bold ${o.color} leading-none mb-1.5`}
+              >
                 {o.stat}
               </div>
               <div className="text-sm font-semibold text-[#0D3C38] leading-snug mb-1">
                 {o.label}
               </div>
-              <div className="text-xs text-[#0D3C38]/60">
+              {/* <div className="text-xs text-[#0D3C38]/60">
                 {o.sub}
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </div>
@@ -409,20 +409,28 @@ export default function GraphotherapyPage() {
 
       {/* ============ HOW IT WORKS ============ */}
       <section className="py-20 lg:py-28 px-6 lg:px-16 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-[radial-gradient(circle,rgba(13,60,56,0.06),transparent_60%)] pointer-events-none" />
+        {/* Decorative background blur - hidden from screen readers */}
+        <div
+          aria-hidden="true"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-[radial-gradient(circle,rgba(13,60,56,0.06),transparent_60%)] pointer-events-none"
+        />
 
-        <div className="relative z-10 max-w-6xl mx-auto">
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="max-w-2xl mx-auto text-center mb-16 space-y-4">
             <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#C48F3A]">
               The Graphotherapy Process
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0D3C38] leading-tight">
-              From handwriting sample <span className="italic font-normal relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#C48F3A]">to lasting change.</span>
+              From handwriting sample{" "}
+              <span className="italic font-normal relative inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#E6B055] to-[#C48F3A]">
+                to lasting change.
+              </span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-6">
-            {howItWorks.map((s, i) => (
+          {/* Adjusted grid: switches from 1 col -> 2 cols on md -> 3 cols on lg -> 5 cols on xl for better card spacing */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {howItWorks.slice(0, 3).map((s, i) => (
               <motion.div
                 key={s.num}
                 initial={{ opacity: 0, y: 24 }}
@@ -430,13 +438,51 @@ export default function GraphotherapyPage() {
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ delay: i * 0.07 }}
                 whileHover={{ y: -6 }}
-                className="group relative rounded-2xl p-6 sm:p-7 bg-white border border-[#0D3C38]/10 hover:border-[#0D3C38]/25 hover:shadow-xl hover:shadow-[#0D3C38]/8 transition-all duration-400 flex flex-col"
+                className="group relative rounded-2xl p-6 sm:p-7 bg-white border border-[#0D3C38]/10 hover:border-[#0D3C38]/25 hover:shadow-xl hover:shadow-[#0D3C38]/8 transition-all duration-300 flex flex-col"
               >
                 <div className="flex items-start justify-between mb-5">
-                  <div className={`w-[3.25rem] h-[3.25rem] rounded-2xl ${s.accent} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`w-[3.25rem] h-[3.25rem] rounded-2xl ${s.accent} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                  >
                     {s.icon}
                   </div>
-                  <span className="font-serif text-xl font-bold text-[#E6B055]/80">
+                  <span
+                    aria-hidden="true"
+                    className="font-serif text-xl font-bold text-[#E6B055]/80"
+                  >
+                    {s.num}
+                  </span>
+                </div>
+                <h3 className="text-lg sm:text-xl font-serif font-semibold text-[#0D3C38] mb-2.5 leading-snug">
+                  {s.title}
+                </h3>
+                <p className="text-sm text-[#0D3C38]/70 leading-relaxed">
+                  {s.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
+            {howItWorks.slice(3, 5).map((s, i) => (
+              <motion.div
+                key={s.num}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ delay: i * 0.07 }}
+                whileHover={{ y: -6 }}
+                className="group relative rounded-2xl p-6 sm:p-7 bg-white border border-[#0D3C38]/10 hover:border-[#0D3C38]/25 hover:shadow-xl hover:shadow-[#0D3C38]/8 transition-all duration-300 flex flex-col"
+              >
+                <div className="flex items-start justify-between mb-5">
+                  <div
+                    className={`w-[3.25rem] h-[3.25rem] rounded-2xl ${s.accent} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    {s.icon}
+                  </div>
+                  <span
+                    aria-hidden="true"
+                    className="font-serif text-xl font-bold text-[#E6B055]/80"
+                  >
                     {s.num}
                   </span>
                 </div>
@@ -472,6 +518,7 @@ export default function GraphotherapyPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {offerings.map((off, i) => (
               <motion.article
+                id={off.id}
                 key={off.name}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -513,7 +560,9 @@ export default function GraphotherapyPage() {
                 </div>
 
                 {/* Content column */}
-                <div className={`p-7 sm:p-8 space-y-6 ${off.primary ? "lg:col-span-7" : ""}`}>
+                <div
+                  className={`p-7 sm:p-8 space-y-6 ${off.primary ? "lg:col-span-7" : ""}`}
+                >
                   <div className="flex flex-wrap items-center gap-3 text-xs">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0D3C38]/8 text-[#0D3C38] font-semibold">
                       {off.who}
@@ -595,13 +644,13 @@ export default function GraphotherapyPage() {
               </p>
             </div>
             <div className="md:col-span-2 flex md:justify-end">
-              <button
-                onClick={handleBookCall}
+              <Link
+                href="#kids-graphotherapy-workshops"
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-[#E6B055] hover:bg-[#E6B055]/92 text-[#0D3C38] font-semibold text-sm sm:text-base shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer"
               >
-                Enquire About Kids Programme
+                <span>Enquire About Kids Programme</span>
                 <ArrowRight className="w-[1.125rem] h-[1.125rem] transition-transform duration-300 group-hover:translate-x-1" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -695,7 +744,9 @@ export default function GraphotherapyPage() {
                 onClick={handleBookCall}
                 className="group inline-flex min-h-16 flex-1 items-center justify-center gap-2.5 rounded-2xl bg-[#0D3C38] px-6 py-4 text-center text-sm font-semibold text-[#FBF9F5] shadow-xl transition-all duration-300 hover:bg-[#0D3C38]/92 hover:shadow-2xl cursor-pointer sm:px-7 md:text-base"
               >
-                <span className="leading-snug">Book Complimentary Graphotherapy Consult</span>
+                <span className="leading-snug">
+                  Book a Clarity Call
+                </span>
                 <ArrowRight className="w-[1.125rem] h-[1.125rem] shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
               <Link
