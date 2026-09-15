@@ -198,13 +198,13 @@ export default function TransformationHero() {
               <div className="relative p-8 rounded-2xl bg-[linear-gradient(to_top,#C48F3A_0%,#E6B055_40%,#FBF9F5_60%,#FBF9F5_100%)] text-[#0D3C38] shadow-2xl border border-[#D4AF37]/30 backdrop-blur-xl transform transition-transform duration-500 hover:-translate-y-1">
                 {/* Decorative quote mark element */}
                 <div className="absolute -top-4 -right-4 w-10 h-10 rounded-full bg-[#D4AF37] text-[#0D3C38] flex items-center justify-center font-serif font-bold text-xl shadow-md">
-                  &ldquo;
+                 
                 </div>
 
-                <p className="text-base sm:text-lg leading-relaxed font-sans font-semibold text-[#0D3C38] p-5">
-                  We believe that mastery over your money, career, health, and
+                <p className="text-base sm:text-xl font-[Lora] italic leading-relaxed font-semibold text-[#0D3C38] p-5">
+                  <span>&ldquo;</span> We believe that mastery over your money, career, health, and
                   relationships begins with unlocking your deepest confidence
-                  and ultimate purpose.
+                  and ultimate purpose.<span>&rdquo;</span>
                 </p>
 
                 {/* <div className="mt-6 pt-6 border-t border-[#0D3C38]/10 flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-[#0D3C38]/60">
@@ -314,9 +314,9 @@ export default function TransformationHero() {
                   <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-[#C48F3A]">
                     Guiding principle
                   </div>
-                  <div className="text-3xl font-bold text-[#0D3C38]">
+                  <h2 className="mb-5 text-3xl font-bold leading-tight text-[#0D3C38]">
                     Clarity
-                  </div>
+                  </h2>
                   <p className="mt-2.5 text-[15px] leading-relaxed text-[#0D3C38]/70">
                     We help people uncover what is really driving their patterns
                     and what is possible beyond them.
@@ -327,9 +327,9 @@ export default function TransformationHero() {
                   <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-[#C48F3A]">
                     What we create
                   </div>
-                  <div className="text-3xl font-bold text-[#0D3C38]">
+                  <h2 className="text-3xl font-bold text-[#0D3C38]">
                     Confidence
-                  </div>
+                  </h2>
                   <p className="mt-2.5 text-[15px] leading-relaxed text-[#0D3C38]/75">
                     Practical support that changes how you think, feel, and move
                     through everyday life.

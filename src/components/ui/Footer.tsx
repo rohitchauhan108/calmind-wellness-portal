@@ -145,12 +145,12 @@ export default function Footer() {
               Join live online from anywhere in the world
             </p>
             <a
-              href="https://calendly.com/ilagarg-official/clarity-call-with-ila"
-              target="_blank"
+              href="/experience-it-free"
+              // target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#E6B055] px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[#0D3C38] transition-colors hover:bg-[#C48F3A]"
             >
-              BOOK A CLARITY CALL
+              Experience It Free
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
