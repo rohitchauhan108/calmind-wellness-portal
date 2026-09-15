@@ -54,7 +54,7 @@ export default function Services() {
       ],
       sessionType: "With Ila Garg — Life Coach & Healer",
       ctaText: "Explore Private Support",
-      ctaHref: "/contact",
+      ctaHref: "#take-the-next-step",
     },
     {
       icon: <Users className="w-5 h-5 pointer-events-none" />,
@@ -70,11 +70,11 @@ export default function Services() {
       ],
       sessionType: "Live group experiences with Ila",
       ctaText: "Explore Current Programs",
-      ctaHref: "/contact",
+      ctaHref: "/programs",
     },
     {
       icon: <Zap className="w-5 h-5 pointer-events-none" />,
-      title: "Live Practices",
+      title: "Daily Live Practices",
       subtitle: "Pause. Align. Raise your frequency.",
       description:
         "Ongoing live practices to help you pause, reset and consciously shift your energy. Join Raise Your Frequency — Daily Practice or Chakra Activation & Balancing Practice for grounding, breathwork, meditation and deeper energetic balance.",
@@ -102,7 +102,7 @@ export default function Services() {
       ],
       sessionType: "With Shilpa — Graphotherapist & Handwriting Expert",
       ctaText: "Explore Graphotherapy",
-      ctaHref: "/contact",
+      ctaHref: "/graphotherapy",
     },
   ];
 

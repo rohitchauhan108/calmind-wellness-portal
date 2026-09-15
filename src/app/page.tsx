@@ -7,8 +7,8 @@ import SupportCategories from "../components/home/SupportCategories";
 import Infomativecta from "../components/home/Informativecta";
 // import About from "../components/home/About";
 import MeetUs from "../components/home/MeetUs";
-
 import CTA from "../components/home/CTA";
+
 import Meet from "../components/home/Meet";
 import LastingChange from "../components/home/LastingChange";
 import NewTestimonials from "../components/home/NewTestimonials";
@@ -35,6 +35,7 @@ export default function Home() {
         <Services />
 
         <MeetUs />
+        <CTA />
 
       </main>
     </div>

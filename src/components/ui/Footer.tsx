@@ -94,12 +94,14 @@ export default function Footer() {
               className="h-28 w-auto rounded-sm object-contain opacity-95 transition-opacity duration-300 group-hover:opacity-100"
             />
           </Link>
+          <h2 className="text-2xl font-bold text-[#FBF9F5] mt-5">ILA GARG</h2>
+          <p>Lasting change starts within.</p>
 
-          <p className="mt-6 max-w-md text-sm font-medium leading-relaxed text-[#FBF9F5]/70">
+          {/* <p className="mt-6 max-w-md text-sm font-medium leading-relaxed text-[#FBF9F5]/70">
             A holistic personal transformation practice integrating Life Coaching,
             subtle Energy Healing, and Graphotherapy to help you dissolve
             subconscious blocks and live with clarity.
-          </p>
+          </p> */}
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
               <a 
@@ -140,8 +142,7 @@ export default function Footer() {
               Begin creating the change you&apos;re ready for.
             </h3>
             <p className="mt-3 max-w-lg text-sm leading-relaxed text-[#FBF9F5]/70">
-              Join live online from anywhere in the world, 17 – 21 September
-              2026, at 7:30 PM IST daily.
+              Join live online from anywhere in the world
             </p>
             <a
               href="https://calendly.com/ilagarg-official/clarity-call-with-ila"
@@ -149,7 +150,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#E6B055] px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[#0D3C38] transition-colors hover:bg-[#C48F3A]"
             >
-              Book a Session
+              BOOK A CLARITY CALL
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>

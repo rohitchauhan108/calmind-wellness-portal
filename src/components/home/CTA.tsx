@@ -74,17 +74,16 @@ export default function CTA() {
               className="group relative inline-flex items-center justify-center gap-2.5 w-full px-7 py-4 rounded-xl bg-[#0D3C38] hover:bg-[#0D3C38]/92 text-[#FBF9F5] font-semibold text-sm md:text-base shadow-xl hover:shadow-2xl hover:shadow-[#0D3C38]/20 transition-all duration-300 cursor-pointer border border-[#0D3C38]/50"
             >
               <Compass className="w-4 h-4 md:w-5 md:h-5 text-[#E6B055]" />
-              <span>Book a Complimentary Discovery Call</span>
+              <span>BOOK A CLARITY CALL</span>
               <ArrowRight className="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
-
-            <button
-              onClick={handleExplore}
+          
+            {/* <button
               className="group inline-flex items-center justify-center gap-2 w-full px-6 py-4 rounded-xl bg-transparent hover:bg-[#0D3C38]/6 text-[#0D3C38] font-medium text-sm md:text-base transition-all duration-300 cursor-pointer border border-[#0D3C38]/20 hover:border-[#0D3C38]/35"
             >
-              <span>Explore Ways to Work With Us</span>
+              <span> <a href="#ways-to-work-with-us">Explore Ways to Work With Us</a></span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 opacity-70" />
-            </button>
+            </button> */}
           </div>
         </motion.div>
       </div>

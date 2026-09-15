@@ -22,12 +22,12 @@ export default function CTA() {
   const [selectedFocus, setSelectedFocus] = useState('1:1 Life Coaching');
 
   const focusOptions = [
-    { id: '1on1', label: '1:1 Life Coaching', icon: UserRound },
-    { id: 'vip', label: 'VIP Coaching', icon: Crown },
-    { id: 'healing', label: '1:1 Healing', icon: Heart },
-    { id: 'group', label: 'Focused Group Programs', icon: Users },
-    { id: 'graphotherapy', label: 'Graphotherapy', icon: PenTool },
-    { id: 'kids', label: 'Program for Kids', icon: Baby },
+    { id: '1on1', label: '1:1 Life Coaching', icon: UserRound, duration: '45 Minutes - 1 hour' },
+    // { id: 'vip', label: 'VIP Coaching', icon: Crown, duration: '90 Minutes' },
+    { id: 'healing', label: 'Healing', icon: Heart, duration: '15 - 30 Minutes' },
+    // { id: 'group', label: 'Focused Group Programs', icon: Users, duration: '90 Minutes' },
+    { id: 'graphotherapy', label: 'Graphotherapy', icon: PenTool, duration: '15 - 30 Minutes' },
+    { id: 'kids', label: 'Program for Kids', icon: Baby, duration: '45 Minutes' },
   ];
 
   const valueProps = [
@@ -36,6 +36,10 @@ export default function CTA() {
     { title: 'Personalised Framework', desc: 'Tailored to your unique goals and patterns' },
     { title: 'Holistic Approach', desc: 'Inner work + aligned action for real results' },
   ];
+
+  // Find the duration of the currently selected focus option
+  const currentDuration =
+    focusOptions.find((opt) => opt.label === selectedFocus)?.duration || '45 Minutes';
 
   const handleBooking = () => {
     const contactSection = document.getElementById('contact') || document.getElementById('newsletter');
@@ -55,7 +59,7 @@ export default function CTA() {
       id="cta"
       className="py-24 md:py-24 bg-[#FBF9F5] text-[#0D3C38] relative overflow-hidden"
     >
-      <div className="absolute inset-0 pointer-events-none opacity-30">
+      <div className="absolute inset-0 pointer-events-none opacity-30" id="take-the-next-step">
         <svg className="absolute inset-0 w-full h-full opacity-20">
           <filter id="noiseFilterCTA">
             <feTurbulence
@@ -135,7 +139,6 @@ export default function CTA() {
                       <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                       <div>
                         <h4 className="text-xs font-semibold text-white">{item.title}</h4>
-                        <p className="text-[11px] text-white/70 font-medium">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -168,7 +171,7 @@ export default function CTA() {
                     <div className="space-y-3 text-xs text-[#FBF9F5]/80">
                       <div className="flex items-center justify-between py-1.5 border-b border-white/5">
                         <span className="text-[#FBF9F5]/60">Duration:</span>
-                        <span className="font-medium text-[#FBF9F5]">45 Minutes - 1 hour</span>
+                        <span className="font-medium text-[#FBF9F5]">{currentDuration}</span>
                       </div>
                       <div className="flex items-center justify-between py-1.5 border-b border-white/5">
                         <span className="text-[#FBF9F5]/60">Service:</span>
