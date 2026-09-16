@@ -73,7 +73,7 @@ export default function Header() {
     { label: "Graphotherapy", href: "/graphotherapy" },
     { label: "Events", href: "/events" },
     { label: "Experience It Free", href: "/experience-it-free" },
-    { label: "contact", href: "/contact" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (

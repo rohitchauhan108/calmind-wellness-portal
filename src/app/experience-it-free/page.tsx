@@ -32,7 +32,7 @@ type Offering = {
 
 const OFFERINGS: Offering[] = [
   {
-    id: "money-abundance",
+    id: "",
     number: "01",
     eyebrow: "MONEY & ABUNDANCE",
     title: "Money & Abundance",
@@ -182,12 +182,14 @@ export default function ExperienceItFreePage() {
 
         <div className="relative mx-auto max-w-7xl">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-            {OFFERINGS.map((offering) => {
+            {OFFERINGS.slice(0,1).map((offering) => {
               const isDark = offering.tone === "dark";
 
               return (
                 <article
+                  id="money-abundance"
                   key={offering.id}
+                  // id={offering.id}
                   style={
                     isDark
                       ? {
@@ -213,7 +215,125 @@ export default function ExperienceItFreePage() {
                     <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-[#E6B055]/10 blur-3xl" />
                   )}
 
-                  <div className="relative z-10 mb-7 flex items-start justify-between gap-4">
+                  <div className="relative z-10 mb-7">
+                    <div
+                      className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${
+                        isDark
+                          ? "bg-white/10 text-[#E6B055]"
+                          : "bg-[#E6B055]/12 text-[#C48F3A]"
+                      }`}
+                    >
+                      {offering.icon}
+                    </div>
+                  </div>
+
+                  <div className="relative z-10 mb-5 min-h-[120px] space-y-2.5">
+                    <p
+                      className={`text-[10px] font-bold uppercase tracking-[0.22em] ${
+                        isDark ? "text-[#FBF9F5]/55" : "text-[#0D3C38]/55"
+                      }`}
+                    >
+                      {offering.eyebrow}
+                    </p>
+                    <h3
+                      className={`font-serif text-[26px] font-bold leading-[1.18] sm:text-[28px] ${
+                        isDark ? "text-white" : "text-[#0D3C38]"
+                      }`}
+                    >
+                      {offering.title}
+                    </h3>
+                    <p
+                      className={`text-sm font-medium leading-snug ${
+                        isDark ? "text-[#FBF9F5]/75" : "text-[#0D3C38]/70"
+                      }`}
+                    >
+                      {offering.tagline}
+                    </p>
+                  </div>
+
+                  <div
+                    className={`relative z-10 mb-8 flex-1 space-y-3 text-sm leading-relaxed ${
+                      isDark ? "text-[#FBF9F5]/70" : "text-[#0D3C38]/70"
+                    }`}
+                  >
+                    {offering.description.map((para, idx) => (
+                      <p key={idx} dangerouslySetInnerHTML={{ __html: para }} />
+                    ))}
+                  </div>
+
+                  <div
+                    style={
+                      isDark
+                        ? { backgroundColor: "rgba(255,255,255,0.12)" }
+                        : undefined
+                    }
+                    className={`relative z-10 mb-5 h-px w-full ${
+                      isDark ? "" : "bg-[#0D3C38]/8"
+                    }`}
+                  />
+
+                  <div className="relative z-10 flex items-center justify-between gap-4">
+                    <div
+                      className={`inline-flex flex-1 items-center gap-1.5 text-[11px] font-medium leading-snug ${
+                        isDark ? "text-[#FBF9F5]/60" : "text-[#0D3C38]/60"
+                      }`}
+                    >
+                      <Video
+                        className={`h-3.5 w-3.5 shrink-0 ${
+                          isDark ? "text-[#E6B055]" : "text-[#C48F3A]"
+                        }`}
+                      />
+                      <span className="whitespace-normal">{offering.meta}</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => openRegister(offering.id)}
+                      className={`group inline-flex h-12 shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-5 text-[12px] font-bold uppercase tracking-[0.14em] transition-all duration-250 sm:px-6 sm:text-[13px] ${
+                        isDark
+                          ? "bg-[#E6B055] text-[#0D3C38] shadow-lg shadow-[#0D3C38]/20 hover:bg-[#F3CE88]"
+                          : "bg-[#0D3C38] text-white shadow-md shadow-[#0D3C38]/10 hover:bg-[#08292C] hover:shadow-lg hover:shadow-[#0D3C38]/15"
+                      }`}
+                    >
+                      <span className="whitespace-nowrap">{offering.ctaText}</span>
+                      <ArrowRight className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5" />
+                    </button>
+                  </div>
+                </article>
+              );
+            })}
+            {OFFERINGS.slice(1,2).map((offering) => {
+              const isDark = offering.tone === "dark";
+
+              return (
+                <article
+                  key={offering.id}
+                  id={offering.id}
+                  style={
+                    isDark
+                      ? {
+                          background:
+                            "linear-gradient(160deg,#0d3c38 0%,#12514c 55%,#08292C 100%)",
+                          color: "white",
+                          borderColor: "rgba(255,255,255,0.1)",
+                          boxShadow:
+                            "0 20px 45px -20px rgba(13,60,56,0.35)",
+                        }
+                      : undefined
+                  }
+                  className={`group relative flex min-h-[520px] flex-col overflow-hidden rounded-[2rem] border p-7 transition-all duration-300 hover:-translate-y-1 sm:p-8 lg:p-9 ${
+                    isDark
+                      ? "text-white"
+                      : "border-[#0D3C38]/10 bg-[#FFFBF2] text-[#0D3C38] shadow-sm hover:shadow-xl hover:shadow-[#0D3C38]/10"
+                  }`}
+                >
+                  {!isDark && (
+                    <div className="pointer-events-none absolute -right-24 -top-24 h-60 w-60 rounded-full bg-[#E6B055]/8 blur-3xl" />
+                  )}
+                  {isDark && (
+                    <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-[#E6B055]/10 blur-3xl" />
+                  )}
+
+                  {/* <div className="relative z-10 mb-7 flex items-start justify-between gap-4">
                     <div
                       className={`font-mono text-[13px] font-bold tracking-[0.22em] ${
                         isDark ? "text-[#E6B055]" : "text-[#0D3C38]/40"
@@ -231,7 +351,283 @@ export default function ExperienceItFreePage() {
                       <CheckCircle2 className="h-3 w-3" />
                       <span className="whitespace-nowrap">{offering.freeTag}</span>
                     </div>
+                  </div> */}
+
+                  <div className="relative z-10 mb-7">
+                    <div
+                      className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${
+                        isDark
+                          ? "bg-white/10 text-[#E6B055]"
+                          : "bg-[#E6B055]/12 text-[#C48F3A]"
+                      }`}
+                    >
+                      {offering.icon}
+                    </div>
                   </div>
+
+                  <div className="relative z-10 mb-5 min-h-[120px] space-y-2.5">
+                    <p
+                      className={`text-[10px] font-bold uppercase tracking-[0.22em] ${
+                        isDark ? "text-[#FBF9F5]/55" : "text-[#0D3C38]/55"
+                      }`}
+                    >
+                      {offering.eyebrow}
+                    </p>
+                    <h3
+                      className={`font-serif text-[26px] font-bold leading-[1.18] sm:text-[28px] ${
+                        isDark ? "text-white" : "text-[#0D3C38]"
+                      }`}
+                    >
+                      {offering.title}
+                    </h3>
+                    <p
+                      className={`text-sm font-medium leading-snug ${
+                        isDark ? "text-[#FBF9F5]/75" : "text-[#0D3C38]/70"
+                      }`}
+                    >
+                      {offering.tagline}
+                    </p>
+                  </div>
+
+                  <div
+                    className={`relative z-10 mb-8 flex-1 space-y-3 text-sm leading-relaxed ${
+                      isDark ? "text-[#FBF9F5]/70" : "text-[#0D3C38]/70"
+                    }`}
+                  >
+                    {offering.description.map((para, idx) => (
+                      <p key={idx} dangerouslySetInnerHTML={{ __html: para }} />
+                    ))}
+                  </div>
+
+                  <div
+                    style={
+                      isDark
+                        ? { backgroundColor: "rgba(255,255,255,0.12)" }
+                        : undefined
+                    }
+                    className={`relative z-10 mb-5 h-px w-full ${
+                      isDark ? "" : "bg-[#0D3C38]/8"
+                    }`}
+                  />
+
+                  <div className="relative z-10 flex items-center justify-between gap-4">
+                    <div
+                      className={`inline-flex flex-1 items-center gap-1.5 text-[11px] font-medium leading-snug ${
+                        isDark ? "text-[#FBF9F5]/60" : "text-[#0D3C38]/60"
+                      }`}
+                    >
+                      <Video
+                        className={`h-3.5 w-3.5 shrink-0 ${
+                          isDark ? "text-[#E6B055]" : "text-[#C48F3A]"
+                        }`}
+                      />
+                      <span className="whitespace-normal">{offering.meta}</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => openRegister(offering.id)}
+                      className={`group inline-flex h-12 shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-5 text-[12px] font-bold uppercase tracking-[0.14em] transition-all duration-250 sm:px-6 sm:text-[13px] ${
+                        isDark
+                          ? "bg-[#E6B055] text-[#0D3C38] shadow-lg shadow-[#0D3C38]/20 hover:bg-[#F3CE88]"
+                          : "bg-[#0D3C38] text-white shadow-md shadow-[#0D3C38]/10 hover:bg-[#08292C] hover:shadow-lg hover:shadow-[#0D3C38]/15"
+                      }`}
+                    >
+                      <span className="whitespace-nowrap">{offering.ctaText}</span>
+                      <ArrowRight className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5" />
+                    </button>
+                  </div>
+                </article>
+              );
+            })}
+            {OFFERINGS.slice(2,3).map((offering) => {
+              const isDark = offering.tone === "dark";
+
+              return (
+                <article
+                  key={offering.id}
+                  id={offering.id}
+                  style={
+                    isDark
+                      ? {
+                          background:
+                            "linear-gradient(160deg,#0d3c38 0%,#12514c 55%,#08292C 100%)",
+                          color: "white",
+                          borderColor: "rgba(255,255,255,0.1)",
+                          boxShadow:
+                            "0 20px 45px -20px rgba(13,60,56,0.35)",
+                        }
+                      : undefined
+                  }
+                  className={`group relative flex min-h-[520px] flex-col overflow-hidden rounded-[2rem] border p-7 transition-all duration-300 hover:-translate-y-1 sm:p-8 lg:p-9 ${
+                    isDark
+                      ? "text-white"
+                      : "border-[#0D3C38]/10 bg-[#FFFBF2] text-[#0D3C38] shadow-sm hover:shadow-xl hover:shadow-[#0D3C38]/10"
+                  }`}
+                >
+                  {!isDark && (
+                    <div className="pointer-events-none absolute -right-24 -top-24 h-60 w-60 rounded-full bg-[#E6B055]/8 blur-3xl" />
+                  )}
+                  {isDark && (
+                    <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-[#E6B055]/10 blur-3xl" />
+                  )}
+
+                  {/* <div className="relative z-10 mb-7 flex items-start justify-between gap-4">
+                    <div
+                      className={`font-mono text-[13px] font-bold tracking-[0.22em] ${
+                        isDark ? "text-[#E6B055]" : "text-[#0D3C38]/40"
+                      }`}
+                    >
+                      {offering.number}
+                    </div>
+                    <div
+                      className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] ${
+                        isDark
+                          ? "bg-white/10 text-[#E6B055]"
+                          : "bg-[#E6B055]/10 text-[#C48F3A]"
+                      }`}
+                    >
+                      <CheckCircle2 className="h-3 w-3" />
+                      <span className="whitespace-nowrap">{offering.freeTag}</span>
+                    </div>
+                  </div> */}
+
+                  <div className="relative z-10 mb-7">
+                    <div
+                      className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${
+                        isDark
+                          ? "bg-white/10 text-[#E6B055]"
+                          : "bg-[#E6B055]/12 text-[#C48F3A]"
+                      }`}
+                    >
+                      {offering.icon}
+                    </div>
+                  </div>
+
+                  <div className="relative z-10 mb-5 min-h-[120px] space-y-2.5">
+                    <p
+                      className={`text-[10px] font-bold uppercase tracking-[0.22em] ${
+                        isDark ? "text-[#FBF9F5]/55" : "text-[#0D3C38]/55"
+                      }`}
+                    >
+                      {offering.eyebrow}
+                    </p>
+                    <h3
+                      className={`font-serif text-[26px] font-bold leading-[1.18] sm:text-[28px] ${
+                        isDark ? "text-white" : "text-[#0D3C38]"
+                      }`}
+                    >
+                      {offering.title}
+                    </h3>
+                    <p
+                      className={`text-sm font-medium leading-snug ${
+                        isDark ? "text-[#FBF9F5]/75" : "text-[#0D3C38]/70"
+                      }`}
+                    >
+                      {offering.tagline}
+                    </p>
+                  </div>
+
+                  <div
+                    className={`relative z-10 mb-8 flex-1 space-y-3 text-sm leading-relaxed ${
+                      isDark ? "text-[#FBF9F5]/70" : "text-[#0D3C38]/70"
+                    }`}
+                  >
+                    {offering.description.map((para, idx) => (
+                      <p key={idx} dangerouslySetInnerHTML={{ __html: para }} />
+                    ))}
+                  </div>
+
+                  <div
+                    style={
+                      isDark
+                        ? { backgroundColor: "rgba(255,255,255,0.12)" }
+                        : undefined
+                    }
+                    className={`relative z-10 mb-5 h-px w-full ${
+                      isDark ? "" : "bg-[#0D3C38]/8"
+                    }`}
+                  />
+
+                  <div className="relative z-10 flex items-center justify-between gap-4">
+                    <div
+                      className={`inline-flex flex-1 items-center gap-1.5 text-[11px] font-medium leading-snug ${
+                        isDark ? "text-[#FBF9F5]/60" : "text-[#0D3C38]/60"
+                      }`}
+                    >
+                      <Video
+                        className={`h-3.5 w-3.5 shrink-0 ${
+                          isDark ? "text-[#E6B055]" : "text-[#C48F3A]"
+                        }`}
+                      />
+                      <span className="whitespace-normal">{offering.meta}</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => openRegister(offering.id)}
+                      className={`group inline-flex h-12 shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-5 text-[12px] font-bold uppercase tracking-[0.14em] transition-all duration-250 sm:px-6 sm:text-[13px] ${
+                        isDark
+                          ? "bg-[#E6B055] text-[#0D3C38] shadow-lg shadow-[#0D3C38]/20 hover:bg-[#F3CE88]"
+                          : "bg-[#0D3C38] text-white shadow-md shadow-[#0D3C38]/10 hover:bg-[#08292C] hover:shadow-lg hover:shadow-[#0D3C38]/15"
+                      }`}
+                    >
+                      <span className="whitespace-nowrap">{offering.ctaText}</span>
+                      <ArrowRight className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5" />
+                    </button>
+                  </div>
+                </article>
+              );
+            })}
+            {OFFERINGS.slice(3,4).map((offering) => {
+              const isDark = offering.tone === "dark";
+
+              return (
+                <article
+                  key={offering.id}
+                  id={offering.id}
+                  style={
+                    isDark
+                      ? {
+                          background:
+                            "linear-gradient(160deg,#0d3c38 0%,#12514c 55%,#08292C 100%)",
+                          color: "white",
+                          borderColor: "rgba(255,255,255,0.1)",
+                          boxShadow:
+                            "0 20px 45px -20px rgba(13,60,56,0.35)",
+                        }
+                      : undefined
+                  }
+                  className={`group relative flex min-h-[520px] flex-col overflow-hidden rounded-[2rem] border p-7 transition-all duration-300 hover:-translate-y-1 sm:p-8 lg:p-9 ${
+                    isDark
+                      ? "text-white"
+                      : "border-[#0D3C38]/10 bg-[#FFFBF2] text-[#0D3C38] shadow-sm hover:shadow-xl hover:shadow-[#0D3C38]/10"
+                  }`}
+                >
+                  {!isDark && (
+                    <div className="pointer-events-none absolute -right-24 -top-24 h-60 w-60 rounded-full bg-[#E6B055]/8 blur-3xl" />
+                  )}
+                  {isDark && (
+                    <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-[#E6B055]/10 blur-3xl" />
+                  )}
+
+                  {/* <div className="relative z-10 mb-7 flex items-start justify-between gap-4">
+                    <div
+                      className={`font-mono text-[13px] font-bold tracking-[0.22em] ${
+                        isDark ? "text-[#E6B055]" : "text-[#0D3C38]/40"
+                      }`}
+                    >
+                      {offering.number}
+                    </div>
+                    <div
+                      className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] ${
+                        isDark
+                          ? "bg-white/10 text-[#E6B055]"
+                          : "bg-[#E6B055]/10 text-[#C48F3A]"
+                      }`}
+                    >
+                      <CheckCircle2 className="h-3 w-3" />
+                      <span className="whitespace-nowrap">{offering.freeTag}</span>
+                    </div>
+                  </div> */}
 
                   <div className="relative z-10 mb-7">
                     <div
@@ -325,6 +721,7 @@ export default function ExperienceItFreePage() {
           <div className="mt-10 lg:mt-12">
             <article
               key={CLARITY_CALL.id}
+              id={CLARITY_CALL.id}
               className="group relative overflow-hidden rounded-[2.25rem] border border-[#0D3C38]/10 bg-white shadow-md shadow-[#0D3C38]/5"
             >
               <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-[#E6B055]/10 blur-3xl" />
@@ -333,7 +730,7 @@ export default function ExperienceItFreePage() {
               <div className="relative z-10 grid grid-cols-1 items-stretch gap-8 p-7 sm:p-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:p-14">
                 <div className="flex flex-col justify-between gap-7">
                   <div className="space-y-6">
-                    <div className="flex items-start justify-between gap-4">
+                    {/* <div className="flex items-start justify-between gap-4">
                       <div className="font-mono text-[13px] font-bold tracking-[0.22em] text-[#0D3C38]/40">
                         {CLARITY_CALL.number}
                       </div>
@@ -341,7 +738,7 @@ export default function ExperienceItFreePage() {
                         <CheckCircle2 className="h-3 w-3" />
                         <span className="whitespace-nowrap">{CLARITY_CALL.freeTag}</span>
                       </div>
-                    </div>
+                    </div> */}
 
                     <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#E6B055]/12 text-[#C48F3A]">
                       {CLARITY_CALL.icon}
