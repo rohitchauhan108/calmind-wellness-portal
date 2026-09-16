@@ -10,7 +10,6 @@ import {
   ArrowLeft,
   X,
   Sparkles,
-  RefreshCw,
   Edit3,
   CalendarClock,
   Video,
@@ -58,8 +57,6 @@ function ConfirmedContent() {
 
   const [showEdit, setShowEdit] = useState(false);
   const [editEmail, setEditEmail] = useState("");
-  const [resendCooldown, setResendCooldown] = useState<number>(0);
-  const [resendFlash, setResendFlash] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -75,12 +72,6 @@ function ConfirmedContent() {
       /* ignore */
     }
   }, [emailFromQuery, programFromQuery]);
-
-  useEffect(() => {
-    if (resendCooldown <= 0) return;
-    const t = setTimeout(() => setResendCooldown((s) => s - 1), 1000);
-    return () => clearTimeout(t);
-  }, [resendCooldown]);
 
   const program = useMemo(
     () => (programId ? FREE_PROGRAMS[programId] : null),
@@ -105,16 +96,6 @@ function ConfirmedContent() {
       /* ignore */
     }
     setShowEdit(false);
-    setResendCooldown(10);
-    setResendFlash(true);
-    setTimeout(() => setResendFlash(false), 1600);
-  };
-
-  const handleResend = () => {
-    if (resendCooldown > 0) return;
-    setResendCooldown(12);
-    setResendFlash(true);
-    setTimeout(() => setResendFlash(false), 1600);
   };
 
   return (
@@ -209,17 +190,7 @@ function ConfirmedContent() {
                     </div>
                   </div>
 
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setEditEmail(email || "");
-                      setShowEdit((s) => !s);
-                    }}
-                    className="group inline-flex items-center gap-1.5 rounded-full border border-[#0D3C38]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#0D3C38] transition-colors hover:bg-[#0D3C38] hover:text-white"
-                  >
-                    <Edit3 className="h-3.5 w-3.5" />
-                    <span>Change Email</span>
-                  </button>
+                 
                 </div>
 
                 <AnimatePresence>
@@ -269,7 +240,7 @@ function ConfirmedContent() {
                               className="group inline-flex items-center justify-center gap-1.5 rounded-full bg-[#0D3C38] px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white transition-colors hover:bg-[#08292C] disabled:cursor-not-allowed disabled:opacity-60"
                             >
                               <CheckCircle2 className="h-3.5 w-3.5" />
-                              <span>Save & Resend</span>
+                              <span>Save Email</span>
                             </button>
                           </div>
                         </div>
@@ -278,49 +249,6 @@ function ConfirmedContent() {
                   )}
                 </AnimatePresence>
 
-                {/* Resend row */}
-                <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[#0D3C38]/8 pt-5">
-                  <p className="text-xs leading-relaxed text-[#0D3C38]/55 sm:text-sm">
-                    Didn&apos;t receive the email? Check your spam, promotions or
-                    updates folder first.
-                  </p>
-                  <button
-                    type="button"
-                    onClick={handleResend}
-                    disabled={resendCooldown > 0}
-                    className={`group relative inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] transition-all ${
-                      resendCooldown > 0
-                        ? "cursor-not-allowed text-[#0D3C38]/40"
-                        : "text-[#C48F3A] hover:text-[#A6762B]"
-                    }`}
-                  >
-                    <span
-                      className={`relative inline-flex h-4 w-4 items-center justify-center ${
-                        resendCooldown > 0 ? "" : "transition-transform group-hover:rotate-180"
-                      }`}
-                    >
-                      <RefreshCw className="h-4 w-4" />
-                    </span>
-                    <span>
-                      {resendCooldown > 0
-                        ? `Resend Email (${resendCooldown}s)`
-                        : "Resend Email"}
-                    </span>
-                    <AnimatePresence>
-                      {resendFlash && (
-                        <motion.span
-                          initial={{ opacity: 0, x: -6 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: 6 }}
-                          className="ml-1 inline-flex items-center gap-1 rounded-full bg-[#0D3C38]/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white"
-                        >
-                          <CheckCircle2 className="h-3 w-3" />
-                          <span>Sent</span>
-                        </motion.span>
-                      )}
-                    </AnimatePresence>
-                  </button>
-                </div>
               </div>
 
               {/* Next steps */}

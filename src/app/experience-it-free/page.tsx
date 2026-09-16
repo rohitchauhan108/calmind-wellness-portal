@@ -32,7 +32,7 @@ type Offering = {
 
 const OFFERINGS: Offering[] = [
   {
-    id: "",
+    id: "money-abundance",
     number: "01",
     eyebrow: "MONEY & ABUNDANCE",
     title: "Money & Abundance",
@@ -458,7 +458,7 @@ export default function ExperienceItFreePage() {
                         }
                       : undefined
                   }
-                  className={`group relative flex min-h-[520px] flex-col overflow-hidden rounded-[2rem] border p-7 transition-all duration-300 hover:-translate-y-1 sm:p-8 lg:p-9 ${
+                  className={`group relative flex min-h-[520px] flex-col overflow-hidden rounded-[2rem] border p-7 transition-all duration-300 hover:-translate-y-1 order-last md:order-none sm:p-8 lg:p-9 ${
                     isDark
                       ? "text-white"
                       : "border-[#0D3C38]/10 bg-[#FFFBF2] text-[#0D3C38] shadow-sm hover:shadow-xl hover:shadow-[#0D3C38]/10"

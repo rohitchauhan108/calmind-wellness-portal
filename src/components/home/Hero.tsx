@@ -259,7 +259,7 @@ export default function Hero() {
               {/* --- CARD 1: Money & Abundance --- */}
               <div className="flex flex-col h-full rounded-[24px] sm:rounded-[28px] border-b-4 border-[#0D3C38] shadow-[0_12px_35px_rgba(7,62,66,0.06)] overflow-hidden bg-white">
                 {/* Top Section with Background Image */}
-                <div className="bg-[url('/home/1.webp')] bg-center bg-cover bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left w-[700px]">
+                <div className="md:bg-[url('/home/1.webp')] md:bg-center md:bg-cover md:bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left w-full md:w-[700px]">
                   <div className="relative z-10 flex flex-col items-start h-full text-left">
                     <div>
                       <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#C48F3A] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
@@ -309,7 +309,7 @@ export default function Hero() {
               {/* --- CARD 2: Fit & Free --- */}
               <div className="flex flex-col h-full rounded-[24px] sm:rounded-[28px] border-b-4 border-[#0D3C38] shadow-[0_12px_35px_rgba(7,62,66,0.06)] overflow-hidden bg-white">
                 {/* Top Section with Background Image */}
-                <div className="bg-[url('/home/2.webp')] bg-center bg-cover bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left">
+                <div className="md:bg-[url('/home/2.webp')] md:bg-center md:bg-cover md:bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left">
                   <div className="relative z-10 flex flex-col items-start h-full text-left">
                     <div>
                       <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#0D3C38] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
@@ -317,9 +317,8 @@ export default function Hero() {
                       </span>
                     </div>
 
-                    <h3 className="text-left text-[23px] sm:text-2xl md:text-5xl font-serif font-bold text-[#0D3C38] leading-tight">
-                      Fit <span className="text-[#C48F3A]">&amp;</span>
-                      <br /> Free
+                    <h3 className="whitespace-nowrap text-left text-[23px] sm:text-2xl md:text-5xl font-serif font-bold text-[#0D3C38] leading-tight">
+                      Fit <span className="text-[#C48F3A]">&amp;</span> Free
                     </h3>
 
                     <p className="mt-4 max-w-xl text-left text-[14px] sm:text-base text-[#0D3C38]/85 leading-relaxed font-medium">

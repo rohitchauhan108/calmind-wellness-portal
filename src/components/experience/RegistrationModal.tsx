@@ -106,17 +106,38 @@ export default function RegistrationModal({ open, onClose, programId }: Props) {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
+    const html = document.documentElement;
+    const body = document.body;
+
     if (open) {
+      const scrollY = window.scrollY;
       const detected = detectCountryCode();
       setForm((prev) => ({ ...EMPTY_FORM, countryCode: detected }));
       setErrors({});
       setSubmitting(false);
-      document.body.style.overflow = "hidden";
+      html.style.overflow = "hidden";
+      body.style.position = "fixed";
+      body.style.top = `-${scrollY}px`;
+      body.style.width = "100%";
+      body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "";
+      html.style.overflow = "";
+      body.style.position = "";
+      body.style.top = "";
+      body.style.width = "";
+      body.style.overflow = "";
     }
+
     return () => {
-      document.body.style.overflow = "";
+      const lockedScrollY = body.style.top;
+      html.style.overflow = "";
+      body.style.position = "";
+      body.style.top = "";
+      body.style.width = "";
+      body.style.overflow = "";
+      if (lockedScrollY) {
+        window.scrollTo(0, Number.parseInt(lockedScrollY, 10) * -1);
+      }
     };
   }, [open, programId]);
 
@@ -233,7 +254,8 @@ export default function RegistrationModal({ open, onClose, programId }: Props) {
           exit={{ opacity: 0, y: 30, scale: 0.98 }}
           transition={{ type: "spring", stiffness: 320, damping: 28, mass: 0.7 }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-[#FBF9F5] shadow-2xl ring-1 ring-black/5 sm:rounded-[2rem]"
+          data-lenis-prevent
+          className="relative max-h-[calc(100dvh-2rem)] w-full max-w-lg overflow-y-auto overflow-x-hidden rounded-3xl bg-[#FBF9F5] shadow-2xl ring-1 ring-black/5 overscroll-contain sm:max-h-[calc(100dvh-3rem)] sm:rounded-[2rem]"
         >
           {/* Top decorative strip */}
           <div className="h-1.5 w-full bg-gradient-to-r from-[#E6B055] via-[#F3CE88] to-[#C48F3A]" />
@@ -294,9 +316,26 @@ export default function RegistrationModal({ open, onClose, programId }: Props) {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="space-y-4 px-6 py-6 sm:space-y-5 sm:px-8 sm:py-8"
+              className="space-y-4 px-5 py-5 sm:space-y-5 sm:px-8 sm:py-8"
               noValidate
             >
+              {/* Selected service */}
+              <div>
+                <label
+                  htmlFor="selected-service"
+                  className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.16em] text-[#0D3C38]/65"
+                >
+                  Selected Service
+                </label>
+                <input
+                  id="selected-service"
+                  type="text"
+                  value={program?.title || ""}
+                  readOnly
+                  className="w-full rounded-2xl border border-[#E6B055]/40 bg-[#E6B055]/8 px-4 py-3.5 text-sm font-medium text-[#0D3C38] focus:outline-none"
+                />
+              </div>
+
               {/* Full name */}
               <div>
                 <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.16em] text-[#0D3C38]/65">

@@ -8,11 +8,8 @@ import {
   Clock,
   ShieldCheck,
   UserRound,
-  Crown,
   Heart,
-  Users,
   PenTool,
-  Baby,
   Sparkles,
   Compass,
 } from 'lucide-react';
@@ -22,24 +19,51 @@ export default function CTA() {
   const [selectedFocus, setSelectedFocus] = useState('1:1 Life Coaching');
 
   const focusOptions = [
-    { id: '1on1', label: '1:1 Life Coaching', icon: UserRound, duration: '45 Minutes - 1 hour' },
+    {
+      id: '1on1',
+      label: '1:1 Life Coaching',
+      icon: UserRound,
+      duration: '45 Minutes - 1 hour',
+      description:
+        'A focused conversation to clarify where you are, what you want to change, and whether private 1:1 coaching with Ila is the right next step.',
+      disclaimer:
+        'Private 1:1 coaching is a paid service. This complimentary call is intended for those genuinely considering investing in their personal transformation.',
+    },
     // { id: 'vip', label: 'VIP Coaching', icon: Crown, duration: '90 Minutes' },
-    { id: 'healing', label: 'Healing', icon: Heart, duration: '15 - 30 Minutes' },
+    {
+      id: 'healing',
+      label: 'Healing',
+      icon: Heart,
+      duration: '15 - 30 Minutes',
+      description:
+        'A short conversation to understand what you would like support with and explore whether working together through healing may be right for you.',
+      disclaimer:
+        'Healing sessions are a paid service. This complimentary conversation is an opportunity to explore your needs and whether working together feels like the right fit.',
+    },
     // { id: 'group', label: 'Focused Group Programs', icon: Users, duration: '90 Minutes' },
-    { id: 'graphotherapy', label: 'Graphotherapy', icon: PenTool, duration: '15 - 30 Minutes' },
-    { id: 'kids', label: 'Program for Kids', icon: Baby, duration: '45 Minutes' },
+    {
+      id: 'graphotherapy',
+      label: 'Graphotherapy',
+      icon: PenTool,
+      duration: '15 - 30 Minutes',
+      description:
+        'A short conversation to understand what you would like to explore and whether Graphotherapy may be suitable for you.',
+      disclaimer:
+        'Graphotherapy is a paid service. This complimentary conversation is intended to help you understand the approach and decide whether it is right for you.',
+    },
   ];
 
   const valueProps = [
-    { title: 'Direct 1-on-1 with Practitioner', desc: 'Private access without intermediaries' },
-    { title: 'Strict Confidentiality', desc: 'Your journey and privacy protected' },
-    { title: 'Personalised Framework', desc: 'Tailored to your unique goals and patterns' },
-    { title: 'Holistic Approach', desc: 'Inner work + aligned action for real results' },
+    { title: 'DIRECT 1-ON-1', desc: 'Private access without intermediaries' },
+    { title: 'FOCUSED ON YOU', desc: 'Your journey and privacy protected' },
+    { title: 'PERSONALISED FRAMEWORK', desc: 'Tailored to your unique goals and patterns' },
+    { title: 'STRICT CONFIDENTIALITY', desc: 'Inner work + aligned action for real results' },
   ];
 
   // Find the duration of the currently selected focus option
   const currentDuration =
     focusOptions.find((opt) => opt.label === selectedFocus)?.duration || '45 Minutes';
+  const currentOption = focusOptions.find((opt) => opt.label === selectedFocus) || focusOptions[0];
 
   const handleBooking = () => {
     const contactSection = document.getElementById('contact') || document.getElementById('newsletter');
@@ -162,6 +186,9 @@ export default function CTA() {
                         <h3 className="text-lg font-serif text-white font-medium">
                           1:1 Discovery Call
                         </h3>
+                        <p className="mt-2 max-w-md text-xs leading-relaxed text-[#FBF9F5]/70">
+                          {currentOption.description}
+                        </p>
                       </div>
                       <div className="w-10 h-10 rounded-full bg-[#0D3C38] flex items-center justify-center text-[#FBF9F5] border border-[#0D3C38]/50">
                         <Clock className="w-5 h-5" />
@@ -188,6 +215,11 @@ export default function CTA() {
                       <span>100% Confidential & Tailored to Your Needs</span>
                     </div>
 
+                    <p className="border-t border-white/10 pt-4 text-[11px] leading-relaxed text-[#FBF9F5]/60">
+                      <span className="font-semibold text-[#E6B055]">Please note:</span>{' '}
+                      {currentOption.disclaimer}
+                    </p>
+
                     <button
                       onClick={handleBooking}
                       className="w-full py-4 rounded-xl bg-[#FBF9F5] hover:bg-white text-[#0D3C38] font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 shadow-lg group cursor-pointer"
@@ -197,19 +229,11 @@ export default function CTA() {
                       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </button>
 
-                    <p className="text-[10px] text-center text-[#FBF9F5]/60 font-medium">
-                      No payment required. Strictly limited to dedicated seekers.
-                    </p>
+                 
                   </div>
                 </motion.div>
 
-                <button
-                  onClick={handleExplore}
-                  className="group w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white/5 hover:bg-white/10 text-[#FBF9F5] font-medium text-sm transition-all duration-300 cursor-pointer border border-white/10 hover:border-white/20"
-                >
-                  <span>Explore Ways to Work With Us</span>
-                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 opacity-70" />
-                </button>
+               
               </div>
             </div>
           </motion.div>

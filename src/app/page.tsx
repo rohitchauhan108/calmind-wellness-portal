@@ -23,17 +23,8 @@ export default function Home() {
         <Meet />
         {/* <LastingChange /> */}
         <Infomativecta/>
-
-
- 
-        
-
-
-
         <NewTestimonials />
-
         <Services />
-
         <MeetUs />
         <CTA />
 
