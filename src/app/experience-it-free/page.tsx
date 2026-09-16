@@ -272,7 +272,7 @@ export default function ExperienceItFreePage() {
                     }`}
                   />
 
-                  <div className="relative z-10 flex items-center justify-between gap-4">
+                  <div className="relative z-10 flex flex-col items-stretch justify-between gap-4 lg:flex-row lg:items-center">
                     <div
                       className={`inline-flex flex-1 items-center gap-1.5 text-[11px] font-medium leading-snug ${
                         isDark ? "text-[#FBF9F5]/60" : "text-[#0D3C38]/60"
@@ -288,7 +288,7 @@ export default function ExperienceItFreePage() {
                     <button
                       type="button"
                       onClick={() => openRegister(offering.id)}
-                      className={`group inline-flex h-12 shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-5 text-[12px] font-bold uppercase tracking-[0.14em] transition-all duration-250 sm:px-6 sm:text-[13px] ${
+                      className={`group inline-flex h-12 w-full shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-5 text-[12px] font-bold uppercase tracking-[0.14em] transition-all duration-250 sm:px-6 sm:text-[13px] lg:w-auto ${
                         isDark
                           ? "bg-[#E6B055] text-[#0D3C38] shadow-lg shadow-[#0D3C38]/20 hover:bg-[#F3CE88]"
                           : "bg-[#0D3C38] text-white shadow-md shadow-[#0D3C38]/10 hover:bg-[#08292C] hover:shadow-lg hover:shadow-[#0D3C38]/15"
@@ -410,7 +410,7 @@ export default function ExperienceItFreePage() {
                     }`}
                   />
 
-                  <div className="relative z-10 flex items-center justify-between gap-4">
+                  <div className="relative z-10 flex flex-col items-stretch justify-between gap-4 lg:flex-row lg:items-center">
                     <div
                       className={`inline-flex flex-1 items-center gap-1.5 text-[11px] font-medium leading-snug ${
                         isDark ? "text-[#FBF9F5]/60" : "text-[#0D3C38]/60"
@@ -426,7 +426,7 @@ export default function ExperienceItFreePage() {
                     <button
                       type="button"
                       onClick={() => openRegister(offering.id)}
-                      className={`group inline-flex h-12 shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-5 text-[12px] font-bold uppercase tracking-[0.14em] transition-all duration-250 sm:px-6 sm:text-[13px] ${
+                      className={`group inline-flex h-12 w-full shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-5 text-[12px] font-bold uppercase tracking-[0.14em] transition-all duration-250 sm:px-6 sm:text-[13px] lg:w-auto ${
                         isDark
                           ? "bg-[#E6B055] text-[#0D3C38] shadow-lg shadow-[#0D3C38]/20 hover:bg-[#F3CE88]"
                           : "bg-[#0D3C38] text-white shadow-md shadow-[#0D3C38]/10 hover:bg-[#08292C] hover:shadow-lg hover:shadow-[#0D3C38]/15"
@@ -548,7 +548,7 @@ export default function ExperienceItFreePage() {
                     }`}
                   />
 
-                  <div className="relative z-10 flex items-center justify-between gap-4">
+                  <div className="relative z-10 flex flex-col items-stretch justify-between gap-4 lg:flex-row lg:items-center">
                     <div
                       className={`inline-flex flex-1 items-center gap-1.5 text-[11px] font-medium leading-snug ${
                         isDark ? "text-[#FBF9F5]/60" : "text-[#0D3C38]/60"
@@ -564,7 +564,7 @@ export default function ExperienceItFreePage() {
                     <button
                       type="button"
                       onClick={() => openRegister(offering.id)}
-                      className={`group inline-flex h-12 shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-5 text-[12px] font-bold uppercase tracking-[0.14em] transition-all duration-250 sm:px-6 sm:text-[13px] ${
+                      className={`group inline-flex h-12 w-full shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-5 text-[12px] font-bold uppercase tracking-[0.14em] transition-all duration-250 sm:px-6 sm:text-[13px] lg:w-auto ${
                         isDark
                           ? "bg-[#E6B055] text-[#0D3C38] shadow-lg shadow-[#0D3C38]/20 hover:bg-[#F3CE88]"
                           : "bg-[#0D3C38] text-white shadow-md shadow-[#0D3C38]/10 hover:bg-[#08292C] hover:shadow-lg hover:shadow-[#0D3C38]/15"
@@ -686,7 +686,7 @@ export default function ExperienceItFreePage() {
                     }`}
                   />
 
-                  <div className="relative z-10 flex items-center justify-between gap-4">
+                  <div className="relative z-10 flex flex-col items-stretch justify-between gap-4 lg:flex-row lg:items-center">
                     <div
                       className={`inline-flex flex-1 items-center gap-1.5 text-[11px] font-medium leading-snug ${
                         isDark ? "text-[#FBF9F5]/60" : "text-[#0D3C38]/60"
@@ -702,7 +702,7 @@ export default function ExperienceItFreePage() {
                     <button
                       type="button"
                       onClick={() => openRegister(offering.id)}
-                      className={`group inline-flex h-12 shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-5 text-[12px] font-bold uppercase tracking-[0.14em] transition-all duration-250 sm:px-6 sm:text-[13px] ${
+                      className={`group inline-flex h-12 w-full shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-5 text-[12px] font-bold uppercase tracking-[0.14em] transition-all duration-250 sm:px-6 sm:text-[13px] lg:w-auto ${
                         isDark
                           ? "bg-[#E6B055] text-[#0D3C38] shadow-lg shadow-[#0D3C38]/20 hover:bg-[#F3CE88]"
                           : "bg-[#0D3C38] text-white shadow-md shadow-[#0D3C38]/10 hover:bg-[#08292C] hover:shadow-lg hover:shadow-[#0D3C38]/15"
