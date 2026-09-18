@@ -259,7 +259,7 @@ export default function Hero() {
               {/* --- CARD 1: Money & Abundance --- */}
               <div className="flex flex-col h-full rounded-[24px] sm:rounded-[28px] border-b-4 border-[#0D3C38] shadow-[0_12px_35px_rgba(7,62,66,0.06)] overflow-hidden bg-white">
                 {/* Top Section with Background Image */}
-                <div className="md:bg-[url('/home/1.webp')] md:bg-center md:bg-cover md:bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left w-full md:w-[700px]">
+                <div className="bg-[url('/home/1.webp')] bg-center bg-cover bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left w-full md:w-[700px]">
                   <div className="relative z-10 flex flex-col items-start h-full text-left">
                     <div>
                       <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#C48F3A] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
@@ -273,12 +273,12 @@ export default function Hero() {
                     </h3>
 
                     <p className="mt-4 max-w-xl text-left text-[14px] sm:text-base text-[#0D3C38]/85 leading-relaxed font-medium">
-                      Explore the beliefs, emotions and <br />
-                      subconscious patterns shaping your
-                      <br />
-                      relationship with money — and begin
-                      <br />
-                      opening yourself to greater abundance.
+                      Explore the beliefs,<br className="lg:hidden block"/> emotions and <br className="lg:block hidden"/>
+                      subco-<br className="lg:hidden block"/>nscious patterns shaping<br className="lg:hidden block"/> your
+                      <br className="lg:block hidden"/>
+                      relationship with money <br className="lg:hidden block"/>— and begin
+                      <br className="lg:block hidden"/>
+                      opening yourself <br className="lg:hidden block"/>to greater abundance.
                     </p>
                   </div>
                 </div>
@@ -309,7 +309,7 @@ export default function Hero() {
               {/* --- CARD 2: Fit & Free --- */}
               <div className="flex flex-col h-full rounded-[24px] sm:rounded-[28px] border-b-4 border-[#0D3C38] shadow-[0_12px_35px_rgba(7,62,66,0.06)] overflow-hidden bg-white">
                 {/* Top Section with Background Image */}
-                <div className="md:bg-[url('/home/2.webp')] md:bg-center md:bg-cover md:bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left">
+                <div className="bg-[url('/home/2.webp')] bg-center bg-cover bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left">
                   <div className="relative z-10 flex flex-col items-start h-full text-left">
                     <div>
                       <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#0D3C38] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
@@ -321,18 +321,18 @@ export default function Hero() {
                       Fit <span className="text-[#C48F3A]">&amp;</span> Free
                     </h3>
 
-                    <p className="mt-4 max-w-xl text-left text-[14px] sm:text-base text-[#0D3C38]/85 leading-relaxed font-medium">
-                      Have you tried diets, workouts or routines
-                      <br />
-                      again and again, only to find yourself falling
-                      <br />
-                      back into the same patterns? Explore what
-                      <br />
-                      may be underneath cravings, emotional
-                      <br />
-                      eating ,overeating and inconsistency —<br />
-                      beyond simply focusing on food and
-                      <br />
+                    <p className="mt-4 max-w-xl text-left lg:text-[14px] text-[10px] text-[#0D3C38]/85 leading-relaxed font-medium">
+                      Have you tried diets, workouts <br className="lg:hidden block"/> or routines
+                      <br className="lg:block hidden"/>
+                      again and again, only<br className="lg:hidden block"/> to find yourself falling
+                      <br className="lg:block hidden"/>
+                      back into the <br className="lg:hidden block"/>same patterns? Explore what
+                      <br className="lg:block hidden"/>
+                      may be<br className="lg:hidden block"/> underneath cravings, emotional
+                      <br className="lg:block hidden"/>
+                      eating<br className="lg:hidden block"/> ,overeating and inconsistency —<br />
+                      beyond simply focusing on food<br className="lg:hidden block"/> and
+                      <br className="lg:block hidden"/>
                       exercise
                     </p>
                   </div>

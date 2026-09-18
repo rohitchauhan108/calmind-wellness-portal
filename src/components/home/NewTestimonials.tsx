@@ -25,6 +25,12 @@ export default function Testimonials() {
       quote:
         "Ila has been a very supportive coach - the needs of her clients are always given top priority. Her techniques and methods have allowed me to better myself and my relationship with my emotions. I struggled with self-acceptance, and her work taught me to embrace myself more. Grateful for the opportunity to have had the chance to work with Ila!",
       author: "Kaveen Tulsiani",
+    },
+    {
+      tagline: "A powerful experience of inner freedom and transformation",
+      quote:
+        "would like to express my gratitude to @~ila gargg for holding the space today and helping me experience the connection to my inner freedom. As a Coach, she heals with her compassionate presence and brings forth joy and aliveness. Thank you for facilitating impactful change. 🌻🙂",
+      author: "Pooja Ravikumar",
     }
   ];
 
