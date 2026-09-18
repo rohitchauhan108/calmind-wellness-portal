@@ -262,7 +262,7 @@ export default function Hero() {
                 <div className="bg-[url('/home/1.webp')] bg-center bg-cover bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left w-full md:w-[700px]">
                   <div className="relative z-10 flex flex-col items-start h-full text-left">
                     <div>
-                      <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#C48F3A] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
+                      <span className="inline-block text-[8px] sm:text-[11px] lg:font-bold font-semibold uppercase tracking-[0.2em] text-white bg-[#C48F3A] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
                         FIRST SESSION COMPLIMENTARY
                       </span>
                     </div>
@@ -298,7 +298,7 @@ export default function Hero() {
                   <button
                     type="button"
                     onClick={() => openRegistration("money-abundance")}
-                    className="group mt-5 lg:w-[40%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#0D3C38] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#08292C] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
+                    className="group mt-5 lg:w-[40%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#0D3C38] text-white text-[10px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#08292C] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
                   >
                       REGISTER FREE
                       <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -312,7 +312,7 @@ export default function Hero() {
                 <div className="bg-[url('/home/2.webp')] bg-center bg-cover bg-no-repeat flex flex-col items-start flex-grow p-6 sm:p-8 md:p-9 text-left">
                   <div className="relative z-10 flex flex-col items-start h-full text-left">
                     <div>
-                      <span className="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-[#0D3C38] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
+                      <span className="inline-block text-[8px] sm:text-[11px] lg:font-bold font-semibold uppercase tracking-[0.2em] text-white bg-[#0D3C38] px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
                         FIRST SESSION COMPLIMENTARY
                       </span>
                     </div>
@@ -321,17 +321,16 @@ export default function Hero() {
                       Fit <span className="text-[#C48F3A]">&amp;</span> Free
                     </h3>
 
-                    <p className="mt-4 max-w-xl text-left lg:text-[14px] text-[10px] text-[#0D3C38]/85 leading-relaxed font-medium">
-                      Have you tried diets, workouts <br className="lg:hidden block"/> or routines
+                    <p className="mt-4 max-w-xl text-left text-[14px] sm:text-base text-[#0D3C38]/85 leading-relaxed font-medium">
+                      Have you tried diets,<br className="lg:hidden block"/> workouts or routines <br className="lg:block hidden"/> 
+                       again<br className="lg:hidden block"/> and again, only to find your<br className="lg:hidden block"/>-self falling
                       <br className="lg:block hidden"/>
-                      again and again, only<br className="lg:hidden block"/> to find yourself falling
+                      back into the same<br className="lg:hidden block"/> patterns? Explore what
                       <br className="lg:block hidden"/>
-                      back into the <br className="lg:hidden block"/>same patterns? Explore what
+                      may be <br className="lg:hidden block"/>underneath cravings, emotional<br className="lg:hidden block"/>
                       <br className="lg:block hidden"/>
-                      may be<br className="lg:hidden block"/> underneath cravings, emotional
-                      <br className="lg:block hidden"/>
-                      eating<br className="lg:hidden block"/> ,overeating and inconsistency —<br />
-                      beyond simply focusing on food<br className="lg:hidden block"/> and
+                      eating ,overeating and<br className="lg:hidden block"/> inconsistency —<br className="lg:block hidden"/>
+                      beyond<br className="lg:hidden block"/> simply focusing on<br className="lg:hidden block"/> food and
                       <br className="lg:block hidden"/>
                       exercise
                     </p>
@@ -353,7 +352,7 @@ export default function Hero() {
                   <button
                     type="button"
                     onClick={() => openRegistration("fit-free")}
-                    className="group mt-5 lg:w-[40%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#0D3C38] text-white text-[12px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#08292C] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
+                    className="group mt-5 lg:w-[40%] flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#0D3C38] text-white text-[10px] sm:text-sm font-bold uppercase tracking-[0.1em] hover:bg-[#08292C] active:scale-[0.99] transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
                   >
                       REGISTER FREE
                       <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
